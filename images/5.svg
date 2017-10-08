@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <rect id="block-1" class="block" fill="#00ff00" x="0" y="0" width="2560" height="960" />
+  <rect id="block-2" class="block" fill="#00ffff" x="0" y="0" width="1120" height="240" />
+  <path id="area-1" class="area closed" fill="#00ffff" stroke="none" d="M 0,705 l 35,-80 l 80,-80 l 160,-10 l 80,50 l 80,-80 l 80,-40 l 160,10 l 160,-80 l 235,-20 l 35,-80 l 80,-80 l 160,-10 l 80,50 l 80,-80 l 80,-40 l 160,10 l 160,-80 l 245,-25 l 235,65 l 170,-30 v -70 h -1430 v 240 h -1125 Z" />
+  <path id="line-2" class="line" fill="none" stroke="#00ffff" d="M 5,695 l 30,-70 l 80,-80 l 160,-10 l 80,50 l 80,-80 l 80,-40 l 160,10 l 160,-80 l 240,-20" />
+  <path id="line-3" class="line" fill="none" stroke="#00ffff" d="M 1075,365 l 30,-70 l 80,-80 l 160,-10 l 80,50 l 80,-80 l 80,-40 l 160,10 l 160,-80 l 240,-20" />
+  <path id="line-4" class="line" fill="none" stroke="#00ffff" d="M 2155,45 l 230,60 l 170,-30 v -70 h -1430 v 240 h -1120" />
+  <path id="line-5" class="line" fill="none" stroke="#000000" d="M 605,145 l 65,20 l 20,60 l 55,-60 l 65,-5" />
+  <path id="line-6" class="line" fill="none" stroke="#000000" d="M 805,15 l 50,15 l 20,50 l 45,-50 l 55,-5" />
+  <path id="line-7" class="line" fill="none" stroke="#000000" d="M 965,65 l 40,15 l 15,40 l 35,-40 l 45,-5" />
+</svg>

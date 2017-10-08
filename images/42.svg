@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-area-3" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ff0000" x="0" y="0" width="10" height="20" />
+      <rect fill="#ff0000" x="10" y="10" width="30" height="10" />
+    </pattern>
+    <pattern id="fill-area-4" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ff0000" x="0" y="0" width="10" height="20" />
+      <rect fill="#ff0000" x="10" y="10" width="30" height="10" />
+    </pattern>
+    <pattern id="pattern-line-11" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <path id="pattern-line-11-1" class="pattern-line-11" fill="#000000" d="M 10,960 h 2550 v -970 h -1610 l 10,10 l -950,950 v 10" />
+      <path id="pattern-line-11-2" class="pattern-line-11" fill="#ff0000" d="M 0,960 l 960,-960 l -10,-10 h -950 v 970" />
+    </pattern>
+    <pattern id="pattern-line-13" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <path id="pattern-line-13-1" class="pattern-line-13" fill="#ff0000" d="M 1920,960 h 640 v -970 h -320 l -640,640 l 320,320 v 10" />
+      <path id="pattern-line-13-2" class="pattern-line-13" fill="#000000" d="M 0,960 h 1920 l -320,-320 l 640,-640 v -10 h -2240 v 970" />
+    </pattern>
+  </defs>
+  <rect id="block-1" class="block" fill="#00ffff" x="1360" y="80" width="160" height="480" />
+  <rect id="block-2" class="block" fill="#00ffff" x="1040" y="80" width="160" height="480" />
+  <path id="block-3" class="block" fill="#ffff00" d="M 0,640 h 2560 v -640 h -2560 v 640
+M 1040,80 h 160 v 480 h -160 v -480
+M 1360,80 h 160 v 480 h -160 v -480" />
+  <rect id="block-4" class="block" fill="#000000" x="800" y="720" width="960" height="80" />
+  <rect id="block-5" class="block" fill="#000000" x="640" y="880" width="1280" height="80" />
+  <path id="block-6" class="block" fill="#ff0000" d="M 0,960 h 640 v -80 h 1280 v 80 h 640 v -320 h -2560 v 320
+M 800,720 h 960 v 80 h -960 v -80" />
+  <path id="area-1" class="area closed" fill="#ffffff" stroke="none" d="M 965,645 h 630 l 160,80 h -965 Z" />
+  <path id="area-2" class="area closed" fill="#ffffff" stroke="none" d="M 805,805 h 950 l 160,80 h -1285 Z" />
+  <path id="area-3" class="area closed" fill="url(#fill-area-3)" stroke="none" d="M 2560,0 v 635 h -965 v -635 Z" />
+  <path id="area-4" class="area closed" fill="url(#fill-area-4)" stroke="none" d="M 955,635 v -635 h -955 v 635 Z" />
+  <path id="line-5" class="line closed" fill="none" stroke="#ffffff" d="M 655,955 h 1260 v -70 h -1270 v 70 Z" />
+  <path id="line-6" class="line" fill="none" stroke="#ffffff" d="M 655,875 l 150,-70 h 950 l 160,80" />
+  <path id="line-7" class="line" fill="none" stroke="#ffffff" d="M 1755,795 v -70 h -950 v 80" />
+  <path id="line-8" class="line" fill="none" stroke="#ffffff" d="M 815,715 l 150,-70 h 630 l 160,80" />
+  <path id="line-9" class="line" fill="none" stroke="#ff0000" d="M 955,635 v -630" />
+  <path id="line-10" class="line" fill="none" stroke="#000000" d="M 1275,15 v 620" />
+  <path id="line-11" class="line" fill="none" stroke="url(#pattern-line-11)" d="M 1595,635 v -630 h -640" />
+  <path id="line-12" class="line" fill="none" stroke="#ff0000" d="M 945,635 h -940" />
+  <path id="line-13" class="line" fill="none" stroke="url(#pattern-line-13)" d="M 965,635 h 1590" />
+</svg>

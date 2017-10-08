@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-area-1" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="0" width="10" height="20" />
+      <rect fill="#000000" x="10" y="10" width="30" height="10" />
+    </pattern>
+    <pattern id="fill-area-2" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="10" width="20" height="10" />
+    </pattern>
+    <pattern id="fill-area-3" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="10" width="20" height="10" />
+    </pattern>
+  </defs>
+  <rect id="block-1" class="block" fill="#c00000" x="0" y="0" width="2560" height="960" />
+  <rect id="block-2" class="block" fill="#c0c000" x="880" y="0" width="800" height="480" />
+  <rect id="block-3" class="block" fill="#0000c0" x="1120" y="560" width="320" height="80" />
+  <path id="area-1" class="area closed" fill="url(#fill-area-1)" stroke="none" d="M 885,475 v -475 h 790 v 475 Z" />
+  <path id="area-2" class="area closed" fill="url(#fill-area-2)" stroke="none" d="M 5,950 l 880,-475 v -475 h -885 v 950 Z" />
+  <path id="area-3" class="area closed" fill="url(#fill-area-3)" stroke="none" d="M 1675,475 v -475 h 885 v 955 l -895,-480 Z" />
+  <path id="area-4" class="area closed" fill="#00c0c0" stroke="none" d="M 1085,585 l 80,-10 h 180 l 85,5 l 65,-15 l -160,-20 h -160 l -150,20 Z" />
+  <path id="line-5" class="line" fill="none" stroke="#000000" d="M 15,945 l 870,-470 v -470" />
+  <path id="line-6" class="line" fill="none" stroke="#000000" d="M 895,475 h 780 v -470" />
+  <path id="line-7" class="line" fill="none" stroke="#000000" d="M 1685,485 l 870,470" />
+  <path id="line-8" class="line" fill="none" stroke="#000000" d="M 5,945 v -10" />
+  <path id="line-9" class="line closed" fill="#00c0c0" stroke="#00c0c0" d="M 995,885 l 190,60 h 160 l 200,-60 l 20,-40 l -20,-40 l -200,60 h -160 l -200,-60 l -20,40 l 20,40 Z" />
+  <path id="line-10" class="line closed" fill="#00c0c0" stroke="#00c0c0" d="M 995,775 l 190,60 h 160 l 200,-60 l 20,-40 l -20,-40 l -200,60 h -160 l -200,-60 l -20,40 l 20,40 Z" />
+  <path id="line-11" class="line closed" fill="#00c0c0" stroke="#00c0c0" d="M 995,665 l 190,60 h 160 l 200,-60 l 20,-40 l -20,-40 l -200,60 h -160 l -200,-60 l -20,40 l 20,40 Z" />
+  <path id="line-12" class="line closed" fill="none" stroke="#00c0c0" d="M 1025,565 l 150,50 h 160 l 160,-50 l -160,-20 h -160 l -150,20 Z" />
+  <path id="line-13" class="line" fill="none" stroke="#00c0c0" d="M 1095,585 l 70,-10 h 180 l 90,10" />
+</svg>

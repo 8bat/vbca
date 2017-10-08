@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-area-3" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffffff" x="0" y="10" width="10" height="10" />
+      <rect fill="#ffffff" x="20" y="0" width="10" height="10" />
+    </pattern>
+    <pattern id="fill-area-4" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffffff" x="0" y="10" width="10" height="10" />
+      <rect fill="#ffffff" x="20" y="0" width="10" height="10" />
+    </pattern>
+    <pattern id="fill-area-5" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffffff" x="0" y="0" width="10" height="10" />
+      <rect fill="#ffffff" x="20" y="10" width="10" height="10" />
+    </pattern>
+    <pattern id="fill-area-6" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffffff" x="0" y="10" width="10" height="10" />
+      <rect fill="#ffffff" x="20" y="0" width="10" height="10" />
+    </pattern>
+    <pattern id="fill-area-7" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffffff" x="0" y="10" width="10" height="10" />
+      <rect fill="#ffffff" x="20" y="0" width="10" height="10" />
+    </pattern>
+  </defs>
+  <rect id="block-1" class="block" fill="#ff00ff" x="0" y="0" width="2560" height="960" />
+  <rect id="block-2" class="block" fill="#00ff00" x="2240" y="80" width="320" height="80" />
+  <rect id="block-3" class="block" fill="#00ff00" x="1440" y="80" width="480" height="80" />
+  <rect id="block-4" class="block" fill="#00ff00" x="640" y="80" width="480" height="80" />
+  <rect id="block-5" class="block" fill="#00ff00" x="0" y="80" width="320" height="80" />
+  <path id="block-6" class="block" fill="#000000" d="M 1760,560 h 640 v -320 h -80 v -80 h -80 v -80 h -320 v 80 h -80 v 80 h -80 v 320" />
+  <path id="block-7" class="block" fill="#000000" d="M 960,560 h 640 v -320 h -80 v -80 h -80 v -80 h -320 v 80 h -80 v 80 h -80 v 320" />
+  <path id="block-8" class="block" fill="#000000" d="M 160,560 h 640 v -320 h -80 v -80 h -80 v -80 h -320 v 80 h -80 v 80 h -80 v 320" />
+  <rect id="block-9" class="block" fill="#00ff00" x="2400" y="240" width="160" height="720" />
+  <rect id="block-10" class="block" fill="#00ff00" x="1600" y="240" width="160" height="720" />
+  <rect id="block-11" class="block" fill="#00ff00" x="800" y="240" width="160" height="720" />
+  <rect id="block-12" class="block" fill="#00ff00" x="0" y="240" width="160" height="720" />
+  <path id="area-1" class="area closed" fill="#ffffff" stroke="none" d="M 2085,195 v 360 h -50 v -360 h -40 v -40 h -40 v -40 h -40 v -40 h 330 v 40 h -80 v 40 h -40 v 40 Z" />
+  <path id="area-2" class="area closed" fill="#ffffff" stroke="none" d="M 490,75 h 155 v 40 h -80 v 40 h -40 v 40 h -40 v 360 h -50 v -360 h -40 v -40 h -40 v -40 h -40 v -40 Z" />
+  <path id="area-3" class="area closed" fill="url(#fill-area-3)" stroke="none" d="M 2085,195 v 360 h 320 v -320 h -80 v -80 h -80 v -40 h -80 v 40 h -40 v 40 Z" />
+  <path id="area-4" class="area closed" fill="url(#fill-area-4)" stroke="none" d="M 1755,235 v 320 h 280 v -360 h -40 v -40 h -40 v -40 h -40 v 40 h -80 v 80 Z" />
+  <path id="area-5" class="area closed" fill="url(#fill-area-5)" stroke="none" d="M 955,235 h 80 v -80 h 80 v -80 h 330 v 80 h 80 v 80 h 80 v 320 h -160 v -360 h -40 v -40 h -40 v -40 h -160 v 40 h -40 v 40 h -40 v 360 h -170 Z" />
+  <path id="area-6" class="area closed" fill="url(#fill-area-6)" stroke="none" d="M 485,195 v 360 h 320 v -320 h -80 v -80 h -80 v -40 h -80 v 40 h -40 v 40 Z" />
+  <path id="area-7" class="area closed" fill="url(#fill-area-7)" stroke="none" d="M 155,235 v 320 h 280 v -360 h -40 v -40 h -40 v -40 h -40 v 40 h -80 v 80 Z" />
+  <path id="line-8" class="line" fill="none" stroke="#ffffff" d="M 155,245 v 710" />
+  <path id="line-9" class="line" fill="none" stroke="#ffffff" d="M 165,235 h 70 v -80 h 80 v -80 h 170" />
+  <path id="line-10" class="line" fill="none" stroke="#ffffff" d="M 495,75 h 150 v 80 h 80 v 80 h 80 v 720" />
+  <path id="line-11" class="line" fill="none" stroke="#ffffff" d="M 955,245 v 710" />
+  <path id="line-12" class="line" fill="none" stroke="#ffffff" d="M 965,235 h 70 v -80 h 80 v -80 h 170" />
+  <path id="line-13" class="line" fill="none" stroke="#ffffff" d="M 1295,75 h 150 v 80 h 80 v 80 h 80 v 720" />
+  <path id="line-14" class="line" fill="none" stroke="#ffffff" d="M 1755,245 v 710" />
+  <path id="line-15" class="line" fill="none" stroke="#ffffff" d="M 1765,235 h 70 v -80 h 80 v -80 h 170" />
+  <path id="line-16" class="line" fill="none" stroke="#ffffff" d="M 2095,75 h 150 v 80 h 80 v 80 h 80 v 720" />
+  <path id="line-17" class="line" fill="none" stroke="#ffffff" d="M 165,555 h 630" />
+  <path id="line-18" class="line" fill="none" stroke="#ffffff" d="M 285,115 h 70 v 40 h 40 v 40 h 40 v 360" />
+  <path id="line-19" class="line" fill="none" stroke="#ffffff" d="M 485,205 v 350" />
+  <path id="line-20" class="line" fill="none" stroke="#ffffff" d="M 495,195 h 30 v -40 h 40 v -40 h 85" />
+  <path id="line-21" class="line" fill="none" stroke="#ffffff" d="M 965,555 h 150" />
+  <path id="line-22" class="line" fill="none" stroke="#ffffff" d="M 1125,205 v 350" />
+  <path id="line-23" class="line" fill="none" stroke="#ffffff" d="M 1135,195 h 30 v -40 h 40 v -40 h 85" />
+  <path id="line-24" class="line" fill="none" stroke="#ffffff" d="M 1295,115 h 70 v 40 h 40 v 40 h 40 v 360" />
+  <path id="line-25" class="line" fill="none" stroke="#ffffff" d="M 1455,555 h 150" />
+  <path id="line-26" class="line" fill="none" stroke="#ffffff" d="M 1765,555 h 630" />
+  <path id="line-27" class="line" fill="none" stroke="#ffffff" d="M 1885,115 h 70 v 40 h 40 v 40 h 40 v 360" />
+  <path id="line-28" class="line" fill="none" stroke="#ffffff" d="M 2085,205 v 350" />
+  <path id="line-29" class="line" fill="none" stroke="#ffffff" d="M 2095,195 h 30 v -40 h 40 v -40 h 85" />
+</svg>

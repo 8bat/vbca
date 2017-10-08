@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="pattern-pattern-area-1-1" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#0000ff" x="0" y="0" width="10" height="20" />
+      <rect fill="#0000ff" x="20" y="0" width="10" height="20" />
+    </pattern>
+    <pattern id="pattern-pattern-area-1-2" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="10" height="20" />
+      <rect fill="#ffff00" x="20" y="0" width="10" height="20" />
+    </pattern>
+    <pattern id="pattern-pattern-area-1-3" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#0000ff" x="0" y="0" width="10" height="20" />
+      <rect fill="#0000ff" x="20" y="0" width="10" height="20" />
+    </pattern>
+    <pattern id="pattern-pattern-area-1-4" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="10" height="20" />
+      <rect fill="#ffff00" x="20" y="0" width="10" height="20" />
+    </pattern>
+    <pattern id="pattern-pattern-area-1-5" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="10" height="20" />
+      <rect fill="#ffff00" x="20" y="0" width="10" height="20" />
+    </pattern>
+    <pattern id="pattern-pattern-area-1-6" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="10" height="20" />
+      <rect fill="#ffff00" x="20" y="0" width="10" height="20" />
+    </pattern>
+    <pattern id="pattern-pattern-area-1-7" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="0" width="10" height="20" />
+      <rect fill="#000000" x="20" y="0" width="10" height="20" />
+    </pattern>
+    <pattern id="pattern-pattern-area-1-8" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="10" height="20" />
+      <rect fill="#ffff00" x="20" y="0" width="10" height="20" />
+    </pattern>
+    <pattern id="pattern-pattern-area-1-9" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="0" width="10" height="20" />
+      <rect fill="#000000" x="20" y="0" width="10" height="20" />
+    </pattern>
+    <pattern id="pattern-area-1" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <path id="pattern-area-1-1" class="pattern-area-1" fill="url(#pattern-pattern-area-1-1)" d="M 2550,80 h 10 v -90 h -90 l 80,80 v 10" />
+      <path id="pattern-area-1-2" class="pattern-area-1" fill="url(#pattern-pattern-area-1-2)" d="M 2550,160 h 10 v -80 l -90,-90 h -80 l 160,160 v 10" />
+      <path id="pattern-area-1-3" class="pattern-area-1" fill="url(#pattern-pattern-area-1-3)" d="M 2550,240 h 10 v -80 l -170,-170 h -80 l 240,240 v 10" />
+      <path id="pattern-area-1-4" class="pattern-area-1" fill="url(#pattern-pattern-area-1-4)" d="M 0,840 l 150,-150 h 10 v -90 l -150,-150 h -10 v 390" />
+      <path id="pattern-area-1-5" class="pattern-area-1" fill="url(#pattern-pattern-area-1-5)" d="M 2390,960 h 170 v -720 l -250,-250 h -410 l 150,150 v 20 l 160,160 h 10 v 20 l 100,100 h 10 v 20 l 30,30 h 10 v 20 l 30,30 h 10 v 20 l 30,30 h 10 v 20 l -60,60 h -10 v 20 l 10,10 h 10 v 250 l -10,10" />
+      <path id="pattern-area-1-6" class="pattern-area-1" fill="url(#pattern-pattern-area-1-6)" d="M 1590,960 h 160 l 10,-10 v -300 l -100,-100 l -70,70 h -10 v 20 l 10,10 h 10 v 300 l -10,10" />
+      <path id="pattern-area-1-7" class="pattern-area-1" fill="url(#pattern-pattern-area-1-7)" d="M 820,960 h 770 l 10,-10 v -300 l -10,-10 h -10 v -20 l 70,-70 l 100,100 h 10 v 300 l -10,10 h 640 l 10,-10 v -250 l -10,-10 h -10 v -20 l 60,-60 h 10 v -20 l -30,-30 h -10 v -20 l -30,-30 h -10 v -20 l -30,-30 h -10 v -20 l -100,-100 h -10 v -20 l -160,-160 h -10 v -20 l -150,-150 h -400 l -590,590 l 50,50 v 190 l -140,140" />
+      <path id="pattern-area-1-8" class="pattern-area-1" fill="url(#pattern-pattern-area-1-8)" d="M 630,960 h 190 l 140,-140 v -190 l -50,-50 l 590,-590 h -360 l -480,480 v 20 l 130,130 h 10 v 170 l -170,170" />
+      <path id="pattern-area-1-9" class="pattern-area-1" fill="url(#pattern-pattern-area-1-9)" d="M 0,960 h 630 l 170,-170 v -170 l -130,-130 h -10 v -20 l 480,-480 h -1140 v 460 l 150,150 h 10 v 90 l -150,150 h -10 v 120" />
+    </pattern>
+    <pattern id="fill-area-2" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="10" width="10" height="10" />
+      <rect fill="#000000" x="20" y="10" width="10" height="10" />
+    </pattern>
+    <pattern id="fill-area-3" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="10" width="10" height="10" />
+      <rect fill="#000000" x="20" y="10" width="10" height="10" />
+    </pattern>
+    <pattern id="fill-area-4" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="10" width="10" height="10" />
+      <rect fill="#000000" x="20" y="10" width="10" height="10" />
+    </pattern>
+    <pattern id="pattern-line-5" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <path id="pattern-line-5-1" class="pattern-line-5" fill="#ffff00" d="M 790,710 h 90 l 80,-80 l -50,-50 l 580,-580 v -10 h -360 l -470,470 v 20 l 140,140 l -80,80 h 70 v 10" />
+      <path id="pattern-line-5-2" class="pattern-line-5" fill="#ffff00" d="M 1460,800 h 150 l 150,-150 l -110,-110 l -70,70 v 20 l 20,20 l -130,130 h -10 v 20" />
+      <path id="pattern-line-5-3" class="pattern-line-5" fill="#ffff00" d="M 0,870 l 170,-170 l -10,-10 l 40,-40 h -60 v -10 h -20 l 40,-40 l -160,-160 v 430" />
+      <path id="pattern-line-5-4" class="pattern-line-5" fill="#ffff00" d="M 2400,960 h 160 v -470 l -170,170 h -10 v 20 l 20,20 l -130,130 h 130 v 10 h 110 l -110,110 v 10" />
+      <path id="pattern-line-5-5" class="pattern-line-5" fill="#ffff00" d="M 1600,960 h 160 l 140,-140 v -10 h -160 l -140,140 v 10" />
+      <path id="pattern-line-5-6" class="pattern-line-5" fill="#000000" d="M 840,960 h 760 l 140,-140 v -10 h 160 l -140,140 v 10 h 640 l 110,-110 v -10 h -110 v -10 h -130 l 130,-130 l -20,-20 v -20 l 170,-170 h 10 v -500 h -1070 l -580,580 l 50,50 l -80,80 v 10 h 50 v 10 h 90 v 10 h 40 l -220,220 v 10
+    M 1460,780 l 140,-140 l -10,-10 h -10 v -20 l 70,-70 l 110,110 l -150,150 h -150 v -20" />
+      <path id="pattern-line-5-7" class="pattern-line-5" fill="#ffff00" d="M 700,960 h 140 l 220,-220 v -10 h -40 v -10 h -90 v -10 h -50 l -80,80 l 30,30 l -130,130 v 10" />
+      <path id="pattern-line-5-8" class="pattern-line-5" fill="#000000" d="M 0,960 h 700 l 130,-130 l -30,-30 l 80,-80 v -10 h -90 v -10 h -70 l 80,-80 l -140,-140 v -20 l 470,-470 h -1130 v 450 l 160,160 l -40,40 h 20 v 10 h 60 l -40,40 l 10,10 l -170,170 v 90" />
+    </pattern>
+    <pattern id="pattern-line-6" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <path id="pattern-line-6-1" class="pattern-line-6" fill="#ffff00" d="M 0,720 l 160,-160 l -150,-150 h -10 v 310" />
+      <path id="pattern-line-6-2" class="pattern-line-6" fill="#ffff00" d="M 2010,960 h 550 v -970 h -730 l 570,570 l -390,390 v 10" />
+      <path id="pattern-line-6-3" class="pattern-line-6" fill="#000000" d="M 1370,960 h 640 l 390,-390 l -570,-570 v -10 h -640 l 570,570 l -390,390 v 10" />
+      <path id="pattern-line-6-4" class="pattern-line-6" fill="#ffff00" d="M 1210,960 h 160 l 390,-390 l -570,-570 v -10 h -160 l 570,570 l -390,390 v 10" />
+      <path id="pattern-line-6-5" class="pattern-line-6" fill="#000000" d="M 570,960 h 640 l 390,-390 l -570,-570 v -10 h -640 l 570,570 l -390,390 v 10" />
+      <path id="pattern-line-6-6" class="pattern-line-6" fill="#ffff00" d="M 410,960 h 160 l 390,-390 l -570,-570 v -10 h -160 l 570,570 l -390,390 v 10" />
+      <path id="pattern-line-6-7" class="pattern-line-6" fill="#000000" d="M 0,960 h 410 l 390,-390 l -570,-570 v -10 h -230 v 420 l 160,160 l -150,150 h -10 v 240" />
+    </pattern>
+    <pattern id="pattern-line-8" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <rect id="pattern-line-8-1" class="pattern-line-8" fill="#000000" x="0" y="0" width="2560" height="960" />
+      <path id="pattern-line-8-2" class="pattern-line-8" fill="#0000ff" d="M 310,80 l 90,-90 h -170 l 80,80 v 10" />
+      <path id="pattern-line-8-3" class="pattern-line-8" fill="#ffff00" d="M 230,160 l 50,-50 l -120,-120 h -90 l 160,160 v 10" />
+    </pattern>
+    <pattern id="pattern-line-9" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <path id="pattern-line-9-1" class="pattern-line-9" fill="#0000ff" d="M 680,120 l 130,-130 h -90 l -80,80 l 40,40 v 10" />
+      <path id="pattern-line-9-2" class="pattern-line-9" fill="#ffff00" d="M 760,200 l 210,-210 h -90 l -160,160 l 40,40 v 10" />
+      <path id="pattern-line-9-3" class="pattern-line-9" fill="#0000ff" d="M 1520,960 h 1040 v -970 h -1520 l -240,240 l 720,720 v 10" />
+      <path id="pattern-line-9-4" class="pattern-line-9" fill="#ffff00" d="M 90,960 h 1430 l -720,-720 l -710,710 v 10" />
+      <path id="pattern-line-9-5" class="pattern-line-9" fill="#000000" d="M 0,960 h 90 l 710,-710 v -20 l 240,-240 h -70 l -210,210 l -40,-40 l 160,-160 v -10 h -70 l -130,130 l -40,-40 l 80,-80 v -10 h -720 v 970" />
+    </pattern>
+    <pattern id="pattern-line-11" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <rect id="pattern-line-11-1" class="pattern-line-11" fill="#000000" x="0" y="0" width="2560" height="960" />
+      <path id="pattern-line-11-2" class="pattern-line-11" fill="#0000ff" d="M 1110,80 l 90,-90 h -170 l 80,80 v 10" />
+      <path id="pattern-line-11-3" class="pattern-line-11" fill="#ffff00" d="M 1030,160 l 50,-50 l -120,-120 h -90 l 160,160 v 10" />
+    </pattern>
+    <pattern id="pattern-line-12" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <path id="pattern-line-12-1" class="pattern-line-12" fill="#0000ff" d="M 1480,120 l 130,-130 h -90 l -80,80 l 40,40 v 10" />
+      <path id="pattern-line-12-2" class="pattern-line-12" fill="#ffff00" d="M 1560,200 l 210,-210 h -90 l -160,160 l 40,40 v 10" />
+      <path id="pattern-line-12-3" class="pattern-line-12" fill="#0000ff" d="M 2320,960 h 240 v -970 h -720 l -240,240 l 720,720 v 10" />
+      <path id="pattern-line-12-4" class="pattern-line-12" fill="#ffff00" d="M 890,960 h 1430 l -720,-720 l -710,710 v 10" />
+      <path id="pattern-line-12-5" class="pattern-line-12" fill="#000000" d="M 0,960 h 890 l 710,-710 v -20 l 240,-240 h -70 l -210,210 l -40,-40 l 160,-160 v -10 h -70 l -130,130 l -40,-40 l 80,-80 v -10 h -1520 v 970" />
+    </pattern>
+    <pattern id="pattern-line-14" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <rect id="pattern-line-14-1" class="pattern-line-14" fill="#000000" x="0" y="0" width="2560" height="960" />
+      <path id="pattern-line-14-2" class="pattern-line-14" fill="#0000ff" d="M 1910,80 l 90,-90 h -170 l 80,80 v 10" />
+      <path id="pattern-line-14-3" class="pattern-line-14" fill="#ffff00" d="M 1830,160 l 50,-50 l -120,-120 h -90 l 160,160 v 10" />
+    </pattern>
+    <pattern id="pattern-line-15" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <rect id="pattern-line-15-1" class="pattern-line-15" fill="#000000" x="0" y="0" width="2560" height="960" />
+      <path id="pattern-line-15-2" class="pattern-line-15" fill="#0000ff" d="M 2280,120 l 130,-130 h -90 l -80,80 l 40,40 v 10" />
+      <path id="pattern-line-15-3" class="pattern-line-15" fill="#ffff00" d="M 2360,200 l 190,-190 h 10 v -20 h -80 l -160,160 l 40,40 v 10" />
+      <path id="pattern-line-15-4" class="pattern-line-15" fill="#0000ff" d="M 2550,390 h 10 v -310 l -160,160 l 150,150" />
+      <path id="pattern-line-15-5" class="pattern-line-15" fill="#ffff00" d="M 1690,960 h 870 v -570 l -150,-150 l -720,720" />
+    </pattern>
+  </defs>
+  <rect id="block-1" class="block" fill="#0000ff" x="0" y="0" width="2560" height="80" />
+  <rect id="block-2" class="block" fill="#ffff00" x="2240" y="80" width="320" height="80" />
+  <rect id="block-3" class="block" fill="#ffff00" x="1440" y="80" width="480" height="80" />
+  <rect id="block-4" class="block" fill="#ffff00" x="640" y="80" width="480" height="80" />
+  <rect id="block-5" class="block" fill="#ffff00" x="0" y="80" width="320" height="80" />
+  <rect id="block-6" class="block" fill="#0000ff" x="2320" y="160" width="240" height="80" />
+  <rect id="block-7" class="block" fill="#0000ff" x="1520" y="160" width="320" height="80" />
+  <rect id="block-8" class="block" fill="#0000ff" x="720" y="160" width="320" height="80" />
+  <rect id="block-9" class="block" fill="#0000ff" x="0" y="160" width="240" height="80" />
+  <path id="block-10" class="block" fill="#00ffff" d="M 1760,560 h 640 v -320 h -80 v -80 h -80 v -80 h -320 v 80 h -80 v 80 h -80 v 320" />
+  <path id="block-11" class="block" fill="#00ffff" d="M 960,560 h 640 v -320 h -80 v -80 h -80 v -80 h -320 v 80 h -80 v 80 h -80 v 320" />
+  <path id="block-12" class="block" fill="#00ffff" d="M 160,560 h 640 v -320 h -80 v -80 h -80 v -80 h -320 v 80 h -80 v 80 h -80 v 320" />
+  <rect id="block-13" class="block" fill="#ffff00" x="2400" y="240" width="160" height="720" />
+  <rect id="block-14" class="block" fill="#ff00ff" x="1760" y="560" width="640" height="400" />
+  <rect id="block-15" class="block" fill="#ffff00" x="1600" y="240" width="160" height="720" />
+  <rect id="block-16" class="block" fill="#ff00ff" x="960" y="560" width="640" height="400" />
+  <rect id="block-17" class="block" fill="#ffff00" x="800" y="240" width="160" height="720" />
+  <rect id="block-18" class="block" fill="#ff00ff" x="160" y="560" width="640" height="400" />
+  <rect id="block-19" class="block" fill="#ffff00" x="0" y="240" width="160" height="720" />
+  <path id="area-1" class="area closed" fill="url(#pattern-area-1)" stroke="none" d="M 2550,565 v 150 l -475,-60 l -2070,-60 v 80 l 880,130 l 480,150 h 1195 v -955 h -10 Z" />
+  <path id="area-2" class="area closed" fill="url(#fill-area-2)" stroke="none" d="M 1755,235 v 330 h 650 v -330 h -80 v -80 h -80 v -80 h -330 v 80 h -80 v 80 Z" />
+  <path id="area-3" class="area closed" fill="url(#fill-area-3)" stroke="none" d="M 955,235 v 330 h 650 v -330 h -80 v -80 h -80 v -80 h -330 v 80 h -80 v 80 Z" />
+  <path id="area-4" class="area closed" fill="url(#fill-area-4)" stroke="none" d="M 155,235 v 330 h 650 v -330 h -80 v -80 h -80 v -80 h -330 v 80 h -80 v 80 Z" />
+  <path id="line-5" class="line" fill="none" stroke="url(#pattern-line-5)" d="M 2545,715 l -470,-60 l -2070,-60 v 80 l 880,130 l 480,150 h 1190" />
+  <path id="line-6" class="line" fill="none" stroke="url(#pattern-line-6)" d="M 2545,565 h -2540" />
+  <path id="line-7" class="line" fill="none" stroke="#ffff00" d="M 155,245 v 710" />
+  <path id="line-8" class="line" fill="none" stroke="url(#pattern-line-8)" d="M 165,235 h 70 v -80 h 80 v -80 h 170" />
+  <path id="line-9" class="line" fill="none" stroke="url(#pattern-line-9)" d="M 495,75 h 150 v 80 h 80 v 80 h 80 v 720" />
+  <path id="line-10" class="line" fill="none" stroke="#ffff00" d="M 955,245 v 710" />
+  <path id="line-11" class="line" fill="none" stroke="url(#pattern-line-11)" d="M 965,235 h 70 v -80 h 80 v -80 h 170" />
+  <path id="line-12" class="line" fill="none" stroke="url(#pattern-line-12)" d="M 1295,75 h 150 v 80 h 80 v 80 h 80 v 720" />
+  <path id="line-13" class="line" fill="none" stroke="#ffff00" d="M 1755,245 v 710" />
+  <path id="line-14" class="line" fill="none" stroke="url(#pattern-line-14)" d="M 1765,235 h 70 v -80 h 80 v -80 h 170" />
+  <path id="line-15" class="line" fill="none" stroke="url(#pattern-line-15)" d="M 2095,75 h 150 v 80 h 80 v 80 h 80 v 720" />
+</svg>

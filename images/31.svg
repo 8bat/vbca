@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-area-2" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="0" width="10" height="20" />
+      <rect fill="#000000" x="20" y="0" width="10" height="20" />
+    </pattern>
+    <pattern id="fill-area-3" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="0" width="10" height="20" />
+      <rect fill="#000000" x="20" y="0" width="10" height="20" />
+    </pattern>
+  </defs>
+  <rect id="block-1" class="block" fill="#0000ff" x="0" y="0" width="2560" height="160" />
+  <rect id="block-2" class="block" fill="#ff00ff" x="0" y="160" width="2560" height="800" />
+  <path id="area-1" class="area closed" fill="#000000" stroke="none" d="M 5,165 v 90 l 1100,-45 l -70,385 v 110 l -320,90 l -160,160 h 800 l -100,-350 l -50,-390 l 1350,70 v -120 Z" />
+  <path id="area-2" class="area closed" fill="url(#fill-area-2)" stroke="none" d="M 1355,955 h 1205 v -945 l -5,155 v 120 l -1350,-70 l 50,390 Z" />
+  <path id="area-3" class="area closed" fill="url(#fill-area-3)" stroke="none" d="M 1105,210 l -1100,45 v 700 h 550 l 160,-160 l 320,-90 v -110 Z" />
+  <path id="line-4" class="line" fill="none" stroke="#000000" d="M 1205,215 l 50,390 l 100,350 h -800 l 160,-160 l 320,-90 v -110 l 70,-380" />
+  <path id="line-5" class="line" fill="none" stroke="#000000" d="M 15,165 h 2540 v 120 l -1350,-70" />
+  <path id="line-6" class="line" fill="none" stroke="#000000" d="M 1095,215 l -1090,40 v -90 v 790" />
+  <path id="line-7" class="line" fill="none" stroke="#000000" d="M 15,955 h 2540" />
+</svg>

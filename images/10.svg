@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="pattern-area-1" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <rect id="pattern-area-1-1" class="pattern-area-1" fill="#0000c0" x="0" y="0" width="2560" height="960" />
+      <path id="pattern-area-1-2" class="pattern-area-1" fill="#c00000" d="M 650,960 h 800 l -390,-390 v -10 h -20 l -390,390 v 10" />
+    </pattern>
+    <pattern id="fill-area-2" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#0000c0" x="0" y="10" width="40" height="10" />
+    </pattern>
+    <pattern id="fill-area-3" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#0000c0" x="0" y="10" width="10" height="10" />
+      <rect fill="#0000c0" x="20" y="10" width="10" height="10" />
+    </pattern>
+    <pattern id="fill-area-4" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#0000c0" x="0" y="10" width="40" height="10" />
+    </pattern>
+    <pattern id="fill-area-5" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c00000" x="0" y="10" width="40" height="10" />
+    </pattern>
+    <pattern id="fill-area-6" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#00c000" x="0" y="10" width="40" height="10" />
+    </pattern>
+    <pattern id="pattern-line-12" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <rect id="pattern-line-12-1" class="pattern-line-12" fill="#0000c0" x="0" y="0" width="2560" height="960" />
+      <path id="pattern-line-12-2" class="pattern-line-12" fill="#00c000" d="M 1500,960 h 110 l 270,-270 l -40,-40 l 650,-650 v -10 h -30 l -960,960 v 10" />
+    </pattern>
+    <pattern id="pattern-line-15" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <rect id="pattern-line-15-1" class="pattern-line-15" fill="#0000c0" x="0" y="0" width="2560" height="960" />
+      <path id="pattern-line-15-2" class="pattern-line-15" fill="#00c000" d="M 1830,960 h 40 l -320,-320 v -10 h -20 l -10,10 l 310,310 v 10" />
+      <path id="pattern-line-15-3" class="pattern-line-15" fill="#c00000" d="M 1020,960 h 730 l -310,-310 l 60,-60 v -10 h -30 v 10 h -20 v 10 h -20 v 10 h -20 l -10,10 v 10 h -20 v 10 h -20 l -210,-210 v 20 h -10 v 390 l -120,120" />
+    </pattern>
+    <pattern id="pattern-line-17" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <rect id="pattern-line-17-1" class="pattern-line-17" fill="#0000c0" x="0" y="0" width="2560" height="960" />
+      <path id="pattern-line-17-2" class="pattern-line-17" fill="#c00000" d="M 1420,960 h 70 l -960,-960 v -10 h -70 l 960,960 v 10" />
+    </pattern>
+  </defs>
+  <rect id="block-1" class="block" fill="#c0c000" x="0" y="0" width="2560" height="960" />
+  <path id="area-1" class="area closed" fill="url(#pattern-area-1)" stroke="none" d="M 1145,185 l 260,50 l 20,240 l -15,30 l -125,10 l -160,30 l -85,30 l -65,-130 l -10,-160 l 175,-100 Z" />
+  <path id="area-2" class="area closed" fill="url(#fill-area-2)" stroke="none" d="M 930,625 l -65,-140 l 30,-240 l 160,-50 l 85,-10 l -175,100 l 10,160 l 65,130 Z" />
+  <path id="area-3" class="area closed" fill="url(#fill-area-3)" stroke="none" d="M 925,620 l -60,-135 l 30,-240 l 160,-50 l 90,-10 l 260,50 l 20,240 l -70,170 l 405,-15 l 50,5 l 35,-300 l 5,20 v 285 l 405,40 l 30,-85 l 30,-400 l -640,-160 l -560,60 l -400,-60 l -400,40 l -105,65 l 25,335 l 60,275 l 195,-90 v -230 l 5,-25 l 20,240 h 10 Z" />
+  <path id="area-4" class="area closed" fill="url(#fill-area-4)" stroke="none" d="M 720,680 l 60,-20 l 45,60 l 25,205 l -140,-45 l -95,35 l 80,-90 l 70,-40 l -10,-45 l -55,-65 Z" />
+  <path id="area-5" class="area closed" fill="url(#fill-area-5)" stroke="none" d="M 1255,645 l 70,-20 l 50,70 l 30,230 l -160,-50 l -110,40 l 90,-100 l 80,-50 l -10,-50 l -65,-75 Z" />
+  <path id="area-6" class="area closed" fill="url(#fill-area-6)" stroke="none" d="M 1750,700 l 60,-20 l 45,60 l 25,205 l -140,-45 l -95,35 l 80,-90 l 70,-40 l -10,-45 l -55,-65 Z" />
+  <path id="line-7" class="line" fill="none" stroke="#0000c0" d="M 5,945 v 10 l 160,-70 l 160,-20 l -90,-390 l -20,-330" />
+  <path id="line-8" class="line" fill="none" stroke="#0000c0" d="M 165,875 l -20,-470" />
+  <path id="line-9" class="line" fill="none" stroke="#0000c0" d="M 85,225 l 230,-150 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,30 l 110,60" />
+  <path id="line-10" class="line" fill="none" stroke="#0000c0" d="M 2445,885 l 20,-480" />
+  <path id="line-11" class="line" fill="none" stroke="#0000c0" d="M 295,755 l 230,-110 l 400,-20" />
+  <path id="line-12" class="line" fill="none" stroke="url(#pattern-line-12)" d="M 1765,635 l 500,50" />
+  <path id="line-13" class="line" fill="none" stroke="#0000c0" d="M 1815,635 l 30,-300 l -40,-160" />
+  <path id="line-14" class="line" fill="none" stroke="#0000c0" d="M 515,635 l -20,-230 l 40,-200" />
+  <path id="line-15" class="line" fill="none" stroke="url(#pattern-line-15)" d="M 925,615 l -60,-130 l 30,-240 l 160,-50 l 90,-10 l 260,50 l 20,240 l -70,170 l 400,-10" />
+  <path id="line-16" class="line" fill="none" stroke="#0000c0" d="M 1125,195 l -160,90 l 10,160 l 60,120" />
+  <path id="line-17" class="line" fill="none" stroke="url(#pattern-line-17)" d="M 935,625 l 190,-80 l 160,-30 l 130,-10" />
+  <path id="line-18" class="line" fill="none" stroke="#0000c0" d="M 835,925 l -165,5 l -140,20 l -80,-20 l 15,-140 l 55,-105 l 60,-25 l 140,20 l 60,-20 l 45,60 l 25,205 l -140,-45 l -95,35 l 80,-90 l 70,-40 l -10,-45 l -60,-70" />
+  <path id="line-19" class="line" fill="none" stroke="#c00000" d="M 1385,925 l -190,10 l -160,20 l -90,-20 l 20,-160 l 60,-120 l 70,-30 l 160,20 l 70,-20 l 50,70 l 30,230 l -160,-50 l -110,40 l 90,-100 l 80,-50 l -10,-50 l -70,-80" />
+  <path id="line-20" class="line" fill="none" stroke="#00c000" d="M 1865,945 l -165,5 l -140,20 l -80,-20 l 15,-140 l 55,-105 l 60,-25 l 140,20 l 60,-20 l 45,60 l 25,205 l -140,-45 l -95,35 l 80,-90 l 70,-40 l -10,-45 l -60,-70" />
+</svg>

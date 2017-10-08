@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-area-1" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="10" width="40" height="10" />
+    </pattern>
+    <pattern id="fill-area-2" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="0" width="10" height="20" />
+      <rect fill="#000000" x="20" y="0" width="10" height="20" />
+    </pattern>
+    <pattern id="fill-area-4" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="0" width="10" height="20" />
+      <rect fill="#000000" x="10" y="10" width="30" height="10" />
+    </pattern>
+  </defs>
+  <rect id="block-1" class="block" fill="#c0c0c0" x="0" y="0" width="2560" height="960" />
+  <rect id="block-2" class="block" fill="#c0c000" x="1360" y="160" width="560" height="320" />
+  <path id="block-3" class="block" fill="#000000" d="M 1120,640 h 880 v -560 h -880 v 560
+M 1360,160 h 560 v 320 h -560 v -320" />
+  <path id="area-1" class="area closed" fill="url(#fill-area-1)" stroke="none" d="M 1995,715 h -950 l 110,-80 h 830 l 5,-555 Z" />
+  <path id="area-2" class="area closed" fill="url(#fill-area-2)" stroke="none" d="M 1155,635 v -550 h -110 v 630 l 110,-80 Z" />
+  <path id="area-3" class="area closed" fill="#000000" stroke="none" d="M 1155,635 l -25,20 h 865 l -5,-575 l -5,555 Z" />
+  <path id="area-4" class="area closed" fill="url(#fill-area-4)" stroke="none" d="M 1045,715 v -630 h 950 v 630 Z
+M 0,955 v -955 h 2560 v 960 Z" />
+  <path id="line-5" class="line closed" fill="none" stroke="#000000" d="M 1045,705 v -620 h 950 v 630 h -950 Z" />
+  <path id="line-6" class="line closed" fill="none" stroke="#000000" d="M 1155,625 v -545 h 830 v 555 h -830 Z" />
+  <path id="line-7" class="line" fill="none" stroke="#000000" d="M 1145,645 l -100,70" />
+  <path id="line-8" class="line" fill="none" stroke="#000000" d="M 2545,955 h -2540" />
+  <path id="line-9" class="line closed" fill="#000000" stroke="#000000" d="M 1915,355 l -40,-10 l -30,-80 l -40,-20 l -30,10 l -20,80 l -30,20 l -20,120 h 210 v -120 Z" />
+</svg>

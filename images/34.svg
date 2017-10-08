@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="pattern-pattern-area-1-1" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="0" width="10" height="20" />
+      <rect fill="#000000" x="20" y="0" width="10" height="20" />
+    </pattern>
+    <pattern id="pattern-pattern-area-1-2" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c0c000" x="0" y="0" width="10" height="20" />
+      <rect fill="#c0c000" x="20" y="0" width="10" height="20" />
+    </pattern>
+    <pattern id="pattern-area-1" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <rect id="pattern-area-1-1" class="pattern-area-1" fill="url(#pattern-pattern-area-1-1)" x="0" y="0" width="2560" height="960" />
+      <path id="pattern-area-1-2" class="pattern-area-1" fill="url(#pattern-pattern-area-1-2)" d="M 2550,560 h 10 v -570 h -570 l 560,560 v 10" />
+    </pattern>
+    <pattern id="fill-area-5" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c0c000" x="0" y="0" width="10" height="10" />
+      <rect fill="#c0c000" x="20" y="10" width="10" height="10" />
+    </pattern>
+    <pattern id="fill-area-6" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c0c000" x="0" y="0" width="10" height="10" />
+      <rect fill="#c0c000" x="20" y="10" width="10" height="10" />
+    </pattern>
+    <pattern id="fill-area-7" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c0c000" x="0" y="0" width="10" height="10" />
+      <rect fill="#c0c000" x="20" y="10" width="10" height="10" />
+    </pattern>
+    <pattern id="pattern-pattern-area-8-1" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c0c000" x="0" y="0" width="10" height="10" />
+      <rect fill="#c0c000" x="20" y="10" width="10" height="10" />
+    </pattern>
+    <pattern id="pattern-pattern-area-8-2" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="0" width="10" height="10" />
+      <rect fill="#000000" x="20" y="10" width="10" height="10" />
+    </pattern>
+    <pattern id="pattern-area-8" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <rect id="pattern-area-8-1" class="pattern-area-8" fill="url(#pattern-pattern-area-8-1)" x="0" y="0" width="2560" height="960" />
+      <path id="pattern-area-8-2" class="pattern-area-8" fill="url(#pattern-pattern-area-8-2)" d="M 2150,960 h 410 v -400 h -20 l -390,390 v 10" />
+    </pattern>
+  </defs>
+  <rect id="block-1" class="block" fill="#0000c0" x="0" y="0" width="2560" height="560" />
+  <rect id="block-2" class="block" fill="#c000c0" x="0" y="560" width="2560" height="400" />
+  <path id="area-1" class="area closed" fill="url(#pattern-area-1)" stroke="none" d="M 2550,565 v 150 l -475,-60 l -2070,-60 v 80 l 880,130 l 480,150 h 1195 v -955 h -10 Z" />
+  <path id="area-2" class="area closed" fill="#c0c000" stroke="none" d="M 485,105 v 460 h -70 v -460 h -50 v -50 h -50 v -50 h 270 v 50 h -50 v 50 Z" />
+  <path id="area-3" class="area closed" fill="#c0c000" stroke="none" d="M 1325,105 v 460 h -70 v -460 h -50 v -50 h -50 v -50 h 270 v 50 h -50 v 50 Z" />
+  <path id="area-4" class="area closed" fill="#c0c000" stroke="none" d="M 2165,105 v 460 h -70 v -460 h -50 v -50 h -50 v -50 h 270 v 50 h -50 v 50 Z" />
+  <path id="area-5" class="area closed" fill="url(#fill-area-5)" stroke="none" d="M 2560,0 l -2535,5 h 290 v 50 h 50 v 50 h 50 v 450 h -415 v -555 Z" />
+  <path id="area-6" class="area closed" fill="url(#fill-area-6)" stroke="none" d="M 485,105 v 450 h 770 v -450 h -50 v -50 h -50 v -50 h -570 v 50 h -50 v 50 Z" />
+  <path id="area-7" class="area closed" fill="url(#fill-area-7)" stroke="none" d="M 1325,105 v 450 h 770 v -450 h -50 v -50 h -50 v -50 h -570 v 50 h -50 v 50 Z" />
+  <path id="area-8" class="area closed" fill="url(#pattern-area-8)" stroke="none" d="M 2545,560 l 5,5 v 150 h -5 v 240 h 15 v -955 l -855,5 h 560 v 50 h -50 v 50 h -50 v 450 Z" />
+  <path id="line-9" class="line" fill="none" stroke="#000000" d="M 2545,715 l -470,-60 l -2070,-60 v 80 l 880,130 l 480,150 h 1190" />
+  <path id="line-10" class="line" fill="none" stroke="#000000" d="M 2545,565 h -2540" />
+  <path id="line-11" class="line" fill="none" stroke="#c0c000" d="M 25,5 h 830" />
+  <path id="line-12" class="line" fill="none" stroke="#c0c000" d="M 225,5 h 90 v 50 h 50 v 50 h 50 v 450" />
+  <path id="line-13" class="line" fill="none" stroke="#c0c000" d="M 485,115 v 440" />
+  <path id="line-14" class="line" fill="none" stroke="#c0c000" d="M 495,105 h 40 v -50 h 50 v -50 h 105" />
+  <path id="line-15" class="line" fill="none" stroke="#c0c000" d="M 865,5 h 830" />
+  <path id="line-16" class="line" fill="none" stroke="#c0c000" d="M 1065,5 h 90 v 50 h 50 v 50 h 50 v 450" />
+  <path id="line-17" class="line" fill="none" stroke="#c0c000" d="M 1325,115 v 440" />
+  <path id="line-18" class="line" fill="none" stroke="#c0c000" d="M 1335,105 h 40 v -50 h 50 v -50 h 105" />
+  <path id="line-19" class="line" fill="none" stroke="#c0c000" d="M 1705,5 h 830" />
+  <path id="line-20" class="line" fill="none" stroke="#c0c000" d="M 1905,5 h 90 v 50 h 50 v 50 h 50 v 450" />
+  <path id="line-21" class="line" fill="none" stroke="#c0c000" d="M 2165,115 v 440" />
+  <path id="line-22" class="line" fill="none" stroke="#c0c000" d="M 2175,105 h 40 v -50 h 50 v -50 h 105" />
+  <path id="line-23" class="line" fill="none" stroke="#c0c000" d="M 2545,555 h -2540" />
+</svg>

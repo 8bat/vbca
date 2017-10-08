@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-area-5" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="10" width="10" height="10" />
+      <rect fill="#000000" x="10" y="0" width="10" height="10" />
+      <rect fill="#000000" x="20" y="10" width="20" height="10" />
+    </pattern>
+    <pattern id="fill-area-6" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="10" width="10" height="10" />
+      <rect fill="#000000" x="10" y="0" width="10" height="10" />
+      <rect fill="#000000" x="20" y="10" width="20" height="10" />
+    </pattern>
+    <pattern id="fill-area-7" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="10" width="10" height="10" />
+      <rect fill="#000000" x="10" y="0" width="10" height="10" />
+      <rect fill="#000000" x="20" y="10" width="20" height="10" />
+    </pattern>
+    <pattern id="fill-area-13" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="10" width="10" height="10" />
+      <rect fill="#000000" x="10" y="0" width="10" height="10" />
+      <rect fill="#000000" x="20" y="10" width="20" height="10" />
+    </pattern>
+    <pattern id="fill-area-14" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="10" width="10" height="10" />
+      <rect fill="#ffff00" x="20" y="10" width="10" height="10" />
+    </pattern>
+    <pattern id="fill-area-15" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="10" height="20" />
+      <rect fill="#ffff00" x="20" y="0" width="10" height="20" />
+    </pattern>
+    <pattern id="pattern-line-42" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <path id="pattern-line-42-1" class="pattern-line-42" fill="#ffff00" d="M 1120,960 h 1440 v -970 h -960 l 240,240 l -720,720 v 10" />
+      <path id="pattern-line-42-2" class="pattern-line-42" fill="#000000" d="M 0,960 h 1120 l 720,-720 l -240,-240 v -10 h -1600 v 970" />
+    </pattern>
+  </defs>
+  <path id="block-1" class="block" fill="#ff00ff" d="M 1600,640 h 960 v -400 h -1040 v 80 h 80 v 320" />
+  <path id="block-2" class="block" fill="#00ffff" d="M 960,960 h 1600 v -320 h -960 v -320 h -80 v -80 h 1040 v -240 h -2560 v 480 h 320 v -240 h 240 v 240 h 400 v 480" />
+  <path id="block-3" class="block" fill="#00ff00" d="M 720,960 h 240 v -480 h -400 v 320 h 160 v 160" />
+  <path id="block-4" class="block" fill="#ffffff" d="M 400,960 h 320 v -160 h -160 v -560 h -240 v 640 h 80 v 80" />
+  <path id="block-5" class="block" fill="#00ff00" d="M 0,960 h 400 v -80 h -80 v -400 h -320 v 480" />
+  <path id="area-1" class="area closed" fill="#000000" stroke="none" d="M 325,555 l -5,-70 l -60,10 l 80,405 l 40,-15 l 45,-190 l -5,-25 l -95,-95 Z" />
+  <path id="area-2" class="area closed" fill="#000000" stroke="none" d="M 325,555 l -5,-75 l 125,75 l -40,80 Z" />
+  <path id="area-3" class="area closed" fill="#000000" stroke="none" d="M 445,555 l 110,-80 l -5,90 l -65,70 l -40,-80 Z" />
+  <path id="area-4" class="area closed" fill="#000000" stroke="none" d="M 365,275 h 150 l 160,-30 l -110,-40 l -20,-100 l -80,-20 l -20,40 l -20,-40 l -90,20 l -30,100 l -100,40 l 110,20 Z" />
+  <path id="area-5" class="area closed" fill="url(#fill-area-5)" stroke="none" d="M 260,495 l 80,405 l -65,25 l -60,-60 l 40,-40 h -50 v -320 Z" />
+  <path id="area-6" class="area closed" fill="url(#fill-area-6)" stroke="none" d="M 0,955 l 85,-400 l 30,-30 l 90,-20 v 325 l 5,40 l 5,-5 l 60,60 l -80,30 Z" />
+  <path id="area-7" class="area closed" fill="url(#fill-area-7)" stroke="none" d="M 425,875 l 40,80 h -270 Z" />
+  <path id="area-8" class="area closed" fill="#000000" stroke="none" d="M 540,785 l 85,-295 l -70,-10 v 75 v 30 l -90,85 v 25 l 20,145 Z" />
+  <path id="area-9" class="area closed" fill="#000000" stroke="none" d="M 725,820 l 90,-45 h 20 l 40,180 h -150 Z" />
+  <path id="area-10" class="area closed" fill="#000000" stroke="none" d="M 895,775 h -60 l 40,180 h 90 v -160 l -20,20 Z" />
+  <path id="area-11" class="area closed" fill="#000000" stroke="none" d="M 965,955 l 60,-55 l 20,55 Z" />
+  <path id="area-12" class="area closed" fill="#000000" stroke="none" d="M 965,955 l 60,-55 v -15 l 320,-320 v -30 l -40,-40 h -40 l -300,300 Z" />
+  <path id="area-13" class="area closed" fill="url(#fill-area-13)" stroke="none" d="M 540,785 l 85,-295 l 140,25 l 30,30 l 40,230 h -20 l -90,40 l -50,-40 l -95,45 l -35,-35 Z" />
+  <path id="area-14" class="area closed" fill="url(#fill-area-14)" stroke="none" d="M 2550,635 l -940,5 l -135,5 l -355,310 h 1435 l 5,-640 h -10 Z" />
+  <path id="area-15" class="area closed" fill="url(#fill-area-15)" stroke="none" d="M 2550,245 h -1025 v 70 h 80 v 250 h -170 v -565 h 1125 v 315 h -10 Z" />
+  <path id="line-16" class="line" fill="none" stroke="#000000" d="M 5,945 l 80,-390 l 30,-30 l 210,-40" />
+  <path id="line-17" class="line" fill="none" stroke="#000000" d="M 325,555 l -10,-310" />
+  <path id="line-18" class="line" fill="none" stroke="#000000" d="M 565,255 l -10,300" />
+  <path id="line-19" class="line" fill="none" stroke="#000000" d="M 545,485 l -100,70 l -120,-70" />
+  <path id="line-20" class="line" fill="none" stroke="#000000" d="M 335,565 l 70,70 l 40,-80 l 40,80 l 70,-70" />
+  <path id="line-21" class="line" fill="none" stroke="#000000" d="M 565,485 l 200,30 l 30,30 l 80,410 h -870" />
+  <path id="line-22" class="line" fill="none" stroke="#000000" d="M 195,955 l 230,-80 l 40,80" />
+  <path id="line-23" class="line" fill="none" stroke="#000000" d="M 445,885 l 100,-100 l 40,40" />
+  <path id="line-24" class="line" fill="none" stroke="#000000" d="M 555,835 l 120,-60 l 50,40 v 140" />
+  <path id="line-25" class="line" fill="none" stroke="#000000" d="M 715,915 h -50" />
+  <path id="line-26" class="line" fill="none" stroke="#000000" d="M 715,855 h -50" />
+  <path id="line-27" class="line" fill="none" stroke="#000000" d="M 475,635 l -10,60 h -40 l -10,-80" />
+  <path id="line-28" class="line" fill="none" stroke="#000000" d="M 425,705 l -40,180" />
+  <path id="line-29" class="line" fill="none" stroke="#000000" d="M 485,835 l -20,-140" />
+  <path id="line-30" class="line" fill="none" stroke="#000000" d="M 265,505 l 80,400" />
+  <path id="line-31" class="line" fill="none" stroke="#000000" d="M 205,515 v 310 h 50 l -40,40 l 50,50" />
+  <path id="line-32" class="line closed" fill="none" stroke="#000000" d="M 365,275 h 150 l 160,-30 l -110,-40 l -20,-100 l -80,-20 l -20,40 l -20,-40 l -90,20 l -30,100 l -100,40 l 160,30 Z" />
+  <path id="line-33" class="line" fill="none" stroke="#000000" d="M 355,355 h 50" />
+  <path id="line-34" class="line" fill="none" stroke="#000000" d="M 475,355 h 50" />
+  <path id="line-35" class="line" fill="none" stroke="#000000" d="M 495,365 l 0,0" />
+  <path id="line-36" class="line" fill="none" stroke="#000000" d="M 375,365 l 0,0" />
+  <path id="line-37" class="line" fill="none" stroke="#000000" d="M 405,475 h 70" />
+  <path id="line-38" class="line" fill="none" stroke="#000000" d="M 325,565 v 10 l 90,90" />
+  <path id="line-39" class="line" fill="none" stroke="#000000" d="M 485,655 l 70,-70 v -20" />
+  <path id="line-40" class="line" fill="none" stroke="#000000" d="M 965,15 v 940 l 470,-390 v -560" />
+  <path id="line-41" class="line" fill="none" stroke="#ffff00" d="M 1445,565 h 150" />
+  <path id="line-42" class="line" fill="none" stroke="url(#pattern-line-42)" d="M 975,955 h 1580 v -300" />
+  <path id="line-43" class="line" fill="none" stroke="#000000" d="M 545,775 l 80,-280" />
+  <path id="line-44" class="line" fill="none" stroke="#000000" d="M 675,515 v 100" />
+  <path id="line-45" class="line" fill="none" stroke="#ffff00" d="M 2545,245 h -1020 v 70 h 1030" />
+  <path id="line-46" class="line" fill="none" stroke="#ffff00" d="M 2545,635 h -940 v -320" />
+  <path id="line-47" class="line closed" fill="none" stroke="#ffff00" d="M 1695,575 v -230 h 200 v 240 h -200 Z" />
+  <path id="line-48" class="line closed" fill="none" stroke="#ffff00" d="M 1995,575 v -230 h 200 v 240 h -200 Z" />
+  <path id="line-49" class="line closed" fill="none" stroke="#ffff00" d="M 2295,575 v -230 h 200 v 240 h -200 Z" />
+  <path id="line-50" class="line" fill="none" stroke="#000000" d="M 735,815 l 80,-40 h 80 l 50,40 l 320,-320 h 40 l 40,40 v 30 l -320,320 l 20,70 h -320" />
+  <path id="line-51" class="line" fill="none" stroke="#000000" d="M 675,625 v 150" />
+  <path id="line-52" class="line" fill="none" stroke="#ffff00" d="M 1135,945 l 340,-300 h 140" />
+</svg>

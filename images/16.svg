@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-area-1" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="10" width="10" height="10" />
+      <rect fill="#000000" x="10" y="0" width="10" height="10" />
+      <rect fill="#000000" x="20" y="10" width="20" height="10" />
+    </pattern>
+  </defs>
+  <rect id="block-1" class="block" fill="#c0c0c0" x="0" y="0" width="2560" height="960" />
+  <rect id="block-2" class="block" fill="#ffff00" x="1520" y="80" width="240" height="560" />
+  <path id="block-3" class="block" fill="#ffff00" d="M 640,880 h 80 v -160 h 480 v 160 h 80 v -160 h 80 v -80 h -800 v 80 h 80 v 160" />
+  <path id="area-1" class="area closed" fill="url(#fill-area-1)" stroke="none" d="M 210,140 l 105,-65 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 235,25 l 25,-485 l 5,500 l 90,50 v -955 h -2560 v 950 l 5,5 l 135,-60 l 5,-490 l 20,475 l 160,-15 l -90,-390 Z" />
+  <path id="line-2" class="line" fill="none" stroke="#000000" d="M 5,945 v 10 l 160,-70 l 160,-20 l -90,-390 l -20,-330" />
+  <path id="line-3" class="line" fill="none" stroke="#000000" d="M 165,875 l -20,-470" />
+  <path id="line-4" class="line" fill="none" stroke="#000000" d="M 85,225 l 230,-150 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,30 l 110,60" />
+  <path id="line-5" class="line" fill="none" stroke="#000000" d="M 2445,885 l 20,-480" />
+  <path id="line-6" class="line" fill="none" stroke="#000000" d="M 295,675 l 230,-110 l 400,-20" />
+  <path id="line-7" class="line" fill="none" stroke="#000000" d="M 1765,555 l 500,50" />
+  <path id="line-8" class="line" fill="none" stroke="#000000" d="M 1815,555 l 30,-300 l -40,-160" />
+  <path id="line-9" class="line" fill="none" stroke="#000000" d="M 515,555 l -20,-230 l 40,-200" />
+  <path id="line-10" class="line" fill="none" stroke="#000000" d="M 935,545 h 580" />
+  <path id="line-11" class="line closed" fill="none" stroke="#ff0000" d="M 1525,625 v -540 h 230 v 550 h -230 Z" />
+  <path id="line-12" class="line closed" fill="none" stroke="#ff0000" d="M 1565,155 h 150 v 320 h -160 v -320 Z" />
+  <path id="line-13" class="line closed" fill="none" stroke="#ff0000" d="M 1355,655 v 60 h -790 v -70 h 790 Z" />
+  <path id="line-14" class="line" fill="none" stroke="#ff0000" d="M 1275,725 v 150 h -70 v -160" />
+  <path id="line-15" class="line" fill="none" stroke="#ff0000" d="M 715,725 v 150 h -70 v -160" />
+  <path id="line-16" class="line closed" fill="#ff0000" stroke="#ff0000" d="M 1575,335 v -50 h 50 v 60 h -50 Z" />
+</svg>
