@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg id="room-1" viewBox="0 0 256 96" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <pattern id="brick-fill" x="0" y="0" width="100%" height="100%">
+      <rect fill="#000000" stroke="none" x="0" y="0" width="100%" height="100%" />
+      <rect x="0.00" y="-0.50" fill="hsl(33.01,23.80%,34.09%)" width="3.5" height="1.5" />
+      <rect x="4.00" y="-0.50" fill="hsl(37.61,23.01%,40.12%)" width="3.5" height="1.5" />
+      <rect x="8.00" y="-0.50" fill="hsl(32.11,23.11%,41.40%)" width="3.5" height="1.5" />
+      <rect x="12.00" y="-0.50" fill="hsl(31.53,23.95%,34.04%)" width="3.5" height="1.5" />
+      <rect x="16.00" y="-0.50" fill="hsl(28.00,30.81%,35.33%)" width="3.5" height="1.5" />
+      <rect x="20.00" y="-0.50" fill="hsl(28.00,30.04%,41.46%)" width="3.5" height="1.5" />
+      <rect x="24.00" y="-0.50" fill="hsl(30.36,23.19%,34.46%)" width="3.5" height="1.5" />
+      <rect x="28.00" y="-0.50" fill="hsl(35.37,23.92%,34.10%)" width="3.5" height="1.5" />
+      <rect x="32.00" y="-0.50" fill="hsl(29.79,23.67%,34.04%)" width="3.5" height="1.5" />
+      <rect x="36.00" y="-0.50" fill="hsl(28.15,24.97%,35.66%)" width="3.5" height="1.5" />
+      <rect x="40.00" y="-0.50" fill="hsl(30.03,23.10%,37.48%)" width="3.5" height="1.5" />
+      <rect x="44.00" y="-0.50" fill="hsl(28.59,23.46%,34.08%)" width="3.5" height="1.5" />
+      <rect x="48.00" y="-0.50" fill="hsl(28.05,30.13%,35.00%)" width="3.5" height="1.5" />
+      <rect x="52.00" y="-0.50" fill="hsl(29.02,30.34%,35.43%)" width="3.5" height="1.5" />
+      <rect x="56.00" y="-0.50" fill="hsl(28.00,31.81%,34.10%)" width="3.5" height="1.5" />
+      <rect x="60.00" y="-0.50" fill="hsl(28.19,31.14%,34.55%)" width="3.5" height="1.5" />
+      <rect x="64.00" y="-0.50" fill="hsl(33.30,23.68%,34.57%)" width="3.5" height="1.5" />
+      <rect x="-2.00" y="1.50" fill="hsl(28.40,24.59%,39.20%)" width="3.5" height="1.5" />
+      <rect x="2.00" y="1.50" fill="hsl(34.00,30.02%,35.10%)" width="3.5" height="1.5" />
+      <rect x="6.00" y="1.50" fill="hsl(30.51,28.11%,43.27%)" width="3.5" height="1.5" />
+      <rect x="10.00" y="1.50" fill="hsl(28.74,30.35%,39.30%)" width="3.5" height="1.5" />
+      <rect x="14.00" y="1.50" fill="hsl(33.74,24.19%,36.44%)" width="3.5" height="1.5" />
+      <rect x="18.00" y="1.50" fill="hsl(31.16,26.43%,40.26%)" width="3.5" height="1.5" />
+      <rect x="22.00" y="1.50" fill="hsl(30.39,24.10%,34.02%)" width="3.5" height="1.5" />
+      <rect x="26.00" y="1.50" fill="hsl(33.77,27.67%,34.12%)" width="3.5" height="1.5" />
+      <rect x="30.00" y="1.50" fill="hsl(28.02,23.34%,38.04%)" width="3.5" height="1.5" />
+      <rect x="34.00" y="1.50" fill="hsl(32.95,24.84%,40.74%)" width="3.5" height="1.5" />
+      <rect x="38.00" y="1.50" fill="hsl(29.11,23.36%,38.53%)" width="3.5" height="1.5" />
+      <rect x="42.00" y="1.50" fill="hsl(30.77,23.25%,34.00%)" width="3.5" height="1.5" />
+      <rect x="46.00" y="1.50" fill="hsl(33.33,29.19%,35.61%)" width="3.5" height="1.5" />
+      <rect x="50.00" y="1.50" fill="hsl(28.13,23.18%,40.44%)" width="3.5" height="1.5" />
+      <rect x="54.00" y="1.50" fill="hsl(29.00,25.62%,34.05%)" width="3.5" height="1.5" />
+      <rect x="58.00" y="1.50" fill="hsl(33.24,32.58%,43.74%)" width="3.5" height="1.5" />
+      <rect x="62.00" y="1.50" fill="hsl(32.15,23.20%,42.32%)" width="3.5" height="1.5" />
+      <rect x="0.00" y="3.50" fill="hsl(30.15,25.79%,38.39%)" width="3.5" height="1.5" />
+      <rect x="4.00" y="3.50" fill="hsl(35.96,30.34%,35.74%)" width="3.5" height="1.5" />
+      <rect x="8.00" y="3.50" fill="hsl(31.81,23.00%,40.69%)" width="3.5" height="1.5" />
+      <rect x="12.00" y="3.50" fill="hsl(34.30,30.37%,36.23%)" width="3.5" height="1.5" />
+      <rect x="16.00" y="3.50" fill="hsl(35.47,26.39%,37.59%)" width="3.5" height="1.5" />
+      <rect x="20.00" y="3.50" fill="hsl(28.15,25.09%,37.89%)" width="3.5" height="1.5" />
+      <rect x="24.00" y="3.50" fill="hsl(34.43,23.58%,39.69%)" width="3.5" height="1.5" />
+      <rect x="28.00" y="3.50" fill="hsl(37.64,23.00%,35.85%)" width="3.5" height="1.5" />
+      <rect x="32.00" y="3.50" fill="hsl(32.36,27.93%,41.25%)" width="3.5" height="1.5" />
+      <rect x="36.00" y="3.50" fill="hsl(28.39,23.02%,35.51%)" width="3.5" height="1.5" />
+      <rect x="40.00" y="3.50" fill="hsl(29.06,23.67%,37.41%)" width="3.5" height="1.5" />
+      <rect x="44.00" y="3.50" fill="hsl(35.07,23.07%,39.00%)" width="3.5" height="1.5" />
+      <rect x="48.00" y="3.50" fill="hsl(32.87,23.06%,34.13%)" width="3.5" height="1.5" />
+      <rect x="52.00" y="3.50" fill="hsl(28.15,29.71%,36.11%)" width="3.5" height="1.5" />
+      <rect x="56.00" y="3.50" fill="hsl(37.64,25.49%,35.10%)" width="3.5" height="1.5" />
+      <rect x="60.00" y="3.50" fill="hsl(34.02,26.41%,40.99%)" width="3.5" height="1.5" />
+      <rect x="64.00" y="3.50" fill="hsl(30.54,25.47%,34.30%)" width="3.5" height="1.5" />
+      <rect x="-2.00" y="5.50" fill="hsl(28.15,31.96%,36.37%)" width="3.5" height="1.5" />
+      <rect x="2.00" y="5.50" fill="hsl(28.08,23.01%,34.02%)" width="3.5" height="1.5" />
+      <rect x="6.00" y="5.50" fill="hsl(28.10,23.25%,35.23%)" width="3.5" height="1.5" />
+      <rect x="10.00" y="5.50" fill="hsl(31.38,31.31%,42.63%)" width="3.5" height="1.5" />
+      <rect x="14.00" y="5.50" fill="hsl(36.88,23.38%,38.19%)" width="3.5" height="1.5" />
+      <rect x="18.00" y="5.50" fill="hsl(30.20,24.22%,37.26%)" width="3.5" height="1.5" />
+      <rect x="22.00" y="5.50" fill="hsl(32.02,25.66%,42.29%)" width="3.5" height="1.5" />
+      <rect x="26.00" y="5.50" fill="hsl(28.71,31.52%,34.57%)" width="3.5" height="1.5" />
+      <rect x="30.00" y="5.50" fill="hsl(28.35,30.80%,36.81%)" width="3.5" height="1.5" />
+      <rect x="34.00" y="5.50" fill="hsl(33.60,23.01%,34.00%)" width="3.5" height="1.5" />
+      <rect x="38.00" y="5.50" fill="hsl(31.59,24.50%,34.14%)" width="3.5" height="1.5" />
+      <rect x="42.00" y="5.50" fill="hsl(30.66,25.14%,34.31%)" width="3.5" height="1.5" />
+      <rect x="46.00" y="5.50" fill="hsl(30.33,23.82%,35.66%)" width="3.5" height="1.5" />
+      <rect x="50.00" y="5.50" fill="hsl(28.08,24.42%,34.09%)" width="3.5" height="1.5" />
+      <rect x="54.00" y="5.50" fill="hsl(31.28,23.09%,42.32%)" width="3.5" height="1.5" />
+      <rect x="58.00" y="5.50" fill="hsl(31.42,29.88%,34.16%)" width="3.5" height="1.5" />
+      <rect x="62.00" y="5.50" fill="hsl(33.72,26.82%,34.35%)" width="3.5" height="1.5" />
+      <rect x="0.00" y="7.50" fill="hsl(28.77,24.55%,35.63%)" width="3.5" height="1.5" />
+      <rect x="4.00" y="7.50" fill="hsl(30.20,23.10%,42.46%)" width="3.5" height="1.5" />
+      <rect x="8.00" y="7.50" fill="hsl(33.49,27.60%,35.13%)" width="3.5" height="1.5" />
+      <rect x="12.00" y="7.50" fill="hsl(29.14,28.43%,38.62%)" width="3.5" height="1.5" />
+      <rect x="16.00" y="7.50" fill="hsl(28.24,27.01%,34.28%)" width="3.5" height="1.5" />
+      <rect x="20.00" y="7.50" fill="hsl(29.56,23.44%,35.42%)" width="3.5" height="1.5" />
+      <rect x="24.00" y="7.50" fill="hsl(28.05,25.61%,34.03%)" width="3.5" height="1.5" />
+      <rect x="28.00" y="7.50" fill="hsl(29.24,24.90%,34.08%)" width="3.5" height="1.5" />
+      <rect x="32.00" y="7.50" fill="hsl(28.98,24.29%,34.10%)" width="3.5" height="1.5" />
+      <rect x="36.00" y="7.50" fill="hsl(30.09,32.95%,34.81%)" width="3.5" height="1.5" />
+      <rect x="40.00" y="7.50" fill="hsl(34.97,23.46%,34.19%)" width="3.5" height="1.5" />
+      <rect x="44.00" y="7.50" fill="hsl(28.26,26.51%,34.02%)" width="3.5" height="1.5" />
+      <rect x="48.00" y="7.50" fill="hsl(30.63,32.31%,35.10%)" width="3.5" height="1.5" />
+      <rect x="52.00" y="7.50" fill="hsl(34.10,23.04%,36.28%)" width="3.5" height="1.5" />
+      <rect x="56.00" y="7.50" fill="hsl(28.02,29.78%,34.12%)" width="3.5" height="1.5" />
+      <rect x="60.00" y="7.50" fill="hsl(31.37,23.02%,35.93%)" width="3.5" height="1.5" />
+      <rect x="64.00" y="7.50" fill="hsl(28.13,23.00%,35.07%)" width="3.5" height="1.5" />
+      <rect x="-2.00" y="9.50" fill="hsl(35.69,23.37%,40.00%)" width="3.5" height="1.5" />
+      <rect x="2.00" y="9.50" fill="hsl(28.73,31.18%,34.68%)" width="3.5" height="1.5" />
+      <rect x="6.00" y="9.50" fill="hsl(29.36,23.01%,37.64%)" width="3.5" height="1.5" />
+      <rect x="10.00" y="9.50" fill="hsl(35.80,24.76%,34.19%)" width="3.5" height="1.5" />
+      <rect x="14.00" y="9.50" fill="hsl(35.07,25.74%,43.30%)" width="3.5" height="1.5" />
+      <rect x="18.00" y="9.50" fill="hsl(37.85,23.16%,43.10%)" width="3.5" height="1.5" />
+      <rect x="22.00" y="9.50" fill="hsl(36.05,26.58%,40.80%)" width="3.5" height="1.5" />
+      <rect x="26.00" y="9.50" fill="hsl(37.09,25.40%,37.42%)" width="3.5" height="1.5" />
+      <rect x="30.00" y="9.50" fill="hsl(29.43,23.17%,39.72%)" width="3.5" height="1.5" />
+      <rect x="34.00" y="9.50" fill="hsl(36.50,23.09%,43.84%)" width="3.5" height="1.5" />
+      <rect x="38.00" y="9.50" fill="hsl(28.33,23.00%,37.21%)" width="3.5" height="1.5" />
+      <rect x="42.00" y="9.50" fill="hsl(29.36,23.54%,41.59%)" width="3.5" height="1.5" />
+      <rect x="46.00" y="9.50" fill="hsl(29.23,23.63%,34.00%)" width="3.5" height="1.5" />
+      <rect x="50.00" y="9.50" fill="hsl(31.23,25.63%,36.70%)" width="3.5" height="1.5" />
+      <rect x="54.00" y="9.50" fill="hsl(37.78,24.37%,34.00%)" width="3.5" height="1.5" />
+      <rect x="58.00" y="9.50" fill="hsl(28.19,30.79%,43.50%)" width="3.5" height="1.5" />
+      <rect x="62.00" y="9.50" fill="hsl(28.02,23.00%,37.99%)" width="3.5" height="1.5" />
+      <rect x="0.00" y="11.50" fill="hsl(35.67,32.21%,34.00%)" width="3.5" height="1.5" />
+      <rect x="4.00" y="11.50" fill="hsl(33.95,23.65%,36.30%)" width="3.5" height="1.5" />
+      <rect x="8.00" y="11.50" fill="hsl(34.95,32.97%,38.14%)" width="3.5" height="1.5" />
+      <rect x="12.00" y="11.50" fill="hsl(28.00,28.67%,41.27%)" width="3.5" height="1.5" />
+      <rect x="16.00" y="11.50" fill="hsl(33.92,32.96%,43.10%)" width="3.5" height="1.5" />
+      <rect x="20.00" y="11.50" fill="hsl(36.88,27.93%,34.07%)" width="3.5" height="1.5" />
+      <rect x="24.00" y="11.50" fill="hsl(33.60,24.21%,36.39%)" width="3.5" height="1.5" />
+      <rect x="28.00" y="11.50" fill="hsl(31.78,23.05%,35.39%)" width="3.5" height="1.5" />
+      <rect x="32.00" y="11.50" fill="hsl(33.07,23.08%,34.78%)" width="3.5" height="1.5" />
+      <rect x="36.00" y="11.50" fill="hsl(30.80,28.92%,34.85%)" width="3.5" height="1.5" />
+      <rect x="40.00" y="11.50" fill="hsl(28.00,26.58%,40.53%)" width="3.5" height="1.5" />
+      <rect x="44.00" y="11.50" fill="hsl(34.02,23.47%,34.66%)" width="3.5" height="1.5" />
+      <rect x="48.00" y="11.50" fill="hsl(28.03,27.65%,38.61%)" width="3.5" height="1.5" />
+      <rect x="52.00" y="11.50" fill="hsl(31.51,23.27%,36.74%)" width="3.5" height="1.5" />
+      <rect x="56.00" y="11.50" fill="hsl(33.27,23.02%,34.51%)" width="3.5" height="1.5" />
+      <rect x="60.00" y="11.50" fill="hsl(36.49,30.65%,38.53%)" width="3.5" height="1.5" />
+      <rect x="64.00" y="11.50" fill="hsl(28.85,24.02%,36.23%)" width="3.5" height="1.5" />
+      <rect x="-2.00" y="13.50" fill="hsl(37.29,29.42%,41.79%)" width="3.5" height="1.5" />
+      <rect x="2.00" y="13.50" fill="hsl(30.60,23.52%,34.02%)" width="3.5" height="1.5" />
+      <rect x="6.00" y="13.50" fill="hsl(29.24,24.17%,41.12%)" width="3.5" height="1.5" />
+      <rect x="10.00" y="13.50" fill="hsl(35.41,23.86%,34.07%)" width="3.5" height="1.5" />
+      <rect x="14.00" y="13.50" fill="hsl(30.87,29.70%,37.66%)" width="3.5" height="1.5" />
+      <rect x="18.00" y="13.50" fill="hsl(29.19,23.91%,34.97%)" width="3.5" height="1.5" />
+      <rect x="22.00" y="13.50" fill="hsl(28.30,23.60%,35.82%)" width="3.5" height="1.5" />
+      <rect x="26.00" y="13.50" fill="hsl(34.51,23.42%,38.96%)" width="3.5" height="1.5" />
+      <rect x="30.00" y="13.50" fill="hsl(32.08,23.11%,34.14%)" width="3.5" height="1.5" />
+      <rect x="34.00" y="13.50" fill="hsl(29.87,25.98%,42.53%)" width="3.5" height="1.5" />
+      <rect x="38.00" y="13.50" fill="hsl(29.13,26.37%,35.01%)" width="3.5" height="1.5" />
+      <rect x="42.00" y="13.50" fill="hsl(28.14,23.02%,35.59%)" width="3.5" height="1.5" />
+      <rect x="46.00" y="13.50" fill="hsl(28.45,27.99%,42.41%)" width="3.5" height="1.5" />
+      <rect x="50.00" y="13.50" fill="hsl(28.02,31.94%,37.78%)" width="3.5" height="1.5" />
+      <rect x="54.00" y="13.50" fill="hsl(28.25,24.33%,35.79%)" width="3.5" height="1.5" />
+      <rect x="58.00" y="13.50" fill="hsl(32.00,24.37%,34.22%)" width="3.5" height="1.5" />
+      <rect x="62.00" y="13.50" fill="hsl(33.64,28.54%,34.10%)" width="3.5" height="1.5" />
+      <rect x="0.00" y="15.50" fill="hsl(28.20,24.67%,29.39%)" width="3.5" height="1.5" />
+      <rect x="4.00" y="15.50" fill="hsl(28.69,32.20%,30.62%)" width="3.5" height="1.5" />
+      <rect x="8.00" y="15.50" fill="hsl(37.20,24.06%,30.53%)" width="3.5" height="1.5" />
+      <rect x="12.00" y="15.50" fill="hsl(28.47,26.84%,35.12%)" width="3.5" height="1.5" />
+      <rect x="16.00" y="15.50" fill="hsl(29.89,27.00%,29.08%)" width="3.5" height="1.5" />
+      <rect x="20.00" y="15.50" fill="hsl(28.17,26.05%,29.42%)" width="3.5" height="1.5" />
+      <rect x="24.00" y="15.50" fill="hsl(28.46,25.98%,36.23%)" width="3.5" height="1.5" />
+      <rect x="28.00" y="15.50" fill="hsl(31.05,27.12%,37.15%)" width="3.5" height="1.5" />
+      <rect x="32.00" y="15.50" fill="hsl(31.74,23.01%,30.23%)" width="3.5" height="1.5" />
+      <rect x="36.00" y="15.50" fill="hsl(30.07,24.12%,34.01%)" width="3.5" height="1.5" />
+      <rect x="40.00" y="15.50" fill="hsl(36.45,25.31%,29.03%)" width="3.5" height="1.5" />
+      <rect x="44.00" y="15.50" fill="hsl(32.01,24.27%,38.08%)" width="3.5" height="1.5" />
+      <rect x="48.00" y="15.50" fill="hsl(33.01,31.45%,35.78%)" width="3.5" height="1.5" />
+      <rect x="52.00" y="15.50" fill="hsl(35.69,29.91%,33.59%)" width="3.5" height="1.5" />
+      <rect x="56.00" y="15.50" fill="hsl(36.56,23.65%,23.01%)" width="3.5" height="1.5" />
+      <rect x="60.00" y="15.50" fill="hsl(32.67,25.33%,25.06%)" width="3.5" height="1.5" />
+      <rect x="64.00" y="15.50" fill="hsl(28.12,25.95%,14.39%)" width="3.5" height="1.5" />
+      <rect x="-2.00" y="17.50" fill="hsl(35.90,23.12%,26.15%)" width="3.5" height="1.5" />
+      <rect x="2.00" y="17.50" fill="hsl(29.67,27.11%,32.26%)" width="3.5" height="1.5" />
+      <rect x="6.00" y="17.50" fill="hsl(31.83,26.24%,24.16%)" width="3.5" height="1.5" />
+      <rect x="10.00" y="17.50" fill="hsl(36.19,25.36%,26.99%)" width="3.5" height="1.5" />
+      <rect x="14.00" y="17.50" fill="hsl(28.51,25.13%,30.34%)" width="3.5" height="1.5" />
+      <rect x="18.00" y="17.50" fill="hsl(30.24,28.19%,26.90%)" width="3.5" height="1.5" />
+      <rect x="22.00" y="17.50" fill="hsl(34.05,24.51%,27.32%)" width="3.5" height="1.5" />
+      <rect x="26.00" y="17.50" fill="hsl(28.81,32.02%,33.87%)" width="3.5" height="1.5" />
+      <rect x="30.00" y="17.50" fill="hsl(32.45,25.71%,24.02%)" width="3.5" height="1.5" />
+      <rect x="34.00" y="17.50" fill="hsl(29.11,26.10%,26.41%)" width="3.5" height="1.5" />
+      <rect x="38.00" y="17.50" fill="hsl(33.80,24.12%,27.90%)" width="3.5" height="1.5" />
+      <rect x="42.00" y="17.50" fill="hsl(29.55,26.79%,27.33%)" width="3.5" height="1.5" />
+      <rect x="46.00" y="17.50" fill="hsl(28.64,30.29%,24.53%)" width="3.5" height="1.5" />
+      <rect x="50.00" y="17.50" fill="hsl(28.03,32.57%,20.93%)" width="3.5" height="1.5" />
+      <rect x="54.00" y="17.50" fill="hsl(28.66,23.23%,21.55%)" width="3.5" height="1.5" />
+      <rect x="58.00" y="17.50" fill="hsl(30.16,24.42%,19.49%)" width="3.5" height="1.5" />
+      <rect x="62.00" y="17.50" fill="hsl(30.33,23.86%,11.56%)" width="3.5" height="1.5" />
+      <rect x="0.00" y="19.50" fill="hsl(28.21,23.79%,22.84%)" width="3.5" height="1.5" />
+      <rect x="4.00" y="19.50" fill="hsl(36.12,25.26%,27.13%)" width="3.5" height="1.5" />
+      <rect x="8.00" y="19.50" fill="hsl(30.91,23.58%,24.59%)" width="3.5" height="1.5" />
+      <rect x="12.00" y="19.50" fill="hsl(29.49,28.64%,20.03%)" width="3.5" height="1.5" />
+      <rect x="16.00" y="19.50" fill="hsl(28.05,23.00%,22.01%)" width="3.5" height="1.5" />
+      <rect x="20.00" y="19.50" fill="hsl(28.39,26.42%,19.01%)" width="3.5" height="1.5" />
+      <rect x="24.00" y="19.50" fill="hsl(34.11,23.24%,21.32%)" width="3.5" height="1.5" />
+      <rect x="28.00" y="19.50" fill="hsl(36.28,31.42%,26.94%)" width="3.5" height="1.5" />
+      <rect x="32.00" y="19.50" fill="hsl(31.73,27.41%,19.80%)" width="3.5" height="1.5" />
+      <rect x="36.00" y="19.50" fill="hsl(28.04,26.65%,22.29%)" width="3.5" height="1.5" />
+      <rect x="40.00" y="19.50" fill="hsl(36.23,24.32%,19.00%)" width="3.5" height="1.5" />
+      <rect x="44.00" y="19.50" fill="hsl(33.25,23.47%,20.90%)" width="3.5" height="1.5" />
+      <rect x="48.00" y="19.50" fill="hsl(32.99,23.64%,21.38%)" width="3.5" height="1.5" />
+      <rect x="52.00" y="19.50" fill="hsl(29.77,29.44%,19.56%)" width="3.5" height="1.5" />
+      <rect x="56.00" y="19.50" fill="hsl(34.94,30.33%,17.30%)" width="3.5" height="1.5" />
+      <rect x="60.00" y="19.50" fill="hsl(29.25,31.93%,8.16%)" width="3.5" height="1.5" />
+      <rect x="64.00" y="19.50" fill="hsl(37.44,28.72%,5.51%)" width="3.5" height="1.5" />
+      <rect x="-2.00" y="21.50" fill="hsl(37.72,27.59%,14.24%)" width="3.5" height="1.5" />
+      <rect x="2.00" y="21.50" fill="hsl(29.50,25.31%,14.01%)" width="3.5" height="1.5" />
+      <rect x="6.00" y="21.50" fill="hsl(28.16,30.93%,22.64%)" width="3.5" height="1.5" />
+      <rect x="10.00" y="21.50" fill="hsl(29.00,30.22%,18.94%)" width="3.5" height="1.5" />
+      <rect x="14.00" y="21.50" fill="hsl(31.49,23.00%,14.02%)" width="3.5" height="1.5" />
+      <rect x="18.00" y="21.50" fill="hsl(36.15,29.75%,18.78%)" width="3.5" height="1.5" />
+      <rect x="22.00" y="21.50" fill="hsl(28.21,26.70%,21.58%)" width="3.5" height="1.5" />
+      <rect x="26.00" y="21.50" fill="hsl(28.03,25.69%,14.42%)" width="3.5" height="1.5" />
+      <rect x="30.00" y="21.50" fill="hsl(29.83,28.68%,21.54%)" width="3.5" height="1.5" />
+      <rect x="34.00" y="21.50" fill="hsl(29.98,30.43%,22.63%)" width="3.5" height="1.5" />
+      <rect x="38.00" y="21.50" fill="hsl(35.24,23.02%,20.94%)" width="3.5" height="1.5" />
+      <rect x="42.00" y="21.50" fill="hsl(37.60,29.83%,14.75%)" width="3.5" height="1.5" />
+      <rect x="46.00" y="21.50" fill="hsl(28.05,26.03%,14.42%)" width="3.5" height="1.5" />
+      <rect x="50.00" y="21.50" fill="hsl(28.82,30.82%,14.47%)" width="3.5" height="1.5" />
+      <rect x="54.00" y="21.50" fill="hsl(30.08,27.18%,12.20%)" width="3.5" height="1.5" />
+      <rect x="58.00" y="21.50" fill="hsl(28.88,25.81%,2.22%)" width="3.5" height="1.5" />
+      <rect x="62.00" y="21.50" fill="hsl(35.95,24.60%,2.19%)" width="3.5" height="1.5" />
+      <rect x="0.00" y="23.50" fill="hsl(28.29,23.01%,9.30%)" width="3.5" height="1.5" />
+      <rect x="4.00" y="23.50" fill="hsl(37.14,24.64%,9.69%)" width="3.5" height="1.5" />
+      <rect x="8.00" y="23.50" fill="hsl(28.01,25.27%,12.25%)" width="3.5" height="1.5" />
+      <rect x="12.00" y="23.50" fill="hsl(31.46,26.66%,16.54%)" width="3.5" height="1.5" />
+      <rect x="16.00" y="23.50" fill="hsl(37.53,23.20%,9.10%)" width="3.5" height="1.5" />
+      <rect x="20.00" y="23.50" fill="hsl(30.61,25.87%,9.03%)" width="3.5" height="1.5" />
+      <rect x="24.00" y="23.50" fill="hsl(29.51,31.09%,17.52%)" width="3.5" height="1.5" />
+      <rect x="28.00" y="23.50" fill="hsl(35.20,23.00%,14.66%)" width="3.5" height="1.5" />
+      <rect x="32.00" y="23.50" fill="hsl(28.03,28.60%,10.12%)" width="3.5" height="1.5" />
+      <rect x="36.00" y="23.50" fill="hsl(28.19,23.02%,16.71%)" width="3.5" height="1.5" />
+      <rect x="40.00" y="23.50" fill="hsl(35.26,23.68%,9.93%)" width="3.5" height="1.5" />
+      <rect x="44.00" y="23.50" fill="hsl(30.32,23.31%,18.37%)" width="3.5" height="1.5" />
+      <rect x="48.00" y="23.50" fill="hsl(37.36,25.71%,13.42%)" width="3.5" height="1.5" />
+      <rect x="52.00" y="23.50" fill="hsl(37.79,24.42%,10.46%)" width="3.5" height="1.5" />
+      <rect x="56.00" y="23.50" fill="hsl(32.00,23.03%,5.03%)" width="3.5" height="1.5" />
+      <rect x="60.00" y="23.50" fill="hsl(32.39,23.02%,-1.49%)" width="3.5" height="1.5" />
+      <rect x="64.00" y="23.50" fill="hsl(29.26,29.38%,1.09%)" width="3.5" height="1.5" />
+    </pattern>
+
+    <filter id="house-filter" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.4" />
+    </filter>
+
+    <filter id="tree-filter" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.3" />
+    </filter>
+
+    <filter id="brick-edge-filter" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+    </filter>
+
+    <filter id="leaves-1-filter">
+      <feTurbulence type="turbulence" baseFrequency="0.1" numOctaves="1" result="turbulence"/>
+      <feDisplacementMap result="displaced" in2="turbulence" in="SourceGraphic" scale="8" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur in="displaced" stdDeviation="0.6" />
+    </filter>
+
+    <filter style="color-interpolation-filters:sRGB;" id="leaves-2-filter">
+      <feTurbulence result="noise1" baseFrequency="0.025" numOctaves="100" type="fractalNoise" />
+      <feTurbulence result="noise2" baseFrequency="1.2" numOctaves="1" type="fractalNoise" />
+      <feComposite  in2="noise1" in="SourceGraphic" operator="in" />
+      <feMorphology result="dilate" radius="2" operator="dilate" />
+      <feDisplacementMap result="dilated-noise" in="dilate" in2="noise2" scale="15" yChannelSelector="G" xChannelSelector="R" />
+      <feComposite result="composite-dilated-noise" in2="dilated-noise" operator="arithmetic" k1="0.5" k3="1" />
+      <feConvolveMatrix result="convolved" in="composite-dilated-noise" order="3 3" kernelMatrix="1 0 0 0 2 0 0 0 -1 " targetX="0" targetY="0" divisor="1.5" edgeMode="duplicate" />
+      <feGaussianBlur in="convolved" stdDeviation="0.5" />
+    </filter>
+
+    <linearGradient id="sky-gradient" x1="0" y1="0" x2="0" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" style="stop-color:#003fff" />
+      <stop offset="0.75" style="stop-color:#00ffff" />
+      <stop offset="1" style="stop-color:#ffff7f" />
+    </linearGradient>
+
+    <radialGradient id="sun-gradient">
+      <stop offset="0" style="stop-color:#ffff7f;stop-opacity:1" />
+      <stop offset="1" style="stop-color:#ffff7f;stop-opacity:0" />
+    </radialGradient>
+
+    <linearGradient id="roof-gradient" x1="0" y1="0" x2="0" y2="100%">
+      <stop offset="0" style="stop-color:#7f3f4f" />
+      <stop offset="1" style="stop-color:#1f0f1f" />
+    </linearGradient>
+
+    <linearGradient id="grass-gradient" x1="50%" y1="0%" x2="51%" y2="50%" gradientUnits="userSpaceOnUse">
+      <stop offset="0"    style="stop-color:#00df00" />
+      <stop offset="1"    style="stop-color:#007f00" />
+    </linearGradient>
+
+    <linearGradient id="grass-overlay-gradient" x1="50%" y1="0%" x2="51%" y2="50%" gradientUnits="userSpaceOnUse">
+      <stop offset="0"    style="stop-color:#00df00;stop-opacity:0.75" />
+      <stop offset="1"    style="stop-color:#007f00;stop-opacity:0" />
+    </linearGradient>
+
+    <pattern id="grass-fill" x="0" y="0" width="100%" height="100%">
+      <rect x="0" y="0" width="100%" height="100%" fill="url(#grass-gradient)" filter="url(#grass-noise)" />
+      <rect x="0" y="0" width="100%" height="100%" fill="url(#grass-overlay-gradient)" />
+    </pattern>
+
+    <filter id="grass-filter">
+      <feTurbulence type="turbulence" baseFrequency="0.01 0" numOctaves="1" result="turbulence"/>
+      <feDisplacementMap result="displaced" in2="turbulence" in="SourceGraphic" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+      <feGaussianBlur in="displaced" stdDeviation="0.6" />
+    </filter>
+
+    <filter id="stream-filter" x="0" y="0" width="100%" height="100%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="0.3" />
+    </filter>
+
+    <linearGradient id="stream-gradient" x1="120" y1="60" x2="120" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" style="stop-color:#000000" />
+      <stop offset="0.2" style="stop-color:#005ddf" />
+      <stop offset="1" style="stop-color:#0000ac" />
+    </linearGradient>
+
+    <linearGradient id="stream-edge-gradient" x1="120" y1="60" x2="120" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" style="stop-color:#000000;stop-opacity: 0" />
+      <stop offset="0.075" style="stop-color:#005ddf;stop-opacity: 0.25" />
+      <stop offset="1" style="stop-color:#0000ac;stop-opacity: 1" />
+    </linearGradient>
+
+    <filter id="grass-noise">
+      <feTurbulence result="patch-noise" type="fractalNoise" numOctaves="3" baseFrequency="0.25" />
+      <feTurbulence result="blade-noise" type="fractalNoise" numOctaves="2" baseFrequency="2" />
+      <feBlend result="noise" in="patch-noise" in2="blade-noise" mode="multiply" />
+      <feColorMatrix type="saturate" values="0" />
+      <feBlend in="SourceGraphic" in2="noise" mode="multiply" />
+    </filter>
+
+    <filter id="tree-noise">
+      <feTurbulence result="noisy" type="fractalNoise" baseFrequency="3 0.2" />
+      <feColorMatrix type="lightness" values="0" />
+      <feBlend in="SourceGraphic" in2="noisy" mode="multiply" />
+    </filter>
+
+    <pattern id="tree1-fill" x="0" y="0" width="100%" height="100%">
+      <rect x="0" y="0" width="100%" height="100%" fill="#a83f2e" filter="url(#tree-noise)" />
+    </pattern>
+    <pattern id="tree2-fill" x="0" y="0" width="100%" height="100%">
+      <rect x="0" y="0" width="100%" height="100%" fill="#8e240d" filter="url(#tree-noise)" />
+    </pattern>
+    <pattern id="tree3-fill" x="0" y="0" width="100%" height="100%">
+      <rect x="0" y="0" width="100%" height="100%" fill="#902111" filter="url(#tree-noise)" />
+    </pattern>
+    <pattern id="tree4-fill" x="0" y="0" width="100%" height="100%">
+      <rect x="0" y="0" width="100%" height="100%" fill="#955b39" filter="url(#tree-noise)" />
+    </pattern>
+
+  </defs>
+
+  <rect id="sky" fill="url(#sky-gradient)" x="0" y="0" width="256" height="56" />
+  <rect id="sun" fill="url(#sun-gradient)" x="70" y="30" width="42" height="42" />
+
+  <rect id="grass" fill="url(#grass-fill)" filter="url(#grass-filter)" x="-2" y="54" width="260" height="44" />
+
+  <rect id="leaves-1" fill="#004f00" x="-4" filter="url(#leaves-1-filter)" y="-8" width="264" height="40" />
+
+  <path id="tree1" fill="url(#tree1-fill)" stroke="url(#tree1-fill)" filter="url(#tree-filter)" d="M 20.5,78.5 c 0,0 4,-7.5 4.5,-9 0.5,-1.5 2.25,-26.25 2.25,-29.25 0,-2 -0.25,-8.25 -3.75,-15.75 l 3,1.5 2.25,6 3.75,-15.75 5.25,-4.5 -4.5,18 c 0,0 0.75,6.5 0.75,8.25 0,2 0.75,27 0.75,28.5 0,1.5 0.1,5.25 2.25,6.75 1.75,2 2.5,2.25 6.75,5.25 h -6 l -7.5,-5.25 -6,5.25 Z" />
+  <path id="tree2" fill="url(#tree2-fill)" stroke="url(#tree2-fill)" d="M 42.5,94.5 c 0,0 5,0 6,-12 0.5,-2 3,-36 3,-39 0,-3 -3.5,-18 -5,-21 0,-0.25 4,2 4,2 l 3,8 5,-21 7,-6 c 0,0 -6,21.75 -6,24 0,2.25 1,7.75 1,11 0,3 1,33 1,38 0,3 1.75,7.75 3,9 1.5,1.5 9,7 9,7 h -8 l -10,-7 -8,7 Z" />
+  <path id="tree3" fill="url(#tree3-fill)" stroke="url(#tree3-fill)" d="M 187.5,94.5 c 0,0 5,0 6,-12 0.5,-2 3,-36 3,-39 0,-3 -3.5,-18 -5,-21 0,-0.25 4,2 4,2 l 3,8 5,-21 7,-6 c 0,0 -6,21.75 -6,24 0,2.25 1,7.75 1,11 0,3 1,33 1,38 0,3 1.75,7.75 3,9 1.5,1.5 9,7 9,7 h -8 l -10,-7 -8,7 Z" />
+  <path id="tree4" fill="url(#tree4-fill)" stroke="url(#tree4-fill)" filter="url(#tree-filter)" d="M 227.5,78.5 c 0,0 4,-7.5 4.5,-9 0.5,-1.5 2.25,-26.25 2.25,-29.25 0,-2 -0.25,-8.25 -3.75,-15.75 l 3,1.5 2.25,6 3.75,-15.75 5.25,-4.5 -4.5,18 c 0,0 0.75,6.5 0.75,8.25 0,2 0.75,27 0.75,28.5 0,1.5 0.1,5.25 2.25,6.75 1.75,2 2.5,2.25 6.75,5.25 h -6 l -7.5,-5.25 -6,5.25 Z" />
+
+  <rect id="brick-shadow" fill="black" stroke="none" filter="url(#brick-edge-filter)" x="87" y="35" width="66" height="30" rx="10" ry="5" />
+  <rect id="brick" fill="url(#brick-fill)" stroke="none" filter="url(#house-filter)" x="88" y="39" width="64" height="25" rx="1" ry="1" />
+
+  <path id="roof" fill="url(#roof-gradient)" filter="url(#house-filter)" stroke="none" d="M 80,40 l 17,-17 46,0 17,17 Z" />
+
+  <rect id="leaves-2" fill="#008f00" fill-opacity="0.75" x="0" y="-4" width="256" height="36" filter="url(#leaves-2-filter)" />
+
+  <rect id="hole" fill="#000000" filter="url(#brick-edge-filter)" x="112" y="56" width="16" height="8" />
+
+  <path id="stream" fill="url(#stream-edge-gradient)" filter="url(#brick-edge-filter)" stroke="none" style="stroke-linejoin:miter" d="M 83.5,96 c 0,0 20,-10 25,-16.5 12,-13 6,-20 4,-20 l 14,0 c 0,0 5.5,12.5 2,20 -4,8.5 22.5,16.5 22.5,16.5 -19.5,0.25 -45.5,-0.25 -64.5,0 z" />
+  <path id="stream" fill="url(#stream-gradient)" filter="url(#stream-filter)" stroke="none" style="stroke-linejoin:miter" d="M 86.5,96 c 0,0 20,-10 25,-16.5 12,-13 6,-20 4,-20 l 8,0 c 0,0 5.5,12.5 2,20 -4,8.5 22.5,16.5 22.5,16.5 -19.5,0.25 -45.5,-0.25 -64.5,0 z" />
+
+</svg>
