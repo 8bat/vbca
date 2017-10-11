@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="stroke-linecap:square;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- background -->
+  <rect id="sky" fill="#00ffff" x="0" y="0" width="2560" height="960" />
+  <path id="hills" fill="#00ff00" stroke="none" d="M 0,710 l 35,-80 l 80,-80 l 160,-10 l 80,50 l 80,-80 l 80,-40 l 160,10 l 160,-80 l 240,-20 l 30,-80 l 80,-80 l 160,-10 l 80,50 l 80,-80 l 80,-40 l 160,10 l 160,-80 l 250,-20 l 230,60 l 175,-30 v 880 h -2560" />
+
+  <!-- birds -->
+  <path id="bird-1" fill="none" stroke="#000000" d="M 605,145 l 67.5,22.5 l 22.5,60 l 52.5,-60 l 67.5,-7.5" />
+  <path id="bird-2" fill="none" stroke="#000000" d="M 805,15 l 56.25,18.75 l 18.75,50 l 43.75,-50 l 56.25,-6.25" />
+  <path id="bird-3" fill="none" stroke="#000000" d="M 965,65 l 45,15 l 15,40 l 35,-40 l 45,-5" />
+
+</svg>
