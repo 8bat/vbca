@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <pattern id="pattern-sign-bg" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="2560" height="960">
+        <animate attributeType="XML" attributeName="fill" from="#ffff00" to="#ff00ff" calcMode="discrete" dur="0.64s" repeatCount="indefinite"/>
+      </rect>
+    </pattern>
+    <pattern id="pattern-sign-fg" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="2560" height="960">
+        <animate attributeType="XML" attributeName="fill" from="#ff00ff" to="#ffff00" calcMode="discrete" dur="0.64s" repeatCount="indefinite"/>
+      </rect>
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect id="sky" fill="#00ffff" x="0" y="0" width="2560" height="960" />
+  <path id="leaves" style="fill:#00ff00" d="M 0,0 v 320 h 850 c 160,0 330,-100 430,-200 c 100,100 330,200 430,200 h 850 v -320 Z" />
+  <rect id="grass" fill="#00ff00" x="0" y="560" width="2560" height="400" />
+
+  <!-- trees -->
+  <path id="tree1" fill="#ff0000" stroke="#ff0000" d="M 205,785 l 45,-90 l 22.5,-292.5 l -37.5,-157.5 l 30,15 l 22.5,60 l 37.5,-157.5 l 52.5,-45 l -45,180 l 7.5,82.5 l 7.5,285 l 22.5,67.5 l 67.5,52.5 l -60,0 l -75,-52.5 l -60,52.5 Z" />
+  <path id="tree2" fill="#ff0000" stroke="#ff0000" d="M 425,945 l 60,-120 l 30,-390 l -50,-210 l 40,20 l 30,80 l 50,-210 l 70,-60 l -60,240 l 10,110 l 10,380 l 30,90 l 90,70 l -80,0 l -100,-70 l -80,70 Z" />
+  <path id="tree3" fill="#ff0000" stroke="#ff0000" d="M 1875,945 l 60,-120 l 30,-390 l -50,-210 l 40,20 l 30,80 l 50,-210 l 70,-60 l -60,240 l 10,110 l 10,380 l 30,90 l 90,70 l -80,0 l -100,-70 l -80,70 Z" />
+  <path id="tree4" fill="#ff0000" stroke="#ff0000" d="M 2275,785 l 45,-90 l 22.5,-292.5 l -37.5,-157.5 l 30,15 l 22.5,60 l 37.5,-157.5 l 52.5,-45 l -45,180 l 7.5,82.5 l 7.5,285 l 22.5,67.5 l 67.5,52.5 l -60,0 l -75,-52.5 l -60,52.5 Z" />
+
+  <!-- sign -->
+  <rect id="sign-bg" fill="url(#pattern-sign-bg)" x="1280" y="480" width="560" height="400" />
+  <path id="sign-fg" fill="url(#pattern-sign-fg)" stroke="url(#pattern-sign-fg)" d="M 1335,685 l 150,-150 l 0,80 l 320,0 l 0,160 l -320,0 l 0,80 l -160,-160 Z" />
+
+  <!-- mound -->
+  <path id="mound-line" fill="none" stroke="#000000" d="M 765,795 l 60,-30 l 30,-80 l 80,-120" />
+  <path id="mound-roof" fill="#00ff00" stroke="#00ff00" d="M 945,555 l 70,-60 l 110,-30 l 150,10 l 0,80 l -330,0 Z" />
+  <path id="mound-hole" fill="#000000" stroke="#000000" d="M 975,705 l 30,-70 l 80,-40 l 90,50 l 40,80 l -80,-30 l -80,30 l -80,-30 Z" />
+
+</svg>
