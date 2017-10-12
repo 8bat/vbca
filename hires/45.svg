@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- background -->
+  <path id="left-wall" fill="#ffffff" stroke="none" d="M 0,960 l 885,-480 v -480 h -885 Z" />
+  <path id="right-wall" fill="#ffffff" stroke="none" d="M 2560,960 l -885,-480 v -480 h 885 Z" />
+  <path id="rear-wall" fill="#ffffff" stroke="#000000" d="M 885,0 v 475 h 790 v -475" />
+  <path id="floor" fill="#ffffff" stroke="#000000" d="M 0,960 l 885,-485 h 790 l 885,485" />
+
+</svg>
