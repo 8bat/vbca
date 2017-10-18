@@ -54,7 +54,8 @@ my %patterns = (
 
 my $pattern = join( '|', keys %patterns );
 
+my $cobble_number = 1;
 while (<>) {
-    s/  <path id="line-([0-9]*)" class="line" fill="none" stroke="#([0-9a-f]*)" d="M ([0-9.,]*) ($pattern)" \/>/  <path id="rock-$1" fill="none" stroke="#$2" stroke-linecap="round" d="M $3 $patterns{$4}" \/>/g;
+    s/  <path id="line-([0-9]*)" class="line" fill="none" stroke="#([0-9a-f]*)" d="M ([0-9.,]*) ($pattern)" \/>/  <path id="cobble-$cobble_number" fill="none" stroke="#$2" stroke-linecap="round" d="M $3 $patterns{$4}" \/>/ && ++$cobble_number;
     print;
 }
