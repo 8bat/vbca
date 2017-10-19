@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="fill-rule:evenodd;stroke-linecap:square;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-near-wall" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c0c0c0" x="0" y="0" width="40" height="20" />
+      <rect fill="#c00000" x="0" y="10" width="10" height="10" />
+      <rect fill="#c00000" x="10" y="0" width="10" height="10" />
+      <rect fill="#c00000" x="20" y="10" width="20" height="10" />
+    </pattern>
+    <pattern id="fill-archway-wall" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c0c0c0" x="0" y="0" width="40" height="20" />
+      <rect fill="#c00000" x="0" y="10" width="40" height="10" />
+    </pattern>
+    <pattern id="fill-pit" x="0" y="0" width="20" height="10" patternUnits="userSpaceOnUse">
+      <rect fill="#c0c0c0" x="0" y="0" width="20" height="1" />
+      <rect fill="#000000" x="0" y="0" width="10" height="20" />
+    </pattern>
+  </defs>
+
+  <rect id="floor" fill="#c0c0c0" x="0" y="0" width="2560" height="960" />
+
+  <!-- far wall -->
+  <path id="far-wall" fill="#c0c0c0" stroke="none" d="M 520,640 l -25,-235 l -5,25 v 230 l -195,90 l -60,-275 l -25,-335 l 105,-65 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -30,85 l -405,-40 v -285 l -5,-20 l -35,300 h -45 l -360,-30 l -475,20 l -405,20 Z" />
+  <path id="far-wall-left-edge" fill="none" stroke="#c00000" d="M 295,675 l 230,-110 l 400,-20 l 150,10 l 10,-200 M 1075,275 l 60,-160 M 520,560 l -25,-235 l 40,-200" />
+  <path id="far-wall-right-edge" fill="none" stroke="#c00000" d="M 1305,235 l 10,150 l -20,160 l 260,20 l 210,-10 l 500,50 M 1815,555 l 30,-300 l -40,-160" />
+
+  <!-- crack -->
+  <path id="crack" fill="#0000c0" stroke="#0000c0" d="M 1125,545 l 10,-230 l 90,-220 l 40,280 l -20,180 l -120,-10 Z" />
+
+  <!-- near wall -->
+  <path id="near-wall" fill="url(#fill-near-wall)" stroke="none" d="M 210,140 l 105,-65 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,25 l 20,-485 v 500 l 95,50 v -955 h -2560 v 950 l 140,-55 l 5,-490 l 20,475 l 160,-15 l -90,-390 Z" />
+  <path id="near-wall-edge" fill="none" stroke="#c00000" d="M 85,225 l 230,-150 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,30 l 110,60
+M 5,955 l 160,-70 l 160,-20 l -90,-390 l -20,-330
+M 165,875 l -20,-470
+M 2445,885 l 20,-480" />
+
+  <!-- pit -->
+  <path id="pit" fill="url(#fill-pit)" stroke="#000000" d="M 830,835 l 395,-50 l 480,50 l 400,120 h -1490 Z" />
+
+</svg>
