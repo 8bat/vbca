@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="stroke-linecap:square;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-near-wall" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c000c0" x="0" y="0" width="40" height="20" />
+      <rect fill="#00c0c0" x="0" y="10" width="10" height="10" />
+      <rect fill="#00c0c0" x="10" y="0" width="10" height="10" />
+      <rect fill="#00c0c0" x="20" y="10" width="20" height="10" />
+    </pattern>
+    <pattern id="fill-archway-wall" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c000c0" x="0" y="0" width="40" height="20" />
+      <rect fill="#00c0c0" x="0" y="10" width="40" height="10" />
+    </pattern>
+    <pattern id="fill-far-wall" x="0" y="0" width="10" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c000c0" x="0" y="0" width="10" height="20" />
+      <rect fill="#00c0c0" x="0" y="10" width="10" height="10" />
+    </pattern>
+    <pattern id="fill-curtain" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c000c0" x="0" y="0" width="20" height="20" />
+      <rect fill="#00c0c0" x="0" y="10" width="10" height="10" />
+    </pattern>
+  </defs>
+
+  <rect id="floor" fill="#c000c0" x="0" y="0" width="2560" height="960" />
+
+  <!-- far wall -->
+  <path id="far-wall" fill="url(#fill-far-wall)" stroke="none" d="M 520,565 l -25,-235 l -5,25 v 230 l -195,90 h -100 v -675 h 2160 v 605 h -100 l -405,-40 v -285 l -5,-20 l -35,300 h -45 l -360,-30 l -475,20 l -405,20 Z" />
+  <path id="far-wall-left-edge" fill="none" stroke="#00c0c0" d="M 295,675 l 230,-110 l 400,-20 M 520,560 l -25,-235 l 40,-200" />
+  <path id="far-wall-middle" fill="none" stroke="#00c0c0" d="M 935,545 h 800" />
+  <path id="far-wall-right-edge" fill="none" stroke="#00c0c0" d="M 1765,555 l 500,50 M 1815,555 l 30,-300 l -40,-160" />
+
+  <!-- curtains -->
+  <path id="curtain" fill="url(#fill-curtain)" stroke="none" d="M 965,75 l -10,50 l -20,440 l 80,30 l 80,-30 l 60,20 l 30,-20 l 80,30 l 80,-30 l 60,20 l 30,-20 l 80,30 l 80,-30 l 60,20 l 30,-20 l 70,20 l -40,-540 Z" />
+  <path id="curtain-edges" fill="none" stroke="#00c0c0" d="M 965,75 l -10,50 l -20,440 l 80,30 l 80,-30 l 60,20 l 30,-20 l 80,30 l 80,-30 l 60,20 l 30,-20 l 80,30 l 80,-30 l 60,20 l 30,-20 l 70,20 l -40,-540
+M 1065,575 l -10,-300
+M 1315,575 l -10,-300
+M 1565,575 l -10,-300
+M 1205,125 l -20,440
+M 1455,125 l -20,440
+" />
+
+  <!-- near wall -->
+  <path id="near-wall" fill="url(#fill-near-wall)" stroke="none" d="M 210,140 l 105,-65 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,25 l 20,-485 v 500 l 95,50 v -955 h -2560 v 950 l 140,-55 l 5,-490 l 20,475 l 160,-15 l -90,-390 Z" />
+  <path id="near-wall-edge" fill="none" stroke="#00c0c0" d="M 85,225 l 230,-150 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,30 l 110,60
+M 5,955 l 160,-70 l 160,-20 l -90,-390 l -20,-330
+M 165,875 l -20,-470
+M 2445,885 l 20,-480" />
+
+</svg>
