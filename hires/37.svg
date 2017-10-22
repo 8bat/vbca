@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="stroke-linecap:square;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-chasm" x="0" y="0" width="20" height="10" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="20" height="20" />
+      <rect fill="#000000" x="5" y="0" width="10" height="10" />
+    </pattern>
+    <pattern id="fill-near-wall" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="40" height="20" />
+      <rect fill="#000000" x="0" y="10" width="10" height="10" />
+      <rect fill="#000000" x="10" y="0" width="10" height="10" />
+      <rect fill="#000000" x="20" y="10" width="20" height="10" />
+    </pattern>
+    <pattern id="fill-archway-wall" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="40" height="20" />
+      <rect fill="#000000" x="0" y="10" width="40" height="10" />
+    </pattern>
+    <pattern id="fill-far-wall" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="40" height="20" />
+      <rect fill="#000000" x="0" y="10" width="10" height="10" />
+    </pattern>
+  </defs>
+
+  <rect id="floor" fill="#ffff00" x="0" y="0" width="2560" height="960" />
+  <!-- chasm -->
+  <path id="chasm" fill="url(#fill-chasm)" stroke="#000000" d="M 2000,625 h -405 l -220,40 l -760,60 l -620,230 h 2550 v -280" />
+
+  <!-- far wall -->
+  <path id="far-wall" fill="url(#fill-far-wall)" stroke="none" d="M 780,630 l -25,-235 l -5,25 v 230 l -195,90 l -545,65 v -800 h 2505 v 670 l -405,-40 v -285 l -5,-20 l -35,300 h -50 l -405,10 l 70,-170 l -20,-240 l -260,-50 l -90,10 l -160,50 l -30,240 l 60,135 l -400,25 Z" />
+  <path id="far-wall-left-edge" fill="none" stroke="#000000" d="M 5,805 l 550,-60 l 230,-110 l 400,-20 M 780,630 l -25,-235 l 40,-200w" />
+
+  <path id="far-wall-right-edge" fill="none" stroke="#000000" d="M 1660,635 l 400,-10 l 500,50 M 2075,625 l 30,-300 l -40,-160" />
+
+  <!-- archway -->
+  <path id="archway-shadow" fill="#000000" stroke="none" d="M 1405,175 l 260,50 l 20,240 l -15,30 l -125,10 l -160,30 l -85,30 l -65,-130 l -10,-160 l 175,-100 Z" />
+  <path id="archway-wall" fill="url(#fill-archway-wall)" stroke="none" d="M 1190,610 l -65,-135 l 30,-240 l 160,-50 l 85,-10 l -175,100 l 10,160 l 65,130 Z" />
+  <path id="archway-edge" fill="none" stroke="#000000" d="M 1675,495 l -130,10 l -160,30 l -190,80 l -70,-140 l 30,-240 l 160,-50 l 90,-10 l 260,50 l 20,240 l -70,170" />
+
+  <!-- ceiling -->
+  <rect id="ceiling" fill="#ff00ff" x="0" y="0" width="2560" height="80" />
+
+  <!-- pillar 1 -->
+  <rect id="pillar-1-top" fill="#ff0000" x="0" y="80" width="320" height="80" />
+  <rect id="pillar-1-middle" fill="#ff00ff" x="0" y="160" width="240" height="80" />
+  <rect id="pillar-1-column" fill="#ff0000" x="0" y="240" width="160" height="720" />
+
+  <!-- pillar 2 -->
+  <rect id="pillar-2-top" fill="#ff0000" x="640" y="80" width="480" height="80" />
+  <rect id="pillar-2-middle" fill="#ff00ff" x="720" y="160" width="320" height="80" />
+  <rect id="pillar-2-column" fill="#ff0000" x="800" y="240" width="160" height="720" />
+
+  <!-- pillar 3 -->
+  <rect id="pillar-3-top" fill="#ff0000" x="1440" y="80" width="480" height="80" />
+  <rect id="pillar-3-middle" fill="#ff00ff" x="1520" y="160" width="320" height="80" />
+  <rect id="pillar-3-column" fill="#ff0000" x="1600" y="240" width="160" height="720" />
+
+  <!-- pillar 4 -->
+  <rect id="pillar-4-top" fill="#ff0000" x="2240" y="80" width="320" height="80" />
+  <rect id="pillar-4-middle" fill="#ff00ff" x="2320" y="160" width="240" height="80" />
+  <rect id="pillar-4-column" fill="#ff0000" x="2400" y="240" width="160" height="720" />
+
+</svg>
