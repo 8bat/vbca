@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <pattern id="fill-wall" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ff0000" x="0" y="0" width="40" height="20" />
+      <rect fill="#ffff00" x="5" y="5" width="30" height="10" />
+    </pattern>
+  </defs>
+
+  <!-- wall -->
+  <rect id="upper-wall" fill="url(#fill-wall)" x="0" y="0" width="2560" height="640" />
+  <rect id="lower-wall" fill="#ff0000" x="0" y="640" width="2560" height="320" />
+
+  <path id="door" fill="#ffff00" stroke="#000000" d="M 1595,635 v -630 h -630 v 630 h 630 Z M 1275,5 v 630" />
+  <rect id="door-glass-1" fill="#00ffff" x="1360" y="80" width="160" height="480" />
+  <rect id="door-glass-2" fill="#00ffff" x="1040" y="80" width="160" height="480" />
+
+  <!-- steps -->
+  <path id="steps-edge" fill="#ffffff" stroke="#ffffff" d="M 815,715 l 150,-70 h 630 l 160,80 v 80 l 160,80 v 70 h -1260 v -70 l 160,-80 v -80 Z" />
+
+  <rect id="step-vertical-1" fill="#000000" stroke="none" x="660" y="890" width="1250" height="60" />
+  <rect id="step-vertical-2" fill="#000000" stroke="none" x="820" y="730" width="930" height="70" />
+
+</svg>
