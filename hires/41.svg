@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 2560 960" style="stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- road -->
+  <rect id="road" fill="#ffffff" stroke="none" x="0" y="0" width="2560" height="960" />
+
+  <!-- walls -->
+  <rect id="wall-1" fill="#ff0000" x="0" y="0" width="560" height="550" />
+  <rect id="wall-2" fill="#ffff00" x="560" y="0" width="325" height="550" />
+  <path id="wall-3" fill="#ff00ff" d="M 885,555 l 240,-160 v -395 h -240 Z" />
+  <rect id="wall-4" fill="#00ffff" x="1125" y="0" width="320" height="390" />
+  <path id="wall-5" fill="#ff00ff" d="M 1445,395 l 240,160 v -555 h -240 Z" />
+  <rect id="wall-6" fill="#00ff00" x="1685" y="0" width="475" height="550" />
+  <rect id="wall-7" fill="#0000ff" x="2160" y="0" width="400" height="550" />
+
+  <!-- road edge -->
+  <path id="road-edge" fill="none" stroke="#000000" d="M 0,555 h 885 l 240,-160 h 320 l 240,160 h 875" />
+
+</svg>
