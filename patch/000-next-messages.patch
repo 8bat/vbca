@@ -1,0 +1,24 @@
+--- ../patch/code.txp	2017-10-27 06:35:53.576595689 +0100
++++ code.txp	2017-10-27 06:35:54.072605989 +0100
+@@ -300,14 +300,14 @@
+ {INK|yellow|{CLASS|bright|{INK|magenta|It's dark here. You might fall into a sploosh-hole.}}}
+ /1
+ {CLASS|bright|{INK|cyan|And you can see:}}<br>
+-/2; TODO: check the following message matches the tone of your game:
++/2;
+ What do you want to do now?
+-/3; TODO: check the following message matches the tone of your game:
+-What will you do next?
+-/4; TODO: check the following message matches the tone of your game:
+-Please enter your next order
+-/5; TODO: check the following message matches the tone of your game:
+-Please type in your orders
++/3;
++What next?
++/4;
++Now what?
++/5;
++Next?
+ /6
+ {CLASS|bright|Sorry, this thick computer doesn't understand that.}
+ /7
