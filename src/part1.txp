@@ -315,6 +315,7 @@ vb_u         9    verb
 vb_up        9    verb
 vb_d        10    verb
 vb_down     10    verb
+descend     10    verb
 vb_exam     13    verb
 vb_read     13    verb
 
@@ -709,15 +710,15 @@ You can't see any exits
 /object_9_bull
 {CLASS|bright ink-yellow|A rampaging bull with the distinct air of a bull who does not mean to be caught out a second time}
 /object_10_grate_locked
-{CLASS|bright|The grate is locked}
+{ACTION|open grate|{CLASS|bright|The grate is locked}}
 /object_11_grate_open
-{CLASS|bright|The grate is open}
+{ACTION|down|{CLASS|bright|The grate is open}}
 /object_12_cage
-{CLASS|bright ink-yellow|A gilded cage}#{CLASS|bright|It looks as if you could enter it.}
+{ACTION|enter the cage|{CLASS|bright ink-yellow|A gilded cage}}#{CLASS|bright|It looks as if you could enter it.}
 /object_13_rod
 {CLASS|bright ink-magenta|A black rod with a rusty star on the end}
 /object_14_songbird
-{CLASS|bright ink-yellow|A cheerful little songbird}
+{ACTION|get bird|{CLASS|bright ink-yellow|A cheerful little songbird}}
 /object_15_moon
 {CLASS|bright|A Venusian Moon-Crystal}
 /object_16_zx81
@@ -727,7 +728,7 @@ You can't see any exits
 /object_18_log_over_chasm
 \n{CLASS|bright|The log forms a bridge over the chasm}
 /object_19_silver
-{CLASS|bright|Bars of silver}
+{ACTION|get silver|{CLASS|bright|Bars of silver}}
 /object_20_python
 {CLASS|bright ink-lime|A python}
 /object_21_can
@@ -739,39 +740,39 @@ You can't see any exits
 /object_24_hint
 {CLASS|bright|(This is not only a fresh example of bad taste but also a BROAD HINT)}
 /object_25_cord
-{CLASS|bright ink-cyan|A thick silken cord fixed inside the pillar box and descending through a hole in its floor into deep impenetrable darkness}
+{ACTION|descend|{CLASS|bright ink-cyan|A thick silken cord fixed inside the pillar box and descending through a hole in its floor into deep impenetrable darkness}}
 /object_26_that_man_has_left
 {CLASS|bright|THAT MAN has left without you, taking away your only chance to return to the caves.}
 /object_27_red_button
-{CLASS|bright ink-red|{CLASS|paper-white|A red button}}
+{ACTION|PUSH THE BUTTON!|{CLASS|bright ink-red|{CLASS|paper-white|A red button}}}
 /object_28_troll
 {CLASS|bright ink-lime|A twelve-foot slavering troll brandishing a chainsaw}
 /object_29_goblet
 {CLASS|bright ink-yellow|A jewel-encrusted goblet}
 /object_30_packet
-{CLASS|bright|A cornflakes packet}
+{ACTION|Read the packet of cornflakes|{CLASS|bright|A cornflakes packet}}
 /object_31_parser
-\n{CLASS|bright ink-yellow|A Sophisticated Parser - only given away in family-size packs}
+\n{ACTION|examine the sophisticated parser|{CLASS|bright ink-yellow|A Sophisticated Parser - only given away in family-size packs}}#{CLASS|bright|The machine hums away to itself, effortlessly misinterpreting every word it hears}
 /object_32_tiara
 {CLASS|bright ink-yellow|A magnificent emerald tiara}
 /object_33_valve
 A gas canister
 /object_34_ladder
-An iron ladder bolted to the wall
+{ACTION|Climb ladder|An iron ladder bolted to the wall}
 /object_35_searchlight
-{CLASS|bright ink-yellow|A curious searchlight}
+{ACTION|examine searchlight|{CLASS|bright ink-yellow|A curious searchlight}}#{CLASS|bright|A bat-like splodge is painted on the glass. At the back is {ACTION|switch switch|a switch}.}
 /object_36_desks
-{CLASS|bright|Rows of empty desks}
+{ACTION|examine desks|{CLASS|bright|Rows of empty desks}}
 /object_37_file
 {CLASS|bright ink-yellow|A Byzantian gold enamelled nail file}
 /object_38_pictures
 {CLASS|bright|Three worth... er, priceless paintings}#{CLASS|bright|You examine the pictures.\nYou are astounded that as many as three people are present.}
 /object_39_bat
-{CLASS|bright|A black paper bat}
+{ACTION|Examine bat|{CLASS|bright|A black paper bat}}
 /object_40_belt
 {CLASS|bright ink-yellow|A utility belt}
 /object_41_box
-{CLASS|bright ink-cyan|A very small cardboard box}
+{ACTION|Examine box|{CLASS|bright ink-cyan|A very small cardboard box}}
 /object_42_pellet
 A grey pellet
 /object_43_art_critiquette
@@ -791,129 +792,129 @@ A grey pellet
 /LTX
 /room_0
 
-/room_1 ; TODO: consider adding relevant links: {ACTION|drop penn|drop penn}, {ACTION|e|e}, {ACTION|exam door|exam door}, {ACTION|open door|open door}, {ACTION|put penn|put penn}, {ACTION|nort|nort}, {ACTION|sout|sout}
-{CLASS|bright|You are standing at the end of a road, {ACTION|west|west} of a small brick building. Forest lies all about you. A small stream flows out of the building and down the gully.}
-/bulls_gully ; TODO: consider adding relevant links: {ACTION|s|s}, {ACTION|nort|nort}, {ACTION|west|west}
-{CLASS|bright|You are in a gully in the forest. It is rather wet underfoot.}
-/wellie_house ; TODO: consider adding relevant links: {ACTION|comm|comm}, {ACTION|drop pict|drop pict}, {ACTION|exam fenc|exam fenc}, {ACTION|exam spri|exam spri}, {ACTION|hit door|hit door}, {ACTION|in spri|in spri}, {ACTION|spri|spri}, {ACTION|w|w}
-{CLASS|bright|You are in the wellie-house for a large spring. At the centre stands the spring itself. Also - if nobody has filched them - a pair of wellies.}
-/stream_end ; TODO: consider adding relevant links: {ACTION|w|w}, {ACTION|nort|nort}
-{CLASS|bright|All the water of the stream gurgles down a two-inch slit in the rock. {ACTION|Southward|Southward} the stream bed continues dry. West is a bog.}
-/small_hill ; TODO: consider adding relevant links: {ACTION|nort|nort}, {ACTION|sout|sout}, {ACTION|west|west}
+/room_1
+{CLASS|bright|You are standing at the end of a road, west of {ACTION|east|a small brick building}. {ACTION|west|Forest} lies all about you. A small stream flows out of the building and {ACTION|south|south} down the gully.}
+/bulls_gully
+{CLASS|bright|You are in a gully in the {ACTION|west|forest}. It is rather wet underfoot.}
+/wellie_house
+{CLASS|bright|You are in the wellie-house for {ACTION|enter spring|a large spring}. At the centre stands the spring itself. Also - if nobody has filched them - a pair of wellies.\nThere is {ACTION|examine fence|a little fence} beside the spring. The door is west.}
+/stream_end
+{CLASS|bright|All the water of the stream gurgles down a two-inch slit in the rock. {ACTION|South|Southward} the stream bed continues dry. {ACTION|west|West} is a bog.}
+/small_hill
 {CLASS|bright|You have climbed a small hill.}
-/lost_in_the_forest ; TODO: consider adding relevant links: {ACTION|east|east}, {ACTION|nort|nort}, {ACTION|sout|sout}, {ACTION|west|west}
+/lost_in_the_forest
 {CLASS|bright|You are wandering about in the forest when you ought to be getting on with the game.}
-/grate_gully ; TODO: consider adding relevant links: {ACTION|nort|nort}
+/grate_gully
 {CLASS|bright|You are in a deep depression. However, you snap out of it and notice a strong steel grate set firmly in concrete underfoot.}
 /below_the_grate
-{CLASS|bright|You are in a small chamber beneath a three-by-three steel grate. A low crawl over rough, hard cobbles leads {ACTION|west|west} into the darkness.}
-/crawling_over_cobbles ; TODO: consider adding relevant links: {ACTION|west|west}
-{CLASS|bright|You are crawling over cobbles, muttering something I shall not try too hard to hear. There is a dim light in the {ACTION|east|east}.}
-/debris_room ; TODO: consider adding relevant links: {ACTION|comm|comm}, {ACTION|exam wall|exam wall}, {ACTION|east|east}, {ACTION|clim|clim}, {ACTION|west|west}
+{CLASS|bright|You are in a small chamber beneath a three-by-three steel grate. A low crawl over rough, hard cobbles leads {ACTION|west|west into the darkness}.}
+/crawling_over_cobbles
+{CLASS|bright|You are {ACTION|west|crawling over cobbles}, muttering something I shall not try too hard to hear. There is a dim light in the {ACTION|east|east}.}
+/debris_room
 {CLASS|bright|You are in the Debris Room.}
-/low_room ; TODO: consider adding relevant links: {ACTION|nort|nort}
+/low_room
 {CLASS|bright|You are in a low room.}
-/log_chasm_room ; TODO: consider adding relevant links: {ACTION|drop log|drop log}, {ACTION|wave rod|wave rod}, {ACTION|east|east}
-{CLASS|bright|You are at the west end of the Hall. To your west is a deep chasm, too wide to jump. The mist is quite thick here.}
-/rope_to_part_2 ; TODO: consider adding relevant links: {ACTION|clim|clim}
-{CLASS|bright ink-yellow|You are sliding {ACTION|down|down} the rope.\n\nIf you continue {ACTION|down|down} you will arrive in part 2.}
+/log_chasm_room
+{CLASS|bright|You are at the west end of the Hall. To your {ACTION|west|west} is a deep chasm, too wide to jump. The mist is quite thick here.}
+/rope_to_part_2
+{CLASS|bright ink-yellow|You are sliding down the rope.\n\nIf you continue {ACTION|down|down} you will arrive in part 2.}
 /part_2_room
 {CLASS|center bright ink-yellow|PLEASE SAVE YOUR POSITION NOW}
-/secret_hiding_place ; TODO: consider adding relevant links: {ACTION|sout|sout}
+/secret_hiding_place
 {CLASS|center bright|THE SECRET HIDING PLACE}
-/habitat_cave ; TODO: consider adding relevant links: {ACTION|open cupb|open cupb}, {ACTION|east|east}, {ACTION|nort|nort}, {ACTION|west|west}
+/habitat_cave
 {CLASS|bright|You are in the Habitat Cave.}
-/twee_chamber ; TODO: consider adding relevant links: {ACTION|sout|sout}
+/twee_chamber
 {CLASS|bright|You are in the Twee Chamber.}
 /avante_garde_room
 
 /live_space_invaders_room ; TODO: consider adding relevant links: {ACTION|fire|fire}, {ACTION|left|left}, {ACTION|righ|righ}
 {CLASS|bright|As you enter this room, the door slides ominously shut behind you.}
 /dead_space_invaders_room
-{CLASS|bright|You are in an empty chamber. The door to your {ACTION|west|west} is now open.\n\nOn the floor you see:\n\n{CLASS|ink-blue paper-white|A {CLASS|ink-lime|brightly-{CLASS|ink-red|coloured {CLASS|ink-magenta|pile {CLASS|ink-blue|of {CLASS|ink-red|user-{CLASS|ink-magenta|defined {CLASS|ink-lime|characters\n}}}}}}}}}
+{CLASS|bright|You are in an empty chamber. {ACTION|west|The door to your west} is now open.\n\nOn the floor you see:\n\n{ACTION|Examine characters|{CLASS|paper-white|{CLASS|ink-blue|A }{CLASS|ink-lime|brightly-}{CLASS|ink-red|coloured }{CLASS|ink-magenta|pile }{CLASS|ink-blue|of }{CLASS|ink-red|user-}{CLASS|ink-magenta|defined }{CLASS|ink-lime|characters\n}}}
 /sloping_canyon
-{CLASS|bright|You are in an awkward, sloping {ACTION|E|E}/{ACTION|W|W} canyon.}
-/splendid_chamber ; TODO: consider adding relevant links: {ACTION|eat wall|eat wall}, {ACTION|exam lett|exam lett}, {ACTION|exam sign|exam sign}, {ACTION|exam wall|exam wall}, {ACTION|get wall|get wall}, {ACTION|open lett|open lett}, {ACTION|east|east}, {ACTION|west|west}
+{CLASS|bright|You are in an awkward, sloping {ACTION|east|E}/{ACTION|west|W} canyon.}
+/splendid_chamber
 {CLASS|bright|You are in a splendid chamber thirty feet high.}
-/west_end_of_upper_floor ; TODO: consider adding relevant links: {ACTION|east|east}
-{CLASS|bright|At your feet is a pit breathing traces of white mist. The passage {ACTION|west|west} ends here but for an old crack. Rough stone steps lead {ACTION|down|down}.}
-/old_crack ; TODO: consider adding relevant links: {ACTION|east|east}, {ACTION|ente|ente}
+/west_end_of_upper_floor
+{CLASS|bright|At your feet is a pit breathing traces of white mist. The passage west ends here but for {ACTION|west|an old crack}. {ACTION|down|Rough stone steps} lead down.}
+/old_crack
 {CLASS|bright ink-cyan|You are inside the crack. You are walking down a street. Someone says &#34;Who was that lady I saw you with last night?&#34;\nYou reply...\n\nI told you it was an old crack.}
-/vast_hall_east ; TODO: consider adding relevant links: {ACTION|east|east}, {ACTION|sout|sout}, {ACTION|clim|clim}
-{CLASS|bright|You are at one end of a vast hall. To the {ACTION|west|west} it stretches out of sight. Passages are on either side. A wide stone staircase leads {ACTION|down|down} to the {ACTION|north|north}. Wisps of white mist curl across the room like living things.}
-/hall_of_the_mountain_king ; TODO: consider adding relevant links: {ACTION|n|n}, {ACTION|w|w}, {ACTION|east|east}, {ACTION|sout|sout}, {ACTION|clim|clim}
-{CLASS|bright|You are in the Hall of the Mountain King. Passages lead off in all directions.}
+/vast_hall_east
+{CLASS|bright|You are at one end of a vast hall. To the {ACTION|west|west} it stretches out of sight. Passages are on {ACTION|south|either} {ACTION|east|side}. {ACTION|down|A wide stone staircase} leads down to the north. Wisps of white mist curl across the room like living things.}
+/hall_of_the_mountain_king
+{CLASS|bright|You are in the Hall of the Mountain King. Passages lead {ACTION|north|off} {ACTION|south-east|in all} {ACTION|west|directions}.}
 /cemented_floor_room
-{CLASS|bright|You are in a {ACTION|N|N}/{ACTION|S|S} passage. A hole in the floor has been repaired and cemented over.}
+{CLASS|bright|You are in a {ACTION|north|N}/{ACTION|south|S} passage. A hole in the floor has been repaired and cemented over.}
 /y2_room
-{CLASS|bright|You are in a large room. Passages lead {ACTION|south|south} and {ACTION|west|west}. A dirty crack is east. There is a large 'Y2' on a rock in the room'{ACTION|s|s} centre.\n\nA hollow voice says 'PLUG'.}
-/window_over_pit ; TODO: consider adding relevant links: {ACTION|east|east}
+{CLASS|bright|You are in a large room. Passages lead {ACTION|south|south} and {ACTION|west|west}. A dirty crack is east. There is a large '{ACTION|Y2|Y2}' on a rock in the room's centre.\n\nA hollow voice says {ACTION|PLUG|'PLUG'}.}
+/window_over_pit
 {CLASS|bright|You are standing at a window looking over a pit. A shadowy figure is watching you from a lighted window opposite.}
 /censored_room ; TODO: consider adding relevant links: {ACTION|east|east}, {ACTION|nort|nort}, {ACTION|sout|sout}, {ACTION|west|west}
 {CLASS|center bright ink-black|{CLASS|paper-white|\n\n\n\n\n\n\n\n\nCENSORED\n\n\n\n\n\n\n\n\n\n}}
 /recent_rock_fall_cavern
-{CLASS|bright|You are in a large cavern. The air is still chokingly dusty from a recent rock-fall. A pile of rubble leads {ACTION|up|up}. Passages run {ACTION|south|south} and {ACTION|west|west}.}
-/high_dark_passage ; TODO: consider adding relevant links: {ACTION|nort|nort}, {ACTION|sout|sout}
+{CLASS|bright|You are in a large cavern. The air is still chokingly dusty from a recent rock-fall. {ACTION|climb|A pile of rubble} leads up. Passages run {ACTION|south|south} and {ACTION|west|west}.}
+/high_dark_passage
 {CLASS|bright|You are in a high dark passage. Somewhere in the blackness above you hear occasional squeals and the rustle of leathery wings.}
 /bat_cave ; TODO: consider adding relevant links: {ACTION|exam coin|exam coin}, {ACTION|get hipp|get hipp}, {ACTION|nort|nort}, {ACTION|sout|sout}
-{CLASS|bright|You have entered a vast spacious cavern. Dozens of bats wheel overhead. This is the Bat Cave. On one wall is a coin of massive proportions. On another, a stuffed dinosaur.}
-/hall_of_mists_west_fissure ; TODO: consider adding relevant links: {ACTION|east|east}
-{CLASS|bright|You are at the {ACTION|west|west} side of the fissure in the Hall of Mists.}
+{CLASS|bright|You have entered a vast spacious cavern. Dozens of bats wheel overhead. This is the Bat Cave. On one wall is {ACTION|examine coin|a coin of massive proportions}. On another, {ACTION|examine dinosaur|a stuffed dinosaur.}}
+/hall_of_mists_west_fissure
+{CLASS|bright|You are travelling {ACTION|west|west} past {ACTION|east|the fissure} in the Hall of Mists.}
 /hall_of_mists_west_end
-{CLASS|bright|You are at the {ACTION|west|west} end of the Hall of Mists. A wide passage leads off {ACTION|west|west}. Other exits lead {ACTION|north|north} and {ACTION|east|east}.}
-/west_end_of_passage ; TODO: consider adding relevant links: {ACTION|east|east}
+{CLASS|bright|You are at the west end of the Hall of Mists. A wide passage leads off {ACTION|west|west}. Other exits lead {ACTION|north-east|north and east}.}
+/west_end_of_passage
 {CLASS|bright|You are at the west end of a passage. The floor has collapsed making further progress impossible.}
 /east_end_of_hall
-{CLASS|bright|You are at the {ACTION|east|east} end of a hall. The floor has collapsed, making further progress impossible. However, the rubble from the massive rock-fall slopes {ACTION|downward|downward}, allowing a precarious descent to the level below. A hole in the rock, six feet up, runs {ACTION|north|north}.}
-/small_low_cavern ; TODO: consider adding relevant links: {ACTION|in|in}, {ACTION|nort|nort}
+{CLASS|bright|You are at the east end of a hall. The floor has collapsed, making further progress impossible. However, the rubble from the massive rock-fall slopes downward, allowing {ACTION|downward|a precarious descent} to the level below. {ACTION|north|A hole in the rock}, six feet up, runs north.}
+/small_low_cavern
 {CLASS|bright|You are in a small low cavern.}
-/batmobile ; TODO: consider adding relevant links: {ACTION|pres butt|pres butt}
-{CLASS|bright|You are seated {ACTION|in|in} the driver's seat. The car looks ready to roll except that there is only a blank rock face ahead.}
+/batmobile
+{CLASS|bright|You are seated in the driver's seat. The car looks ready to roll except that there is only a blank rock face ahead.}
 /batcave_exit_tunnel
 {CLASS|bright|The rock face slides silently aside to reveal a long, narrow tunnel.}
-/heart_of_gotham ; TODO: consider adding relevant links: {ACTION|in door|in door}, {ACTION|east|east}, {ACTION|nort|nort}, {ACTION|sout|sout}, {ACTION|west|west}
-{CLASS|bright|You are in the heart of Gotham City near to the concealed ramp from which you emerged.\nRoads lead in all directions.}
-/outside_le_chat_noir ; TODO: consider adding relevant links: {ACTION|ente|ente}
-{CLASS|bright|You are outside {CLASS|ink-yellow|Le Chat Noir{CLASS|ink-white|, a restaurant patronised by the rich and famous.\nRoads lead {ACTION|north|north}, {ACTION|south|south} and {ACTION|west|west}}}}
+/heart_of_gotham
+{CLASS|bright|You are in the heart of Gotham City near to the concealed ramp from which you emerged.\nRoads {ACTION|north|lead} {ACTION|south|in} {ACTION|east|all} {ACTION|west|directions}.}
+/outside_le_chat_noir
+{CLASS|bright|You are outside {ACTION|enter|{CLASS|ink-yellow|Le Chat Noir}}, a restaurant patronised by the rich and famous.\nRoads lead {ACTION|north|north}, {ACTION|south|south} and {ACTION|west|west}}
 /inside_le_chat_noir
 {CLASS|bright|You are inside {CLASS|ink-yellow|Le Chat Noir{CLASS|ink-white|. At one table sit a party from St. Br*d*'s, squirting champagne and throwing rolls.}}}
-/sophisticated_parser_cave ; TODO: consider adding relevant links: {ACTION|cupb curt|cupb curt}, {ACTION|exam curt|exam curt}, {ACTION|exam pars|exam pars}, {ACTION|exam soph|exam soph}, {ACTION|l behi|l behi}, {ACTION|east|east}
+/sophisticated_parser_cave
 {CLASS|bright|You are in the Brand New Sophisticated Parser Cave.}
-/swear_box ; TODO: consider adding relevant links: {ACTION|wash mout|wash mout}
+/swear_box
 {CLASS|bright|You are in the Swear Box.\nIt is a bare room with neither windows nor doors.\nIn one corner is a washstand and a cake of soap.\nYou know what to do.}
-/outside_art_gallery ; TODO: consider adding relevant links: {ACTION|in|in}
-{CLASS|bright|You are outside the Gotham Art Gallery.\nRoads run {ACTION|north|north} and {ACTION|east|east}.}
-/outside_jewllers_shop ; TODO: consider adding relevant links: {ACTION|ente|ente}
-{CLASS|bright|You are outside a jeweller's shop.\nRoads lead {ACTION|north|north}, {ACTION|east|east} and {ACTION|west|west}}
-/outside_gotham_museum ; TODO: consider adding relevant links: {ACTION|ente|ente}
-{CLASS|bright|You are outside Gotham Museum. Roads lead {ACTION|north|north}, {ACTION|south|south} and {ACTION|east|east}}
-/outside_gotham_library ; TODO: consider adding relevant links: {ACTION|ente|ente}
-{CLASS|bright|You are on the steps of Gotham Library.\nRoads lead {ACTION|south|south}, {ACTION|east|east} and {ACTION|west|west}}
-/outside_gotham_bank ; TODO: consider adding relevant links: {ACTION|ente|ente}
-{CLASS|bright|You are outside Gotham City Bank. Roads lead {ACTION|south|south} and {ACTION|west|west}.}
-/inside_library ; TODO: consider adding relevant links: {ACTION|dog|dog}, {ACTION|exam book|exam book}, {ACTION|exam dog|exam dog}, {ACTION|get book|get book}, {ACTION|get dog|get dog}, {ACTION|ente|ente}
-{CLASS|bright|It is full of flattish oblong things with paper inside. The entire literate population of Gotham City is here. She has a small Pekingese dog under her arm, called Toodloo.\n\nA corridor runs {ACTION|west|west}.}
-/inside_art_gallery ; TODO: consider adding relevant links: {ACTION|cut rope|cut rope}, {ACTION|exam pict|exam pict}, {ACTION|get pict|get pict}, {ACTION|open valv|open valv}, {ACTION|zx81|zx81}
-{CLASS|bright|You are {ACTION|in|in} the Art Gallery.\nIt is featuring a special international exhibition of modern art. You are astounded to see that only three people are present.\nLarge, striking paintings line the walls.}
-/study_area ; TODO: consider adding relevant links: {ACTION|exam desk|exam desk}, {ACTION|east|east}
+/outside_art_gallery
+{CLASS|bright|You are outside {ACTION|Enter|the Gotham Art Gallery}.\nRoads run {ACTION|north|north} and {ACTION|east|east}.}
+/outside_jewllers_shop
+{CLASS|bright|You are outside {ACTION|Enter|a jeweller's shop}.\nRoads lead {ACTION|north|north}, {ACTION|east|east} and {ACTION|west|west}}
+/outside_gotham_museum
+{CLASS|bright|You are outside {ACTION|Enter|Gotham Museum}. Roads lead {ACTION|north|north}, {ACTION|south|south} and {ACTION|east|east}}
+/outside_gotham_library
+{CLASS|bright|You are on the steps of {ACTION|Enter|Gotham Library}.\nRoads lead {ACTION|south|south}, {ACTION|east|east} and {ACTION|west|west}}
+/outside_gotham_bank
+{CLASS|bright|You are outside {ACTION|Enter|Gotham City Bank}. Roads lead {ACTION|south|south} and {ACTION|west|west}.}
+/inside_library
+{CLASS|bright|It is full of {ACTION|read book|flattish oblong things with paper inside}. The entire literate population of Gotham City is here. She has {ACTION|get the dog|a small Pekingese dog} under her arm, called Toodloo.\n\nA corridor runs {ACTION|west|west}.}
+/inside_art_gallery
+{CLASS|bright|You are in the Art Gallery.\nIt is featuring a special international exhibition of modern art. You are astounded to see that only three people are present.\n{ACTION|Examine the pictures|Large, striking paintings} line the walls.}
+/study_area
 {CLASS|bright|You are in the study area.}
-/inside_gotham_museum ; TODO: consider adding relevant links: {ACTION|exam hipp|exam hipp}, {ACTION|get file|get file}, {ACTION|get hipp|get hipp}, {ACTION|ente|ente}
+/inside_gotham_museum
 {CLASS|bright|You are inside Gotham Museum.}
-/inside_jewellers_shop ; TODO: consider adding relevant links: {ACTION|get tiar|get tiar}, {ACTION|ente|ente}
+/inside_jewellers_shop
 {CLASS|bright|You are inside the jeweller's.}
 /inside_gotham_bank
 {CLASS|bright|You are in the bank. Approximately every thirty seconds a gentleman in a black shirt with a white tie enters to deposit some outrageous sum of money.}
-/outside_gotham_infirmary ; TODO: consider adding relevant links: {ACTION|exam bubb|exam bubb}, {ACTION|get bubb|get bubb}
-{CLASS|bright|You are outside the Gotham Infirmary. Approximately every ninety seconds a man wearing a black shirt with a white tie is carried {ACTION|in|in} on a stretcher, riddled with bullets. Used speech bubbles litter the floor. Roads lead {ACTION|north|north} and {ACTION|west|west}.}
+/outside_gotham_infirmary
+{CLASS|bright|You are outside {ACTION|Enter|Gotham Infirmary}. Approximately every ninety seconds a man wearing a black shirt with a white tie is carried in on a stretcher, riddled with bullets. {ACTION|Examine bubbles|Used speech bubbles} litter the floor. Roads lead {ACTION|north|north} and {ACTION|west|west}.}
 /gotham_infirmary_foyer
 {CLASS|bright|You are in the foyer of the infirmary. A brisk, athletic young nurse asks you your business.}
-/outside_gotham_police_station ; TODO: consider adding relevant links: {ACTION|ente|ente}
-{CLASS|bright|You are outside Gotham Police Headquarters.\nRoads lead {ACTION|south|south} and {ACTION|east|east}. A little alleyway leads {ACTION|north|north}.}
+/outside_gotham_police_station
+{CLASS|bright|You are outside {ACTION|Enter|Gotham Police Headquarters}.\nRoads lead {ACTION|south|south} and {ACTION|east|east}. {ACTION|north|A little alleyway} leads north.}
 /inside_gotham_police_station
 {CLASS|bright|You are inside the station house.}
-/behind_gotham_police_station ; TODO: consider adding relevant links: {ACTION|exam wall|exam wall}, {ACTION|sout|sout}
-{CLASS|bright|You are in a back alley behind the station house. The station wall is tall and black, punctuated only by a series of dismal barred windows.}
-/gotham_police_station_roof ; TODO: consider adding relevant links: {ACTION|exam swit|exam swit}, {ACTION|swit swit|swit swit}, {ACTION|down|down}
+/behind_gotham_police_station
+{CLASS|bright|You are in a back alley behind the station house. {ACTION|examine wall|The station wall} is tall and black, punctuated only by a series of dismal barred windows.}
+/gotham_police_station_roof
 {CLASS|bright|You are on the roof of the station.}
 /room_63
 {CLASS|center|\n{CLASS|bright ink-yellow|WELCOME TO ADVENTURE\n\n}}{CLASS|bright ink-yellow|Hi. I'm Trixie, spelunk me.\n\nWhat I mean is, I've done Caves before, so I've got the job of showing new adventurers around.\n\nI'm a prefect. So you'll have to behave yourself.\n\nLet's have a look at you.\nHealthy enough, I suppose.\nDo with a bit more exercise.\nStill, you'll soon get that.\nAlright, you'll do.\n\nLet's get going.}
@@ -1303,7 +1304,7 @@ vb_e _
 vb_e _
  at      room_1
  zero    game_progress
- writeln "{CLASS|bright|The door of the small brick building is closed.}"
+ writeln "{CLASS|bright|The {ACTION|examine the door|door} of the small brick building is closed.}"
  done
 
 vb_e _
@@ -1403,7 +1404,7 @@ vb_exam nn_spri
 
 vb_exam nn_char
  at      dead_space_invaders_room
- writeln "{CLASS|bright|They are in the shape of space ships. They do not look much the worse for being zapped - the odd pixel out of place here and there, perhaps. Nothing more. These are tough characters.\n\nYou notice that one of them is rather more than a character. This is THE MOTHER SHIP, three characters in length by two high. Pretty big even for a full-blown sprite like yourself. There is an airlock on the ship.}"
+ writeln "{CLASS|bright|They are in the shape of space ships. They do not look much the worse for being zapped - the odd pixel out of place here and there, perhaps. Nothing more. These are tough characters.\n\nYou notice that one of them is rather more than a character. This is THE MOTHER SHIP, three characters in length by two high. Pretty big even for a full-blown sprite like yourself. There is {ACTION|open airlock|an airlock} on the ship.}"
  done
 
 vb_exam nn_wall
@@ -1414,7 +1415,7 @@ vb_exam nn_wall
 
 vb_exam nn_wall
  at      splendid_chamber
- writeln "{CLASS|bright|Cold and inviting.}"
+ writeln "{CLASS|bright|{ACTION|get wall|Cold and inviting}.}"
  done
 
 vb_exam nn_wall
@@ -1430,7 +1431,7 @@ vb_exam nn_wall
 
 vb_exam nn_lett
  at      splendid_chamber
- writeln "{CLASS|bright|It is red with a large slot and a small keyhole. The ornate letters are &#34;V.R.&#34; Below them is a sign.}"
+ writeln "{CLASS|bright|It is red with a large slot and {ACTION|open letterbox|a small keyhole}. The ornate letters are &#34;V.R.&#34; Below them is {ACTION|examine sign|a sign}.}"
  done
 
 vb_exam nn_crac
@@ -1447,7 +1448,7 @@ vb_exam nn_fenc
  done
 
 vb_exam nn_dino
- writeln "{CLASS|bright|On closer inspection, it is an aging hippy.}"
+ writeln "{CLASS|bright|On closer inspection, it is {ACTION|get hippy|an aging hippy}.}"
  done
 
 vb_exam nn_coin
@@ -1499,12 +1500,12 @@ vb_exam nn_pack
 
 vb_exam nn_book
  at      inside_library
- writeln "{CLASS|bright|You see the title &#34;{CLASS|ink-magenta|A Detailed Solution to the Gotham City Section of {CLASS|ink-yellow|The Very Big Cave Adventure{CLASS|ink-white|&#34;.}}}}"
+ writeln "{CLASS|bright|You see the title {ACTION|get book|&#34;{CLASS|ink-magenta|A Detailed Solution to the Gotham City Section of {CLASS|ink-yellow|The Very Big Cave Adventure{CLASS|ink-white|&#34;.}}}}}"
  done
 
 vb_exam nn_pict
  at      inside_art_gallery
- writeln "{CLASS|bright|You examine the pictures.\nYou are astounded that as many as three people are present.}"
+ writeln "{CLASS|bright|You examine {ACTION|get the pictures|the pictures}.\nYou are astounded that as many as three people are present.}"
  done
 
 vb_exam nn_hipp
@@ -1514,13 +1515,13 @@ vb_exam nn_hipp
 
 vb_exam nn_bubb
  at      outside_gotham_infirmary
- writeln "{CLASS|bright ink-lime|{CLASS|paper-white|&#34;I'll pull t'rough, babe. I gotta.&#34;\n{CLASS|paper-black|\n\n{CLASS|ink-blue paper-white|&#34;Don't worry, Louie. We'll nail da rats what done this to ya. We'll nail 'em good.&#34;\n{CLASS|paper-black|\n\n{CLASS|ink-magenta paper-white|&#34;I knew you'd come to a bad end, son. I never believed all that stuff about violin lessons.&#34;\n{CLASS|paper-black|\n\n{CLASS|ink-red paper-white|&#34;Yeah, he's the big man behind the operation. His name is... ARRGH CHOKE&#34;\n{CLASS|paper-black|\n\n{CLASS|ink-white|Etc. As you sort through the bubbles you uncover something buried beneath them.}}}}}}}}}}"
+ writeln "{CLASS|bright|{CLASS|ink-lime paper-white|&#34;I'll pull t'rough, babe. I gotta.&#34;}\n\n{CLASS|paper-white ink-blue|&#34;Don't worry, Louie. We'll nail da rats what done this to ya. We'll nail 'em good.&#34;}\n\n{CLASS|paper-white ink-magenta|&#34;I knew you'd come to a bad end, son. I never believed all that stuff about violin lessons.&#34;}\n\n{CLASS|paper-white ink-red|&#34;Yeah, he's the big man behind the operation. His name is... ARRGH CHOKE&#34;}\n\nEtc. As you sort through the bubbles you uncover {ACTION|examine canister|something buried beneath them}.}"
  create  object_33_valve
  done
 
 vb_exam nn_valv
  present object_33_valve
- writeln "{CLASS|center|{CLASS|bright|\n{CLASS|bright ink-yellow|NITROUS OXIDE     \nWITH CARE\n}}}{CLASS|bright ink-white|The canister has a valve at the top.}"
+ writeln "\n{CLASS|bright center ink-yellow|NITROUS OXIDE\nWITH CARE\n}{CLASS|bright ink-white|The canister has {ACTION|Open valve|a valve} at the top.}"
  done
 
 vb_exam nn_bat
@@ -1530,7 +1531,7 @@ vb_exam nn_bat
 
 vb_exam nn_swit
  at      gotham_police_station_roof
- writeln "{CLASS|bright|A bat-like splodge is painted on the glass. At the back is a switch.}"
+ writeln "{CLASS|bright|A bat-like splodge is painted on the glass. At the back is {ACTION|switch switch|a switch}.}"
  done
 
 vb_exam nn_dog
@@ -1540,7 +1541,7 @@ vb_exam nn_dog
 
 vb_exam nn_box
  present object_41_box
- writeln "\n\n{CLASS|bright ink-yellow|DEHYDRATED ART CRITICS\n\n{CLASS|ink-magenta|Surprise your friends           }}{CLASS|center bright ink-magenta|with these\n}{CLASS|bright ink-yellow|AMAZING NATURAL MARVELS}"
+ writeln "\n{ACTION|open box|{CLASS|center ink-yellow bright|DEHYDRATED ART CRITICS\n{CLASS|ink-magenta|Surprise your friends with these\n}AMAZING NATURAL MARVELS}}"
  done
 
 vb_exam nn_desk
@@ -1633,7 +1634,7 @@ vb_open nn_valv
 
 vb_open nn_box
  present object_41_box
- writeln "{CLASS|bright|Something falls to the ground.}"
+ writeln "{CLASS|bright|{ACTION|Look|Something} falls to the ground.}"
  create  object_42_pellet
 
 vb_no _
@@ -1793,7 +1794,7 @@ vb_put nn_penn
  place   object_9_bull bulls_gully
  let     game_progress 1
  destroy object_2_penny
- writeln "{CLASS|bright|The door swings open.}"
+ writeln "{CLASS|bright|The {ACTION|east|door} swings open.}"
  done
 
 vb_put _
@@ -2040,7 +2041,7 @@ vb_get nn_moon
 
 vb_get nn_wall
  at      splendid_chamber
- writeln "{CLASS|bright|How? Lick it where it is.}"
+ writeln "{CLASS|bright|How? {ACTION|lick wall|Lick it where it is}.}"
  done
 
 vb_get nn_log
@@ -2170,7 +2171,7 @@ vb_drop nn_penn
  place   object_9_bull bulls_gully
  let     game_progress 1
  destroy object_2_penny
- writeln "{CLASS|bright|The door swings open.}"
+ writeln "{CLASS|bright|The {ACTION|east|door} swings open.}"
  done
 
 vb_drop nn_bott
@@ -2603,7 +2604,7 @@ _ _
  absent  object_16_zx81
  present object_0_lamp
  anykey
- writeln "{CLASS|bright|\n{CLASS|bright|A spindly balding creature with a neat ginger beard and spectacles emerges from the gloom.\n\nHe throws something which lodges in the wall with a sickening thud, then rushes off cackling wildly.}}"
+ writeln "{CLASS|bright|\n{CLASS|bright|A spindly balding creature with a neat ginger beard and spectacles emerges from the gloom.\n\nHe throws something which {ACTION|examine wall|lodges in the wall} with a sickening thud, then rushes off cackling wildly.}}"
  create  object_16_zx81
 
 _ _
@@ -2739,7 +2740,7 @@ _ _
  zero    space_invaders_position_and_that_man_status
  notzero countdown_player_input_1
  writeln "\n{CLASS|bright ink-cyan|A newsboy cries &#34;Jester escapes!}"
- writeln "{CLASS|bright ink-cyan|Read all about it!&#34;}"
+ writeln "{ACTION|buy news|{CLASS|bright ink-cyan|Read all about it!&#34;}}"
  done
 
 _ _
@@ -2750,7 +2751,7 @@ _ _
  notat   outside_gotham_library
  lt      space_invaders_position_and_that_man_status 51
  writeln "\n{CLASS|bright ink-cyan|A newsboy cries &#34;Daring robbery!}"
- writeln "{CLASS|bright ink-cyan|Read all about it!&#34;}"
+ writeln "{ACTION|buy news|{CLASS|bright ink-cyan|Read all about it!&#34;}}"
 
 _ _
  eq      total_dead_space_invaders_and_yesno_gotham_theft 50
@@ -2792,37 +2793,31 @@ _ _
  writeln "{CLASS|bright|Overloaded by the excessive and indigestible verbal input, the SOPHISTICATED PARSER overheats and explodes, vaporising the troll and the art critic.}"
 
 _ _
- at      wellie_house
- zero    countdown_location_description
- anykey
- writeln "\n{CLASS|bright|There is a little fence beside the spring. The door is west.}"
-
-_ _
  at      small_hill
  zero    countdown_location_description
  anykey
- writeln "{CLASS|bright|Well, not that small. I notice you are out of breath and perspiring freely so I hope you will not fuss when I tell you that this hill plays no particular part in the adventure and I have no idea why it's here\n\nContrary to the laws of geography, going north will take you back to the road.\n\nDon't say I never tell you anything.}"
+ writeln "{CLASS|bright|Well, not that small. I notice you are out of breath and perspiring freely so I hope you will not fuss when I tell you that this hill plays no particular part in the adventure and I have no idea why it's here\n\nContrary to the laws of geography, going {ACTION|north|north} will take you back to the road.\n\n\nDon't say I never tell you anything.}"
 
 _ _
  at      debris_room
  zero    countdown_location_description
  present object_0_lamp
  anykey
- writeln "{CLASS|bright|\n{CLASS|bright|The room is filled with bits and pieces washed in from the surface and has not been tidied in years. It looks a lot like your bedroom.\n\nA low crawl becomes plugged with mud here but an awkward passage leads west.\n\nThere is a very rude word on the wall.}}"
+ writeln "{CLASS|bright|\nThe room is filled with bits and pieces washed in from the surface and has not been tidied in years. It looks a lot like your bedroom.\n\n{ACTION|east|The low crawl} becomes plugged with mud here but {ACTION|west|an awkward passage} leads west.\n\nThere is {ACTION|examine wall|a very rude word on the wall}.}"
 
 _ _
  at      live_space_invaders_room
  zero    countdown_location_description
  present object_0_lamp
  anykey
- writeln "\n{CLASS|bright|You are in a dark place. High above you hover several rows of brightly-coloured alien craft.\n\nAs you watch, you realise that they are also moving slowly but inexorably... DOWN TOWARD YOU.\n\nYou can move LEFT, RIGHT or FIRE}"
+ writeln "\n{CLASS|bright|You are in a dark place. High above you hover several rows of brightly-coloured alien craft.\n\nAs you watch, you realise that they are also moving slowly but inexorably... DOWN TOWARD YOU.\n\nYou can move {ACTION|left|LEFT}, {ACTION|right|RIGHT} or {ACTION|fire|FIRE}}"
 
 _ _
  at      splendid_chamber
  zero    countdown_location_description
  present object_0_lamp
  anykey
- writeln "\n{CLASS|bright|The walls are frozen rivers of orange sorbet. In the centre stands a pillar adorned with ornate letters, and here the marble flags are somewhat worn. An awkward passage and a good canyon exit to east and west.}"
+ writeln "\n{CLASS|bright|The {ACTION|examine wall|walls} are frozen rivers of orange sorbet. In the centre stands a {ACTION|examine pillar|pillar} adorned with ornate letters, and here the marble flags are somewhat worn. {ACTION|east|An awkward passage} and {ACTION|west|a good canyon} exit to east and west.}"
 
 _ _
  at      bat_cave
@@ -2836,14 +2831,14 @@ _ _
  zero    countdown_location_description
  present object_0_lamp
  anykey
- writeln "\n{CLASS|bright|You now see that the two red glints came from the tail lights of a powerful, low-slung automobile. It is jet black with a bat-like mask on the front and a sort of fin along the back resembling a bat's wing.}"
+ writeln "\n{CLASS|bright|You now see that the two red glints came from the tail lights of {ACTION|enter|a powerful, low-slung automobile}. It is jet black with a bat-like mask on the front and a sort of fin along the back resembling a bat's wing.}"
 
 _ _
  at      sophisticated_parser_cave
  zero    countdown_location_description
  present object_0_lamp
  anykey
- writeln "{CLASS|bright|\n{CLASS|bright|One wall is covered by crimson silk curtains which look suspiciously as if something is concealed behind them.}}"
+ writeln "{CLASS|bright|\n{CLASS|bright|One wall is covered by {ACTION|examine the curtains covering the wall|crimson silk curtains} which look suspiciously as if {ACTION|look behind the crimson|something is concealed behind them}.}}"
 
 _ _
  at      inside_jewellers_shop
@@ -2877,13 +2872,13 @@ _ _
  at      habitat_cave
  zero    countdown_location_description
  anykey
- writeln "\n{CLASS|bright|The cave is distinguished by sackcloth curtains, a cupboard and other square pieces of furniture in unvarnished pine, almost as beautiful as packing cases.\n\nThese and other items of like nature, hideous as they look in houses, seem strangely appropriate in a cave.\n\nObjectively the cave is not large but the cold bleakness of its furnishings gives it a sense of endlessness.\n\nExits, thankfully, are north, east and west.}"
+ writeln "\n{CLASS|bright|The cave is distinguished by sackcloth curtains, a {ACTION|open the cupboard|cupboard} and other square pieces of furniture in unvarnished pine, almost as beautiful as packing cases.\n\nThese and other items of like nature, hideous as they look in houses, seem strangely appropriate in a cave.\n\nObjectively the cave is not large but the cold bleakness of its furnishings gives it a sense of endlessness.\n\nExits, thankfully, are {ACTION|north|north}, {ACTION|east|east} and {ACTION|west|west}.}"
 
 _ _
  at      twee_chamber
  zero    countdown_location_description
  anykey
- writeln "\n{CLASS|bright|The wallpaper is a Laura Ashley pattern of pink flowers on blue, the hangings are the same, only blue on pink.\n\nAfter the barren wastes of the Habitat Cave this room seems almost a relief. But it is a dead end and leads only back to Habitat.}"
+ writeln "\n{CLASS|bright|The wallpaper is a Laura Ashley pattern of pink flowers on blue, the hangings are the same, only blue on pink.\n\nAfter the barren wastes of the Habitat Cave this room seems almost a relief. But it is a dead end and leads only {ACTION|south|back to Habitat}.}"
 
 _ _
  at      part_2_room
