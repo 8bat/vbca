@@ -1,0 +1,2984 @@
+; ngPAWS output created by The Inker
+;
+; Note: Adventures created with The Quill need to be cleaned up manually
+; before they will work properly with ngPAWS.
+; Please search for "TODO" lines below.
+
+; Object attributes constants:
+#define const aLight       = 0
+#define const aWearable    = 1
+#define const aContainer   = 2
+#define const aNPC         = 3
+#define const aConcealed   = 4
+#define const aEdible      = 5
+#define const aDrinkable   = 6
+#define const aEnterable   = 7
+#define const aFemale      = 8
+#define const aLockable    = 9
+#define const aLocked      = 10
+#define const aMale        = 11
+#define const aNeuter      = 12
+#define const aOpenable    = 13
+#define const aOpen        = 14
+#define const aPluralName  = 15
+#define const aTransparent = 16
+#define const aScenery     = 17
+#define const aSupporter   = 18
+#define const aSwitchable  = 19
+#define const aOn          = 20
+#define const aStatic      = 21
+
+; Object name constants:
+#define const object_0_lamp = 0
+#define const object_1_bull = 1
+#define const object_2_penny = 2
+#define const object_3_keys = 3
+#define const object_4_lamp = 4
+#define const object_5_food = 5
+#define const object_6_bottle = 6
+#define const object_7_wellies = 7
+#define const object_8_bomb = 8
+#define const object_9_bull = 9
+#define const object_10_grate_locked = 10
+#define const object_11_grate_open = 11
+#define const object_12_cage = 12
+#define const object_13_rod = 13
+#define const object_14_songbird = 14
+#define const object_15_moon = 15
+#define const object_16_zx81 = 16
+#define const object_17_log = 17
+#define const object_18_log_over_chasm = 18
+#define const object_19_silver = 19
+#define const object_20_python = 20
+#define const object_21_can = 21
+#define const object_22_table = 22
+#define const object_23_key = 23
+#define const object_24_hint = 24
+#define const object_25_cord = 25
+#define const object_26_that_man_has_left = 26
+#define const object_27_red_button = 27
+#define const object_28_troll = 28
+#define const object_29_goblet = 29
+#define const object_30_packet = 30
+#define const object_31_parser = 31
+#define const object_32_tiara = 32
+#define const object_33_valve = 33
+#define const object_34_ladder = 34
+#define const object_35_searchlight = 35
+#define const object_36_desks = 36
+#define const object_37_file = 37
+#define const object_38_pictures = 38
+#define const object_39_bat = 39
+#define const object_40_belt = 40
+#define const object_41_box = 41
+#define const object_42_pellet = 42
+#define const object_43_art_critiquette = 43
+#define const object_44_hippies = 44
+#define const object_45_bottle = 45
+
+; Room ID constants:
+#define const room_0 = 0
+#define const room_1 = 1
+#define const bulls_gully = 2
+#define const wellie_house = 3
+#define const stream_end = 4
+#define const small_hill = 5
+#define const lost_in_the_forest = 6
+#define const grate_gully = 7
+#define const below_the_grate = 8
+#define const crawling_over_cobbles = 9
+#define const debris_room = 10
+#define const low_room = 11
+#define const log_chasm_room = 12
+#define const rope_to_part_2 = 13
+#define const part_2_room = 14
+#define const secret_hiding_place = 15
+#define const habitat_cave = 16
+#define const twee_chamber = 17
+#define const avante_garde_room = 18
+#define const live_space_invaders_room = 19
+#define const dead_space_invaders_room = 20
+#define const sloping_canyon = 21
+#define const splendid_chamber = 22
+#define const west_end_of_upper_floor = 23
+#define const old_crack = 24
+#define const vast_hall_east = 25
+#define const hall_of_the_mountain_king = 26
+#define const cemented_floor_room = 27
+#define const y2_room = 28
+#define const window_over_pit = 29
+#define const censored_room = 30
+#define const recent_rock_fall_cavern = 31
+#define const high_dark_passage = 32
+#define const bat_cave = 33
+#define const hall_of_mists_west_fissure = 34
+#define const hall_of_mists_west_end = 35
+#define const west_end_of_passage = 36
+#define const east_end_of_hall = 37
+#define const small_low_cavern = 38
+#define const batmobile = 39
+#define const batcave_exit_tunnel = 40
+#define const heart_of_gotham = 41
+#define const outside_le_chat_noir = 42
+#define const inside_le_chat_noir = 43
+#define const sophisticated_parser_cave = 44
+#define const swear_box = 45
+#define const outside_art_gallery = 46
+#define const outside_jewllers_shop = 47
+#define const outside_gotham_museum = 48
+#define const outside_gotham_library = 49
+#define const outside_gotham_bank = 50
+#define const inside_library = 51
+#define const inside_art_gallery = 52
+#define const study_area = 53
+#define const inside_gotham_museum = 54
+#define const inside_jewellers_shop = 55
+#define const inside_gotham_bank = 56
+#define const outside_gotham_infirmary = 57
+#define const gotham_infirmary_foyer = 58
+#define const outside_gotham_police_station = 59
+#define const inside_gotham_police_station = 60
+#define const behind_gotham_police_station = 61
+#define const gotham_police_station_roof = 62
+#define const room_63 = 63
+; Special Room ID constants:
+#define const room_noncreated = 252 ; destroying an object moves it to this room
+#define const room_worn = 253 ; wearing an object moves it to this room
+#define const room_carried = 254 ; carrying an object moves it to this room
+#define const room_here = 255 ; not used by any Quill condacts
+
+; Flag IDs:
+; Flags beginning "yesno_" are yes/no values (e.g. "is it dark?")
+; Flags beginning "total_" represent a count (e.g. "how many objects are carried?")
+; Flags beginning "countdown_" are decremented when certain events occur
+; Flags beginning "bitset_" are a set of 8 yes/no values
+; Flags beginning "word_" represent a word ID in the vocabulary table
+; Flags beginning "game_flag_" have game-specific meanings
+; Flags ending "_dark" refer to the room being dark
+; Flags ending "_unlit" refer to the room being dark *and* the lamp being absent
+#define const yesno_is_dark                       =   0
+#define const total_carried                       =   1
+#define const countdown_location_description      =   2
+#define const countdown_location_description_dark =   3 ; unused
+#define const countdown_object_description_unlit  =   4
+#define const countdown_player_input_1            =   5
+#define const countdown_player_input_2            =   6
+#define const countdown_player_input_3            =   7
+#define const countdown_player_input_4            =   8
+#define const countdown_player_input_dark         =   9
+#define const countdown_player_input_unlit        =  10
+#define const yesno_bull_roared                        = 111 ; ngPAWS assigns a special meaning to flag 11
+#define const total_dead_space_invaders_and_yesno_gotham_theft                        = 112 ; ngPAWS assigns a special meaning to flag 12
+#define const space_invaders_position_and_that_man_status                        = 113 ; ngPAWS assigns a special meaning to flag 13
+#define const game_flag_14                        = 114 ; ngPAWS assigns a special meaning to flag 14 ; unused
+#define const game_flag_15                        = 115 ; ngPAWS assigns a special meaning to flag 15 ; unused
+#define const yesno_silver_sold                        = 116 ; ngPAWS assigns a special meaning to flag 16
+#define const yesno_moon_crystal_sold                        =  17
+#define const wellie_house_door_status                        =  18
+#define const yesno_got_booted                        =  19
+#define const yesno_entered_batmobile                        =  20
+#define const game_flag_21                        =  21 ; unused
+#define const game_progress                        =  22
+#define const game_flag_23                        =  23 ; unused
+#define const game_flag_24                        =  24 ; unused
+#define const game_flag_25                        =  25 ; unused
+#define const yesno_done_part_1                        =  26
+#define const yesno_rope_cut                        =  27
+#define const pause_parameter                     =  28
+#define const bitset_graphics_status              =  29
+#define const total_player_score                  =  30
+#define const total_turns_lower                   =  31
+#define const total_turns_higher                  =  32
+#define const word_verb                           =  33
+#define const word_noun                           =  34
+#define const room_number                         =  38 ; (35 in The Quill, but 38 in ngPAWS)
+
+; PAUSE subfunctions:
+; Setting the pause_parameter flag will change the behaviour of the PAUSE command:
+; sound effects:
+#define const pause_sound_effect_tone_increasing = 1 ; increasing tone (value is the duration)
+#define const pause_sound_effect_telephone       = 2 ; ringing telephone (value is the number of rings)
+#define const pause_sound_effect_tone_decreasing = 3 ; decreasing tone (opposite of effect 1)
+#define const pause_sound_effect_white_noise     = 5 ; white noise (resembles an audience clapping, value is the number of repetitions)
+#define const pause_sound_effect_machine_gun     = 6 ; machine gun noise (value is the duration)
+; visual effects:
+#define const pause_flash = 4 ; flash the screen and the border (value is the number of flashes)
+#define const pause_box_wipe = 9 ; a series of coloured boxes expands out of the centre of the screen at speed
+; change font:
+#define const pause_font_default = 7 ; switch to the default font
+#define const pause_font_alternate = 8 ; switch to the alternative font.
+; change messages:
+#define const pause_change_youcansee = 10 ; Change the "You can also see" message to the message number passed to PAUSE
+; Control commands:
+#define const pause_restart = 12 ; Restart the game without warning.
+#define const pause_reboot = 13 ; Reboot the Spectrum without warning
+#define const pause_ability = 11 ; Set the maximum number of objects carried at once to the value passed to PAUSE
+#define const pause_ability_plus = 14 ; Increase number of objects that can be carried at once by the amount passed to PAUSE
+#define const pause_ability_minus = 15 ; Decrease number of objects that can be carried at once by the amount passed to PAUSE
+#define const pause_toggle_graphics = 19 ; switch graphics off (for PAUSE 255) or on (for any other value)
+#define const pause_ram_save_load = 21 ; RAMload (for PAUSE 50) or RAMsave (for any other value)
+#define const pause_set_identity_byte = 22 ; Set the identity in saved games to the value passed to PAUSE
+; change the keyboard click sound:
+#define const pause_click_effect_1 = 16
+#define const pause_click_effect_2 = 17
+#define const pause_click_effect_3 = 18
+
+; Location graphics:
+#define pic location1.svg    =   1
+#define pic location2.svg    =   2
+#define pic location3.svg    =   3
+#define pic location4.svg    =   4
+#define pic location5.svg    =   5
+#define pic location6.svg    =   6
+#define pic location7.svg    =   7
+#define pic location8.svg    =   8
+#define pic location9.svg    =   9
+#define pic location10.svg   =  10
+#define pic location11.svg   =  11
+#define pic location12.svg   =  12
+#define pic location15.svg   =  15
+#define pic location16.svg   =  16
+#define pic location17.svg   =  17
+#define pic location19.svg   =  19
+#define pic location20.svg   =  20
+#define pic location21.svg   =  21
+#define pic location22.svg   =  22
+#define pic location23.svg   =  23
+#define pic location25.svg   =  25
+#define pic location26.svg   =  26
+#define pic location27.svg   =  27
+#define pic location28.svg   =  28
+#define pic location29.svg   =  29
+#define pic location31.svg   =  31
+#define pic location32.svg   =  32
+#define pic location33.svg   =  33
+#define pic location34.svg   =  34
+#define pic location35.svg   =  35
+#define pic location36.svg   =  36
+#define pic location37.svg   =  37
+#define pic location38.svg   =  38
+#define pic location39.svg   =  39
+#define pic location40.svg   =  40
+#define pic location41.svg   =  41
+#define pic location42.svg   =  42
+#define pic location43.svg   =  43
+#define pic location44.svg   =  44
+#define pic location45.svg   =  45
+#define pic location46.svg   =  46
+#define pic location47.svg   =  47
+#define pic location48.svg   =  48
+#define pic location49.svg   =  49
+#define pic location50.svg   =  50
+#define pic location51.svg   =  51
+#define pic location52.svg   =  52
+#define pic location53.svg   =  53
+#define pic location54.svg   =  54
+#define pic location55.svg   =  55
+#define pic location56.svg   =  56
+#define pic location57.svg   =  57
+#define pic location58.svg   =  58
+#define pic location59.svg   =  59
+#define pic location60.svg   =  60
+#define pic location61.svg   =  61
+#define pic location62.svg   =  62
+
+
+
+;
+; CONTROL SECTION (deprecated)
+;
+
+/CTL
+
+
+;
+; VOCABULARY SECTION
+;
+
+/VOC
+
+; -- Movements, verbs and nouns --
+; words with value less than 14 are treated as requests to go in that direction.
+; This is the same in both PAW and Quill, so these should behave properly.
+;
+;word    value    type
+vb_n         1    verb
+vb_nort      1    verb
+vb_s         2    verb
+vb_sout      2    verb
+vb_e         3    verb
+vb_east      3    verb
+vb_w         4    verb
+vb_west      4    verb
+vb_clim      9    verb
+vb_u         9    verb
+vb_up        9    verb
+vb_d        10    verb
+vb_down     10    verb
+vb_exam     13    verb
+vb_read     13    verb
+
+;-- verbs and proper nouns --
+; nouns less than 50 are proper nouns and ignored by the pronoun system.
+; The Quill didn't have a pronoun system, so these should behave properly.
+;
+;word    value    type
+nn_buil     14    noun
+nn_door     14    noun
+nn_lock     14    noun
+vb_open     15    verb
+vb_unlo     15    verb
+nn_penn     16    noun
+vb_no       17    verb
+nn_bott     18    noun
+nn_bunc     19    noun
+nn_keys     19    noun
+nn_lamp     20    noun
+nn_food     21    noun
+nn_wate     22    noun
+vb_wate     22    verb
+vb_yes      23    verb
+nn_bomb     24    noun
+vb_thro     25    verb
+nn_grat     26    noun
+vb_spel     27    verb
+vb_ligh     28    verb
+nn_cage     29    noun
+nn_rod      30    noun
+vb_comm     31    verb
+nn_spri     32    noun
+vb_spri     32    verb
+vb_left     33    verb
+vb_righ     34    verb
+vb_fire     35    verb
+nn_char     36    noun
+nn_pile     36    noun
+nn_airl     37    noun
+nn_crys     38    noun
+nn_moon     38    noun
+nn_sorb     39    noun
+nn_wall     39    noun
+nn_word     39    noun
+nn_zx81     41    noun
+vb_zx81     41    verb
+vb_atta     42    verb
+vb_batt     42    verb
+vb_brea     42    verb
+vb_hit      42    verb
+vb_kick     42    verb
+vb_ram      42    verb
+vb_smas     42    verb
+nn_log      43    noun
+nn_bird     44    noun
+vb_catc     45    verb
+vb_fill     45    verb
+vb_give     45    verb
+vb_pick     45    verb
+vb_put      45    verb
+vb_take     45    verb
+nn_lett     46    noun
+nn_pill     46    noun
+vb_eat      47    verb
+vb_lick     47    verb
+vb_ente     48    verb
+vb_in       48    verb
+vb_into     48    verb
+vb_leav     48    verb
+vb_out      48    verb
+nn_crac     49    noun
+
+;-- verbs and other nouns --
+; nouns 50 and above can be used by the pronoun system.
+; We don't define any pronouns by default, so these should behave properly.
+;
+;word    value    type
+vb_plug     50    verb
+nn_bars     52    noun
+nn_silv     52    noun
+nn_can      53    noun
+vb_wave     54    verb
+nn_tabl     55    noun
+nn_cupb     57    noun
+vb_cupb     57    verb
+nn_draw     57    noun
+vb_draw     57    verb
+nn_key      58    noun
+nn_trin     59    noun
+nn_trix     59    noun
+nn_you      59    noun
+vb_kiss     60    verb
+nn_fenc     61    noun
+nn_dino     62    noun
+nn_coin     63    noun
+vb_pres     65    verb
+vb_push     65    verb
+nn_butt     66    noun
+vb_fuck     67    verb
+vb_rape     67    verb
+vb_shit     67    verb
+vb_swea     67    verb
+vb_wash     68    verb
+nn_mout     69    noun
+nn_gyms     70    noun
+nn_skir     70    noun
+vb_lift     71    verb
+vb_rais     71    verb
+nn_pett     72    noun
+nn_pars     73    noun
+vb_pars     73    verb
+nn_gobl     74    noun
+vb_gobl     74    verb
+nn_curt     75    noun
+vb_curt     75    verb
+nn_chai     76    noun
+vb_chai     76    verb
+nn_saw      76    noun
+vb_saw      76    verb
+nn_soph     77    noun
+vb_soph     77    verb
+nn_trol     78    noun
+vb_trol     78    verb
+nn_pack     79    noun
+nn_behi     80    noun
+vb_behi     80    verb
+nn_book     81    noun
+nn_oblo     81    noun
+nn_solu     81    noun
+nn_pain     82    noun
+nn_pict     82    noun
+nn_hipp     84    noun
+vb_scor     85    verb
+nn_bubb     87    noun
+nn_cani     88    noun
+nn_valv     88    noun
+nn_bat      89    noun
+nn_sear     90    noun
+vb_sear     90    verb
+nn_swit     90    noun
+vb_swit     90    verb
+nn_turn     90    noun
+vb_turn     90    verb
+nn_news     92    noun
+nn_pape     92    noun
+vb_buy      93    verb
+nn_dog      94    noun
+vb_dog      94    verb
+nn_tood     94    noun
+vb_tood     94    verb
+vb_cut      95    verb
+nn_rope     96    noun
+nn_file     97    noun
+nn_box      98    noun
+nn_desk     99    noun
+vb_get     100    verb
+vb_drop    101    verb
+vb_inse    101    verb
+vb_spen    101    verb
+vb_remo    102    verb
+vb_wear    103    verb
+vb_i       104    verb
+vb_inve    104    verb
+vb_l       105    verb
+vb_look    105    verb
+vb_quit    106    verb
+vb_save    107    verb
+vb_load    108    verb
+vb_wait    109    verb
+nn_pell    112    noun
+nn_all     136    noun
+vb_y2      150    verb
+nn_sign    151    noun
+vb_text    152    verb
+vb_grap    153    verb
+vb_spit    154    verb
+vb_tape    155    verb
+nn_well    201    noun
+nn_tiar    220    noun
+nn_belt    221    noun
+
+; -- Standard ngPAWS conjuntions (taken from the ngPAWS "start" database) --
+;
+;word    value    type
+AND          2    conjunction
+THEN         2    conjunction
+
+
+;
+; SYSTEM MESSAGES SECTION
+;
+
+/STX
+;
+; ngPAWS defines several extra system messages that didn't exist in The Quill.
+; Default messages have been added below, but they might not match the tone
+; of your game (too serious, too silly, etc.).
+; TODO: check the text of these messages match the tone of your game
+/0
+{CLASS|bright ink-magenta|It's dark here. You might fall into a sploosh-hole.}<br>
+/1
+{CLASS|bright ink-cyan|And you can see:}<br>
+/2 ; TODO: check the following message matches the tone of your game:
+What do you want to do now?
+/3 ; TODO: check the following message matches the tone of your game:
+{EXITS|@38|1000}
+/4 ; TODO: check the following message matches the tone of your game:
+Please enter your next order
+/5 ; TODO: check the following message matches the tone of your game:
+Please type in your orders
+/6
+{CLASS|bright|Sorry, this thick computer doesn't understand that.}<br>
+/7
+{CLASS|bright|You can't go that way.}<br>
+/8
+{CLASS|bright|You jolly well can't, so there.}<br>
+/9
+{CLASS|bright|You have pinched:}
+/10
+ (worn)
+/11
+{CLASS|bright|Nix}<br>
+/12
+{CLASS|bright|Giving up so soon?}<br>
+/13
+{CLASS|center|\n{CLASS|bright ink-black paper-white|THE END{CLASS|ink-white paper-black| \n}}}{CLASS|bright ink-white|{CLASS|paper-black|'nother go?}}<br>
+/14
+{CLASS|bright|SAYONARA}<br>
+/15
+{CLASS|bright|OK}<br>
+/16
+{CLASS|center|Press a key}<br>
+/17
+{CLASS|bright|You have taken }
+/18
+{CLASS|bright| turn}
+/19
+{CLASS|bright|s}
+/20
+.<br>
+/21
+\n{CLASS|bright|You have &pound;}
+/22
+{CLASS|bright|,000 two shillings\nand fourpence three-farthings.\n{CLASS|ink-yellow|\n{CLASS|ink-yellow|A smart spelunker can make &pound;131,000 in part 1.\n }}}<br>
+/23
+{CLASS|bright|Not being worn, duffer.}<br>
+/24
+{CLASS|bright|You can't. Your hands are full.}<br>
+/25
+{CLASS|bright|You already have it, dumbo.}<br>
+/26
+{CLASS|bright|It's not here, dim-wit.}<br>
+/27
+{CLASS|bright|You can't carry any more, wimp.}<br>
+/28
+{CLASS|bright|You don't have it.}<br>
+/29
+{CLASS|bright|Already being worn, bub.}<br>
+/30
+Y<br>
+/31
+N<br>
+/32 ; TODO: check the following message matches the tone of your game:
+More...<br>
+/33 ; TODO: check the following message matches the tone of your game:
+><br>
+/34 ; TODO: check the following message matches the tone of your game:
+<br>
+/35 ; TODO: check the following message matches the tone of your game:
+Time passes...<br>
+/36 ; TODO: check the following message matches the tone of your game:
+
+/37 ; TODO: check the following message matches the tone of your game:
+
+/38 ; TODO: check the following message matches the tone of your game:
+
+/39 ; TODO: check the following message matches the tone of your game:
+
+/40 ; TODO: check the following message matches the tone of your game:
+{CLASS|bright|You jolly well can't, so there.}<br>
+/41 ; TODO: check the following message matches the tone of your game:
+{CLASS|bright|You jolly well can't, so there.}<br>
+/42 ; TODO: check the following message matches the tone of your game:
+{CLASS|bright|You can't. Your hands are full.}<br>
+/43 ; TODO: check the following message matches the tone of your game:
+{CLASS|bright|You can't carry any more, wimp.}<br>
+/44 ; TODO: check the following message matches the tone of your game:
+You put {OREF} into<br>
+/45 ; TODO: check the following message matches the tone of your game:
+{OREF} is not into<br>
+/46 ; TODO: check the following message matches the tone of your game:
+<br>
+/47 ; TODO: check the following message matches the tone of your game:
+<br>
+/48 ; TODO: check the following message matches the tone of your game:
+<br>
+/49 ; TODO: check the following message matches the tone of your game:
+{CLASS|bright|You don't have it.}<br>
+/50 ; TODO: check the following message matches the tone of your game:
+{CLASS|bright|You jolly well can't, so there.}<br>
+/51 ; TODO: check the following message matches the tone of your game:
+.<br>
+/52 ; TODO: check the following message matches the tone of your game:
+That is not into<br>
+/53 ; TODO: check the following message matches the tone of your game:
+nothing at all<br>
+/54 ; TODO: check the following message matches the tone of your game:
+File not found.<br>
+/55 ; TODO: check the following message matches the tone of your game:
+File corrupt.<br>
+/56 ; TODO: check the following message matches the tone of your game:
+I/O error. File not saved.<br>
+/57 ; TODO: check the following message matches the tone of your game:
+Directory full.<br>
+/58 ; TODO: check the following message matches the tone of your game:
+Please enter savegame name you used when saving the game status.
+/59 ; TODO: check the following message matches the tone of your game:
+Invalid savegame name. Please check the name you entered is correct, and make sure you are trying to load the game from the same browser you saved it.<br>
+/60 ; TODO: check the following message matches the tone of your game:
+Please enter savegame name. Remember to note down the name you choose, as it will be requested in order to restore the game status.
+/61 ; TODO: check the following message matches the tone of your game:
+<br>
+/62 ; TODO: check the following message matches the tone of your game:
+Sorry? Please try other words.<br>
+/63 ; TODO: check the following message matches the tone of your game:
+Here<br>
+/64 ; TODO: check the following message matches the tone of your game:
+you can see<br>
+/65 ; TODO: check the following message matches the tone of your game:
+you can see<br>
+/66 ; TODO: check the following message matches the tone of your game:
+inside you see<br>
+/67 ; TODO: check the following message matches the tone of your game:
+on top you see<br>
+/68
+(extra message added so the newlines below aren't included in the message above)
+
+
+;
+; MESSAGES SECTION
+;
+
+/MTX
+
+; Messages used by the EXITS condact and sequence tag:
+/1000 ; TODO: check the following message matches the tone of your game:
+Exits: 
+/1001 ; TODO: check the following message matches the tone of your game:
+You can't see any exits
+; TODO: Make sure the text for each exit looks right:
+/1003
+{ACTION|nort|nort}
+/1004
+{ACTION|sout|sout}
+/1005
+{ACTION|east|east}
+/1006
+{ACTION|west|west}
+/1011
+{ACTION|up|up}
+/1012
+{ACTION|down|down}
+/1050
+{ACTION|out|out}
+/1051
+(extra message added so the newlines below aren't included in the message above)
+
+
+;
+; OBJECT TEXT SECTION
+;
+
+/OTX
+/object_0_lamp
+{CLASS|bright ink-black|{CLASS|paper-yellow| A LIT LAMP }}
+/object_1_bull
+{CLASS|bright ink-yellow|A rampaging bull guarding the gully}
+/object_2_penny
+{CLASS|bright ink-yellow|One penny(old style)}
+/object_3_keys
+{CLASS|bright ink-yellow|A bunch of keys}#{CLASS|bright|They are of the kind which lock and unlock things.}
+/object_4_lamp
+{CLASS|bright ink-yellow|A shiny brass lamp}
+/object_5_food
+{CLASS|bright ink-yellow|Some tasty food}#{CLASS|bright|I wouldn't. It's a school dinner.}
+/object_6_bottle
+{CLASS|bright ink-lime|A bottle}#{CLASS|bright|Green. Originally one of a set of ten.}
+/object_7_wellies
+{CLASS|bright ink-yellow|A pair of wellies}#{CLASS|bright|Pong.}
+/object_8_bomb
+{CLASS|bright ink-yellow|A bomb}#{CLASS|bright|Round and black with &#34;BOMB&#34; written on it.}
+/object_9_bull
+{CLASS|bright ink-yellow|A rampaging bull with the distinct air of a bull who does not mean to be caught out a second time}
+/object_10_grate_locked
+{CLASS|bright|The grate is locked}
+/object_11_grate_open
+{CLASS|bright|The grate is open}
+/object_12_cage
+{CLASS|bright ink-yellow|A gilded cage}#{CLASS|bright|It looks as if you could enter it. }
+/object_13_rod
+{CLASS|bright ink-magenta|A black rod with a rusty star on the end}
+/object_14_songbird
+{CLASS|bright ink-yellow|A cheerful little songbird}
+/object_15_moon
+{CLASS|bright|A Venusian Moon-Crystal}
+/object_16_zx81
+{CLASS|bright ink-yellow|A sharpened ZX81}
+/object_17_log
+{CLASS|bright ink-yellow|A hefty log}
+/object_18_log_over_chasm
+\n{CLASS|bright|The log forms a bridge over\nthe chasm}
+/object_19_silver
+{CLASS|bright|Bars of silver}
+/object_20_python
+{CLASS|bright ink-lime|A python}
+/object_21_can
+{CLASS|bright ink-yellow|A can marked &#34;CHEERS&#34;}
+/object_22_table
+{CLASS|bright ink-yellow|A little Chippendale table}
+/object_23_key
+{CLASS|bright ink-red|{CLASS|paper-white|A key painted bright red}}
+/object_24_hint
+{CLASS|bright|(This is not only a fresh example of bad taste but also a BROAD HINT)}
+/object_25_cord
+{CLASS|bright ink-cyan|A thick silken cord fixed inside the pillar box and descending through a hole in its floor into deep impenetrable darkness}
+/object_26_that_man_has_left
+{CLASS|bright|THAT MAN has left without you, taking away your only chance to return to the caves.}
+/object_27_red_button
+{CLASS|bright ink-red|{CLASS|paper-white|A red button}}
+/object_28_troll
+{CLASS|bright ink-lime|A twelve-foot slavering troll brandishing a chainsaw}
+/object_29_goblet
+{CLASS|bright ink-yellow|A jewel-encrusted goblet}
+/object_30_packet
+{CLASS|bright|A cornflakes packet}
+/object_31_parser
+\n{CLASS|bright ink-yellow|A Sophisticated Parser - only given away in family-size packs}
+/object_32_tiara
+{CLASS|bright ink-yellow|A magnificent emerald tiara}
+/object_33_valve
+A gas canister
+/object_34_ladder
+An iron ladder bolted to the wall
+/object_35_searchlight
+{CLASS|bright ink-yellow|A curious searchlight}
+/object_36_desks
+{CLASS|bright|Rows of empty desks}
+/object_37_file
+{CLASS|bright ink-yellow|A Byzantian gold enamelled nail file}
+/object_38_pictures
+{CLASS|bright|Three worth... er, priceless paintings}#{CLASS|bright|You examine the pictures.\nYou are astounded that as many as three people are present.}
+/object_39_bat
+{CLASS|bright|A black paper bat}
+/object_40_belt
+{CLASS|bright ink-yellow|A utility belt}
+/object_41_box
+{CLASS|bright ink-cyan|A very small cardboard box}
+/object_42_pellet
+A grey pellet
+/object_43_art_critiquette
+{CLASS|bright|An angular art-critiquette emitting a string of poly- syllables}
+/object_44_hippies
+{CLASS|bright|A group of hippies}
+/object_45_bottle
+{CLASS|bright ink-lime|A bottle of water}#{CLASS|bright|Green. Originally one of a set of ten.}
+/46
+(extra message added so the newlines below aren't included in the message above)
+
+
+;
+; LOCATION TEXT SECTION
+;
+
+/LTX
+/room_0
+
+/room_1 ; TODO: consider adding relevant links: {ACTION|drop penn|drop penn}, {ACTION|e|e}, {ACTION|exam door|exam door}, {ACTION|open door|open door}, {ACTION|put penn|put penn}, {ACTION|nort|nort}, {ACTION|sout|sout}
+{CLASS|bright|You are standing at the end of\na road, {ACTION|west|west} of a small brick building. Forest lies all about you. A small stream flows out of the building and down the gully.}
+/bulls_gully ; TODO: consider adding relevant links: {ACTION|s|s}, {ACTION|nort|nort}, {ACTION|west|west}
+{CLASS|bright|You are in a gully in the forest. It is rather wet underfoot.}
+/wellie_house ; TODO: consider adding relevant links: {ACTION|comm|comm}, {ACTION|drop pict|drop pict}, {ACTION|exam fenc|exam fenc}, {ACTION|exam spri|exam spri}, {ACTION|hit door|hit door}, {ACTION|in spri|in spri}, {ACTION|spri|spri}, {ACTION|w|w}
+{CLASS|bright|You are in the wellie-house for a large spring. At the centre stands the spring itself. Also - if nobody has filched them - a pair of wellies.}
+/stream_end ; TODO: consider adding relevant links: {ACTION|w|w}, {ACTION|nort|nort}
+{CLASS|bright|All the water of the stream gurgles down a two-inch slit in the rock. {ACTION|Southward|Southward} the stream- bed continues dry. West is a bog.}
+/small_hill ; TODO: consider adding relevant links: {ACTION|nort|nort}, {ACTION|sout|sout}, {ACTION|west|west}
+{CLASS|bright|You have climbed a small hill.}
+/lost_in_the_forest ; TODO: consider adding relevant links: {ACTION|east|east}, {ACTION|nort|nort}, {ACTION|sout|sout}, {ACTION|west|west}
+{CLASS|bright|You are wandering about in the forest when you ought to be getting on with the game.}
+/grate_gully ; TODO: consider adding relevant links: {ACTION|nort|nort}
+{CLASS|bright|You are in a deep depression. However, you snap out of it and notice a strong steel grate set firmly in concrete underfoot.}
+/below_the_grate ; TODO: consider adding relevant links: {ACTION|u|u}
+{CLASS|bright|You are in a small chamber beneath a three-by-three steel grate. A low crawl over rough, hard cobbles leads {ACTION|west|west} into\nthe darkness.}
+/crawling_over_cobbles ; TODO: consider adding relevant links: {ACTION|west|west}
+{CLASS|bright|You are crawling over cobbles, muttering something I shall not try too hard to hear. There is\na dim light in the {ACTION|east|east}. }
+/debris_room ; TODO: consider adding relevant links: {ACTION|comm|comm}, {ACTION|exam wall|exam wall}, {ACTION|east|east}, {ACTION|clim|clim}, {ACTION|west|west}
+{CLASS|bright|You are in the Debris Room.}
+/low_room ; TODO: consider adding relevant links: {ACTION|nort|nort}
+{CLASS|bright|You are in a low room.}
+/log_chasm_room ; TODO: consider adding relevant links: {ACTION|drop log|drop log}, {ACTION|wave rod|wave rod}, {ACTION|east|east}
+{CLASS|bright|You are at the west end of the Hall. To your west is a deep chasm, too wide to jump. The mist is quite thick here.}
+/rope_to_part_2 ; TODO: consider adding relevant links: {ACTION|clim|clim}
+{CLASS|bright ink-yellow|You are sliding {ACTION|down|down} the rope.\n\nIf you continue {ACTION|down|down} you will arrive in part 2.}
+/part_2_room
+{CLASS|center bright ink-yellow|PLEASE SAVE YOUR POSITION NOW}
+/secret_hiding_place ; TODO: consider adding relevant links: {ACTION|sout|sout}
+{CLASS|center bright|THE SECRET HIDING PLACE}
+/habitat_cave ; TODO: consider adding relevant links: {ACTION|open cupb|open cupb}, {ACTION|east|east}, {ACTION|nort|nort}, {ACTION|west|west}
+{CLASS|bright|You are in the Habitat Cave.}
+/twee_chamber ; TODO: consider adding relevant links: {ACTION|sout|sout}
+{CLASS|bright|You are in the Twee Chamber.}
+/avante_garde_room
+
+/live_space_invaders_room ; TODO: consider adding relevant links: {ACTION|fire|fire}, {ACTION|left|left}, {ACTION|righ|righ}
+{CLASS|bright|As you enter this room, the door slides ominously shut behind you.}
+/dead_space_invaders_room ; TODO: consider adding relevant links: {ACTION|exam char|exam char}, {ACTION|open airl|open airl}
+{CLASS|bright|You are in an empty chamber. The door to your {ACTION|west|west} is now open.\n\nOn the floor you see:\n\n{CLASS|ink-blue paper-white|A {CLASS|ink-lime|brightly-{CLASS|ink-red|coloured {CLASS|ink-magenta|pile {CLASS|ink-blue|of {CLASS|ink-red|user-{CLASS|ink-magenta|defined {CLASS|ink-lime|characters\n{CLASS|paper-black|\n}}}}}}}}}}
+/sloping_canyon ; TODO: consider adding relevant links: {ACTION|exam wall|exam wall}
+{CLASS|bright|You are in an awkward, sloping {ACTION|E|E}/{ACTION|W|W} canyon.}
+/splendid_chamber ; TODO: consider adding relevant links: {ACTION|eat wall|eat wall}, {ACTION|exam lett|exam lett}, {ACTION|exam sign|exam sign}, {ACTION|exam wall|exam wall}, {ACTION|get wall|get wall}, {ACTION|open lett|open lett}, {ACTION|east|east}, {ACTION|west|west}
+{CLASS|bright|You are in a splendid chamber thirty feet high.}
+/west_end_of_upper_floor ; TODO: consider adding relevant links: {ACTION|east|east}
+{CLASS|bright|At your feet is a pit breathing traces of white mist. The passage {ACTION|west|west} ends here but for an old crack. Rough stone steps lead {ACTION|down|down}.}
+/old_crack ; TODO: consider adding relevant links: {ACTION|east|east}, {ACTION|ente|ente}
+{CLASS|bright ink-cyan|You are inside the crack. You are walking down a street. Someone says &#34;Who was that lady I saw you with last night?&#34;\nYou reply...\n\nI told you it was an old crack.}
+/vast_hall_east ; TODO: consider adding relevant links: {ACTION|east|east}, {ACTION|sout|sout}, {ACTION|clim|clim}
+{CLASS|bright|You are at one end of a vast hall. To the {ACTION|west|west} it stretches out of sight. Passages are on either side. A wide stone staircase leads {ACTION|down|down} to the {ACTION|north|north}. Wisps of white mist curl across the room like living things.}
+/hall_of_the_mountain_king ; TODO: consider adding relevant links: {ACTION|n|n}, {ACTION|w|w}, {ACTION|east|east}, {ACTION|sout|sout}, {ACTION|clim|clim}
+{CLASS|bright|You are in the Hall of the Mountain King. Passages lead off in all directions.}
+/cemented_floor_room
+{CLASS|bright|You are in a {ACTION|N|N}/{ACTION|S|S} passage.\nA hole in the floor has been repaired and cemented over.}
+/y2_room ; TODO: consider adding relevant links: {ACTION|e|e}
+{CLASS|bright|You are in a large room. Passages lead {ACTION|south|south} and {ACTION|west|west}. A dirty crack is east. There is a large 'Y2' on a rock in the room'{ACTION|s|s} centre.\n\nA hollow voice says 'PLUG'.}
+/window_over_pit ; TODO: consider adding relevant links: {ACTION|east|east}
+{CLASS|bright|You are standing at a window looking over a pit. A shadowy figure is watching you from a lighted window opposite.}
+/censored_room ; TODO: consider adding relevant links: {ACTION|east|east}, {ACTION|nort|nort}, {ACTION|sout|sout}, {ACTION|west|west}
+{CLASS|center bright ink-black|{CLASS|paper-white|\n\n\n\n\n\n\n\n\nCENSORED\n\n\n\n\n\n\n\n\n\n}}
+/recent_rock_fall_cavern
+{CLASS|bright|You are in a large cavern. The air is still chokingly dusty from a recent rock-fall. A pile of rubble leads {ACTION|up|up}. Passages run {ACTION|south|south} and {ACTION|west|west}.}
+/high_dark_passage ; TODO: consider adding relevant links: {ACTION|nort|nort}, {ACTION|sout|sout}
+{CLASS|bright|You are in a high dark passage. Somewhere in the blackness above you hear occasional squeals and the rustle of leathery wings. }
+/bat_cave ; TODO: consider adding relevant links: {ACTION|exam coin|exam coin}, {ACTION|get hipp|get hipp}, {ACTION|nort|nort}, {ACTION|sout|sout}
+{CLASS|bright|You have entered a vast spacious cavern. Dozens of bats wheel overhead. This is the Bat Cave. On one wall is a coin of massive proportions. On another, a stuffed dinosaur.}
+/hall_of_mists_west_fissure ; TODO: consider adding relevant links: {ACTION|east|east}
+{CLASS|bright|You are at the {ACTION|west|west} side of the fissure in the Hall of Mists.}
+/hall_of_mists_west_end
+{CLASS|bright|You are at the {ACTION|west|west} end of the Hall of Mists. A wide passage leads off {ACTION|west|west}. Other exits\nlead {ACTION|north|north} and {ACTION|east|east}.}
+/west_end_of_passage ; TODO: consider adding relevant links: {ACTION|east|east}
+{CLASS|bright|You are at the west end of a passage. The floor has collapsed making further progress impossible.}
+/east_end_of_hall
+{CLASS|bright|You are at the {ACTION|east|east} end of a hall. The floor has collapsed, making further progress impossible. However, the rubble from the massive rock-fall slopes {ACTION|downward|downward}, allowing a precarious descent to the level below. A hole in the rock, six feet up, runs {ACTION|north|north}.}
+/small_low_cavern ; TODO: consider adding relevant links: {ACTION|in|in}, {ACTION|nort|nort}
+{CLASS|bright|You are in a small low cavern.}
+/batmobile ; TODO: consider adding relevant links: {ACTION|pres butt|pres butt}
+{CLASS|bright|You are seated {ACTION|in|in} the driver's seat. The car looks ready to roll except that there is only a blank rock face ahead.}
+/batcave_exit_tunnel
+{CLASS|bright|The rock face slides silently aside to reveal a long, narrow tunnel.}
+/heart_of_gotham ; TODO: consider adding relevant links: {ACTION|in door|in door}, {ACTION|east|east}, {ACTION|nort|nort}, {ACTION|sout|sout}, {ACTION|west|west}
+{CLASS|bright|You are in the heart of Gotham City near to the concealed ramp from which you emerged.\nRoads lead in all directions.}
+/outside_le_chat_noir ; TODO: consider adding relevant links: {ACTION|ente|ente}
+{CLASS|bright|You are outside {CLASS|ink-yellow|Le Chat Noir{CLASS|ink-white|, a restaurant patronised by the rich and famous.\nRoads lead {ACTION|north|north}, {ACTION|south|south} and {ACTION|west|west}}}}
+/inside_le_chat_noir
+{CLASS|bright|You are inside {CLASS|ink-yellow|Le Chat Noir{CLASS|ink-white|. At one table sit a party from\nSt. Br*d*'s, squirting champagne and throwing rolls.}}}
+/sophisticated_parser_cave ; TODO: consider adding relevant links: {ACTION|cupb curt|cupb curt}, {ACTION|exam curt|exam curt}, {ACTION|exam pars|exam pars}, {ACTION|exam soph|exam soph}, {ACTION|l behi|l behi}, {ACTION|east|east}
+{CLASS|bright|You are in the Brand New Sophisticated Parser Cave.}
+/swear_box ; TODO: consider adding relevant links: {ACTION|wash mout|wash mout}
+{CLASS|bright|You are in the Swear Box.\nIt is a bare room with neither windows nor doors.\nIn one corner is a washstand and a cake of soap.\nYou know what to do.}
+/outside_art_gallery ; TODO: consider adding relevant links: {ACTION|in|in}
+{CLASS|bright|You are outside the Gotham Art Gallery.\nRoads run {ACTION|north|north} and {ACTION|east|east}.}
+/outside_jewllers_shop ; TODO: consider adding relevant links: {ACTION|ente|ente}
+{CLASS|bright|You are outside a jeweller's shop.\nRoads lead {ACTION|north|north}, {ACTION|east|east} and {ACTION|west|west}}
+/outside_gotham_museum ; TODO: consider adding relevant links: {ACTION|ente|ente}
+{CLASS|bright|You are outside Gotham Museum. Roads lead {ACTION|north|north}, {ACTION|south|south} and {ACTION|east|east}}
+/outside_gotham_library ; TODO: consider adding relevant links: {ACTION|ente|ente}
+{CLASS|bright|You are on the steps of Gotham Library.\nRoads lead {ACTION|south|south}, {ACTION|east|east} and {ACTION|west|west}}
+/outside_gotham_bank ; TODO: consider adding relevant links: {ACTION|ente|ente}
+{CLASS|bright|You are outside Gotham City Bank. Roads lead {ACTION|south|south} and {ACTION|west|west}.}
+/inside_library ; TODO: consider adding relevant links: {ACTION|dog|dog}, {ACTION|exam book|exam book}, {ACTION|exam dog|exam dog}, {ACTION|get book|get book}, {ACTION|get dog|get dog}, {ACTION|ente|ente}
+{CLASS|bright|It is full of flattish oblong things with paper inside. The entire literate population of Gotham City is here. She has a small Pekingese dog under her arm, called Toodloo.\n\nA corridor runs {ACTION|west|west}.}
+/inside_art_gallery ; TODO: consider adding relevant links: {ACTION|cut rope|cut rope}, {ACTION|exam pict|exam pict}, {ACTION|get pict|get pict}, {ACTION|open valv|open valv}, {ACTION|zx81|zx81}
+{CLASS|bright|You are {ACTION|in|in} the Art Gallery.\nIt is featuring a special international exhibition of modern art. You are astounded to see that only three people are present.\nLarge, striking paintings line the walls.}
+/study_area ; TODO: consider adding relevant links: {ACTION|exam desk|exam desk}, {ACTION|east|east}
+{CLASS|bright|You are in the study area.}
+/inside_gotham_museum ; TODO: consider adding relevant links: {ACTION|exam hipp|exam hipp}, {ACTION|get file|get file}, {ACTION|get hipp|get hipp}, {ACTION|ente|ente}
+{CLASS|bright|You are inside Gotham Museum.}
+/inside_jewellers_shop ; TODO: consider adding relevant links: {ACTION|get tiar|get tiar}, {ACTION|ente|ente}
+{CLASS|bright|You are inside the jeweller's.}
+/inside_gotham_bank
+{CLASS|bright|You are in the bank. Approximately every thirty seconds a gentleman in a black shirt with a white tie enters to deposit some outrageous sum of money.}
+/outside_gotham_infirmary ; TODO: consider adding relevant links: {ACTION|exam bubb|exam bubb}, {ACTION|get bubb|get bubb}
+{CLASS|bright|You are outside the Gotham Infirmary. Approximately every ninety seconds a man wearing a black shirt with a white tie is carried {ACTION|in|in} on a stretcher, riddled with bullets. Used speech bubbles litter the floor. Roads lead {ACTION|north|north} and {ACTION|west|west}.}
+/gotham_infirmary_foyer
+{CLASS|bright|You are in the foyer of the infirmary. A brisk, athletic young nurse asks you your business.}
+/outside_gotham_police_station ; TODO: consider adding relevant links: {ACTION|ente|ente}
+{CLASS|bright|You are outside Gotham Police Headquarters.\nRoads lead {ACTION|south|south} and {ACTION|east|east}. A little alleyway leads {ACTION|north|north}.}
+/inside_gotham_police_station
+{CLASS|bright|You are inside the station house.}
+/behind_gotham_police_station ; TODO: consider adding relevant links: {ACTION|exam wall|exam wall}, {ACTION|sout|sout}
+{CLASS|bright|You are in a back alley behind the station house. The station wall is tall and black, punctuated only by a series of dismal barred windows.}
+/gotham_police_station_roof ; TODO: consider adding relevant links: {ACTION|exam swit|exam swit}, {ACTION|swit swit|swit swit}, {ACTION|down|down}
+{CLASS|bright|You are on the roof of the station.}
+/room_63
+{CLASS|center|\n{CLASS|bright ink-yellow|WELCOME TO ADVENTURE\n\n}}{CLASS|bright ink-yellow|Hi. I'm Trixie, spelunk me.\n\nWhat I mean is, I've done Caves before, so I've got the job of showing new adventurers around.\n\nI'm a prefect. So you'll have to behave yourself.\n\nLet's have a look at you. Healthy enough, I suppose.\nDo with a bit more exercise. Still, you'll soon get that. Alright, you'll do.\n\nLet's get going.}
+/64
+(extra message added so the newlines below aren't included in the message above)
+
+
+;
+; CONNECTIONS SECTION
+;
+
+/CON
+/room_0
+
+/room_1
+vb_n secret_hiding_place
+vb_s bulls_gully
+vb_w small_hill
+
+/bulls_gully
+vb_n room_1
+vb_w lost_in_the_forest
+
+/wellie_house
+
+/stream_end
+vb_n bulls_gully
+vb_s grate_gully
+
+/small_hill
+vb_n room_1
+vb_s lost_in_the_forest
+vb_w lost_in_the_forest
+
+/lost_in_the_forest
+vb_e bulls_gully
+vb_n small_hill
+vb_s lost_in_the_forest
+vb_w lost_in_the_forest
+
+/grate_gully
+vb_n stream_end
+
+/below_the_grate
+vb_w crawling_over_cobbles
+
+/crawling_over_cobbles
+vb_e below_the_grate
+vb_w debris_room
+
+/debris_room
+vb_e crawling_over_cobbles
+vb_u sloping_canyon
+vb_w sloping_canyon
+
+/low_room
+vb_n vast_hall_east
+
+/log_chasm_room
+vb_e vast_hall_east
+
+/rope_to_part_2
+vb_d part_2_room
+vb_u splendid_chamber
+
+/part_2_room
+
+/secret_hiding_place
+vb_s room_1
+
+/habitat_cave
+vb_e hall_of_the_mountain_king
+vb_n twee_chamber
+vb_w west_end_of_passage
+
+/twee_chamber
+vb_s habitat_cave
+
+/avante_garde_room
+
+/live_space_invaders_room
+
+/dead_space_invaders_room
+vb_w vast_hall_east
+
+/sloping_canyon
+vb_e debris_room
+vb_w splendid_chamber
+
+/splendid_chamber
+vb_e sloping_canyon
+vb_w west_end_of_upper_floor
+
+/west_end_of_upper_floor
+vb_d vast_hall_east
+vb_e splendid_chamber
+vb_w old_crack
+
+/old_crack
+vb_e west_end_of_upper_floor
+vb_in west_end_of_upper_floor
+
+/vast_hall_east
+vb_d hall_of_the_mountain_king
+vb_e live_space_invaders_room
+vb_n hall_of_the_mountain_king
+vb_s low_room
+vb_u west_end_of_upper_floor
+vb_w log_chasm_room
+
+/hall_of_the_mountain_king
+vb_e vast_hall_east
+vb_s vast_hall_east
+vb_u vast_hall_east
+
+/cemented_floor_room
+vb_n y2_room
+vb_s hall_of_the_mountain_king
+
+/y2_room
+vb_s cemented_floor_room
+vb_w window_over_pit
+
+/window_over_pit
+vb_e y2_room
+
+/censored_room
+vb_e censored_room
+vb_n censored_room
+vb_s censored_room
+vb_w y2_room
+
+/recent_rock_fall_cavern
+vb_s high_dark_passage
+vb_u east_end_of_hall
+vb_w sophisticated_parser_cave
+
+/high_dark_passage
+vb_n recent_rock_fall_cavern
+vb_s bat_cave
+
+/bat_cave
+vb_n high_dark_passage
+vb_s small_low_cavern
+
+/hall_of_mists_west_fissure
+vb_e log_chasm_room
+vb_w hall_of_mists_west_end
+
+/hall_of_mists_west_end
+vb_e hall_of_mists_west_fissure
+vb_n hall_of_mists_west_fissure
+vb_w east_end_of_hall
+
+/west_end_of_passage
+vb_e habitat_cave
+
+/east_end_of_hall
+vb_d recent_rock_fall_cavern
+vb_e hall_of_mists_west_end
+vb_n hall_of_mists_west_fissure
+
+/small_low_cavern
+vb_n bat_cave
+
+/batmobile
+vb_in small_low_cavern
+
+/batcave_exit_tunnel
+
+/heart_of_gotham
+vb_e outside_le_chat_noir
+vb_n outside_gotham_library
+vb_s outside_jewllers_shop
+vb_w outside_gotham_museum
+
+/outside_le_chat_noir
+vb_in inside_le_chat_noir
+vb_n outside_gotham_bank
+vb_s outside_gotham_infirmary
+vb_w heart_of_gotham
+
+/inside_le_chat_noir
+
+/sophisticated_parser_cave
+vb_e recent_rock_fall_cavern
+
+/swear_box
+
+/outside_art_gallery
+vb_e outside_jewllers_shop
+vb_n outside_gotham_museum
+
+/outside_jewllers_shop
+vb_e outside_gotham_infirmary
+vb_in inside_jewellers_shop
+vb_n heart_of_gotham
+vb_w outside_art_gallery
+
+/outside_gotham_museum
+vb_e heart_of_gotham
+vb_in inside_gotham_museum
+vb_n outside_gotham_police_station
+vb_s outside_art_gallery
+
+/outside_gotham_library
+vb_e outside_gotham_bank
+vb_in inside_library
+vb_s heart_of_gotham
+vb_w outside_gotham_police_station
+
+/outside_gotham_bank
+vb_in inside_gotham_bank
+vb_s outside_le_chat_noir
+vb_w outside_gotham_library
+
+/inside_library
+vb_in outside_gotham_library
+vb_w study_area
+
+/inside_art_gallery
+vb_in outside_art_gallery
+
+/study_area
+vb_e inside_library
+
+/inside_gotham_museum
+vb_in outside_gotham_museum
+
+/inside_jewellers_shop
+vb_in outside_jewllers_shop
+
+/inside_gotham_bank
+
+/outside_gotham_infirmary
+vb_in gotham_infirmary_foyer
+vb_n outside_le_chat_noir
+vb_w outside_jewllers_shop
+
+/gotham_infirmary_foyer
+
+/outside_gotham_police_station
+vb_e outside_gotham_library
+vb_in inside_gotham_police_station
+vb_n behind_gotham_police_station
+vb_s outside_gotham_museum
+
+/inside_gotham_police_station
+
+/behind_gotham_police_station
+vb_s outside_gotham_police_station
+
+/gotham_police_station_roof
+vb_d behind_gotham_police_station
+
+/room_63
+
+
+
+;
+; OBJECTS SECTION
+;
+
+/OBJ
+;object#        loc             weight    noun adjective attributes
+/object_0_lamp  room_noncreated      1    _    _       ATTR aLight
+/object_1_bull                bulls_gully      1    _    _       ATTR
+/object_2_penny           bulls_gully      1 nn_penn _       ATTR
+/object_3_keys          secret_hiding_place      1 nn_bunc _       ATTR
+/object_4_lamp          secret_hiding_place      1 nn_lamp _       ATTR
+/object_5_food          secret_hiding_place      1 nn_food _       ATTR
+/object_6_bottle          secret_hiding_place      1 nn_bott _       ATTR
+/object_7_wellies           wellie_house      1 nn_well _       ATTR aWearable
+/object_8_bomb           wellie_house      1 nn_bomb _       ATTR
+/object_9_bull       room_noncreated      1    _    _       ATTR
+/object_10_grate_locked               grate_gully      1    _    _       ATTR
+/object_11_grate_open      room_noncreated      1    _    _       ATTR
+/object_12_cage          crawling_over_cobbles      1    _    _       ATTR
+/object_13_rod          debris_room      1 nn_rod  _       ATTR
+/object_14_songbird              splendid_chamber      1    _    _       ATTR
+/object_15_moon room_noncreated      1    _    _       ATTR
+/object_16_zx81 room_noncreated      1 nn_zx81 _       ATTR
+/object_17_log               wellie_house      1    _    _       ATTR
+/object_18_log_over_chasm      room_noncreated      1    _    _       ATTR
+/object_19_silver         cemented_floor_room      1    _    _       ATTR
+/object_20_python              hall_of_the_mountain_king      1    _    _       ATTR
+/object_21_can          low_room      1 nn_can  _       ATTR
+/object_22_table         twee_chamber      1    _    _       ATTR
+/object_23_key  room_noncreated      1 nn_key  _       ATTR
+/object_24_hint      room_noncreated      1    _    _       ATTR
+/object_25_cord      room_noncreated      1    _    _       ATTR
+/object_26_that_man_has_left      room_noncreated      1    _    _       ATTR
+/object_27_red_button              batmobile      1    _    _       ATTR
+/object_28_troll              sophisticated_parser_cave      1    _    _       ATTR
+/object_29_goblet         sophisticated_parser_cave      1    _    _       ATTR
+/object_30_packet room_noncreated      1 nn_pack _       ATTR
+/object_31_parser      room_noncreated      1    _    _       ATTR
+/object_32_tiara         inside_jewellers_shop      1    _    _       ATTR
+/object_33_valve room_noncreated      1 nn_valv _       ATTR
+/object_34_ladder      room_noncreated      1    _    _       ATTR
+/object_35_searchlight              gotham_police_station_roof      1    _    _       ATTR
+/object_36_desks              study_area      1    _    _       ATTR
+/object_37_file         inside_gotham_museum      1    _    _       ATTR
+/object_38_pictures room_noncreated      1    _    _       ATTR
+/object_39_bat          outside_gotham_bank      1 nn_bat  _       ATTR
+/object_40_belt room_noncreated      1 nn_belt _       ATTR aWearable
+/object_41_box  room_noncreated      1 nn_box  _       ATTR
+/object_42_pellet room_noncreated      1 nn_pell _       ATTR
+/object_43_art_critiquette      room_noncreated      1    _    _       ATTR
+/object_44_hippies              inside_gotham_museum      1    _    _       ATTR
+/object_45_bottle room_noncreated      1    _    _       ATTR
+
+
+;
+; RESPONSES SECTION (process table 0)
+;
+
+/PRO 0
+;
+; ngPAWS includes a system to hook in extra functionality.
+; For hooks to work properly, they must be fired in the right order.
+; TODO: move responses around so the default responses
+;       ("you can't do that", "I see no X here" etc.)
+;       are grouped together between the hooks titled
+;       "RESPONSE_DEFAULT_START" and "RESPONSE_DEFAULT_END"
+; Callback to hook system, do not delete:
+_ _
+ hook    "RESPONSE_START"
+
+; Callback to hook system, do not delete:
+_ _
+ hook    "RESPONSE_USER"
+
+vb_n _
+ present object_20_python
+ writeln "{CLASS|bright|The ferocious creature will not let you.}"
+ done
+
+vb_n _
+ at      hall_of_the_mountain_king
+ goto    cemented_floor_room
+ desc
+
+vb_s _
+ present object_1_bull
+ writeln "{CLASS|bright|The ferocious creature will not let you.}"
+ done
+
+vb_s _
+ present object_9_bull
+ writeln "{CLASS|bright|The ferocious creature will not let you.}"
+ done
+
+vb_s _
+ at      bulls_gully
+ notworn object_7_wellies
+ writeln "{CLASS|bright|No. It is far too wet underfoot. You'll catch your death and then who'll get the blame? Me, that's who. Not you. You'll be happily dead. I'll have to explain it to the RSPCA. In a word, no.}"
+ done
+
+vb_s _
+ at      bulls_gully
+ goto    stream_end
+ desc
+
+vb_e _
+ at      y2_room
+ lt      game_progress 4
+ writeln "{CLASS|bright|No. This a family game. Don't you start getting into any dirty cracks.}"
+ pause   255
+ writeln "\n{CLASS|bright|Oh well, you can go in if you must, but I'm staying outside.\n\nAnd it will cost you a treasure.}"
+ let     game_progress 4
+ done
+
+vb_e _
+ at      y2_room
+ eq      yesno_silver_sold 255
+ minus   total_player_score 10
+ let     yesno_silver_sold 50
+
+vb_e _
+ at      y2_room
+ goto    censored_room
+ let     game_progress 5
+ destroy object_19_silver
+ desc
+
+vb_e _
+ at      room_1
+ zero    game_progress
+ writeln "{CLASS|bright|The door of the small brick building is closed.}"
+ done
+
+vb_e _
+ at      room_1
+ goto    wellie_house
+ desc
+
+vb_w _
+ present object_20_python
+ writeln "{CLASS|bright|The ferocious creature will not let you.}"
+ done
+
+vb_w _
+ at      hall_of_the_mountain_king
+ goto    habitat_cave
+ desc
+
+vb_w _
+ present object_18_log_over_chasm
+ goto    hall_of_mists_west_fissure
+ desc
+
+vb_w _
+ at      wellie_house
+ writeln "{CLASS|bright|You try the door but the mechanism seems to have caught on the outside.\n\nA similar thing once occurred\nto three old ladies of my acquaintance.}"
+ done
+
+vb_w _
+ at      stream_end
+ writeln "{CLASS|bright|You have spent your penny.}"
+ done
+
+vb_u _
+ present object_34_ladder
+ goto    gotham_police_station_roof
+ desc
+
+vb_u _
+ at      below_the_grate
+ clear   yesno_is_dark
+ goto    grate_gully
+ desc
+
+vb_d _
+ eq      game_progress 1
+ present object_11_grate_open
+ cls
+ writeln "{CLASS|bright ink-yellow|Yippee! Now we're getting to the really good bits!}"
+ anykey
+ goto    below_the_grate
+ desc
+
+vb_d _
+ present object_11_grate_open
+ set     yesno_is_dark
+ goto    below_the_grate
+ desc
+
+vb_d _
+ present object_25_cord
+ goto    rope_to_part_2
+ desc
+
+vb_exam nn_door
+ at      room_1
+ writeln "{CLASS|bright|You see a brass mechanism attached to the door, bearing the legend:\n\n}{CLASS|center bright ink-black|{CLASS|paper-yellow| VACANT {CLASS|ink-yellow paper-black|\n}}}{CLASS|bright ink-white|{CLASS|paper-black|There is an aperture at the top of the mechanism approximately the thickness and diameter of one penny (old style).}}"
+ done
+
+vb_exam nn_bott
+ writeln "{CLASS|bright|Green. Originally one of a set of ten.}"
+ done
+
+vb_exam nn_bunc
+ writeln "{CLASS|bright|They are of the kind which lock and unlock things.}"
+ done
+
+vb_exam nn_food
+ writeln "{CLASS|bright|I wouldn't. It's a school dinner.}"
+ done
+
+vb_exam nn_bomb
+ writeln "{CLASS|bright|Round and black with &#34;BOMB&#34; written on it.}"
+ done
+
+vb_exam nn_cage
+ writeln "{CLASS|bright|It looks as if you could enter it. }"
+ done
+
+vb_exam nn_spri
+ at      wellie_house
+ cls
+ writeln "{CLASS|center|\n\n\n{CLASS|bright ink-lime|BOOOOOoooooiiiinnnNNGGGG!!!!}}"
+ let     pause_parameter pause_sound_effect_tone_increasing
+ pause   100
+ goto    room_1
+ desc
+
+vb_exam nn_char
+ at      dead_space_invaders_room
+ writeln "{CLASS|bright|They are in the shape of space ships. They do not look much the worse for being zapped - the odd pixel out of place here and there, perhaps. Nothing more. These are tough characters.\n\nYou notice that one of them is rather more than a character. This is THE MOTHER SHIP, three characters in length by two high. Pretty big even for a full-blown sprite like yourself. There is an airlock on the ship.}"
+ done
+
+vb_exam nn_wall
+ at      debris_room
+ cls
+ writeln "{CLASS|center|\n\n{CLASS|bright ink-yellow|COMMODORE}}"
+ done
+
+vb_exam nn_wall
+ at      splendid_chamber
+ writeln "{CLASS|bright|Cold and inviting.}"
+ done
+
+vb_exam nn_wall
+ at      sloping_canyon
+ present object_16_zx81
+ desc
+
+vb_exam nn_wall
+ at      behind_gotham_police_station
+ let     countdown_location_description 2
+ create  object_34_ladder
+ desc
+
+vb_exam nn_lett
+ at      splendid_chamber
+ writeln "{CLASS|bright|It is red with a large slot and a small keyhole. The ornate letters are &#34;V.R.&#34; Below them is a sign.}"
+ done
+
+vb_exam nn_crac
+ writeln "{CLASS|bright|It looks as if you could enter it. }"
+ done
+
+vb_exam nn_you
+ writeln "{CLASS|bright|I am extraordinarily attractive. I am wearing a boater, navy blue gymslip and black stockings.}"
+ done
+
+vb_exam nn_fenc
+ at      wellie_house
+ writeln "{CLASS|bright|He knows the price of everything and the value of nothing.}"
+ done
+
+vb_exam nn_dino
+ writeln "{CLASS|bright|On closer inspection, it is an aging hippy.}"
+ done
+
+vb_exam nn_coin
+ at      bat_cave
+ writeln "{CLASS|bright|It is larger than you. It bears the head of Abraham Lincoln and the words:\n\n}{CLASS|center bright ink-yellow|IN GOD WE TRUST}"
+ done
+
+vb_exam nn_pars
+ at      sophisticated_parser_cave
+ writeln "{CLASS|bright|You can't see a parsimonious filing-clerk here.}"
+ done
+
+vb_exam nn_gobl
+ present object_28_troll
+ writeln "{CLASS|bright|You cannot see a green goblin with vermilion spots here.}"
+ done
+
+vb_exam nn_curt
+ present object_28_troll
+ writeln "{CLASS|bright|Curtains: that's just scenery.}"
+ done
+
+vb_exam nn_curt
+ at      sophisticated_parser_cave
+ writeln "{CLASS|bright|The room description was very misleading - there is nothing behind the curtains.\n\nI'd complain if I were you.}"
+ done
+
+vb_exam nn_saw
+ present object_28_troll
+ writeln "{CLASS|bright|Chainsaw: ignore it.}"
+ done
+
+vb_exam nn_soph
+ at      sophisticated_parser_cave
+ writeln "{CLASS|bright|You can't use the word &#34;sophisticated&#34; like that.}"
+ done
+
+vb_exam nn_trol
+ present object_28_troll
+ writeln "{CLASS|bright|Troll: ignore it.}"
+ done
+
+vb_exam nn_pack
+ present object_30_packet
+ present object_28_troll
+ absent  object_31_parser
+ create  object_31_parser
+ desc
+
+vb_exam nn_book
+ at      inside_library
+ writeln "{CLASS|bright|You see the title &#34;{CLASS|ink-magenta|A Detailed Solution to the Gotham City Section of {CLASS|ink-yellow|The Very Big Cave Adventure{CLASS|ink-white|&#34;.}}}}"
+ done
+
+vb_exam nn_pict
+ at      inside_art_gallery
+ writeln "{CLASS|bright|You examine the pictures.\nYou are astounded that as many as three people are present.}"
+ done
+
+vb_exam nn_hipp
+ at      inside_gotham_museum
+ writeln "{CLASS|bright|They are valuable treasures, both on account of their great antiquity and as consummate examples of the taxidermist's art.}"
+ done
+
+vb_exam nn_bubb
+ at      outside_gotham_infirmary
+ writeln "{CLASS|bright ink-lime|{CLASS|paper-white|&#34;I'll pull t'rough, babe. I gotta.&#34;\n{CLASS|paper-black|\n\n{CLASS|ink-blue paper-white|&#34;Don't worry, Louie. We'll nail da rats what done this to ya. We'll nail 'em good.&#34;\n{CLASS|paper-black|\n\n{CLASS|ink-magenta paper-white|&#34;I knew you'd come to a bad end, son. I never believed all that stuff about violin lessons.&#34;\n{CLASS|paper-black|\n\n{CLASS|ink-red paper-white|&#34;Yeah, he's the big man behind the operation. His name is... ARRGH CHOKE&#34;\n{CLASS|paper-black|\n\n{CLASS|ink-white|Etc. As you sort through the bubbles you uncover something buried beneath them.}}}}}}}}}}"
+ create  object_33_valve
+ done
+
+vb_exam nn_valv
+ present object_33_valve
+ writeln "{CLASS|center|{CLASS|bright|\n{CLASS|bright ink-yellow|NITROUS OXIDE     \nWITH CARE\n}}}{CLASS|bright ink-white|The canister has a valve at the top.}"
+ done
+
+vb_exam nn_bat
+ present object_39_bat
+ writeln "{CLASS|bright|On the back is scrawled:\n\n{CLASS|ink-yellow|Take a cart\nFrom the sea,\nTurn it round\nAnd you'll find me.\n\nIt is 'signed' with a crude picture of a jester.}}"
+ done
+
+vb_exam nn_swit
+ at      gotham_police_station_roof
+ writeln "{CLASS|bright|A bat-like splodge is painted on the glass. At the back is a switch.}"
+ done
+
+vb_exam nn_dog
+ at      inside_library
+ writeln "{CLASS|bright|Toodloo sinks his cute little fangs into your triceps. The entire literate population of Gotham hits you over the head with her umbrella.}"
+ done
+
+vb_exam nn_box
+ present object_41_box
+ writeln "\n\n{CLASS|bright ink-yellow|DEHYDRATED ART CRITICS\n\n{CLASS|ink-magenta|Surprise your friends           }}{CLASS|center bright ink-magenta|with these\n}{CLASS|bright ink-yellow|AMAZING NATURAL MARVELS}"
+ done
+
+vb_exam nn_desk
+ at      study_area
+ absent  object_41_box
+ create  object_41_box
+ desc
+
+vb_exam nn_sign
+ at      splendid_chamber
+ writeln "{CLASS|paper-red|   {CLASS|bright|Beware! A treasure-eating    }}{CLASS|center bright|{CLASS|paper-red|mouse lives in this pillar box}}"
+ done
+
+vb_exam nn_well
+ writeln "{CLASS|bright|Pong.}"
+ done
+
+vb_exam nn_belt
+ present object_40_belt
+ writeln "{CLASS|bright ink-black|{CLASS|paper-white|Rule 137(b): The player may not examine the utility belt until part 2.                         }}"
+ done
+
+vb_exam _
+ writeln "{CLASS|bright|Looks pretty ordinary to me.}"
+ done
+
+vb_open nn_door
+ at      room_1
+ zero    game_progress
+ writeln "{CLASS|bright|Something prevents it from opening.}"
+
+vb_open nn_grat
+ present object_10_grate_locked
+ present object_3_keys
+ swap    object_10_grate_locked object_11_grate_open
+ set     yesno_got_booted
+ desc
+
+vb_open nn_airl
+ at      dead_space_invaders_room
+ zero    yesno_moon_crystal_sold
+ absent  object_15_moon
+ create  object_15_moon
+ desc
+
+vb_open nn_lett
+ at      splendid_chamber
+ carried object_23_key
+ create  object_25_cord
+ desc
+
+vb_open nn_can
+ present object_21_can
+ writeln "{CLASS|bright|The sound of tumultuous applause roars forth from the can.\n\nThe little songbird appears, bowing and blowing kisses.\n\nYou close the can.}"
+ let     pause_parameter pause_sound_effect_white_noise
+ pause   20
+ create  object_14_songbird
+
+vb_open nn_can
+ present object_20_python
+ present object_21_can
+ writeln "\n\n{CLASS|bright|&#34;Thank you, thank you!&#34; says the bird. &#34;And for my next little number...&#34;\n\nSuddenly she spots the snake and attacks it. In an astounding flurry she sends it to that great flying circus in the sky.}"
+ destroy object_20_python
+
+vb_open nn_cupb
+ at      habitat_cave
+ absent  object_23_key
+ create  object_23_key
+ create  object_24_hint
+ let     countdown_location_description 2
+ desc
+
+vb_open nn_valv
+ at      inside_art_gallery
+ present object_33_valve
+ lt      countdown_player_input_1 6
+ writeln "{CLASS|bright|As the gas eqcapes, THAT&#34;MAN&#x4;bee ins vo laweh,&#34;but&#34;THE&#34;JESTER,wjo  ks anuays laugjile, now collarqes in&#34;helrless&#34;paroxysms, kicking his legs in thg air.&#x4;\n                THCT MAL snapq t he brccelgts on&#34;hio ald tckes hi s haul / mle&#x4;Rkaasso and vwo rec ent&#34;works       by Ferdinand Fin k. The choice   is typical of TH E JESTER's      grotesquely twis ted aesthetic   sense.\n{CLASS|ink-cyan|\n{CLASS|ink-cyan|                &#34;Here, take thes e,&#34; says THAT   MAN. &#34;The city i s better off    without them.\n\n                &#34;I'll take you b ack to the      caves.&#34;}}}"
+ let     countdown_player_input_2 8
+ minus   total_carried 1
+ create  object_38_pictures
+ get     object_38_pictures
+ anykey
+ goto    heart_of_gotham
+ let     space_invaders_position_and_that_man_status 100
+ desc
+
+vb_open nn_valv
+ present object_33_valve
+ writeln "{CLASS|bright|The gas makes you giggle. As this is a serious adventure you close it up again.}"
+
+vb_open nn_box
+ present object_41_box
+ writeln "{CLASS|bright|Something falls to the ground.}"
+ create  object_42_pellet
+
+vb_no _
+ gt      yesno_bull_roared 1
+ present object_1_bull
+ writeln "{CLASS|bright|The bull believes your outrageous fib and stops guarding the gully.\n\nIt is a GULLY-BULL}"
+ destroy object_1_bull
+
+vb_wate nn_pell
+ present object_42_pellet
+ present object_45_bottle
+ destroy object_42_pellet
+ create  object_43_art_critiquette
+ swap    object_45_bottle object_6_bottle
+ writeln "{CLASS|bright|The pellet blossoms into an angular lady who sprouts the following foliage:{CLASS|ink-yellow|\n&#34;While it is perhaps tempting to compare Morone's 'Blank Canvas' with 'Unpainted Canvas' by Cretine, nothing could be more misleading. While Cretine sees a pure white proto-landscape of limitless possibilities, Morone is representing the existential void which confronts us all when the superficial pretences of civilised life are stripped away It is necessary to remember that Cretine's work is a virgin canvas while Morone's is actually a Rembrandt scrubbed clean with turpentine in order to fully confront...&#34; etc.}}"
+ done
+
+vb_yes _
+ present object_1_bull
+ writeln "{CLASS|center|\n{CLASS|bright ink-yellow|&#34;WELL, GO AWAY!&#34;}}"
+
+vb_thro nn_bomb
+ present object_9_bull
+ present object_8_bomb
+ let     pause_parameter pause_flash
+ pause   8
+ writeln "{CLASS|bright|The bull eats the bomb and promptly explodes in a most inelegant manner.\n\nIt is A BOMB IN A BULL.\n\nBut enough of this old bull. What do you want to do now?}"
+ destroy object_8_bomb
+ destroy object_9_bull
+
+vb_spel nn_you
+ writeln "{CLASS|bright|Spelunking means exploring caves, you duffer. That's what we're here for. Not that you've made much of a job of it so far.}"
+
+vb_ligh nn_lamp
+ present object_4_lamp
+ swap    object_0_lamp object_4_lamp
+ desc
+
+vb_comm _
+ at      debris_room
+ clear   yesno_is_dark
+ let     pause_parameter pause_box_wipe
+ pause   20
+ goto    wellie_house
+ desc
+
+vb_comm _
+ at      wellie_house
+ set     yesno_is_dark
+ let     pause_parameter pause_box_wipe
+ pause   20
+ goto    debris_room
+ cls
+ desc
+
+vb_spri _
+ at      wellie_house
+ cls
+ writeln "{CLASS|center|\n\n\n{CLASS|bright ink-lime|BOOOOOoooooiiiinnnNNGGGG!!!!}}"
+ let     pause_parameter pause_sound_effect_tone_increasing
+ pause   100
+ goto    room_1
+ desc
+
+vb_left _
+ at      live_space_invaders_room
+ lt      space_invaders_position_and_that_man_status 9
+ writeln "\n{CLASS|bright ink-yellow|EDGE OF SCLEEN}"
+ done
+
+vb_left _
+ at      live_space_invaders_room
+ writeln "{CLASS|bright ink-yellow|YOU HAVE MOVED LEFT}"
+ minus   space_invaders_position_and_that_man_status 1
+ let     countdown_player_input_1 3
+
+vb_righ _
+ at      live_space_invaders_room
+ gt      space_invaders_position_and_that_man_status 11
+ writeln "\n{CLASS|bright ink-yellow|EDGE OF SCLEEN}"
+ done
+
+vb_righ _
+ at      live_space_invaders_room
+ plus    space_invaders_position_and_that_man_status 1
+ let     countdown_player_input_1 3
+ writeln "{CLASS|bright ink-yellow|YOU HAVE MOVED RIGHT}"
+
+vb_fire _
+ at      live_space_invaders_room
+ writeln "{CLASS|bright ink-yellow|ZZZAPPP!\n\n                }"
+ pause   25
+
+vb_fire _
+ at      live_space_invaders_room
+ zero    countdown_player_input_1
+ let     countdown_player_input_1 3
+
+vb_fire _
+ at      live_space_invaders_room
+ chance  50
+ writeln "{CLASS|bright ink-lime|KERBLANGG! ANOTHER GLEENSKIN BITES THE DUST!\n\n                }"
+ plus    total_dead_space_invaders_and_yesno_gotham_theft 1
+ done
+
+vb_fire _
+ at      live_space_invaders_room
+ writeln "{CLASS|bright ink-yellow|MISSED}"
+
+vb_zx81 _
+ at      inside_art_gallery
+ carried object_16_zx81
+ notzero yesno_rope_cut
+ writeln "{CLASS|bright|THE JESTER escapes as you cut the rope. THAT MAN offers to take you back to the caves.}"
+ let     countdown_player_input_2 8
+ anykey
+ goto    heart_of_gotham
+ let     space_invaders_position_and_that_man_status 50
+ desc
+
+vb_hit nn_door
+ at      wellie_house
+ plus    wellie_house_door_status 1
+
+vb_hit nn_door
+ at      wellie_house
+ eq      wellie_house_door_status 1
+ writeln "{CLASS|bright|It is very stout but shows some signs of giving under your attack.}"
+
+vb_hit nn_door
+ at      wellie_house
+ eq      wellie_house_door_status 2
+ writeln "{CLASS|bright|You hear cracking and splintering sounds - it is definitely giving way.}"
+
+vb_hit nn_door
+ at      wellie_house
+ eq      wellie_house_door_status 3
+ writeln "{CLASS|bright|A lavatory attendant apprehends you for damaging public property. The magistrate binds you over to keep the peace and stay away from the caves area.}"
+ pause   250
+ score
+ turns
+ end
+
+vb_hit _
+ notzero countdown_player_input_4
+ let     pause_parameter pause_ram_save_load
+ pause   50
+
+vb_hit _
+ notzero countdown_player_input_3
+ let     pause_parameter pause_ram_save_load
+ pause   25
+
+vb_put nn_penn
+ at      room_1
+ present object_2_penny
+ place   object_9_bull bulls_gully
+ let     game_progress 1
+ destroy object_2_penny
+ writeln "{CLASS|bright|The door swings open.}"
+ done
+
+vb_put _
+ writeln "{CLASS|bright|Try &#34;get&#34; or &#34;drop&#34;.}"
+
+vb_eat nn_food
+ present object_5_food
+ writeln "{CLASS|bright|OK {CLASS|ink-lime|(YIK!)}}"
+ destroy object_5_food
+
+vb_eat nn_wall
+ at      splendid_chamber
+ writeln "{CLASS|bright|Fine vintage for Chateau Yquem. For sorbet YIK! Actually it's volcanic rock. Don't you dare spit it out in my presence.}"
+
+vb_in nn_door
+ at      heart_of_gotham
+ writeln "{CLASS|bright|You do not have the local currency. Hold on, old thing.}"
+ done
+
+vb_in nn_cage
+ present object_12_cage
+ writeln "{CLASS|bright|Very pretty you look too.\n\nI think I shall lock the cage and leave you there for a while.\n\n{CLASS|ink-yellow|&gt;CLIK&lt;{CLASS|ink-white|\n\n'Bye.}}}"
+ pause   255
+ pause   255
+ pause   200
+ cls
+ pause   255
+ pause   255
+ writeln "{CLASS|bright|Hello. You still there?\n\nWell, you'd better come out, I suppose.\n\n{CLASS|ink-yellow|&gt;KLIK&lt;}}"
+ done
+
+vb_in nn_spri
+ at      wellie_house
+ cls
+ writeln "{CLASS|center|\n\n\n{CLASS|bright ink-lime|BOOOOOoooooiiiinnnNNGGGG!!!!}}"
+ pause   100
+ goto    room_1
+ desc
+
+vb_in _
+ at      outside_art_gallery
+ notzero countdown_player_input_1
+ goto    inside_art_gallery
+ desc
+
+vb_in _
+ at      outside_art_gallery
+ writeln "{CLASS|bright|The art gallery is cordoned off by the police, having been the scene of a daring robbery.}"
+ done
+
+vb_in _
+ at      small_low_cavern
+ zero    yesno_entered_batmobile
+ clear   yesno_is_dark
+ goto    batmobile
+ destroy object_26_that_man_has_left
+ desc
+
+vb_in _
+ at      small_low_cavern
+ writeln "{CLASS|bright|The car is locked now.}"
+ done
+
+vb_in _
+ writeln "{CLASS|bright|Try a direction.}"
+
+vb_plug _
+ writeln "{CLASS|bright ink-yellow|BUGSY {CLASS|ink-cyan|- ya wanna stay healthy, ya buy it.}}"
+
+vb_wave nn_rod
+ at      log_chasm_room
+ carried object_13_rod
+ writeln "{CLASS|bright ink-cyan|In a puff of stage smoke a Bridge appears on the other side of the chasm. It is Tony Bridge.\n\nHe says: &#34;What you need is the 16 32.&#34;\n\nUnfortunately he is wearing wellies and you cannot see his footnotes.}"
+
+vb_cupb nn_curt
+ present object_28_troll
+ writeln "{CLASS|bright|Curtains: that's just scenery.}"
+ done
+
+vb_cupb nn_curt
+ at      sophisticated_parser_cave
+ writeln "{CLASS|bright|The room description was very misleading - there is nothing behind the curtains.\n\nI'd complain if I were you.}"
+
+vb_kiss nn_you
+ writeln "{CLASS|bright ink-yellow|MMMMMmmmmmm...}"
+ pause   100
+ paper   3
+ cls
+ border  3
+ cls
+ pause   200
+ paper   0
+ cls
+ border  0
+ writeln "{CLASS|bright|Disrespect to a prefect.\nTake one black mark.}"
+
+vb_pres nn_butt
+ at      batmobile
+ pause   50
+ goto    batcave_exit_tunnel
+ desc
+
+vb_rape nn_you
+ cls
+ pause   50
+ writeln "{CLASS|bright ink-yellow|KRIKKK!}"
+ pause   50
+ writeln "\n{CLASS|bright|You be unable to continue this game. I have been obliged to break your arm.                 }"
+ pause   250
+ score
+ turns
+ end
+
+vb_rape _
+ goto    swear_box
+ desc
+
+vb_wash nn_mout
+ at      swear_box
+ goto    room_1
+ desc
+
+vb_lift nn_gyms
+ writeln "{CLASS|bright|You see a white lace petticoat.}"
+
+vb_lift nn_pett
+ writeln "{CLASS|bright ink-magenta|You see a fist.}"
+ pause   100
+ end
+
+vb_pars _
+ present object_28_troll
+ writeln "{CLASS|bright|You can't see a parsimonious filing-clerk here.}"
+ done
+
+vb_gobl _
+ present object_28_troll
+ writeln "{CLASS|bright|You cannot see a green goblin with vermilion spots here.}"
+ done
+
+vb_curt _
+ present object_28_troll
+ writeln "{CLASS|bright|Curtains: that's just scenery.}"
+ done
+
+vb_saw _
+ present object_28_troll
+ writeln "{CLASS|bright|Chainsaw: ignore it.}"
+ done
+
+vb_soph _
+ present object_28_troll
+ writeln "{CLASS|bright|You can't use the word &#34;sophisticated&#34; like that.}"
+ done
+
+vb_trol _
+ present object_28_troll
+ writeln "{CLASS|bright|Troll: ignore it.}"
+ done
+
+vb_behi _
+ present object_28_troll
+ writeln "{CLASS|bright|Behind: dunno what that is.}"
+ done
+
+vb_scor _
+ score
+
+vb_swit nn_lamp
+ swap    object_0_lamp object_4_lamp
+ desc
+
+vb_swit nn_swit
+ at      gotham_police_station_roof
+ writeln "{CLASS|bright ink-yellow|A yellow beam thrusts into the sky, projecting upon the clouds that inimitable call-to-arms, the sign of the bat-like splodge.\n\nFrom somewhere below you catch the words: &#34;This is a job for... BARRROOOOOOMMM!&#34; (this last being the roar of a mighty engine)}"
+
+vb_swit nn_swit
+ at      gotham_police_station_roof
+ notzero countdown_player_input_2
+ plus    countdown_player_input_2 20
+ set     space_invaders_position_and_that_man_status
+
+vb_buy nn_news
+ atgt    swear_box
+ atlt    inside_library
+ notat   outside_jewllers_shop
+ notat   outside_gotham_museum
+ notat   outside_gotham_library
+ set     yesno_got_booted
+ writeln "{CLASS|bright ink-cyan|&#34;That'll be a dime, Mac. Hey! What's this funny British money?!&#34;}"
+ anykey
+ let     pause_parameter pause_sound_effect_tone_decreasing
+ pause   100
+ goto    heart_of_gotham
+ desc
+
+vb_dog _
+ at      inside_library
+ writeln "{CLASS|bright|Toodloo sinks his cute little fangs into your triceps. The entire literate population of Gotham hits you over the head with her umbrella.}"
+
+vb_cut nn_rope
+ at      inside_art_gallery
+ lt      countdown_player_input_1 6
+ set     yesno_rope_cut
+ let     countdown_player_input_1 4
+ writeln "{CLASS|bright|With what?}"
+
+vb_get nn_penn
+ present object_1_bull
+ present object_2_penny
+ writeln "{CLASS|bright|The ferocious creature will not let you.}"
+ done
+
+vb_get nn_penn
+ get     object_2_penny
+ ok
+
+vb_get nn_bott
+ present object_45_bottle
+ get     object_45_bottle
+ done
+
+vb_get nn_lamp
+ present object_0_lamp
+ get     object_0_lamp
+ ok
+
+vb_get nn_wate
+ atgt    room_0
+ atlt    wellie_house
+ carried object_6_bottle
+ swap    object_6_bottle object_45_bottle
+ ok
+
+vb_get nn_cage
+ notat   wellie_house
+ get     object_12_cage
+ ok
+
+vb_get nn_moon
+ notat   wellie_house
+ get     object_15_moon
+ ok
+
+vb_get nn_wall
+ at      splendid_chamber
+ writeln "{CLASS|bright|How? Lick it where it is.}"
+ done
+
+vb_get nn_log
+ notzero total_carried
+ writeln "{CLASS|bright|You can't get the log with your present load.}"
+ done
+
+vb_get nn_log
+ get     object_17_log
+ destroy object_18_log_over_chasm
+ let     total_carried 6
+ ok
+
+vb_get nn_bird
+ beep2   100 25
+ beep2   100 20
+ done
+
+vb_get nn_silv
+ notat   wellie_house
+ get     object_19_silver
+ ok
+
+vb_get nn_tabl
+ notat   wellie_house
+ get     object_22_table
+ ok
+
+vb_get nn_pars
+ present object_28_troll
+ writeln "{CLASS|bright|You can't see a parsimonious filing-clerk here.}"
+ done
+
+vb_get nn_gobl
+ present object_28_troll
+ writeln "{CLASS|bright|You cannot see a green goblin with vermilion spots here.}"
+ done
+
+vb_get nn_gobl
+ notat   wellie_house
+ get     object_29_goblet
+ ok
+
+vb_get nn_soph
+ present object_28_troll
+ writeln "{CLASS|bright|You can't use the word &#34;sophisticated&#34; like that.}"
+ done
+
+vb_get nn_book
+ at      inside_library
+ writeln "{CLASS|bright ink-cyan|&#34;Where is your ticket?&#34;\n\nA neat young librarian wearing round spectacles and a pencil skirt propels you gently out of the door with just the slightest touch of her stiletto heel.}"
+ set     yesno_got_booted
+ anykey
+ let     pause_parameter pause_sound_effect_tone_decreasing
+ pause   100
+ goto    outside_gotham_library
+ desc
+
+vb_get nn_pict
+ at      inside_art_gallery
+ gt      countdown_player_input_1 5
+ let     total_dead_space_invaders_and_yesno_gotham_theft 50
+
+vb_get nn_pict
+ notat   wellie_house
+ notat   inside_art_gallery
+ get     object_38_pictures
+ ok
+
+vb_get nn_hipp
+ at      inside_gotham_museum
+ writeln "{CLASS|bright|Too heavy, man.}"
+ done
+
+vb_get nn_hipp
+ at      bat_cave
+ writeln "{CLASS|bright|Too heavy, man.}"
+ done
+
+vb_get nn_bubb
+ at      outside_gotham_infirmary
+ writeln "{CLASS|bright|They are too surreal to get.}"
+ done
+
+vb_get nn_dog
+ at      inside_library
+ writeln "{CLASS|bright|Toodloo sinks his cute little fangs into your triceps. The entire literate population of Gotham hits you over the head with her umbrella.}"
+ done
+
+vb_get nn_file
+ at      inside_gotham_museum
+ gt      space_invaders_position_and_that_man_status 2
+ get     object_37_file
+ ok
+
+vb_get nn_file
+ at      inside_gotham_museum
+ let     total_dead_space_invaders_and_yesno_gotham_theft 50
+
+vb_get nn_file
+ notat   wellie_house
+ get     object_37_file
+ ok
+
+vb_get nn_tiar
+ at      inside_jewellers_shop
+ gt      space_invaders_position_and_that_man_status 2
+ get     object_32_tiara
+ ok
+
+vb_get nn_tiar
+ at      inside_jewellers_shop
+ let     total_dead_space_invaders_and_yesno_gotham_theft 50
+
+vb_get nn_tiar
+ notat   wellie_house
+ get     object_32_tiara
+ ok
+
+vb_get _
+ autog
+ ok
+
+vb_drop nn_penn
+ at      room_1
+ present object_2_penny
+ place   object_9_bull bulls_gully
+ let     game_progress 1
+ destroy object_2_penny
+ writeln "{CLASS|bright|The door swings open.}"
+ done
+
+vb_drop nn_bott
+ present object_45_bottle
+ drop    object_45_bottle
+ ok
+
+vb_drop nn_lamp
+ present object_0_lamp
+ drop    object_0_lamp
+ ok
+
+vb_drop nn_food
+ present object_14_songbird
+ present object_5_food
+ writeln "{CLASS|bright ink-lime|The bird eats the food, turns a sickly shade of green and flies off in the direction of the bog.}"
+ destroy object_14_songbird
+ destroy object_5_food
+ done
+
+vb_drop nn_bomb
+ present object_8_bomb
+ ink     4
+ let     pause_parameter pause_flash
+ pause   8
+ writeln "\n{CLASS|bright ink-lime|KABLOOT!\n\n                }"
+ pause   100
+ cls
+ pause   250
+ writeln "{CLASS|bright|I say, where are you?}"
+ pause   250
+ writeln "{CLASS|bright|\n{CLASS|bright|And what's that pair of smoking boots doing here?}}"
+ pause   250
+ writeln "{CLASS|bright|\n{CLASS|bright|Oh well. Better look for a new adventurer.\n\nThat one was a bit weedy anyway.}}"
+ pause   250
+ end
+
+vb_drop nn_cage
+ notat   wellie_house
+ drop    object_12_cage
+ ok
+
+vb_drop nn_cage
+ carried object_12_cage
+ writeln "{CLASS|bright|The fence examines it closely and says:}"
+ writeln "{CLASS|bright ink-yellow|&#34;'Course it's only plate. Worn too. I can let you 'ave a thou' on it.&#34;}"
+ drop    object_12_cage
+ plus    total_player_score 1
+ done
+
+vb_drop nn_moon
+ notat   wellie_house
+ drop    object_15_moon
+ ok
+
+vb_drop nn_moon
+ carried object_15_moon
+ drop    object_15_moon
+ writeln "{CLASS|bright|The fence examines it closely and says:}"
+ writeln "{CLASS|bright ink-yellow|&#34;Don't see many o' these about nowadays. I'll take it.&#34;}"
+ plus    total_player_score 30
+ set     yesno_moon_crystal_sold
+ done
+
+vb_drop nn_log
+ carried object_17_log
+ at      log_chasm_room
+ create  object_18_log_over_chasm
+ drop    object_17_log
+ let     total_carried 0
+ desc
+
+vb_drop nn_log
+ drop    object_17_log
+ let     total_carried 0
+ ok
+
+vb_drop nn_silv
+ notat   wellie_house
+ drop    object_19_silver
+ ok
+
+vb_drop nn_silv
+ carried object_19_silver
+ drop    object_19_silver
+ writeln "{CLASS|bright|The fence examines it closely and says:}"
+ writeln "{CLASS|bright ink-yellow|&#34;'Ere you are. Robbin' meself I am.&#34;}"
+ plus    total_player_score 10
+ set     yesno_silver_sold
+ done
+
+vb_drop nn_tabl
+ notat   wellie_house
+ drop    object_22_table
+ ok
+
+vb_drop nn_tabl
+ carried object_22_table
+ drop    object_22_table
+ writeln "{CLASS|bright|The fence examines it closely and says:}"
+ writeln "{CLASS|bright ink-yellow|&#34;'Ard to get rid of these, but since you're a good supplier, I'll do it.&#34;}"
+ plus    total_player_score 10
+ done
+
+vb_drop nn_gobl
+ notat   wellie_house
+ drop    object_29_goblet
+ ok
+
+vb_drop nn_gobl
+ carried object_29_goblet
+ drop    object_29_goblet
+ writeln "{CLASS|bright|The fence examines it closely and says:}"
+ writeln "{CLASS|bright ink-yellow|&#34;'Ard to get rid of these, but since you're a good supplier, I'll do it.&#34;}"
+ plus    total_player_score 20
+ done
+
+vb_drop nn_pict
+ notat   wellie_house
+ notat   inside_art_gallery
+ drop    object_38_pictures
+ ok
+
+vb_drop nn_pict
+ at      wellie_house
+ carried object_38_pictures
+ drop    object_38_pictures
+ writeln "{CLASS|bright|The fence says: {CLASS|ink-yellow|&#34;Luvly! I know just the suck... er, customer what'll take these.&#34;}}"
+ plus    total_carried 1
+ plus    total_player_score 30
+ done
+
+vb_drop nn_file
+ notat   wellie_house
+ drop    object_37_file
+ ok
+
+vb_drop nn_file
+ carried object_37_file
+ drop    object_37_file
+ writeln "{CLASS|bright|The fence examines it closely and says:}"
+ writeln "{CLASS|bright ink-yellow|&#34;'Ard to get rid of these, but since you're a good supplier, I'll do it.&#34;}"
+ plus    total_player_score 10
+ done
+
+vb_drop nn_all
+ dropall
+ ok
+
+vb_drop nn_tiar
+ notat   wellie_house
+ drop    object_32_tiara
+ ok
+
+vb_drop nn_tiar
+ carried object_32_tiara
+ drop    object_32_tiara
+ writeln "{CLASS|bright|The fence examines it closely and says:}"
+ writeln "{CLASS|bright ink-yellow|&#34;'Ere you are. Robbin' meself I am.&#34;}"
+ plus    total_player_score 20
+ done
+
+vb_drop _
+ autod
+ ok
+
+vb_remo _
+ autor
+ ok
+
+vb_wear _
+ autow
+ ok
+
+vb_i _
+ inven
+
+vb_l nn_behi
+ present object_28_troll
+ writeln "{CLASS|bright|Behind: dunno what that is.}"
+ done
+
+vb_l nn_behi
+ at      sophisticated_parser_cave
+ writeln "{CLASS|bright|The room description was very misleading - there is nothing behind the curtains.\n\nI'd complain if I were you.}"
+ done
+
+; TODO: move all default responses below this, and everything else above it:
+_ _
+ hook    "RESPONSE_DEFAULT_START"
+
+vb_l _
+ desc
+
+vb_quit _
+ quit
+ score
+ turns
+ end
+
+vb_save _
+ atgt    vast_hall_east
+ atlt    censored_room
+ eq      game_progress 4
+ writeln "{CLASS|bright|No cheating.}"
+ done
+
+vb_save _
+ let     countdown_player_input_3 2
+ writeln "{CLASS|bright|Tape or Ram?}"
+
+vb_load _
+ let     countdown_player_input_4 2
+ writeln "{CLASS|bright|Tape or Ram?}"
+
+vb_wait _
+ writeln "{CLASS|bright|One minute passes.}"
+
+vb_y2 _
+ writeln "{CLASS|bright|YNOT?}"
+ done
+
+vb_text _
+ let     pause_parameter pause_toggle_graphics
+ pause   255
+ desc
+
+vb_grap _
+ let     pause_parameter pause_toggle_graphics
+ pause   1
+ desc
+
+vb_spit _
+ writeln "{CLASS|bright|Disrespect to a prefect.\nTake one black mark.}"
+ done
+
+vb_tape _
+ notzero countdown_player_input_4
+ load
+
+vb_tape _
+ notzero countdown_player_input_3
+ save
+
+_ _
+ present object_28_troll
+ chance  50
+ writeln "{CLASS|bright|Arfle bargle gloop?}"
+ done
+
+_ _
+ present object_28_troll
+ writeln "{CLASS|bright|Wirt's mirt bud?}"
+
+; Callback to hook system, do not delete:
+_ _
+ hook    "RESPONSE_DEFAULT_END"
+
+
+
+;
+; POST-DESCRIPTION ACTION SECTION (process table 1)
+;
+
+/PRO 1
+
+; Callback to hook system, do not delete:
+_ _
+ hook "PRO1"
+
+_ _
+ at     0
+ bclear 12 5                      ; Set language to English
+
+_ _
+ islight
+ listobj                        ; Lists present objects
+ listnpc @38                    ; Lists present NPCs
+
+
+
+;
+; STATUSES SECTION (process table 2)
+;
+
+/PRO 2
+
+; set carrying capacity at game start:
+_ _
+ eq      total_turns_lower 0
+ eq      total_turns_higher 0
+ ability 6 6
+
+; Callback to hook system, do not delete:
+_ _
+ hook    "PRO2"
+
+_ _
+ at      vast_hall_east
+ let     space_invaders_position_and_that_man_status 10
+
+_ _
+ at      inside_art_gallery
+ lt      countdown_player_input_1 5
+ zero    space_invaders_position_and_that_man_status
+ let     countdown_player_input_1 6
+
+_ _
+ set     bitset_graphics_status
+
+_ _
+ at      room_0
+ let     pause_parameter pause_font_alternate
+ pause   5
+
+_ _
+ at      room_0
+ goto    room_63
+ desc
+
+_ _
+ at      batcave_exit_tunnel
+ anykey
+ writeln "\n{CLASS|bright ink-yellow|The powerful headlights suddenly lance down the tunnel, showing{CLASS|ink-yellow| it to be much longer than you had thought.}}"
+ anykey
+ writeln "{CLASS|bright|\n{CLASS|bright|The engines roar into life.}}"
+ anykey
+ cls
+ writeln "{CLASS|bright ink-magenta|The mighty machine plunges down the tunnel, devouring mile after incredible mile of die-straight underground freeway.}"
+ beep2   250 20
+ beep2   250 30
+ beep2   100 205
+ clear   countdown_player_input_2
+ clear   yesno_got_booted
+ clear   space_invaders_position_and_that_man_status
+ clear   yesno_is_dark
+ let     countdown_player_input_1 20
+ goto    heart_of_gotham
+ desc
+
+_ _
+ at      room_63
+ anykey
+ goto    room_1
+ desc
+
+_ _
+ at      room_0
+ let     yesno_bull_roared 1
+
+_ _
+ present object_1_bull
+ plus    yesno_bull_roared 1
+
+_ _
+ present object_1_bull
+ gt      yesno_bull_roared 1
+ pause   50
+ writeln "\n\n{CLASS|bright|The bull roars out:\n\n}{CLASS|center bright ink-yellow|&#34;ARE YOU STILL THERE?&#34;}"
+
+_ _
+ at      below_the_grate
+ eq      game_progress 1
+ writeln "{CLASS|bright|(I didn't say it would be fun for you)}"
+ let     game_progress 2
+
+_ _
+ at      below_the_grate
+ set     yesno_is_dark
+
+_ _
+ present object_0_lamp
+ let     countdown_player_input_unlit 2
+
+_ _
+ zero    yesno_is_dark
+ let     countdown_player_input_unlit 2
+
+_ _
+ atgt    crawling_over_cobbles
+ zero    countdown_player_input_unlit
+ writeln "{CLASS|bright|Sploosh!}"
+ score
+ turns
+ end
+
+_ _
+ at      live_space_invaders_room
+ eq      countdown_player_input_1 1
+ lt      total_dead_space_invaders_and_yesno_gotham_theft 20
+ writeln "\n{CLASS|bright ink-lime|KABLOOT!\n\n                }"
+ pause   25
+ writeln "{CLASS|bright ink-yellow|YOUR SHIP IS DESTLOYED}"
+ pause   100
+ cls
+ writeln "{CLASS|center|\n\n\n\n{CLASS|bright ink-yellow|PLAY PLAYER 1}}"
+ pause   200
+ cls
+ let     countdown_player_input_1 3
+
+_ _
+ at      live_space_invaders_room
+ lt      total_dead_space_invaders_and_yesno_gotham_theft 20
+ notzero countdown_player_input_1
+ chance  5
+ writeln "\n{CLASS|bright ink-lime|KABLOOT!\n\n                }"
+ pause   25
+ writeln "{CLASS|bright ink-yellow|YOUR SHIP IS DESTLOYED}"
+ pause   100
+ cls
+ writeln "{CLASS|center|\n\n\n\n{CLASS|bright ink-yellow|PLAY PLAYER 1}}"
+ pause   200
+ cls
+ let     countdown_player_input_1 3
+
+_ _
+ at      live_space_invaders_room
+ eq      total_dead_space_invaders_and_yesno_gotham_theft 20
+ cls
+ writeln "{CLASS|center|\n\n\n\n{CLASS|bright ink-yellow|CONGRATURATIONS!\n}}{CLASS|bright ink-magenta|YOU HAVE DEFEATED ARIEN INVADERS}"
+ pause   250
+ goto    dead_space_invaders_room
+ clear   total_dead_space_invaders_and_yesno_gotham_theft
+ clear   space_invaders_position_and_that_man_status
+ clear   countdown_player_input_1
+ desc
+
+_ _
+ at      sloping_canyon
+ absent  object_16_zx81
+ present object_0_lamp
+ anykey
+ writeln "{CLASS|bright|\n{CLASS|bright|A spindly balding creature\nwith a neat ginger beard and spectacles emerges from the gloom.\n\nHe throws something which lodges in the wall with a sickening thud, then rushes off cackling wildly.}}"
+ create  object_16_zx81
+
+_ _
+ at      outside_gotham_bank
+ notzero yesno_got_booted
+ pause   75
+ writeln "\n\n{CLASS|bright|Here, let me help you up.}"
+ pause   100
+ writeln "{CLASS|bright|\n{CLASS|bright|These sedentary desk-jobs! She hardly got you beyond the steps.}}"
+ clear   yesno_got_booted
+
+_ _
+ at      outside_art_gallery
+ notzero yesno_got_booted
+ pause   200
+ writeln "\n{CLASS|bright|Thought you might land about here.\n\nLucky thing these nurses wear rubber-soled shoes, what?}"
+ clear   yesno_got_booted
+ pause   100
+
+_ _
+ at      splendid_chamber
+ lt      game_progress 3
+ notcarr object_13_rod
+ writeln "\n{CLASS|bright ink-cyan|&#34;No black rod, what?&#34; chirps the bird. &#34;I can see you've played this game before.&#34;}"
+ let     game_progress 3
+
+_ _
+ at      y2_room
+ eq      game_progress 5
+ writeln "\n{CLASS|bright ink-yellow|There. I hope you enjoyed it.}"
+ let     game_progress 6
+
+_ _
+ at      vast_hall_east
+ eq      game_progress 4
+ let     game_progress 3
+
+_ _
+ destroy object_24_hint
+
+_ _
+ at      recent_rock_fall_cavern
+ let     countdown_player_input_2 8
+
+_ _
+ present object_28_troll
+ eq      countdown_player_input_2 3
+ writeln "\n{CLASS|bright ink-yellow|The troll takes a family-size cornflakes packet from his breast pocket and begins to crunch them.}"
+
+_ _
+ present object_28_troll
+ eq      countdown_player_input_2 1
+ writeln "{CLASS|bright|\n{CLASS|bright ink-yellow|The troll drops a cornflakes packet.}}"
+ create  object_30_packet
+
+_ _
+ at      outside_gotham_library
+ notzero yesno_got_booted
+ pause   50
+ writeln "\n\n{CLASS|bright|Here, let me help you up.}"
+ clear   yesno_got_booted
+
+_ _
+ at      inside_art_gallery
+ eq      countdown_player_input_1 5
+ pause   100
+ cls
+ writeln "{CLASS|bright ink-magenta|Suddenly a shriek of inhuman laughter rends the air and a terrible figure appears. Green hair, chalk-white face and ruby mouth set forever in a demented grin. Howling with malevolent mirth, VHE JESTER&#34;strkpq the galngry&#34;of&#34;kvs oosv rricgless pckntings.}"
+ anykey
+ writeln "\n{CLASS|bright|Thg&#34;room darkels as THCT MCN swoops&#34;through&#34;the skylight. His qilkel THAT-POPE snakgs touard THE JESTER. Buv the&#34;villain activates jkq REPELNM FORCE- FIENF,&#34;cawsing the rope to loop baak enqnaping ivs ouner.{CLASS|ink-yellow|\n&#x4;&#x4;THAT MAN&#34;is&#34;trarref by jks own}}{CLASS|center bright ink-yellow|     rmpe.}{CLASS|bright ink-yellow|                THE&#34;JEQTER&#34;ks es carkle.         Is thg worst &#123;et  vm&#34;come?}"
+ let     space_invaders_position_and_that_man_status 1
+
+_ _
+ at      inside_art_gallery
+ eq      countdown_player_input_1 1
+ writeln "{CLASS|bright|\n{CLASS|bright|THE JESTER escapes. THAT MAN, untangling himself, sets off in pursuit. You have lost your only chance of returning to the caves.}}"
+ pause   250
+ score
+ turns
+ end
+
+_ _
+ at      heart_of_gotham
+ eq      countdown_player_input_2 1
+ cls
+ writeln "{CLASS|bright|THAT MAN returns looking much relieved. The return journey begins.}"
+
+_ _
+ at      heart_of_gotham
+ eq      countdown_player_input_2 1
+ eq      space_invaders_position_and_that_man_status 255
+ pause   50
+ writeln "\n{CLASS|bright ink-cyan|&#34;I'm sorry for the delay,&#34; apologises THAT MAN. &#34;I was called away on a foolish false alarm.&#34;}"
+
+_ _
+ at      heart_of_gotham
+ eq      countdown_player_input_2 1
+ anykey
+ goto    bat_cave
+ create  object_40_belt
+ set     yesno_entered_batmobile
+ set     yesno_is_dark
+ desc
+
+_ _
+ atgt    batmobile
+ notat   sophisticated_parser_cave
+ notat   swear_box
+ eq      countdown_player_input_2 1
+ place   object_26_that_man_has_left heart_of_gotham
+
+_ _
+ at      heart_of_gotham
+ present object_26_that_man_has_left
+ pause   200
+ score
+ turns
+ end
+
+_ _
+ at      heart_of_gotham
+ eq      countdown_player_input_2 8
+ lt      space_invaders_position_and_that_man_status 255
+ anykey
+ writeln "\n\n{CLASS|bright ink-yellow|&#34;One moment,&#34; says THAT MAN.\n&#34;I just have to visit THAT PLACE before our journey.&#34;\n\nThe caped figure disappears into a small brick building.}"
+
+_ _
+ atgt    swear_box
+ atlt    inside_library
+ notat   outside_jewllers_shop
+ notat   outside_gotham_museum
+ notat   outside_gotham_library
+ zero    space_invaders_position_and_that_man_status
+ notzero countdown_player_input_1
+ writeln "\n{CLASS|bright ink-cyan|A newsboy cries &#34;Jester escapes!}"
+ writeln "{CLASS|bright ink-cyan|Read all about it!&#34;}"
+ done
+
+_ _
+ atgt    swear_box
+ atlt    inside_library
+ notat   outside_jewllers_shop
+ notat   outside_gotham_museum
+ notat   outside_gotham_library
+ lt      space_invaders_position_and_that_man_status 51
+ writeln "\n{CLASS|bright ink-cyan|A newsboy cries &#34;Daring robbery!}"
+ writeln "{CLASS|bright ink-cyan|Read all about it!&#34;}"
+
+_ _
+ eq      total_dead_space_invaders_and_yesno_gotham_theft 50
+ cls
+ let     pause_parameter pause_sound_effect_tone_increasing
+ pause   255
+ writeln "{CLASS|bright|Amid a chaos of alarms and sirens you attempt to leave the building with the loot. Suddenly the room darkens as a grim bat-like figure swoops in through the skylight.\n\nAt first you think it is a bird - or perhaps a plane - but as the handcuffs close over your wrists you realise it is none other than...}"
+ anykey
+ end
+
+_ _
+ at      heart_of_gotham
+ eq      yesno_got_booted 255
+ pause   50
+ writeln "\n\n{CLASS|bright|Here, let me help you up.}"
+ clear   yesno_got_booted
+
+_ _
+ at      inside_gotham_bank
+ set     yesno_got_booted
+ anykey
+ writeln "\n{CLASS|bright ink-cyan|A pretty bank-clerkette comes up to you and examines your wallet. &#34;No accounts opened with less than $25O,OOO,&#34; she says.}"
+ anykey
+ let     pause_parameter pause_sound_effect_tone_decreasing
+ pause   100
+ goto    outside_gotham_bank
+ desc
+
+_ _
+ present object_28_troll
+ present object_43_art_critiquette
+ destroy object_43_art_critiquette
+ destroy object_28_troll
+ destroy object_31_parser
+ anykey
+ let     pause_parameter pause_flash
+ pause   20
+ cls
+ writeln "{CLASS|bright|Overloaded by the excessive and indigestible verbal input, the SOPHISTICATED PARSER overheats and explodes, vaporising the troll and the art critic.}"
+
+_ _
+ at      wellie_house
+ zero    countdown_location_description
+ anykey
+ writeln "\n{CLASS|bright|There is a little fence beside the spring. The door is west.}"
+
+_ _
+ at      small_hill
+ zero    countdown_location_description
+ anykey
+ writeln "{CLASS|bright|Well, not that small. I notice you are out of breath and perspiring freely so I hope you will not fuss when I tell you that this hill plays no particular part in the adventure and I have no idea why it's here\n\nContrary to the laws of geo- graphy, going north will take you back to the road.\n\nDon't say I never tell you anything.}"
+
+_ _
+ at      debris_room
+ zero    countdown_location_description
+ present object_0_lamp
+ anykey
+ writeln "{CLASS|bright|\n{CLASS|bright|The room is filled with bits and pieces washed in from the surface and has not been tidied in years. It looks a lot like your bedroom.\n\nA low crawl becomes plugged with mud here but an awkward passage leads west.\n\nThere is a very rude word on the wall.}}"
+
+_ _
+ at      live_space_invaders_room
+ zero    countdown_location_description
+ present object_0_lamp
+ anykey
+ writeln "\n{CLASS|bright|You are in a dark place. High above you hover several rows of brightly-coloured alien craft.\n\nAs you watch, you realise that they are also moving slowly but inexorably... DOWN TOWARD YOU.\n\nYou can move LEFT, RIGHT or FIRE}"
+
+_ _
+ at      splendid_chamber
+ zero    countdown_location_description
+ present object_0_lamp
+ anykey
+ writeln "\n{CLASS|bright|The walls are frozen rivers of orange sorbet. In the centre stands a pillar adorned with ornate letters, and here the marble flags are somewhat worn. An awkward passage and a good canyon exit to east and west.}"
+
+_ _
+ at      bat_cave
+ zero    countdown_location_description
+ present object_0_lamp
+ anykey
+ writeln "\n{CLASS|bright|From a low cavern in the south glint what would seem to be the two red eyes of some monstrous creature.}"
+
+_ _
+ at      small_low_cavern
+ zero    countdown_location_description
+ present object_0_lamp
+ anykey
+ writeln "\n{CLASS|bright|You now see that the two red glints came from the tail\nlights of a powerful, low-slung automobile. It is jet black with a bat-like mask on the front and a sort of fin along the back resembling a bat's wing.}"
+
+_ _
+ at      sophisticated_parser_cave
+ zero    countdown_location_description
+ present object_0_lamp
+ anykey
+ writeln "{CLASS|bright|\n{CLASS|bright|One wall is covered by crimson silk curtains which look suspiciously as if something is concealed behind them.}}"
+
+_ _
+ at      inside_jewellers_shop
+ zero    countdown_location_description
+ anykey
+ writeln "\n{CLASS|bright|Approximately every forty-seven seconds a gentleman in a black shirt with a white tie arrives with a slinky lady draped over his arm and buys her some trinket whose enormous price is matched only by its colossal tastelessness.}"
+
+_ _
+ at      inside_gotham_police_station
+ anykey
+ writeln "\n{CLASS|bright|In one corner, distinguished, white-haired Commissioner Gormless offers a few encouraging words to a rookie cop. From a desk at the back of the room the words &#34;Book 'im, Sam&#34; ring out with monotonous regularity approximately every thirty seconds as a new gentleman in a black shirt with a white tie is brought in.\n{CLASS|ink-cyan|\n{CLASS|ink-cyan|The station sergeant approaches you. &#34;You got some business here, Mac?&#34; he enquires.}}}"
+
+_ _
+ at      behind_gotham_police_station
+ zero    countdown_location_description
+ anykey
+ writeln "\n{CLASS|bright|Approximately every forty-seven seconds a gentleman in a black shirt with a white tie arrives, looks furtively around him and drops a file or a revolver through the bars of one of the windows. Occasionally a slinky lady in a tight skirt breaks the monotony by doing the same thing.}"
+
+_ _
+ at      gotham_police_station_roof
+ zero    countdown_location_description
+ anykey
+ writeln "\n{CLASS|bright|A panoramic view of Gotham stretches out before you and\nthe teeming multitudes below exemplify every field of human endeavour: protection, numbers running, bootlegging, blackmail, extortion...\n\nBut why go on? All human life is here. The man who is tired of Gotham is tired of the rackets.}"
+
+_ _
+ at      inside_le_chat_noir
+ anykey
+ writeln "\n{CLASS|bright|Elsewhere dine the board of directors of Oc**n S*ftw*r*. They are wearing black shirts and white ties. From the cases placed neatly at their feet, it would appear that many of them play the violin.}"
+
+_ _
+ at      habitat_cave
+ zero    countdown_location_description
+ anykey
+ writeln "\n{CLASS|bright|The cave is distinguished by sackcloth curtains, a cupboard and other square pieces of furniture in unvarnished pine, almost as beautiful as packing cases.\n\nThese and other items of like nature, hideous as they look in houses, seem strangely appropriate in a cave.\n\nObjectively the cave is not large but the cold bleakness of its furnishings gives it a sense of endlessness.\n\nExits, thankfully, are north, east and west.}"
+
+_ _
+ at      twee_chamber
+ zero    countdown_location_description
+ anykey
+ writeln "\n{CLASS|bright|The wallpaper is a Laura Ashley pattern of pink flowers on blue, the hangings are the same, only blue on pink.\n\nAfter the barren wastes of the Habitat Cave this room seems almost a relief. But it is a dead end and leads only back to Habitat.}"
+
+_ _
+ at      part_2_room
+ carried object_12_cage
+ destroy object_12_cage
+
+_ _
+ at      part_2_room
+ carried object_15_moon
+ destroy object_15_moon
+
+_ _
+ at      part_2_room
+ carried object_19_silver
+ destroy object_19_silver
+
+_ _
+ at      part_2_room
+ carried object_22_table
+ destroy object_22_table
+
+_ _
+ at      part_2_room
+ carried object_29_goblet
+ destroy object_29_goblet
+
+_ _
+ at      part_2_room
+ carried object_32_tiara
+ destroy object_32_tiara
+
+_ _
+ at      part_2_room
+ carried object_37_file
+ destroy object_37_file
+
+_ _
+ at      part_2_room
+ carried object_38_pictures
+ destroy object_38_pictures
+
+_ _
+ at      part_2_room
+ zero    yesno_done_part_1
+ set     yesno_done_part_1
+ save
+
+_ _
+ at      part_2_room
+ writeln "{CLASS|bright|\n{CLASS|bright ink-yellow|Thank you. Now turn off your{CLASS|ink-yellow| computer and load part 2.}}}"
+
+_ _
+ at      inside_gotham_police_station
+ set     yesno_got_booted
+ anykey
+ let     pause_parameter pause_sound_effect_tone_decreasing
+ pause   100
+ goto    outside_gotham_police_station
+ desc
+
+_ _
+ at      outside_gotham_police_station
+ notzero yesno_got_booted
+ pause   200
+ writeln "\n\n{CLASS|bright|Size ten, I'd guess.}"
+ pause   200
+ writeln "\n\n{CLASS|bright|Here, let me help you up.}"
+ clear   yesno_got_booted
+
+_ _
+ at      gotham_infirmary_foyer
+ set     yesno_got_booted
+ anykey
+ let     pause_parameter pause_sound_effect_tone_decreasing
+ pause   100
+ goto    outside_art_gallery
+ desc
+
+_ _
+ at      inside_le_chat_noir
+ anykey
+ writeln "{CLASS|ink-cyan|{CLASS|bright|\n{CLASS|bright ink-cyan|A waiter approaches.\n\n&#34;Pardon my mentioning it,&#34; he remarks, &#34;but Sir's clothes appear more suitable for potholing than for dining. Perhaps Sir would care to return after a change of attire.&#34;}}}"
+ let     pause_parameter pause_sound_effect_tone_decreasing
+ anykey
+ pause   100
+ goto    outside_le_chat_noir
+ set     yesno_got_booted
+ desc
+
+_ _
+ at      outside_le_chat_noir
+ notzero yesno_got_booted
+ pause   250
+ writeln "\n\n{CLASS|bright|Well, your clothes are rather grubby.\n\nI don't think the boot-mark makes any noticeable difference.}"
+ clear   yesno_got_booted
+
+_ _
+ let     countdown_location_description 1
