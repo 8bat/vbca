@@ -167,23 +167,26 @@
 #define const countdown_player_input_4            =   8
 #define const countdown_player_input_dark         =   9
 #define const countdown_player_input_unlit        =  10
-#define const yesno_bull_roared                        = 111 ; ngPAWS assigns a special meaning to flag 11
-#define const total_dead_space_invaders_and_yesno_gotham_theft                        = 112 ; ngPAWS assigns a special meaning to flag 12
-#define const space_invaders_position_and_that_man_status                        = 113 ; ngPAWS assigns a special meaning to flag 13
+
+#define const yesno_bull_roared                   = 111
+#define const total_dead_space_invaders           = 112
+#define const yesno_gotham_theft                  = 112
+#define const space_invaders_position             = 113
+#define const that_man_status                     = 113
 #define const game_flag_14                        = 114 ; ngPAWS assigns a special meaning to flag 14 ; unused
 #define const game_flag_15                        = 115 ; ngPAWS assigns a special meaning to flag 15 ; unused
-#define const yesno_silver_sold                        = 116 ; ngPAWS assigns a special meaning to flag 16
-#define const yesno_moon_crystal_sold                        =  17
-#define const wellie_house_door_status                        =  18
-#define const yesno_got_booted                        =  19
-#define const yesno_entered_batmobile                        =  20
+#define const yesno_silver_sold                   = 116 ; ngPAWS assigns a special meaning to flag 16
+#define const yesno_moon_crystal_sold             =  17
+#define const wellie_house_door_status            =  18
+#define const yesno_got_booted                    =  19
+#define const yesno_entered_batmobile             =  20
 #define const game_flag_21                        =  21 ; unused
-#define const game_progress                        =  22
+#define const game_progress                       =  22
 #define const game_flag_23                        =  23 ; unused
 #define const game_flag_24                        =  24 ; unused
 #define const game_flag_25                        =  25 ; unused
-#define const yesno_done_part_1                        =  26
-#define const yesno_rope_cut                        =  27
+#define const yesno_done_part_1                   =  26
+#define const yesno_rope_cut                      =  27
 #define const pause_parameter                     =  28
 #define const bitset_graphics_status              =  29
 #define const total_player_score                  =  30
@@ -1625,7 +1628,7 @@ vb_open nn_valv
  get     object_38_pictures
  anykey
  goto    heart_of_gotham
- let     space_invaders_position_and_that_man_status 100
+ let     that_man_status 100
  desc
 
 vb_open nn_valv
@@ -1701,25 +1704,25 @@ vb_spri _
 
 vb_left _
  at      live_space_invaders_room
- lt      space_invaders_position_and_that_man_status 9
+ lt      space_invaders_position 9
  writeln "\n{CLASS|bright ink-yellow|EDGE OF SCLEEN}"
  done
 
 vb_left _
  at      live_space_invaders_room
  writeln "{CLASS|bright ink-yellow|YOU HAVE MOVED LEFT}"
- minus   space_invaders_position_and_that_man_status 1
+ minus   space_invaders_position 1
  let     countdown_player_input_1 3
 
 vb_righ _
  at      live_space_invaders_room
- gt      space_invaders_position_and_that_man_status 11
+ gt      space_invaders_position 11
  writeln "\n{CLASS|bright ink-yellow|EDGE OF SCLEEN}"
  done
 
 vb_righ _
  at      live_space_invaders_room
- plus    space_invaders_position_and_that_man_status 1
+ plus    space_invaders_position 1
  let     countdown_player_input_1 3
  writeln "{CLASS|bright ink-yellow|YOU HAVE MOVED RIGHT}"
 
@@ -1737,7 +1740,7 @@ vb_fire _
  at      live_space_invaders_room
  chance  50
  writeln "{CLASS|bright ink-lime|KERBLANGG! ANOTHER GLEENSKIN BITES THE DUST!\n\n                }"
- plus    total_dead_space_invaders_and_yesno_gotham_theft 1
+ plus    total_dead_space_invaders 1
  done
 
 vb_fire _
@@ -1752,7 +1755,7 @@ vb_zx81 _
  let     countdown_player_input_2 8
  anykey
  goto    heart_of_gotham
- let     space_invaders_position_and_that_man_status 50
+ let     that_man_status 50
  desc
 
 vb_hit nn_door
@@ -1975,7 +1978,7 @@ vb_swit nn_swit
  at      gotham_police_station_roof
  notzero countdown_player_input_2
  plus    countdown_player_input_2 20
- set     space_invaders_position_and_that_man_status
+ set     that_man_status
 
 vb_buy nn_news
  atgt    swear_box
@@ -2103,7 +2106,7 @@ vb_get nn_book
 vb_get nn_pict
  at      inside_art_gallery
  gt      countdown_player_input_1 5
- let     total_dead_space_invaders_and_yesno_gotham_theft 50
+ let     yesno_gotham_theft 50
 
 vb_get nn_pict
  notat   wellie_house
@@ -2133,13 +2136,13 @@ vb_get nn_dog
 
 vb_get nn_file
  at      inside_gotham_museum
- gt      space_invaders_position_and_that_man_status 2
+ gt      that_man_status 2
  get     object_37_file
  ok
 
 vb_get nn_file
  at      inside_gotham_museum
- let     total_dead_space_invaders_and_yesno_gotham_theft 50
+ let     yesno_gotham_theft 50
 
 vb_get nn_file
  notat   wellie_house
@@ -2148,13 +2151,13 @@ vb_get nn_file
 
 vb_get nn_tiar
  at      inside_jewellers_shop
- gt      space_invaders_position_and_that_man_status 2
+ gt      that_man_status 2
  get     object_32_tiara
  ok
 
 vb_get nn_tiar
  at      inside_jewellers_shop
- let     total_dead_space_invaders_and_yesno_gotham_theft 50
+ let     yesno_gotham_theft 50
 
 vb_get nn_tiar
  notat   wellie_house
@@ -2471,12 +2474,12 @@ _ _
 
 _ _
  at      vast_hall_east
- let     space_invaders_position_and_that_man_status 10
+ let     space_invaders_position 10
 
 _ _
  at      inside_art_gallery
  lt      countdown_player_input_1 5
- zero    space_invaders_position_and_that_man_status
+ zero    that_man_status
  let     countdown_player_input_1 6
 
 _ _
@@ -2506,7 +2509,7 @@ _ _
  beep2   100 205
  clear   countdown_player_input_2
  clear   yesno_got_booted
- clear   space_invaders_position_and_that_man_status
+ clear   that_man_status
  clear   yesno_is_dark
  let     countdown_player_input_1 20
  goto    heart_of_gotham
@@ -2561,7 +2564,7 @@ _ _
 _ _
  at      live_space_invaders_room
  eq      countdown_player_input_1 1
- lt      total_dead_space_invaders_and_yesno_gotham_theft 20
+ lt      total_dead_space_invaders 20
  writeln "\n{CLASS|bright ink-lime|KABLOOT!\n\n                }"
  pause   25
  writeln "{CLASS|bright ink-yellow|YOUR SHIP IS DESTLOYED}"
@@ -2574,7 +2577,7 @@ _ _
 
 _ _
  at      live_space_invaders_room
- lt      total_dead_space_invaders_and_yesno_gotham_theft 20
+ lt      total_dead_space_invaders 20
  notzero countdown_player_input_1
  chance  5
  writeln "\n{CLASS|bright ink-lime|KABLOOT!\n\n                }"
@@ -2589,13 +2592,13 @@ _ _
 
 _ _
  at      live_space_invaders_room
- eq      total_dead_space_invaders_and_yesno_gotham_theft 20
+ eq      total_dead_space_invaders 20
  cls
  writeln "{CLASS|center|\n\n\n\n{CLASS|bright ink-yellow|CONGRATURATIONS!\n}}{CLASS|bright ink-magenta|YOU HAVE DEFEATED ARIEN INVADERS}"
  pause   250
  goto    dead_space_invaders_room
- clear   total_dead_space_invaders_and_yesno_gotham_theft
- clear   space_invaders_position_and_that_man_status
+ clear   total_dead_space_invaders
+ clear   space_invaders_position
  clear   countdown_player_input_1
  desc
 
@@ -2675,7 +2678,7 @@ _ _
  writeln "{CLASS|bright ink-magenta|Suddenly a shriek of inhuman laughter rends the air and a terrible figure appears. Green hair, chalk-white face and ruby mouth set forever in a demented grin. Howling with malevolent mirth, VHE JESTER&#34;strkpq the galngry&#34;of&#34;kvs oosv rricgless pckntings.}"
  anykey
  writeln "\n{CLASS|bright|Thg&#34;room darkels as THCT MCN swoops&#34;through&#34;the skylight. His qilkel THAT-POPE snakgs touard THE JESTER. Buv the&#34;villain activates jkq REPELNM FORCE- FIENF,&#34;cawsing the rope to loop baak enqnaping ivs ouner.{CLASS|ink-yellow|\n&#x4;&#x4;THAT MAN&#34;is&#34;trarref by jks own}}{CLASS|center bright ink-yellow|     rmpe.}{CLASS|bright ink-yellow|                THE&#34;JEQTER&#34;ks es carkle.         Is thg worst &#123;et  vm&#34;come?}"
- let     space_invaders_position_and_that_man_status 1
+ let     that_man_status 1
 
 _ _
  at      inside_art_gallery
@@ -2695,7 +2698,7 @@ _ _
 _ _
  at      heart_of_gotham
  eq      countdown_player_input_2 1
- eq      space_invaders_position_and_that_man_status 255
+ eq      that_man_status 255
  pause   50
  writeln "\n{CLASS|bright ink-cyan|&#34;I'm sorry for the delay,&#34; apologises THAT MAN. &#34;I was called away on a foolish false alarm.&#34;}"
 
@@ -2727,7 +2730,7 @@ _ _
 _ _
  at      heart_of_gotham
  eq      countdown_player_input_2 8
- lt      space_invaders_position_and_that_man_status 255
+ lt      that_man_status 255
  anykey
  writeln "\n\n{CLASS|bright ink-yellow|&#34;One moment,&#34; says THAT MAN.\n&#34;I just have to visit THAT PLACE before our journey.&#34;\n\nThe caped figure disappears into a small brick building.}"
 
@@ -2737,7 +2740,7 @@ _ _
  notat   outside_jewllers_shop
  notat   outside_gotham_museum
  notat   outside_gotham_library
- zero    space_invaders_position_and_that_man_status
+ zero    that_man_status
  notzero countdown_player_input_1
  writeln "\n{CLASS|bright ink-cyan|A newsboy cries &#34;Jester escapes!}"
  writeln "{ACTION|buy news|{CLASS|bright ink-cyan|Read all about it!&#34;}}"
@@ -2749,12 +2752,12 @@ _ _
  notat   outside_jewllers_shop
  notat   outside_gotham_museum
  notat   outside_gotham_library
- lt      space_invaders_position_and_that_man_status 51
+ lt      that_man_status 51
  writeln "\n{CLASS|bright ink-cyan|A newsboy cries &#34;Daring robbery!}"
  writeln "{ACTION|buy news|{CLASS|bright ink-cyan|Read all about it!&#34;}}"
 
 _ _
- eq      total_dead_space_invaders_and_yesno_gotham_theft 50
+ eq      yesno_gotham_theft 50
  cls
  let     pause_parameter pause_sound_effect_tone_increasing
  pause   255
