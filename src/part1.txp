@@ -517,14 +517,14 @@ THEN         2    conjunction
 {CLASS|bright ink-magenta|It's dark here. You might fall into a sploosh-hole.}<br>
 /1
 {CLASS|bright ink-cyan|And you can see:}<br>
-/2 ; TODO: check the following message matches the tone of your game:
+/2
 What do you want to do now?
-/3 ; TODO: check the following message matches the tone of your game:
+/3
 {EXITS|@38|1000}
-/4 ; TODO: check the following message matches the tone of your game:
-Please enter your next order
-/5 ; TODO: check the following message matches the tone of your game:
-Please type in your orders
+/4
+What next?
+/5
+Now what?
 /6
 {CLASS|bright|Sorry, this thick computer doesn't understand that.}<br>
 /7
