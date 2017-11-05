@@ -916,7 +916,7 @@ A grey pellet
 /gotham_police_station_roof ; TODO: consider adding relevant links: {ACTION|exam swit|exam swit}, {ACTION|swit swit|swit swit}, {ACTION|down|down}
 {CLASS|bright|You are on the roof of the station.}
 /room_63
-{CLASS|center|\n{CLASS|bright ink-yellow|WELCOME TO ADVENTURE\n\n}}{CLASS|bright ink-yellow|Hi. I'm Trixie, spelunk me.\n\nWhat I mean is, I've done Caves before, so I've got the job of showing new adventurers around.\n\nI'm a prefect. So you'll have to behave yourself.\n\nLet's have a look at you. Healthy enough, I suppose.\nDo with a bit more exercise. Still, you'll soon get that. Alright, you'll do.\n\nLet's get going.}
+{CLASS|center|\n{CLASS|bright ink-yellow|WELCOME TO ADVENTURE\n\n}}{CLASS|bright ink-yellow|Hi. I'm Trixie, spelunk me.\n\nWhat I mean is, I've done Caves before, so I've got the job of showing new adventurers around.\n\nI'm a prefect. So you'll have to behave yourself.\n\nLet's have a look at you.\nHealthy enough, I suppose.\nDo with a bit more exercise.\nStill, you'll soon get that.\nAlright, you'll do.\n\nLet's get going.}
 /64
 (extra message added so the newlines below aren't included in the message above)
 
