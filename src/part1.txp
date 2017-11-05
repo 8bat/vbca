@@ -1373,7 +1373,7 @@ vb_d _
 
 vb_exam nn_door
  at      room_1
- writeln "{CLASS|bright|You see a brass mechanism attached to the door, bearing the legend:\n\n}{CLASS|center bright ink-black|{CLASS|paper-yellow| VACANT {CLASS|ink-yellow paper-black|\n}}}{CLASS|bright ink-white|{CLASS|paper-black|There is an aperture at the top of the mechanism approximately the thickness and diameter of one penny (old style).}}"
+ writeln "{CLASS|bright|You see a brass mechanism attached to the door, bearing the legend:\n\n{CLASS|center|{CLASS|ink-black paper-yellow| VACANT }}\nThere is an aperture at the top of the mechanism approximately the thickness and diameter of {ACTION|spend a penny|one penny (old style)}.}"
  done
 
 vb_exam nn_bott
@@ -1555,7 +1555,7 @@ vb_exam nn_desk
 
 vb_exam nn_sign
  at      splendid_chamber
- writeln "{CLASS|paper-red|   {CLASS|bright|Beware! A treasure-eating    }}{CLASS|center bright|{CLASS|paper-red|mouse lives in this pillar box}}"
+ writeln "{CLASS|bright center|{CLASS|paper-red| Beware! A treasure-eating mouse lives in this pillar box }}"
  done
 
 vb_exam nn_well
