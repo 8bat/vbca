@@ -2230,11 +2230,11 @@ vb_drop nn_bomb
  pause   100
  cls
  pause   250
- writeln "{CLASS|bright|I say, where are you?}"
+ writeln "{CLASS|bright ink-lime|I say, where are you?}"
  pause   250
- writeln "{CLASS|bright|\n{CLASS|bright|And what's that pair of smoking boots doing here?}}"
+ writeln "{CLASS|bright ink-lime|\n{CLASS|bright|And what's that pair of smoking boots doing here?}}"
  pause   250
- writeln "{CLASS|bright|\n{CLASS|bright|Oh well. Better look for a new adventurer.\n\nThat one was a bit weedy anyway.}}"
+ writeln "{CLASS|bright ink-lime|\n{CLASS|bright|Oh well. Better look for a new adventurer.\n\nThat one was a bit weedy anyway.}}"
  pause   250
  end
 
