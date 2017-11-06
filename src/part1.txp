@@ -1857,17 +1857,25 @@ vb_in nn_door
  writeln "{CLASS|bright|You do not have the local currency. Hold on, old thing.}"
  done
 
-vb_in nn_cage
+VB_in NN_cage
  present object_12_cage
- writeln "{CLASS|bright|Very pretty you look too.\n\nI think I shall lock the cage and leave you there for a while.\n\n{CLASS|ink-yellow|&gt;CLIK&lt;{CLASS|ink-white|\n\n'Bye.}}}"
- pause   255
- pause   255
- pause   200
+ writeln "{CLASS|bright|Very pretty you look too.}"
+ pause 100
+ writeln "{CLASS|bright|I think I shall lock the cage and leave you there for a while.}"
+ pause 100
+ writeln "\n{CLASS|bright ink-yellow|&gt;CLIK&lt;}"
+ pause 100
+ writeln "{CLASS|bright ink-white|\n'Bye.}"
+ pause 200
  cls
- pause   255
- pause   255
- writeln "{CLASS|bright|Hello. You still there?\n\nWell, you'd better come out, I suppose.\n\n{CLASS|ink-yellow|&gt;KLIK&lt;}}"
- done
+ pause 200
+ writeln "{CLASS|bright|Hello. You still there?}"
+ pause 100
+ writeln "{CLASS|bright|Well, you'd better come out, I suppose.}"
+ pause 100
+ writeln "\n{CLASS|bright ink-yellow|&gt;KLIK&lt;}"
+ pause 100
+ desc
 
 vb_in nn_spri
  at      wellie_house
