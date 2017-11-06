@@ -2364,6 +2364,9 @@ vb_remo _
  ok
 
 vb_wear _
+ isautogettable
+ autog
+vb_wear _
  autow
  ok
 
