@@ -500,6 +500,9 @@ nn_well    201    noun
 nn_tiar    220    noun
 nn_belt    221    noun
 
+; utilities:
+reload 156 verb
+
 ; -- Standard ngPAWS conjuntions (taken from the ngPAWS "start" database) --
 ;
 ;word    value    type
@@ -1250,6 +1253,11 @@ _ _
 ; Callback to hook system, do not delete:
 _ _
  hook    "RESPONSE_USER"
+
+reload _
+ autoload
+ desc
+ done
 
 vb_n _
  present object_20_python
@@ -2453,6 +2461,30 @@ _ _
  islight
  listobj                        ; Lists present objects
  listnpc @38                    ; Lists present NPCs
+
+; autosave:
+
+_ _ ; give the user a few turns to autoload
+ at room_1
+ turnlt 5
+ hasautosave
+ writeln "{ACTION|reload|Click here to reload your previous game}"
+
+_ _ ; autosave, except in the first few turns and the "no cheating" phase
+ atgt window_over_pit
+ atlt room_63
+ islight
+ autosave
+_ _
+ turngt 5
+ atlt hall_of_the_mountain_king
+ islight
+ autosave
+_ _
+ turngt 5
+ noteq game_progress 4
+ islight
+ autosave
 
 
 
