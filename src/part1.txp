@@ -1445,7 +1445,7 @@ vb_exam nn_char
 vb_exam nn_wall
  at      debris_room
  cls
- writeln "{CLASS|center|\n\n{CLASS|bright ink-yellow|COMMODORE}}"
+ writeln "{CLASS|center|\n\n{ACTION|commodore|{CLASS|bright ink-yellow|COMMODORE}}}"
  done
 
 vb_exam nn_wall
@@ -1741,6 +1741,7 @@ vb_comm _
 
 vb_comm _
  at      wellie_house
+ gt      game_progress 1
  set     yesno_is_dark
  let     pause_parameter pause_box_wipe
  pause   20
