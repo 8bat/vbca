@@ -750,7 +750,7 @@ You can't see any exits
 /object_20_python
 {CLASS|bright ink-lime|A python}
 /object_21_can
-{CLASS|bright ink-yellow|A can marked &#34;CHEERS&#34;}
+{CLASS|bright ink-yellow|A can marked &#34;CHEERS&#34;}#{CLASS|bright|Filmed before a live studio audience}
 /object_22_table
 {CLASS|bright ink-yellow|A little Chippendale table}
 /object_23_key
@@ -1636,9 +1636,24 @@ vb_open nn_lett
 
 vb_open nn_can
  present object_21_can
- writeln "{CLASS|bright|The sound of tumultuous applause roars forth from the can.\n\nThe little songbird appears, bowing and blowing kisses.\n\nYou close the can.}"
+ writeln "{CLASS|bright|The sound of tumultuous applause roars forth from the can.}"
  let     pause_parameter pause_sound_effect_white_noise
  pause   20
+
+vb_open nn_can
+ present object_21_can
+ present object_14_songbird
+ writeln "{CLASS|bright|\nThe little songbird prances about the room, bowing and blowing kisses.}"
+
+vb_open nn_can
+ present object_21_can
+ absent  object_14_songbird
+ writeln "{CLASS|bright|\nThe little songbird appears, bowing and blowing kisses.}"
+ create  object_14_songbird
+
+vb_open nn_can
+ present object_21_can
+ writeln "{CLASS|bright|\nYou close the can.}"
  create  object_14_songbird
 
 vb_open nn_can
@@ -2544,6 +2559,13 @@ _ _
  pause 50
  writeln "\n{CLASS|bright|{ACTION|light lamp|Turn the lamp on}, doofus}"
  pause 20
+
+; open can hint:
+_ _
+ at splendid_chamber
+ present object_14_songbird
+ present object_21_can
+ writeln "\n{CLASS|bright|The songbird chirps with delight and gestures for you to {ACTION|open the can|open the can}}"
 
 
 
