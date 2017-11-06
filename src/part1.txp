@@ -508,6 +508,8 @@ nn_belt    221    noun
 ; utilities:
 reload 156 verb
 vb_games 157 verb
+transcript 158 verb
+replay     159 verb
 
 ; -- Standard ngPAWS conjuntions (taken from the ngPAWS "start" database) --
 ;
@@ -1267,6 +1269,14 @@ reload _
 
 vb_games _
  listsavedgames
+ done
+
+transcript _
+ transcript 0
+ done
+
+replay _
+ replay
  done
 
 vb_n _
