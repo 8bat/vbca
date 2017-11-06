@@ -333,6 +333,7 @@ nn_lock     14    noun
 vb_open     15    verb
 vb_unlo     15    verb
 nn_penn     16    noun
+nn_penny    16    noun
 vb_no       17    verb
 nn_bott     18    noun
 nn_bunc     19    noun
@@ -443,6 +444,7 @@ vb_soph     77    verb
 nn_trol     78    noun
 vb_trol     78    verb
 nn_pack     79    noun
+nn_packet   79    noun
 nn_behi     80    noun
 vb_behi     80    verb
 nn_book     81    noun
@@ -455,6 +457,7 @@ vb_scor     85    verb
 nn_bubb     87    noun
 nn_cani     88    noun
 nn_valv     88    noun
+canister    88    noun
 nn_bat      89    noun
 nn_sear     90    noun
 vb_sear     90    verb
@@ -489,6 +492,7 @@ vb_save    107    verb
 vb_load    108    verb
 vb_wait    109    verb
 nn_pell    112    noun
+nn_pellet  112    noun
 nn_all     136    noun
 vb_y2      150    verb
 nn_sign    151    noun
@@ -497,6 +501,7 @@ vb_grap    153    verb
 vb_spit    154    verb
 vb_tape    155    verb
 nn_well    201    noun
+nn_wellies 201    noun
 nn_tiar    220    noun
 nn_belt    221    noun
 
@@ -1189,12 +1194,12 @@ vb_d behind_gotham_police_station
 ;object#                     loc                        weight    noun adjective attributes
 /object_0_lamp               room_noncreated                 1    _    _       ATTR aLight
 /object_1_bull               bulls_gully                     1    _    _       ATTR
-/object_2_penny              bulls_gully                     1 nn_penn _       ATTR
-/object_3_keys               secret_hiding_place             1 nn_bunc _       ATTR
+/object_2_penny              bulls_gully                     1 nn_penny _      ATTR
+/object_3_keys               secret_hiding_place             1 nn_keys _       ATTR
 /object_4_lamp               secret_hiding_place             1 nn_lamp _       ATTR
 /object_5_food               secret_hiding_place             1 nn_food _       ATTR
 /object_6_bottle             secret_hiding_place             1 nn_bott _       ATTR
-/object_7_wellies            wellie_house                    1 nn_well _       ATTR aWearable
+/object_7_wellies            wellie_house                    1 nn_wellies _    ATTR aWearable
 /object_8_bomb               wellie_house                    1 nn_bomb _       ATTR
 /object_9_bull               room_noncreated                 1    _    _       ATTR
 /object_10_grate_locked      grate_gully                     1    _    _       ATTR
@@ -1217,10 +1222,10 @@ vb_d behind_gotham_police_station
 /object_27_red_button        batmobile                       1    _    _       ATTR
 /object_28_troll             sophisticated_parser_cave       1    _    _       ATTR
 /object_29_goblet            sophisticated_parser_cave       1    _    _       ATTR
-/object_30_packet            room_noncreated                 1 nn_pack _       ATTR
+/object_30_packet            room_noncreated                 1 nn_packet _     ATTR
 /object_31_parser            room_noncreated                 1    _    _       ATTR
 /object_32_tiara             inside_jewellers_shop           1    _    _       ATTR
-/object_33_valve             room_noncreated                 1 nn_valv _       ATTR
+/object_33_valve             room_noncreated                 1 canister _      ATTR
 /object_34_ladder            room_noncreated                 1    _    _       ATTR
 /object_35_searchlight       gotham_police_station_roof      1    _    _       ATTR
 /object_36_desks             study_area                      1    _    _       ATTR
@@ -1229,7 +1234,7 @@ vb_d behind_gotham_police_station
 /object_39_bat               outside_gotham_bank             1 nn_bat  _       ATTR
 /object_40_belt              room_noncreated                 1 nn_belt _       ATTR aWearable
 /object_41_box               room_noncreated                 1 nn_box  _       ATTR
-/object_42_pellet            room_noncreated                 1 nn_pell _       ATTR
+/object_42_pellet            room_noncreated                 1 nn_pellet _     ATTR
 /object_43_art_critiquette   room_noncreated                 1    _    _       ATTR
 /object_44_hippies           inside_gotham_museum            1    _    _       ATTR
 /object_45_bottle            room_noncreated                 1    _    _       ATTR
