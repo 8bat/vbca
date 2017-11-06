@@ -665,6 +665,8 @@ inside you see<br>
 /67 ; TODO: check the following message matches the tone of your game:
 on top you see<br>
 /68
+What is your reply?
+/69
 (extra message added so the newlines below aren't included in the message above)
 
 
@@ -1679,6 +1681,7 @@ vb_no _
  present object_1_bull
  writeln "{CLASS|bright|The bull believes your outrageous fib and stops guarding the gully.\n\nIt is a GULLY-BULL}"
  destroy object_1_bull
+ prompt 0
 
 vb_wate nn_pell
  present object_42_pellet
@@ -1692,6 +1695,7 @@ vb_wate nn_pell
 vb_yes _
  present object_1_bull
  writeln "{CLASS|center|\n{CLASS|bright ink-yellow|&#34;WELL, GO AWAY!&#34;}}"
+ prompt 0
 
 vb_thro nn_bomb
  present object_9_bull
@@ -2601,6 +2605,7 @@ _ _
  gt      yesno_bull_roared 1
  pause   50
  writeln "\n\n{CLASS|bright|The bull roars out:\n\n}{CLASS|center bright ink-yellow|&#34;ARE YOU STILL THERE?&#34;}"
+ prompt  68
 
 _ _
  at      below_the_grate
