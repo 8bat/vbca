@@ -196,6 +196,8 @@
 #define const word_noun                           =  34
 #define const room_number                         =  38 ; (35 in The Quill, but 38 in ngPAWS)
 
+#define const yesno_lamp_hint                     = 60
+
 ; PAUSE subfunctions:
 ; Setting the pause_parameter flag will change the behaviour of the PAUSE command:
 ; sound effects:
@@ -2525,6 +2527,16 @@ _ _
  pause 25
  writeln "\n{CLASS|bright|You feel a cool breeze blowing from the {ACTION|north|north}}"
 
+; hint if the user needs to turn the lamp on
+_ _
+ isnotlight
+ carried object_4_lamp
+ zero    yesno_lamp_hint
+ set     yesno_lamp_hint
+ pause 50
+ writeln "\n{CLASS|bright|{ACTION|light lamp|Turn the lamp on}, doofus}"
+ pause 20
+
 
 
 ;
@@ -2624,6 +2636,7 @@ _ _
 _ _
  zero    yesno_is_dark
  let     countdown_player_input_unlit 2
+ clear   yesno_lamp_hint
 
 _ _
  atgt    crawling_over_cobbles
