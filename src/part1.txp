@@ -614,10 +614,10 @@ Time passes...<br>
 {CLASS|bright|You can't. Your hands are full.}<br>
 /43 ; TODO: check the following message matches the tone of your game:
 {CLASS|bright|You can't carry any more, wimp.}<br>
-/44 ; TODO: check the following message matches the tone of your game:
-You put {OREF} into<br>
-/45 ; TODO: check the following message matches the tone of your game:
-{OREF} is not into<br>
+/44
+You put that into<br>
+/45
+that is not into<br>
 /46 ; TODO: check the following message matches the tone of your game:
 <br>
 /47 ; TODO: check the following message matches the tone of your game:
