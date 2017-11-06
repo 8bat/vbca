@@ -1601,6 +1601,12 @@ vb_open nn_grat
  set     yesno_got_booted
  desc
 
+vb_open nn_grat
+ present object_10_grate_locked
+ absent  object_3_keys
+ writeln "{CLASS|bright|It's locked}"
+ done
+
 vb_open nn_airl
  at      dead_space_invaders_room
  zero    yesno_moon_crystal_sold
