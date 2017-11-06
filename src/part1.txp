@@ -2486,6 +2486,16 @@ _ _
  islight
  autosave
 
+; hint if the user can't find the hiding place:
+_ _
+ turngt 35
+ isat object_3_keys secret_hiding_place
+ isat object_8_bomb room_noncreated ; bomb has exploded
+ worn object_7_wellies
+ at room_1
+ pause 25
+ writeln "\n{CLASS|bright|You feel a cool breeze blowing from the {ACTION|north|north}}"
+
 
 
 ;
