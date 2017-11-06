@@ -736,7 +736,7 @@ You can't see any exits
 /object_16_zx81
 {CLASS|bright ink-yellow|A sharpened ZX81}
 /object_17_log
-{CLASS|bright ink-yellow|A hefty log}
+{CLASS|bright ink-yellow|A hefty log}#{CLASS|bright|Taller than you. Stronger too.}
 /object_18_log_over_chasm
 \n{CLASS|bright|The log forms a bridge over the chasm}
 /object_19_silver
@@ -1192,11 +1192,11 @@ vb_d behind_gotham_police_station
 
 /OBJ
 ;object#                     loc                        weight    noun adjective attributes
-/object_0_lamp               room_noncreated                 1    _    _       ATTR aLight
+/object_0_lamp               room_noncreated                 0    _    _       ATTR aLight
 /object_1_bull               bulls_gully                     1    _    _       ATTR
 /object_2_penny              bulls_gully                     1 nn_penny _      ATTR
 /object_3_keys               secret_hiding_place             1 nn_keys _       ATTR
-/object_4_lamp               secret_hiding_place             1 nn_lamp _       ATTR
+/object_4_lamp               secret_hiding_place             0 nn_lamp _       ATTR
 /object_5_food               secret_hiding_place             1 nn_food _       ATTR
 /object_6_bottle             secret_hiding_place             1 nn_bott _       ATTR
 /object_7_wellies            wellie_house                    1 nn_wellies _    ATTR aWearable
@@ -1209,8 +1209,8 @@ vb_d behind_gotham_police_station
 /object_14_songbird          splendid_chamber                1    _    _       ATTR
 /object_15_moon              room_noncreated                 1    _    _       ATTR
 /object_16_zx81              room_noncreated                 1 nn_zx81 _       ATTR
-/object_17_log               wellie_house                    1    _    _       ATTR
-/object_18_log_over_chasm    room_noncreated                 1    _    _       ATTR
+/object_17_log               wellie_house                    5 nn_log  _       ATTR
+/object_18_log_over_chasm    room_noncreated                 5    _    _       ATTR
 /object_19_silver            cemented_floor_room             1    _    _       ATTR
 /object_20_python            hall_of_the_mountain_king       1    _    _       ATTR
 /object_21_can               low_room                        1 nn_can  _       ATTR
@@ -2072,14 +2072,16 @@ vb_get nn_wall
  done
 
 vb_get nn_log
- notzero total_carried
+ present object_17_log
+ isnotgettable object_17_log
  writeln "{CLASS|bright|You can't get the log with your present load.}"
  done
 
 vb_get nn_log
+ present 17
+ isgettable 17
  get     object_17_log
  destroy object_18_log_over_chasm
- let     total_carried 6
  ok
 
 vb_get nn_bird
@@ -2268,13 +2270,7 @@ vb_drop nn_log
  at      log_chasm_room
  create  object_18_log_over_chasm
  drop    object_17_log
- let     total_carried 0
  desc
-
-vb_drop nn_log
- drop    object_17_log
- let     total_carried 0
- ok
 
 vb_drop nn_silv
  notat   wellie_house
@@ -2527,7 +2523,7 @@ _ _
 _ _
  eq      total_turns_lower 0
  eq      total_turns_higher 0
- ability 6 6
+ ability 6 5
 
 ; Callback to hook system, do not delete:
 _ _
