@@ -1657,6 +1657,7 @@ vb_open nn_can
  absent  object_14_songbird
  writeln "{CLASS|bright|\nThe little songbird appears, bowing and blowing kisses.}"
  create  object_14_songbird
+ pause   50
 
 vb_open nn_can
  present object_21_can
@@ -1666,7 +1667,10 @@ vb_open nn_can
 vb_open nn_can
  present object_20_python
  present object_21_can
- writeln "\n\n{CLASS|bright|&#34;Thank you, thank you!&#34; says the bird. &#34;And for my next little number...&#34;\n\nSuddenly she spots the snake and attacks it. In an astounding flurry she sends it to that great flying circus in the sky.}"
+ pause   50
+ writeln "\n{CLASS|bright|{CLASS|ink-cyan|&#34;Thank you, thank you!&#34;} says the bird. {CLASS|ink-cyan|&#34;And for my next little number...&#34;}}"
+ pause   100
+ writeln "\n{CLASS|bright|Suddenly she spots the snake and attacks it. In an astounding flurry she sends it to that great flying circus in the sky.}"
  destroy object_20_python
 
 vb_open nn_cupb
