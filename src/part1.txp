@@ -669,6 +669,8 @@ on top you see<br>
 /68
 What is your reply?
 /69
+Type EAST, then press RETURN
+/70
 (extra message added so the newlines below aren't included in the message above)
 
 
@@ -2649,6 +2651,10 @@ _ _
  pause   50
  writeln "\n\n{CLASS|bright|The bull roars out:\n\n}{CLASS|center bright ink-yellow|&#34;ARE YOU STILL THERE?&#34;}"
  prompt  68
+
+_ _
+ at      lost_in_the_forest
+ prompt  69
 
 _ _
  at      below_the_grate
