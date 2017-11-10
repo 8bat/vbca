@@ -1338,6 +1338,10 @@ vb_e _
  destroy object_19_silver
  desc
 
+vb_ente _
+ at      room_1
+ synonym vb_e _
+
 vb_e _
  at      room_1
  zero    game_progress
