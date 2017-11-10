@@ -383,6 +383,7 @@ vb_give     45    verb
 vb_pick     45    verb
 vb_put      45    verb
 vb_take     45    verb
+vb_sell     45    verb
 nn_lett     46    noun
 nn_pill     46    noun
 vb_eat      47    verb
