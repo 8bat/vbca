@@ -2478,7 +2478,9 @@ vb_grap _
  desc
 
 vb_spit _
- writeln "{CLASS|bright|Disrespect to a prefect.\nTake one black mark.}"
+ writeln "{CLASS|bright|Disrespect to a prefect.}"
+ pause   40
+ writeln "{CLASS|bright|Take one black mark.}"
  done
 
 vb_tape _
