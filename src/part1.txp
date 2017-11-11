@@ -2279,6 +2279,62 @@ vb_get nn_tiar
  get     object_32_tiara
  ok
 
+vb_get nn_cage
+ at      wellie_house
+ present object_12_cage
+ notcarr object_12_cage
+ writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ done
+
+vb_get nn_moon
+ at      wellie_house
+ present object_15_moon
+ notcarr object_15_moon
+ writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ done
+
+vb_get nn_silv
+ at      wellie_house
+ present object_19_silver
+ notcarr object_19_silver
+ writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ done
+
+vb_get nn_tabl
+ at      wellie_house
+ present object_22_table
+ notcarr object_22_table
+ writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ done
+
+vb_get nn_gobl
+ at      wellie_house
+ present object_29_goblet
+ notcarr object_29_goblet
+ writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ done
+
+vb_get nn_pict
+ at      wellie_house
+ present object_38_pictures
+ notcarr object_38_pictures
+ writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ done
+
+vb_get nn_file
+ at      wellie_house
+ present object_37_file
+ notcarr object_37_file
+ writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ done
+
+vb_get nn_tiar
+ at      wellie_house
+ present object_32_tiara
+ notcarr object_32_tiara
+ writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ done
+
 vb_get _
  autog
  ok
