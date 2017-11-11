@@ -97,6 +97,10 @@ part1/jsl: ${PLUGINS}
 	cp -a $^ $@
 	sed -i -e 's/30/13/g' $@/longdescription_lib.jsp
 
+part1/dat/location19.svg: hires/19.svg
+	cp -a $^ $@
+	./script/kill-space-invaders.pl
+
 part1/dat/location%.svg: hires/%.svg
 	cp -a $^ $@
 

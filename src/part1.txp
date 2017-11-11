@@ -169,7 +169,7 @@
 #define const countdown_player_input_unlit        =  10
 
 #define const yesno_bull_roared                   = 111
-#define const total_dead_space_invaders           = 112
+#define const total_dead_space_invaders           = 212
 #define const yesno_gotham_theft                  = 112
 #define const space_invaders_position             = 113
 #define const that_man_status                     = 113
@@ -288,6 +288,34 @@
 #define pic location62.svg   =  62
 
 
+; Space invaders constants:
+
+; Pseudonym for countdown_player_input_1 - you will be killed automatically when it reaches 1:
+#define const countdown_to_destruction = 5
+
+; Number of invaders you need to destroy (20 in the original, which took way too long):
+#define const total_space_invaders       = 8
+
+; Countdown is reset to this value (3 in the original, was too punishing):
+#define const max_countdown_to_destruction = 5
+
+; Screen edges:
+#define const space_invaders_screen_left  = 9
+#define const space_invaders_screen_start = 10
+#define const space_invaders_screen_right = 11
+
+; Probabilities:
+#define const space_invaders_kill_probability  = 50
+#define const space_invaders_death_probability =  5
+
+; In the space invaders room:
+; you are always killed when countdown_to_destruction reaches 1
+; countdown is reset each time you successfully move
+; firing is space_invaders_kill_probability% likely to succeed
+; space_invaders_death_probability% chance you die each turn
+; success when all invaders are dead
+
+
 
 ;
 ; CONTROL SECTION (deprecated)
@@ -363,6 +391,7 @@ nn_pile     36    noun
 nn_airl     37    noun
 nn_crys     38    noun
 nn_moon     38    noun
+nn_venu     38    noun
 nn_sorb     39    noun
 nn_wall     39    noun
 nn_word     39    noun
@@ -741,7 +770,7 @@ You can't see any exits
 /object_14_songbird
 {ACTION|get bird|{CLASS|bright ink-yellow|A cheerful little songbird}}
 /object_15_moon
-{CLASS|bright|A Venusian Moon-Crystal}
+{ACTION|Get the Venusian Moon-Crystal|{CLASS|bright white|A Venusian Moon-Crystal}}
 /object_16_zx81
 {CLASS|bright ink-yellow|A sharpened ZX81}
 /object_17_log
@@ -849,10 +878,10 @@ A grey pellet
 {CLASS|bright|You are in the Twee Chamber.}
 /avante_garde_room
 
-/live_space_invaders_room ; TODO: consider adding relevant links: {ACTION|fire|fire}, {ACTION|left|left}, {ACTION|righ|righ}
+/live_space_invaders_room
 {CLASS|bright|As you enter this room, the door slides ominously shut behind you.}
 /dead_space_invaders_room
-{CLASS|bright|You are in an empty chamber. {ACTION|west|The door to your west} is now open.\n\nOn the floor you see:\n\n{ACTION|Examine characters|{CLASS|paper-white|{CLASS|ink-blue|A }{CLASS|ink-lime|brightly-}{CLASS|ink-red|coloured }{CLASS|ink-magenta|pile }{CLASS|ink-blue|of }{CLASS|ink-red|user-}{CLASS|ink-magenta|defined }{CLASS|ink-lime|characters\n}}}
+{CLASS|bright|You are in an empty chamber. {ACTION|west|The door to your west} is now open.\n\nOn the floor you see:\n\n{ACTION|Examine characters|{CLASS|paper-white|{CLASS|ink-blue|A }{CLASS|ink-lime|brightly-}{CLASS|ink-red|coloured }{CLASS|ink-magenta|pile }{CLASS|ink-blue|of }{CLASS|ink-red|user-}{CLASS|ink-magenta|defined }{CLASS|ink-lime|characters\n}}}}
 /sloping_canyon
 {CLASS|bright|You are in an awkward, sloping {ACTION|east|E}/{ACTION|west|W} canyon.}
 /splendid_chamber
@@ -1771,7 +1800,7 @@ vb_spri _
 
 vb_left _
  at      live_space_invaders_room
- lt      space_invaders_position 9
+ lt      space_invaders_position space_invaders_screen_left
  writeln "\n{CLASS|bright ink-yellow|EDGE OF SCLEEN}"
  done
 
@@ -1779,35 +1808,44 @@ vb_left _
  at      live_space_invaders_room
  writeln "{CLASS|bright ink-yellow|YOU HAVE MOVED LEFT}"
  minus   space_invaders_position 1
- let     countdown_player_input_1 3
+ let     countdown_to_destruction max_countdown_to_destruction
 
 vb_righ _
  at      live_space_invaders_room
- gt      space_invaders_position 11
+ gt      space_invaders_position space_invaders_screen_right
  writeln "\n{CLASS|bright ink-yellow|EDGE OF SCLEEN}"
  done
 
 vb_righ _
  at      live_space_invaders_room
- plus    space_invaders_position 1
- let     countdown_player_input_1 3
  writeln "{CLASS|bright ink-yellow|YOU HAVE MOVED RIGHT}"
+ plus    space_invaders_position 1
+ let     countdown_to_destruction max_countdown_to_destruction
 
 vb_fire _
  at      live_space_invaders_room
- writeln "{CLASS|bright ink-yellow|ZZZAPPP!\n\n                }"
+ writeln "{CLASS|bright ink-yellow|ZZZAPPP!\n\n}"
  pause   25
 
 vb_fire _
  at      live_space_invaders_room
- zero    countdown_player_input_1
- let     countdown_player_input_1 3
+ zero    countdown_to_destruction
+ let     countdown_to_destruction max_countdown_to_destruction
 
 vb_fire _
  at      live_space_invaders_room
- chance  50
- writeln "{CLASS|bright ink-lime|KERBLANGG! ANOTHER GLEENSKIN BITES THE DUST!\n\n                }"
+ eq      total_dead_space_invaders 0
+ writeln "{CLASS|bright ink-lime|KERBLANGG! ANOTHER GLEENSKIN BITES THE DUST!\n\n}"
  plus    total_dead_space_invaders 1
+ extern  "$('.graphics img').attr('src',RESOURCES_DIR+'location19-'+getFlag(total_dead_space_invaders)+'.svg');"
+ done
+
+vb_fire _
+ at      live_space_invaders_room
+ chance  space_invaders_kill_probability
+ writeln "{CLASS|bright ink-lime|KERBLANGG! ANOTHER GLEENSKIN BITES THE DUST!\n\n}"
+ plus    total_dead_space_invaders 1
+ extern  "$('.graphics img').attr('src',RESOURCES_DIR+'location19-'+getFlag(total_dead_space_invaders)+'.svg');"
  done
 
 vb_fire _
@@ -2601,7 +2639,7 @@ _ _
 
 _ _
  at      vast_hall_east
- let     space_invaders_position 10
+ let     space_invaders_position space_invaders_screen_start
 
 _ _
  at      inside_art_gallery
@@ -2696,43 +2734,38 @@ _ _
 
 _ _
  at      live_space_invaders_room
- eq      countdown_player_input_1 1
- lt      total_dead_space_invaders 20
- writeln "\n{CLASS|bright ink-lime|KABLOOT!\n\n                }"
+ eq      countdown_to_destruction 1
+ lt      total_dead_space_invaders total_space_invaders
+ writeln "\n{CLASS|bright ink-lime|KABLOOT!\n\n}"
  pause   25
  writeln "{CLASS|bright ink-yellow|YOUR SHIP IS DESTLOYED}"
  pause   100
- cls
- writeln "{CLASS|center|\n\n\n\n{CLASS|bright ink-yellow|PLAY PLAYER 1}}"
- pause   200
- cls
- let     countdown_player_input_1 3
+ writeln "\n\n\n\n\n\n\n\n{CLASS|center|\n\n\n\n{CLASS|bright ink-yellow|PLAY PLAYER 1}}"
+ pause   100
+ let     countdown_to_destruction max_countdown_to_destruction
 
 _ _
  at      live_space_invaders_room
- lt      total_dead_space_invaders 20
- notzero countdown_player_input_1
- chance  5
- writeln "\n{CLASS|bright ink-lime|KABLOOT!\n\n                }"
+ lt      total_dead_space_invaders total_space_invaders
+ notzero countdown_to_destruction
+ chance  space_invaders_death_probability
+ writeln "\n{CLASS|bright ink-lime|KABLOOT!\n\n}"
  pause   25
  writeln "{CLASS|bright ink-yellow|YOUR SHIP IS DESTLOYED}"
  pause   100
- cls
- writeln "{CLASS|center|\n\n\n\n{CLASS|bright ink-yellow|PLAY PLAYER 1}}"
- pause   200
- cls
- let     countdown_player_input_1 3
+ writeln "\n\n\n\n\n\n\n\n{CLASS|center|\n\n\n\n{CLASS|bright ink-yellow|PLAY PLAYER 1}}"
+ pause   100
+ let     countdown_to_destruction max_countdown_to_destruction
 
 _ _
  at      live_space_invaders_room
- eq      total_dead_space_invaders 20
+ eq      total_dead_space_invaders total_space_invaders
  cls
- writeln "{CLASS|center|\n\n\n\n{CLASS|bright ink-yellow|CONGRATURATIONS!\n}}{CLASS|bright ink-magenta|YOU HAVE DEFEATED ARIEN INVADERS}"
+ writeln "{CLASS|center|\n\n\n\n{CLASS|bright ink-yellow|CONGRATURATIONS!\n}\n{CLASS|bright ink-magenta|YOU HAVE DEFEATED ARIEN INVADERS}\n}"
  pause   250
  goto    dead_space_invaders_room
- clear   total_dead_space_invaders
  clear   space_invaders_position
- clear   countdown_player_input_1
+ clear   countdown_to_destruction
  desc
 
 _ _
