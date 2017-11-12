@@ -197,6 +197,7 @@
 #define const room_number                         =  38 ; (35 in The Quill, but 38 in ngPAWS)
 
 #define const yesno_lamp_hint                     = 60
+#define const yesno_found_secret_hiding_place     = 61
 
 ; PAUSE subfunctions:
 ; Setting the pause_parameter flag will change the behaviour of the PAUSE command:
@@ -709,6 +710,8 @@ What is your reply?
 /69
 Type EAST, then press RETURN
 /70
+Type messages in here, like &#34;north&#34; or &#34;get keys&#34;
+/71
 (extra message added so the newlines below aren't included in the message above)
 
 
@@ -767,7 +770,7 @@ You can't see any exits
 /object_9_bull
 {CLASS|bright ink-yellow|A rampaging bull with the distinct air of a bull who does not mean to be caught out a second time}
 /object_10_grate_locked
-{ACTION|open grate|{CLASS|bright|The grate is locked}}
+{ACTION|open grate|{CLASS|bright|The grate is locked}}#{CLASS|bright|you can just about see a keyhole buried underneath the rust}
 /object_11_grate_open
 {ACTION|down|{CLASS|bright|The grate is open}}
 /object_12_cage
@@ -1344,8 +1347,21 @@ vb_s _
 
 vb_s _
  at      bulls_gully
- notworn object_7_wellies
+ absent  object_7_wellies
  writeln "{CLASS|bright|No. It is far too wet underfoot. You'll catch your death and then who'll get the blame? Me, that's who. Not you. You'll be happily dead. I'll have to explain it to the RSPCA. In a word, no.}"
+ pause   100
+ writeln "\n{CLASS|bright|Go find some wellies, then maybe.}"
+ pause 25
+
+vb_s _
+ at      bulls_gully
+ carried object_7_wellies
+ notworn object_7_wellies
+ writeln "{ACTION|wear wellies|Put your wellies on first.}"
+
+vb_s _
+ at      bulls_gully
+ notworn object_7_wellies
  done
 
 vb_s _
@@ -1745,9 +1761,12 @@ vb_open nn_box
 vb_no _
  gt      yesno_bull_roared 1
  present object_1_bull
- writeln "{CLASS|bright|The bull believes your outrageous fib and stops guarding the gully.\n\nIt is a GULLY-BULL}"
+ writeln "{CLASS|bright|The bull believes your outrageous fib and stops guarding the gully.}"
+ pause   90
+ writeln "\n{CLASS|bright|It is a GULLY-BULL}"
+ pause   25
  destroy object_1_bull
- prompt 0
+ prompt 70
 
 vb_wate nn_pell
  present object_42_pellet
@@ -1761,7 +1780,7 @@ vb_wate nn_pell
 vb_yes _
  present object_1_bull
  writeln "{CLASS|center|\n{CLASS|bright ink-yellow|&#34;WELL, GO AWAY!&#34;}}"
- prompt 0
+ prompt 70
 
 vb_thro nn_bomb
  present object_9_bull
@@ -2357,6 +2376,13 @@ vb_drop nn_penn
  writeln "{CLASS|bright|The {ACTION|east|door} swings open.}"
  done
 
+vb_drop nn_penn
+ at      room_1
+ absent  object_2_penny
+ zero    game_progress
+ writeln "{CLASS|bright|You'll have to go and find it.}"
+ done
+
 vb_drop nn_bott
  present object_45_bottle
  drop    object_45_bottle
@@ -2388,7 +2414,7 @@ vb_drop nn_bomb
  pause   250
  writeln "{CLASS|bright ink-lime|\n{CLASS|bright|And what's that pair of smoking boots doing here?}}"
  pause   250
- writeln "{CLASS|bright ink-lime|\n{CLASS|bright|Oh well. Better look for a new adventurer.\n\nThat one was a bit weedy anyway.}}"
+ writeln "{CLASS|bright ink-lime|\n{CLASS|bright|Oh well. Better look for a new adventurer.\n\nThat one was too weedy to throw the bomb anyway.}}"
  pause   250
  end
 
@@ -2417,6 +2443,13 @@ vb_drop nn_moon
  writeln "{CLASS|bright ink-yellow|&#34;Don't see many o' these about nowadays. I'll take it.&#34;}"
  plus    total_player_score 30
  set     yesno_moon_crystal_sold
+ done
+
+vb_drop nn_log
+ at      grate_gully
+ carried object_17_log
+ drop    object_17_log
+ writeln "{CLASS|bright|OK... Not sure what you were expecting to happen there, but it didn't work.\n\nYou need to find some keys.}"
  done
 
 vb_drop nn_log
@@ -2671,7 +2704,7 @@ _ _
 ; hint if the user can't find the hiding place:
 _ _
  turngt 35
- isat object_3_keys secret_hiding_place
+ zero yesno_found_secret_hiding_place
  isat object_8_bomb room_noncreated ; bomb has exploded
  worn object_7_wellies
  at room_1
@@ -2695,6 +2728,12 @@ _ _
  present object_21_can
  writeln "\n{CLASS|bright|The songbird chirps with delight and gestures for you to {ACTION|open the can|open the can}}"
 
+; Remove the initial prompt:
+_ _
+ atgt grate_gully ; usually triggered in the secret hiding place, but can happen if you load a game
+ atlt room_63
+ set yesno_found_secret_hiding_place
+ prompt 0
 
 
 ;
@@ -2760,6 +2799,7 @@ _ _
  at      room_63
  anykey
  goto    room_1
+ prompt  70
  desc
 
 _ _
@@ -2779,7 +2819,19 @@ _ _
 
 _ _
  at      lost_in_the_forest
+ zero    yesno_found_secret_hiding_place
  prompt  69
+
+_ _
+ at      small_hill
+ zero    yesno_found_secret_hiding_place
+ prompt  70
+
+_ _
+ at      bulls_gully
+ zero    yesno_found_secret_hiding_place
+ absent  object_1_bull
+ prompt  70
 
 _ _
  at      below_the_grate
