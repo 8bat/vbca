@@ -900,8 +900,8 @@ A grey pellet
 {CLASS|bright|You are in a large room. Passages lead {ACTION|south|south} and {ACTION|west|west}. A dirty crack is east. There is a large '{ACTION|Y2|Y2}' on a rock in the room's centre.\n\nA hollow voice says {ACTION|PLUG|'PLUG'}.}
 /window_over_pit
 {CLASS|bright|You are standing at a window looking over a pit. A shadowy figure is watching you from a lighted window opposite.}
-/censored_room ; TODO: consider adding relevant links: {ACTION|east|east}, {ACTION|nort|nort}, {ACTION|sout|sout}, {ACTION|west|west}
-{CLASS|center bright ink-black|{CLASS|paper-white|\n\n\n\n\n\n\n\n\nCENSORED\n\n\n\n\n\n\n\n\n\n}}
+/censored_room
+{CLASS|center bright ink-black paper-white|\n\n\n\n\n\n\n\n\nCENSORED\n\n\n\n\n\n\n\n\n\n}
 /recent_rock_fall_cavern
 {CLASS|bright|You are in a large cavern. The air is still chokingly dusty from a recent rock-fall. {ACTION|climb|A pile of rubble} leads up. Passages run {ACTION|south|south} and {ACTION|west|west}.}
 /high_dark_passage
@@ -1350,8 +1350,10 @@ vb_e _
  at      y2_room
  lt      game_progress 4
  writeln "{CLASS|bright|No. This a family game. Don't you start getting into any dirty cracks.}"
- pause   255
- writeln "\n{CLASS|bright|Oh well, you can go in if you must, but I'm staying outside.\n\nAnd it will cost you a treasure.}"
+ pause   200
+ writeln "\n{CLASS|bright|Oh well, you can go in if you must, but I'm staying outside.\n}"
+ pause   55
+ writeln "{CLASS|bright|And it will cost you a treasure.}"
  let     game_progress 4
  done
 
