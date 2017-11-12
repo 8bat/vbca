@@ -290,8 +290,8 @@
 
 ; Space invaders constants:
 
-; Pseudonym for countdown_player_input_1 - you will be killed automatically when it reaches 1:
-#define const countdown_to_destruction = 5
+; You lose a life automatically when this reaches 1:
+#define const countdown_to_destruction = countdown_player_input_1
 
 ; Number of invaders you need to destroy (20 in the original, which took way too long):
 #define const total_space_invaders       = 8
@@ -314,6 +314,12 @@
 ; firing is space_invaders_kill_probability% likely to succeed
 ; space_invaders_death_probability% chance you die each turn
 ; success when all invaders are dead
+
+
+; Other constants:
+
+; Pseudonym for countdown_player_input_2 - troll does things as the timer counts down
+#define const countdown_troll_actions = 6
 
 
 
@@ -1987,12 +1993,12 @@ vb_wave nn_rod
  carried object_13_rod
  writeln "{CLASS|bright ink-cyan|In a puff of stage smoke a Bridge appears on the other side of the chasm. It is Tony Bridge.\n\nHe says: &#34;What you need is the 16 32.&#34;\n\nUnfortunately he is wearing wellies and you cannot see his footnotes.}"
 
-vb_cupb nn_curt
+vb_draw nn_curt
  present object_28_troll
  writeln "{CLASS|bright|Curtains: that's just scenery.}"
  done
 
-vb_cupb nn_curt
+vb_draw nn_curt
  at      sophisticated_parser_cave
  writeln "{CLASS|bright|The room description was very misleading - there is nothing behind the curtains.\n\nI'd complain if I were you.}"
 
@@ -2874,16 +2880,17 @@ _ _
 
 _ _
  at      recent_rock_fall_cavern
- let     countdown_player_input_2 8
+ let     countdown_troll_actions 8
 
 _ _
  present object_28_troll
+ eq      countdown_troll_actions 3
  eq      countdown_player_input_2 3
  writeln "\n{CLASS|bright ink-yellow|The troll takes a family-size cornflakes packet from his breast pocket and begins to crunch them.}"
 
 _ _
  present object_28_troll
- eq      countdown_player_input_2 1
+ eq      countdown_troll_actions 1
  writeln "{CLASS|bright|\n{CLASS|bright ink-yellow|The troll drops a cornflakes packet.}}"
  create  object_30_packet
 
