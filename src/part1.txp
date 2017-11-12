@@ -163,8 +163,8 @@
 #define const countdown_object_description_unlit  =   4
 #define const countdown_player_input_1            =   5
 #define const countdown_player_input_2            =   6
-#define const countdown_player_input_3            =   7
-#define const countdown_player_input_4            =   8
+#define const countdown_save_prompt               =   7 ; SAVE -> Tape or RAM?
+#define const countdown_load_prompt               =   8 ; LOAD -> Tape or RAM?
 #define const countdown_player_input_dark         =   9
 #define const countdown_player_input_unlit        =  10
 
@@ -1888,13 +1888,13 @@ vb_hit nn_door
  turns
  end
 
-vb_hit _
- notzero countdown_player_input_4
+vb_ram _
+ notzero countdown_load_prompt
  let     pause_parameter pause_ram_save_load
  pause   50
 
-vb_hit _
- notzero countdown_player_input_3
+vb_ram _
+ notzero countdown_save_prompt
  let     pause_parameter pause_ram_save_load
  pause   25
 
@@ -2553,11 +2553,11 @@ vb_save _
  done
 
 vb_save _
- let     countdown_player_input_3 2
+ let     countdown_save_prompt 2
  writeln "{CLASS|bright|Tape or Ram?}"
 
 vb_load _
- let     countdown_player_input_4 2
+ let     countdown_load_prompt 2
  writeln "{CLASS|bright|Tape or Ram?}"
 
 vb_wait _
@@ -2584,11 +2584,11 @@ vb_spit _
  done
 
 vb_tape _
- notzero countdown_player_input_4
+ notzero countdown_load_prompt
  load
 
 vb_tape _
- notzero countdown_player_input_3
+ notzero countdown_save_prompt
  save
 
 _ _
