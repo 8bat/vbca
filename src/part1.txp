@@ -717,15 +717,14 @@ Type EAST, then press RETURN
 /MTX
 
 ; Messages used by the EXITS condact and sequence tag:
-/1000 ; TODO: check the following message matches the tone of your game:
+/1000
 Exits: 
-/1001 ; TODO: check the following message matches the tone of your game:
+/1001
 You can't see any exits
-; TODO: Make sure the text for each exit looks right:
 /1003
-{ACTION|nort|nort}
+{ACTION|north|north}
 /1004
-{ACTION|sout|sout}
+{ACTION|south|south}
 /1005
 {ACTION|east|east}
 /1006
