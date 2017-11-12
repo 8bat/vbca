@@ -357,6 +357,8 @@ vb_down     10    verb
 descend     10    verb
 vb_exam     13    verb
 vb_read     13    verb
+inspect     13    verb
+observe     13    verb
 
 ;-- verbs and proper nouns --
 ; nouns less than 50 are proper nouns and ignored by the pronoun system.
@@ -801,9 +803,9 @@ You can't see any exits
 /object_27_red_button
 {ACTION|PUSH THE BUTTON!|{CLASS|bright ink-red|{CLASS|paper-white|A red button}}}
 /object_28_troll
-{CLASS|bright ink-lime|A twelve-foot slavering troll brandishing a chainsaw}
+{ACTION|Inspect the troll|{CLASS|bright ink-lime|A twelve-foot slavering troll}}{ACTION|Observe the chainsaw|{CLASS|bright ink-lime| brandishing a chainsaw}}
 /object_29_goblet
-{CLASS|bright ink-yellow|A jewel-encrusted goblet}
+{ACTION|Get the goblet|{CLASS|bright ink-yellow|A jewel-encrusted goblet}}
 /object_30_packet
 {ACTION|Read the packet of cornflakes|{CLASS|bright|A cornflakes packet}}
 /object_31_parser
@@ -2598,6 +2600,17 @@ vb_tape _
 
 _ _
  present object_28_troll
+ absent  object_31_parser
+ writeln "{CLASS|bright|You hear a fan whir for a moment...}"
+ pause 50
+
+_ _
+ present object_31_parser
+ writeln "{CLASS|bright|The parser rattles as it listens to you...}"
+ pause 50
+
+_ _
+ present object_28_troll
  chance  50
  writeln "{CLASS|bright|Arfle bargle gloop?}"
  done
@@ -2879,18 +2892,25 @@ _ _
 
 _ _
  at      recent_rock_fall_cavern
- let     countdown_troll_actions 8
+ let     countdown_troll_actions 10
 
 _ _
  present object_28_troll
- eq      countdown_troll_actions 3
- eq      countdown_player_input_2 3
+ eq      countdown_troll_actions 5
  writeln "\n{CLASS|bright ink-yellow|The troll takes a family-size cornflakes packet from his breast pocket and begins to crunch them.}"
 
 _ _
  present object_28_troll
+ eq      countdown_troll_actions 3
+ writeln "{CLASS|bright|\n{CLASS|bright ink-yellow|The troll drops {ACTION|Read the packet of cornflakes|a cornflakes packet.}}}"
+ create  object_30_packet
+
+_ _
+ present object_28_troll
  eq      countdown_troll_actions 1
- writeln "{CLASS|bright|\n{CLASS|bright ink-yellow|The troll drops a cornflakes packet.}}"
+ writeln "\n{CLASS|bright ink-yellow|The troll starts muttering to himself.}"
+ pause   50
+ writeln "{CLASS|bright|The parser clanks irritably before successfully misinterpreting the troll's utterances}"
  create  object_30_packet
 
 _ _
