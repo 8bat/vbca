@@ -838,7 +838,7 @@ A grey pellet
 /object_43_art_critiquette
 {CLASS|bright|An angular art-critiquette emitting a string of poly- syllables}
 /object_44_hippies
-{CLASS|bright|A group of hippies}
+{CLASS|bright|A group of hippies}#{CLASS|bright|They are valuable treasures, both on account of their great antiquity and as consummate examples of the taxidermist's art}
 /object_45_bottle
 {CLASS|bright ink-lime|A bottle of water}#{CLASS|bright|Green. Originally one of a set of ten.}
 /46
