@@ -1,0 +1,92 @@
+countdown_player_input_1
+ - used in the space invaders room:
+   * reset to 3 on move or successful kill
+   * when it reaches 1, your ship is destroyed (there's a chance it's destroyed anyway)
+ - used in Gotham:
+   * set to 8 when THE JESTER enters the art gallery
+   * actions are triggered as it counts down
+
+countdown_player_input_2
+ - used in Gotham:
+   * incremented when you switch on the bat signal
+   * set when THE JESTER escapes
+   * THAT MAN's actions are triggered as it counts down
+ - used in the rock-fall cavern:
+   * initial value: 8
+   * Troll actions are triggered as it counts down
+
+countdown_player_input_3
+ - used while saving:
+   * initialised to 2
+   - must say "tape" or "ram" before it reaches 0
+   - some animation plays if you type "hit" before it reaches 0
+
+countdown_player_input_4
+ - used while loading (as countdown_player_input_3)
+
+game_flag_11 == yesno_bull_roared
+ 1 - initial value (set in room 0)
+ (higher than 1) - bull has roared out
+
+game_flag_12 == total_dead_space_invaders_and_yesno_gotham_theft
+ In the space invaders room:
+ 0 - initial value
+ +1 for each kill
+ 20 - they're all dead
+ In Gotham:
+ 50 - have stolen something that triggers THAT MAN
+
+game_flag_13 == space_invaders_position_and_that_man_status
+ In the space invaders room:
+ 10 - initial value
+ 9 - left edge of screen
+ 11 - right edge of screen
+ In Gotham:
+ 0 - initial value
+ 1 - THE JESTER has appeared
+ >2 - stealable objects displayed
+ 100 - THAT MAN is taking you back to the caves (success)
+ 50 - THAT MAN offers to take you back to the caves (Jester escapes)
+ 255 - Bat signal activated
+
+game_flag_16 == yesno_silver_sold
+  0 - initial value
+  255 - the fence has it
+  50 - the fence has it, but its value has been deducted for viewing the crack
+
+game_flag_17 == yesno_moon_crystal_sold
+  0 - initial value
+  255 - the fence has it
+
+game_flag_18 == wellie_house_door_status
+  0 - initial value
+  +1 - each time you attack the door
+
+game_flag_19 == yesno_got_booted
+  0 - initial value, or after a "let me help you up" message
+  255 - kicked out of various places
+(this is a running gag in Gotham)
+
+
+game_flag_20 == yesno_gotham_complete
+ 0 - initial value
+ 255 - returned to the batcave from Gotham
+
+game_flag_22 == game_progress
+- set at various points during the game to indicate progress:
+  0 - initial value
+  1 - wellie house door opened
+  2 - entered the caves
+  3 - bird has mentioned the lack of a black rod
+  4 - have received the "dirty crack" warning
+  5 - have viewed the dirty crack anyway
+  6 - after viewing the dirty crack
+Note: progress goes back down from 4 to 3 if you don't view the crack
+
+game_flag_26 == yesno_done_part_1
+ 0 - initial value
+ 255 - part 1 complete, ready to load part 2
+
+game_flag_27 == yesno_rope_cut
+ 0 - initial value
+ 255 - have cut THE JESTER's rope with the sharpened ZX81
