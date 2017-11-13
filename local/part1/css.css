@@ -1,0 +1,85 @@
+
+
+/*
+ * VBCA-specific CSS
+ */
+
+body {
+    font-family: 'Fondamento', cursive, Verdana, arial, helvetica;
+    font-size: 125%;
+}
+
+body.location-63 {
+    background-image: url("dat/cover.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+body.location-63 .wrapper {
+    box-shadow: inset -2px -2px 10px 10px rgba(64,64,64,0.85);
+    border-radius: 5em;
+    background: rgba(0,0,0,0.85);
+}
+
+body.location-63 .text {
+    background: none;
+}
+
+.half_graphics {
+    z-index: 1;
+}
+
+.half_graphics::after {
+    content: "";
+    position: absolute;
+    bottom:-6px;
+    left: 3px;
+    right: 3px;
+    box-shadow: 0 10px 5px 0;
+    z-index: -1;
+    height: 10px;
+}
+
+.pause-animation-box .half_graphics::after {
+    display: none;
+}
+
+.half_text {
+    margin-top: 10px;
+    padding-top: 1em;
+    top: 50%;
+}
+
+.text .center {
+    display: block;
+    text-align: center;
+}
+.text .right {
+    display: block;
+    text-align: right;
+}
+
+
+@keyframes anykey-flash {
+    0, 100% { opacity: 1 }
+    50% { opacity: 0 }
+}
+.anykey-text {
+    animation: anykey-flash 2s linear infinite;
+}
+
+.input-table, .input-table td {
+    width: 100%;
+}
+
+.feedback, .arrow, .prompt {
+    color: #666688;
+}
+
+.input-table td.arrow {
+    font-size: 125%;
+    float: left;
+    padding-top: 5px;
+    width: 1em;
+    cursor: default;
+}
