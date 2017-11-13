@@ -2013,6 +2013,7 @@ vb_wave nn_rod
  at      log_chasm_room
  carried object_13_rod
  writeln "{CLASS|bright ink-cyan|In a puff of stage smoke a Bridge appears on the other side of the chasm. It is Tony Bridge.\n\nHe says: &#34;What you need is the 16 32.&#34;\n\nUnfortunately he is wearing wellies and you cannot see his footnotes.}"
+ destroy object_13_rod
 
 vb_draw nn_curt
  present object_28_troll
@@ -2418,6 +2419,13 @@ vb_drop nn_bomb
  writeln "{CLASS|bright ink-lime|\n{CLASS|bright|Oh well. Better look for a new adventurer.\n\nThat one was too weedy to throw the bomb anyway.}}"
  pause   250
  end
+
+vb_drop nn_rod
+ carried object_13_rod
+ at      wellie_house
+ writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;No use to me&#34;} says the fence. {CLASS|ink-yellow|&#34;go wave it some place else&#34;}}"
+ autod
+ done
 
 vb_drop nn_cage
  notat   wellie_house
