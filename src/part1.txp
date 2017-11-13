@@ -1657,7 +1657,7 @@ vb_exam nn_well
 
 vb_exam nn_belt
  present object_40_belt
- writeln "{CLASS|bright ink-black|{CLASS|paper-white|Rule 137(b): The player may not examine the utility belt until part 2.                         }}"
+ writeln "{CLASS|bright ink-black|{CLASS|paper-white|Rule 137(b): The player may not examine the utility belt until part 2.}}"
  done
 
 vb_exam _
@@ -2437,7 +2437,7 @@ vb_drop nn_bomb
  ink     4
  let     pause_parameter pause_flash
  pause   8
- writeln "\n{CLASS|bright ink-lime|KABLOOT!\n\n                }"
+ writeln "\n{CLASS|bright ink-lime|KABLOOT!\n\n}"
  pause   100
  cls
  pause   250
