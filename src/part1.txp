@@ -1661,6 +1661,10 @@ vb_exam nn_belt
  done
 
 vb_exam _
+ at secret_hiding_place
+ synonym vb_in _
+
+vb_exam _
  writeln "{CLASS|bright|Looks pretty ordinary to me.}"
  done
 
@@ -1933,6 +1937,23 @@ vb_put nn_penn
  writeln "{CLASS|bright|The {ACTION|east|door} swings open.}"
  done
 
+vb_fill nn_bott
+ atgt    room_0
+ atlt    wellie_house
+ carried object_6_bottle
+ swap    object_6_bottle object_45_bottle
+ ok
+
+vb_fill nn_bott
+ carried object_6_bottle
+ writeln "{CLASS|bright|With what, dear Liza?}"
+ done
+
+vb_fill nn_bott
+ carried object_45_bottle
+ writeln "{CLASS|bright|It's already full}"
+ done
+
 vb_put _
  writeln "{CLASS|bright|Try &#34;get&#34; or &#34;drop&#34;.}"
 
@@ -1988,6 +2009,14 @@ vb_in _
 vb_in _
  at      outside_art_gallery
  writeln "{CLASS|bright|The art gallery is cordoned off by the police, having been the scene of a daring robbery.}"
+ done
+
+vb_in _
+ at secret_hiding_place
+ writeln "{CLASS|bright|A voice from deep in the cave says &#34;the bottle is for a puzzle you're not supposed to solve the first time&#34;.}"
+ pause 150
+ writeln "{CLASS|bright|&#34;Now buzz off, I'm playing Chuckie Egg.&#34;}"
+ pause 50
  done
 
 vb_in _
