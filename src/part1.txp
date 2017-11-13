@@ -186,7 +186,7 @@
 #define const game_flag_24                        =  24 ; unused
 #define const game_flag_25                        =  25 ; unused
 #define const yesno_done_part_1                   =  26
-#define const yesno_rope_cut                      =  27
+#define const yesno_cutting_rope                  =  27
 #define const pause_parameter                     =  28
 #define const bitset_graphics_status              =  29
 #define const total_player_score                  =  30
@@ -292,7 +292,7 @@
 ; Space invaders constants:
 
 ; You lose a life automatically when this reaches 1:
-#define const countdown_to_destruction = countdown_player_input_1
+#define const countdown_to_destruction = 5 ; countdown_player_input_1
 
 ; Number of invaders you need to destroy (20 in the original, which took way too long):
 #define const total_space_invaders       = 8
@@ -320,19 +320,21 @@
 ; Gotham constants:
 
 ; once you enter Gotham, THE JESTER's plan starts to unfold:
-#define const countdown_jester = countdown_player_input_1
-#define const jester_initial_value   = 20 ; when you enter Gotham
-#define const jester_about_to_appear =  6 ; if you enter the library slightly late
+#define const countdown_jester = 5 ; countdown_player_input_1
+#define const jester_initial_value   = 40 ; when you enter Gotham
+#define const jester_escapes         = 20 ; when THE JESTER starts to be mentioned
+#define const jester_about_to_appear =  6 ; when you enter the gallery with a relevant item
 #define const jester_appears         =  5 ; when THE JESTER enters the art gallery
 #define const jester_present         =  4 ; pause while the player decides how to cut the rope
-#define const jester_escapes         =  1 ; if you don't do something in time
+#define const jester_flees           =  1 ; if you don't do something in time
 
 ; finishing THE JESTER's storyline starts THAT MAN's clock
 ; (either cut the rope with the ZX81, or open the valve)
-#define const countdown_that_man = countdown_player_input_2
-#define const that_man_initial_value        =  8 ; when you finish THE JESTER's plot line
+#define const countdown_that_man = 6 ; countdown_player_input_2
+#define const that_man_initial_value        = 16 ; when you finish THE JESTER's plot line
 #define const that_man_bat_signal_increment = 20 ; when you light the bat signal
-#define const that_man_end                  =  1 ; when THAT MAN is ready to take you home
+#define const that_man_returns              =  8 ; when THAT MAN is ready to take you home
+#define const that_man_end                  =  1 ; when THAT MAN leaves without you
 ; Once THAT MAN is active, you can modify his state:
 #define const that_man_approaching =   1 ; when THE JESTER appears
 #define const that_man_active      =   2 ; when any of the following are true
@@ -1302,8 +1304,8 @@ vb_d behind_gotham_police_station
 /object_35_searchlight       gotham_police_station_roof      1    _    _       ATTR
 /object_36_desks             study_area                      1    _    _       ATTR
 /object_37_file              inside_gotham_museum            1    _    _       ATTR
-/object_38_pictures          room_noncreated                 1    _    _       ATTR
-/object_39_bat               outside_gotham_bank             1 nn_bat  _       ATTR
+/object_38_pictures          room_noncreated                 0    _    _       ATTR
+/object_39_bat               room_noncreated                 1 nn_bat  _       ATTR
 /object_40_belt              room_noncreated                 1 nn_belt _       ATTR aWearable
 /object_41_box               room_noncreated                 1 nn_box  _       ATTR
 /object_42_pellet            room_noncreated                 1 nn_pellet _     ATTR
@@ -1629,7 +1631,7 @@ vb_exam nn_book
 
 vb_exam nn_pict
  at      inside_art_gallery
- writeln "{CLASS|bright|You examine {ACTION|get the pictures|the pictures}.\nYou are astounded that as many as three people are present.}"
+ writeln "{CLASS|bright|You examine the pictures.\nYou are astounded that as many as three people are present.}"
  done
 
 vb_exam nn_hipp
@@ -1639,9 +1641,23 @@ vb_exam nn_hipp
 
 vb_exam nn_bubb
  at      outside_gotham_infirmary
- writeln "{CLASS|bright|{CLASS|ink-lime paper-white|&#34;I'll pull t'rough, babe. I gotta.&#34;}\n\n{CLASS|paper-white ink-blue|&#34;Don't worry, Louie. We'll nail da rats what done this to ya. We'll nail 'em good.&#34;}\n\n{CLASS|paper-white ink-magenta|&#34;I knew you'd come to a bad end, son. I never believed all that stuff about violin lessons.&#34;}\n\n{CLASS|paper-white ink-red|&#34;Yeah, he's the big man behind the operation. His name is... ARRGH CHOKE&#34;}\n\nEtc. As you sort through the bubbles you uncover {ACTION|examine canister|something buried beneath them}.}"
+ writeln "{CLASS|bright ink-lime paper-white|&#34;I'll pull t'rough, babe. I gotta.&#34;}\n"
+ pause 10
+ writeln "{CLASS|bright paper-white ink-blue|&#34;Don't worry, Louie. We'll nail da rats what done this to ya. We'll nail 'em good.&#34;}\n"
+ pause 10
+ writeln "{CLASS|bright paper-white ink-magenta|&#34;I knew you'd come to a bad end, son. I never believed all that stuff about violin lessons.&#34;}\n"
+ pause 10
+ writeln "{CLASS|bright paper-white ink-red|&#34;Yeah, he's the big man behind the operation. His name is... ARRGH CHOKE&#34;}\n"
+ pause 10
+ writeln "{CLASS|bright|Etc. As you sort through the bubbles you uncover {ACTION|examine canister|something buried beneath them}.}"
+ pause 10
  create  object_33_gas_canister
  done
+
+vb_get nn_valv
+ isat  object_39_bat room_noncreated
+ place object_39_bat outside_gotham_bank
+ let   countdown_jester jester_escapes
 
 vb_exam nn_valv
  present object_33_gas_canister
@@ -1650,7 +1666,17 @@ vb_exam nn_valv
 
 vb_exam nn_bat
  present object_39_bat
- writeln "{CLASS|bright|On the back is scrawled:\n\n{CLASS|ink-yellow|Take a cart\nFrom the sea,\nTurn it round\nAnd you'll find me.\n\nIt is 'signed' with a crude picture of a jester.}}"
+ writeln "{CLASS|bright|On the back is scrawled:\n}"
+ pause   75
+ writeln "{CLASS|bright ink-yellow|Take a cart}"
+ pause   50
+ writeln "{CLASS|bright ink-yellow|From the sea}"
+ pause   50
+ writeln "{CLASS|bright ink-yellow|Turn it round}"
+ pause   50
+ writeln "{CLASS|bright ink-yellow|And you'll find me.}"
+ pause   75
+ writeln "{CLASS|bright|\nIt is 'signed' with a crude picture of a jester.}"
  done
 
 vb_exam nn_swit
@@ -1771,10 +1797,7 @@ vb_open nn_valv
  at      inside_art_gallery
  present object_33_gas_canister
  le      countdown_jester jester_appears
- present object_33_valve
- lt      countdown_player_input_1 6
- writeln "{CLASS|bright|As the gas eqcapes, THAT&#34;MAN&#x4;bee ins vo laweh,&#34;but&#34;THE&#34;JESTER,wjo  ks anuays laugjile, now collarqes in&#34;helrless&#34;paroxysms, kicking his legs in thg air.&#x4;\n                THCT MAL snapq t he brccelgts on&#34;hio ald tckes hi s haul / mle&#x4;Rkaasso and vwo rec ent&#34;works       by Ferdinand Fin k. The choice   is typical of TH E JESTER's      grotesquely twis ted aesthetic   sense.\n{CLASS|ink-cyan|\n{CLASS|ink-cyan|                &#34;Here, take thes e,&#34; says THAT   MAN. &#34;The city i s better off    without them.\n\n                &#34;I'll take you b ack to the      caves.&#34;}}}"
- let     countdown_player_input_2 8
+ writeln "{CLASS|bright|As the gas eqcapes, THAT&#34;MAN&#xFFFD;bee ins vo laweh,&#34;but&#34;THE&#34;JESTER,wjo  ks anuays laugjile, now collarqes in&#34;helrless&#34;paroxysms, kicking his legs in thg air.&#xFFFD;\n                THCT MAL snapq t he brccelgts on&#34;hio ald tckes hi s haul / mle&#xFFFD;Rkaasso and vwo rec ent&#34;works       by Ferdinand Fin k. The choice   is typical of TH E JESTER's      grotesquely twis ted aesthetic   sense.\n{CLASS|ink-cyan|\n                &#34;Here, take thes e,&#34; says THAT   MAN. &#34;The city i s better off    without them.\n\n                &#34;I'll take you b ack to the      caves.&#34;}}"
  let     countdown_that_man that_man_initial_value
  minus   total_carried 1
  create  object_38_pictures
@@ -1915,10 +1938,14 @@ vb_fire _
  at      live_space_invaders_room
  writeln "{CLASS|bright ink-yellow|MISSED}"
 
+vb_drop nn_zx81
+ at      inside_art_gallery
+ synonym vb_zx81 _
+
 vb_zx81 _
  at      inside_art_gallery
  carried object_16_zx81
- notzero yesno_rope_cut
+ notzero yesno_cutting_rope
  writeln "{CLASS|bright|THE JESTER escapes as you cut the rope. THAT MAN offers to take you back to the caves.}"
  let     countdown_that_man that_man_initial_value
  anykey
@@ -2030,6 +2057,18 @@ vb_in nn_spri
  pause   100
  goto    room_1
  desc
+
+vb_in _
+ at      outside_art_gallery
+ notzero countdown_jester
+ carried object_16_zx81
+ let     countdown_jester jester_about_to_appear
+
+vb_in _
+ at      outside_art_gallery
+ notzero countdown_jester
+ carried object_33_gas_canister
+ let     countdown_jester jester_about_to_appear
 
 vb_in _
  at      outside_art_gallery
@@ -2204,7 +2243,7 @@ vb_dog _
 vb_cut nn_rope
  at      inside_art_gallery
  le      countdown_jester jester_appears
- set     yesno_rope_cut
+ set     yesno_cutting_rope
  let     countdown_jester jester_present
  writeln "{CLASS|bright|With what?}"
 
@@ -2316,6 +2355,9 @@ vb_get nn_pict
 vb_get nn_pict
  notat   wellie_house
  notat   inside_art_gallery
+ present object_38_pictures
+ notcarr object_38_pictures
+ minus   total_carried 1
  get     object_38_pictures
  ok
 
@@ -2572,6 +2614,7 @@ vb_drop nn_pict
  notat   wellie_house
  notat   inside_art_gallery
  drop    object_38_pictures
+ plus    total_carried 1
  ok
 
 vb_drop nn_pict
@@ -2671,6 +2714,11 @@ vb_load _
 
 vb_wait _
  writeln "{CLASS|bright|One minute passes.}"
+
+vb_wait _
+ at  heart_of_gotham
+ gt  countdown_that_man that_man_returns
+ let countdown_that_man that_man_returns
 
 vb_y2 _
  writeln "{CLASS|bright|YNOT?}"
@@ -2804,6 +2852,29 @@ _ _
  set yesno_found_secret_hiding_place
  prompt 0
 
+_ _
+ atgt    swear_box
+ atlt    inside_library
+ notat   outside_jewllers_shop
+ notat   outside_gotham_museum
+ notat   outside_gotham_library
+ zero    that_man_status
+ notzero countdown_jester
+ lt      countdown_jester jester_escapes
+ writeln "\n{CLASS|bright ink-cyan|A newsboy cries &#34;Jester escapes!}"
+ writeln "{ACTION|buy news|{CLASS|bright ink-cyan|Read all about it!&#34;}}"
+ done
+
+_ _
+ atgt    swear_box
+ atlt    inside_library
+ notat   outside_jewllers_shop
+ notat   outside_gotham_museum
+ notat   outside_gotham_library
+ le      that_man_status that_man_fail
+ writeln "\n{CLASS|bright ink-cyan|A newsboy cries &#34;Daring robbery!}"
+ writeln "{ACTION|buy news|{CLASS|bright ink-cyan|Read all about it!&#34;}}"
+
 
 ;
 ; STATUSES SECTION (process table 2)
@@ -2827,6 +2898,13 @@ _ _
 
 _ _
  at      inside_art_gallery
+ lt      countdown_jester jester_escapes
+ gt      countdown_jester jester_about_to_appear
+ zero    that_man_status
+ let     countdown_jester jester_about_to_appear
+
+_ _
+ at      inside_art_gallery
  lt      countdown_jester jester_appears
  zero    that_man_status
  let     countdown_jester jester_about_to_appear
@@ -2846,6 +2924,14 @@ _ _
 
 _ _
  at      batcave_exit_tunnel
+ let     countdown_jester jester_initial_value
+_ _
+ at      batcave_exit_tunnel
+ carried object_16_zx81
+ place   object_39_bat outside_gotham_bank
+ let     countdown_jester jester_escapes
+_ _
+ at      batcave_exit_tunnel
  anykey
  writeln "\n{CLASS|bright ink-yellow|The powerful headlights suddenly lance down the tunnel, showing{CLASS|ink-yellow| it to be much longer than you had thought.}}"
  anykey
@@ -2860,9 +2946,23 @@ _ _
  clear   yesno_got_booted
  clear   that_man_status
  clear   yesno_is_dark
- let     countdown_jester jester_initial_value
  goto    heart_of_gotham
  desc
+
+; pause THE JESTER's countdown:
+_ _
+ atgt    batmobile
+ notat   sophisticated_parser_cave
+ notat   swear_box
+ gt      countdown_jester jester_escapes
+ let     countdown_jester jester_initial_value
+_ _
+ atgt    batmobile
+ notat   sophisticated_parser_cave
+ notat   swear_box
+ lt      countdown_jester jester_escapes
+ gt      countdown_jester jester_about_to_appear
+ let     countdown_jester jester_escapes
 
 _ _
  at      room_63
@@ -2985,7 +3085,7 @@ _ _
 _ _
  at      outside_art_gallery
  notzero yesno_got_booted
- pause   200
+ pause   128
  writeln "\n{CLASS|bright|Thought you might land about here.\n\nLucky thing these nurses wear rubber-soled shoes, what?}"
  clear   yesno_got_booted
  pause   100
@@ -3048,12 +3148,12 @@ _ _
  cls
  writeln "{CLASS|bright ink-magenta|Suddenly a shriek of inhuman laughter rends the air and a terrible figure appears. Green hair, chalk-white face and ruby mouth set forever in a demented grin. Howling with malevolent mirth, VHE JESTER&#34;strkpq the galngry&#34;of&#34;kvs oosv rricgless pckntings.}"
  anykey
- writeln "\n{CLASS|bright|Thg&#34;room darkels as THCT MCN swoops&#34;through&#34;the skylight. His qilkel THAT-POPE snakgs touard THE JESTER. Buv the&#34;villain activates jkq REPELNM FORCE- FIENF,&#34;cawsing the rope to loop baak enqnaping ivs ouner.{CLASS|ink-yellow|\n&#x4;&#x4;THAT MAN&#34;is&#34;trarref by jks own}}{CLASS|center bright ink-yellow|     rmpe.}{CLASS|bright ink-yellow|                THE&#34;JEQTER&#34;ks es carkle.         Is thg worst &#123;et  vm&#34;come?}"
+ writeln "\n{CLASS|bright|Thg&#34;room darkels as THCT MCN swoops&#34;through&#34;the skylight. His qilkel THAT-POPE snakgs touard THE JESTER. Buv the&#34;villain activates jkq REPELNM FORCE- FIENF,&#34;cawsing the rope to loop baak enqnaping ivs ouner.{CLASS|ink-yellow|\n&#xFFFD;&#xFFFD;THAT MAN&#34;is&#34;trarref by jks own rmpe.}}{CLASS|bright ink-yellow right|THE&#34;JEQTER&#34;ks es\ncarkle.\nIs thg worst &#123;et  vm&#34;come?}"
  let     that_man_status that_man_approaching
 
 _ _
  at      inside_art_gallery
- eq      countdown_jester jester_escapes
+ eq      countdown_jester jester_flees
  writeln "{CLASS|bright|\n{CLASS|bright|THE JESTER escapes. THAT MAN, untangling himself, sets off in pursuit. You have lost your only chance of returning to the caves.}}"
  pause   250
  score
@@ -3062,26 +3162,46 @@ _ _
 
 _ _
  at      heart_of_gotham
- eq      countdown_that_man that_man_end
+ eq      countdown_that_man that_man_returns
  cls
  writeln "{CLASS|bright|THAT MAN returns looking much relieved. The return journey begins.}"
 
 _ _
  at      heart_of_gotham
- eq      countdown_that_man that_man_end
+ eq      countdown_that_man that_man_returns
  eq      that_man_status that_man_signalled
  pause   50
  writeln "\n{CLASS|bright ink-cyan|&#34;I'm sorry for the delay,&#34; apologises THAT MAN. &#34;I was called away on a foolish false alarm.&#34;}"
 
 _ _
  at      heart_of_gotham
- eq      countdown_that_man that_man_end
+ lt      countdown_that_man that_man_returns
+ notzero countdown_that_man
+ cls
+ writeln "{CLASS|bright ink-cyan|What bat-time do you call this?}"
+ pause   50
+ writeln "{CLASS|bright|The return journey begins.}"
+
+_ _
+ at      heart_of_gotham
+ le      countdown_that_man that_man_returns
+ notzero countdown_that_man
  anykey
  goto    bat_cave
  create  object_40_belt
  set     yesno_entered_batmobile
  set     yesno_is_dark
  desc
+
+_ _
+ atgt    batmobile
+ notat   sophisticated_parser_cave
+ notat   swear_box
+ notat   heart_of_gotham
+ le      countdown_that_man that_man_returns
+ notzero countdown_that_man
+ pause   25
+ writeln "{CLASS|bright|You hear the impatient honking of a bat-horn in the distance}"
 
 _ _
  atgt    batmobile
@@ -3104,29 +3224,6 @@ _ _
  lt      that_man_status that_man_signalled
  anykey
  writeln "\n\n{CLASS|bright ink-yellow|&#34;One moment,&#34; says THAT MAN.\n&#34;I just have to visit THAT PLACE before our journey.&#34;\n\nThe caped figure disappears into a small brick building.}"
-
-_ _
- atgt    swear_box
- atlt    inside_library
- notat   outside_jewllers_shop
- notat   outside_gotham_museum
- notat   outside_gotham_library
- zero    that_man_status
- notzero countdown_jester
- writeln "\n{CLASS|bright ink-cyan|A newsboy cries &#34;Jester escapes!}"
- writeln "{ACTION|buy news|{CLASS|bright ink-cyan|Read all about it!&#34;}}"
- done
-
-_ _
- atgt    swear_box
- atlt    inside_library
- notat   outside_jewllers_shop
- notat   outside_gotham_museum
- notat   outside_gotham_library
- le      that_man_status that_man_fail
- lt      that_man_status 51
- writeln "\n{CLASS|bright ink-cyan|A newsboy cries &#34;Daring robbery!}"
- writeln "{ACTION|buy news|{CLASS|bright ink-cyan|Read all about it!&#34;}}"
 
 _ _
  eq      yesno_gotham_theft 50
@@ -3198,6 +3295,7 @@ _ _
  at      bat_cave
  zero    countdown_location_description
  present object_0_lamp
+ zero    yesno_entered_batmobile
  anykey
  writeln "\n{CLASS|bright|From a low cavern in the south glint what would seem to be the two red eyes of some monstrous creature.}"
 
@@ -3205,6 +3303,7 @@ _ _
  at      small_low_cavern
  zero    countdown_location_description
  present object_0_lamp
+ zero    yesno_entered_batmobile
  anykey
  writeln "\n{CLASS|bright|You now see that the two red glints came from the tail lights of {ACTION|enter|a powerful, low-slung automobile}. It is jet black with a bat-like mask on the front and a sort of fin along the back resembling a bat's wing.}"
 
@@ -3315,9 +3414,9 @@ _ _
 _ _
  at      outside_gotham_police_station
  notzero yesno_got_booted
- pause   200
+ pause   128
  writeln "\n\n{CLASS|bright|Size ten, I'd guess.}"
- pause   200
+ pause   128
  writeln "\n\n{CLASS|bright|Here, let me help you up.}"
  clear   yesno_got_booted
 
@@ -3344,7 +3443,7 @@ _ _
 _ _
  at      outside_le_chat_noir
  notzero yesno_got_booted
- pause   250
+ pause   128
  writeln "\n\n{CLASS|bright|Well, your clothes are rather grubby.\n\nI don't think the boot-mark makes any noticeable difference.}"
  clear   yesno_got_booted
 
