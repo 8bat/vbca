@@ -1433,6 +1433,10 @@ vb_w _
  writeln "{CLASS|bright|You have spent your penny.}"
  done
 
+vb_w _
+ at      bat_cave
+ writeln "{CLASS|bright|Never heard of him.}"
+
 vb_u _
  present object_34_ladder
  goto    gotham_police_station_roof
