@@ -3267,11 +3267,9 @@ _ _
  at      part_2_room
  zero    yesno_done_part_1
  set     yesno_done_part_1
+ score
+ writeln "{CLASS|bright|{CLASS|bright ink-yellow|Part 2 is still being adapted for the web - please bookmark this page and check back in a few months.}}\n"
  save
-
-_ _
- at      part_2_room
- writeln "{CLASS|bright|\n{CLASS|bright ink-yellow|Thank you. Now turn off your{CLASS|ink-yellow| computer and load part 2.}}}"
 
 _ _
  at      inside_gotham_police_station
