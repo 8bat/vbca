@@ -834,7 +834,7 @@ A gas canister
 /object_41_box
 {ACTION|Examine box|{CLASS|bright ink-cyan|A very small cardboard box}}
 /object_42_pellet
-A grey pellet
+A grey pellet#{CLASS|bright|The dehydrated seed of an art critic}
 /object_43_art_critiquette
 {CLASS|bright|An angular art-critiquette emitting a string of poly- syllables}
 /object_44_hippies
