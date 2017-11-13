@@ -1,0 +1,67 @@
+# Minimal run through the game
+
+> # RESTART
+> # PAUSE: 1
+
+# get the penny:
+> s
+> text
+> no
+> get penny
+> n
+
+# get the bomb and wellies:
+> spend a penny
+> east
+> get bomb
+> wear wellies
+> spring
+
+# get the keys and lamp:
+> n
+> get keys
+> get lamp
+> light lamp
+
+# pass the bull:
+> s
+> s
+> s
+> throw bomb
+
+# open the grate:
+> s
+> s
+> open grate
+
+# get the can:
+> down
+> w
+> w
+> w
+> w
+> w
+> d
+> s
+> get can
+
+# kill the python:
+> n
+> n
+> open can
+
+# get the key:
+> w
+> open cupboard
+> get key
+
+# open the pillarbox:
+> e
+> s
+> u
+> e
+> open pillarbox
+
+# descend to part 2:
+> d
+> d

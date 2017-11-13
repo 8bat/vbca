@@ -1,0 +1,480 @@
+#
+# Simple loop at the start of the game:
+#
+
+# start the game again:
+> # RESTART
+> # PAUSE: 1
+> # EXPECT: AT 1
+
+> W
+> # EXPECT: AT 5
+> N
+> # EXPECT: AT 1
+
+# Interact with the bull (the first time):
+> # ASSERT: AT 1
+> # ASSERT: NOTCARR 2
+> S
+> Get penny
+> # EXPECT: NOTCARR 2
+> Get penny
+> # EXPECT: NOTCARR 2
+> YES
+> Get penny
+> # EXPECT: NOTCARR 2
+> NO
+> Get penny
+> # EXPECT: CARRIED 2
+
+# Spend a penny:
+> # ASSERT: AT 2
+> # ASSERT: CARRIED 2
+> N
+> # ASSERT: AT 1
+> E
+> # EXPECT: AT 1
+> Spend a penny
+> # EXPECT: NOTCARR 2
+> E
+> # EXPECT: AT 3
+
+# Make sure the teleport doesn't work in the early game:
+> # ASSERT: AT 3
+> commodore
+> # ASSERT: AT 3
+
+
+# Swear:
+> swear
+> # EXPECT: AT 45
+> wash mouth
+> # ASSERT: AT 1
+
+# kick the door:
+> # ASSERT: AT 1
+> E
+> # ASSERT: AT 3
+> kick door
+> # EXPECT: ISNOTEND
+> kick door
+> # EXPECT: ISNOTEND
+> kick door
+> # EXPECT: ISEND
+
+
+#
+# Solve the bull puzzle:
+#
+
+# start the game again:
+> # RESTART
+> # PAUSE: 1
+> # EXPECT: AT 1
+
+# get to the bull (part 2):
+> s; get penny; no; get penny; n; spend a penny; east; get bomb; spring
+> # ASSERT: AT 1
+> # ASSERT: CARRIED 8
+
+# put a bomb in a bull:
+> s
+> # EXPECT: PRESENT 9
+> throw bomb
+> # EXPECT: ABSENT 9
+
+
+#
+# Remainder of the above-ground portion:
+#
+
+# make sure the wellies are needed
+> # ASSERT: AT 2
+> # ASSERT: ABSENT 7
+> S
+> # ASSERT: AT 2
+> N; E; WEAR WELL; SPRING; S; S
+> # ASSERT: AT 4
+
+# make sure the keys are needed:
+> S
+> # ASSERT: AT 7
+> # EXPECT: ABSENT 3
+> # EXPECT: PRESENT 10
+> # EXPECT: ABSENT 11
+
+# get the keys:
+> N;N;N;N;get keys;S;S;S;S
+> # EXPECT: PRESENT 3
+> # EXPECT: PRESENT 10
+> # EXPECT: ABSENT 11
+> open grate
+> # EXPECT: ABSENT 10
+> # EXPECT: PRESENT 11
+
+
+#
+# Sploosh holes are deadly
+#
+
+> Down
+> # ASSERT: AT 8
+> # ASSERT: ABSENT 0
+> W
+> # EXPECT: ISNOTLIGHT
+> # EXPECT: ISNOTEND
+> W
+> # EXPECT: ISEND
+
+
+#
+# Sell the cage
+#
+
+# start the game again:
+> # RESTART
+> # PAUSE: 1
+> # EXPECT: AT 1
+> s; get penny; no; get penny; n; spend a penny; east; get bomb; wear well; spring; n; get keys; get lamp; light lamp; s; s; s; throw bomb; s; s; open grate; down
+> # EXPECT: AT 8
+> # EXPECT: ISLIGHT
+> w; get cage
+> # ASSERT: EQ 30 0
+> e; u; n; n; n; e; drop cage
+> # EXPECT: EQ 30 1
+
+#
+# Make sure the teleport works both ways:
+#
+
+> # ASSERT: AT 3
+> commodore
+> # EXPECT: AT 10
+> commodore
+> # ASSERT: AT 3
+
+
+#
+# Make sure the pillar box isn't openable:
+#
+
+> commodore; w; w
+> # ASSERT: AT 22
+> # ASSERT: ABSENT 25
+> # ASSERT: ABSENT 23
+> open letterbox
+> # EXPECT: ABSENT 25
+
+
+#
+# Check the can works
+#
+
+# can't open the can unless it's present
+> w
+> # ASSERT: ABSENT 21
+> # ASSERT: ABSENT 14
+> open can
+> # EXPECT: ABSENT 14
+# go to the can
+> d; s
+# open the can:
+> # ASSERT: PRESENT 21
+> # EXPECT: ABSENT 14
+> open can
+> # EXPECT: PRESENT 14
+> get can; n
+> # ASSERT: PRESENT 21
+> # EXPECT: ABSENT 14
+> open can
+> # EXPECT: PRESENT 14
+
+#
+# Check the python works
+#
+
+> N
+> # EXPECT: AT 26
+> # ASSERT: PRESENT 20
+> N
+> # EXPECT: AT 26
+> W
+> # EXPECT: AT 26
+
+#
+# Check the bird kills the python
+#
+
+> # ASSERT: PRESENT 20
+> # ASSERT: ABSENT 14
+> open can
+> # ASSERT: ABSENT 20
+> # ASSERT: PRESENT 14
+
+#
+# Play space invaders:
+#
+
+> e; e
+# First hit always kills:
+> # EXPECT: EQ 212 0
+> # MOCKRANDOM: 1 1
+> FIRE
+> # EXPECT: EQ 212 1
+
+# Second hit can fail
+> # MOCKRANDOM: 1 1
+> FIRE
+> # EXPECT: EQ 212 1
+
+# Kill the remaining invaders:
+> # MOCKRANDOM: 0 1
+> FIRE
+> # MOCKRANDOM: 0 1
+> FIRE
+> # MOCKRANDOM: 0 1
+> FIRE
+> # MOCKRANDOM: 0 1
+> FIRE
+> # MOCKRANDOM: 0 1
+> FIRE
+> # MOCKRANDOM: 0 1
+> FIRE
+> # EXPECT: AT 19
+> # MOCKRANDOM: 0 1
+> FIRE
+> # MOCKRANDOM: 0 1
+> FIRE
+> # EXPECT: EQ 212 8
+> # EXPECT: AT 20
+
+#
+# Make sure the Venusian Moon-Crystal works
+#
+
+> open airlock; get crystal
+> # EXPECT: CARRIED 15
+> # ASSERT: EQ 30 1
+> swear; wash mouth; e; drop moon
+> # EXPECT: EQ 30 31
+
+#
+# Make sure the dirty crack works
+#
+
+> commodore; w; w; w; d; n; n; n
+> # ASSERT: AT 28
+> e
+> # EXPECT: AT 28
+> # EXPECT: EQ 30 31
+> # EXPECT: ISNOTAT 19 252
+> e
+> # EXPECT: AT 30
+> # EXPECT: EQ 30 31
+> # EXPECT: ISAT 19 252
+
+#
+# Try to get the log
+#
+
+> swear; wash mouth; e;
+> # EXPECT: PRESENT 17
+> # EXPECT: NOTCARR 17
+> get log
+> # EXPECT: NOTCARR 17
+> drop keys; get log
+> # EXPECT: NOTCARR 17
+> drop can; get log
+> # EXPECT: CARRIED 17
+
+#
+# Drop the log in place
+#
+
+> comm; w; w; w; d; w
+> # EXPECT: PRESENT 17
+> # EXPECT: ABSENT  18
+> drop log
+> # EXPECT: PRESENT 17
+> # EXPECT: PRESENT 18
+> get log
+> # EXPECT: PRESENT 17
+> # EXPECT: ABSENT  18
+> drop log
+> # EXPECT: PRESENT 17
+> # EXPECT: PRESENT 18
+
+
+
+#
+# THE JESTER's storyline (cut rope)
+#
+
+> # RESTART
+> # PAUSE: 1
+# put the log over the chasm:
+> s; get penny; no; get penny; n; spend a penny; east; get bomb; wear well; spring; n; get keys; get lamp; light lamp; s; s; s; throw bomb; s; s; open grate; drop keys; down; w; w; comm; get log; comm; w; w; w; d; w; drop log
+# Go back and get the ZX81:
+> e; u; e; e; get zx81; w; w; d; w
+# Go to Gotham:
+> w; w; w; d; s; s; s; in; push butt
+# Get the canister:
+> s; e; exam bubb; get cani
+# Go to the gallery:
+> w; w; in
+# cut rope:
+> ASSERT: AT 52
+> look
+> cut rope
+> zx81
+> # EXPECT: NOTCARR 38
+> # EXPECT: AT 41
+> wait
+> # EXPECT: AT 33
+
+#
+# THE JESTER's storyline (open valve)
+#
+
+> # RESTART
+> # PAUSE: 1
+# put the log over the chasm:
+> s; get penny; no; get penny; n; spend a penny; east; get bomb; wear well; spring; n; get keys; get lamp; light lamp; s; s; s; throw bomb; s; s; open grate; drop keys; down; w; w; comm; get log; comm; w; w; w; d; w; drop log
+# Go back and get the ZX81:
+> e; u; e; e; get zx81; w; w; d; w
+# Go to Gotham:
+> w; w; w; d; s; s; s; in; push butt
+# Get the canister:
+> s; e; exam bubb; get cani
+# Go to the gallery:
+> w; w; in
+# open valve:
+> ASSERT: AT 52
+> look
+> open valve
+> # EXPECT: CARRIED 38
+> # EXPECT: AT 41
+> wait
+> # EXPECT: AT 33
+
+#
+# THAT MAN's storyline (right number of actions):
+#
+
+> # RESTART
+> # PAUSE: 1
+# put the log over the chasm:
+> s; get penny; no; get penny; n; spend a penny; east; get bomb; wear well; spring; n; get keys; get lamp; light lamp; s; s; s; throw bomb; s; s; open grate; drop keys; down; w; w; comm; get log; comm; w; w; w; d; w; drop log
+# Go to Gotham:
+> w; w; w; d; s; s; s; in; push butt
+# Get the canister:
+> s; e; exam bubb; get cani
+# Go to the gallery:
+> w; w; in
+# open valve:
+> look
+> open valve
+> # EXPECT: AT 41
+> n; s; n; s; n; s; n; s
+> # EXPECT: AT 33
+
+#
+# THAT MAN's storyline (too many actions):
+#
+
+> # RESTART
+> # PAUSE: 1
+# put the log over the chasm:
+> s; get penny; no; get penny; n; spend a penny; east; get bomb; wear well; spring; n; get keys; get lamp; light lamp; s; s; s; throw bomb; s; s; open grate; drop keys; down; w; w; comm; get log; comm; w; w; w; d; w; drop log
+# Go to Gotham:
+> w; w; w; d; s; s; s; in; push butt
+# Get the canister:
+> s; e; exam bubb; get cani
+# Go to the gallery:
+> w; w; in
+# open valve:
+> look
+> open valve
+> # EXPECT: AT 41
+> e; n; s; n; s; n; s; n; s; n; s; n; s; n; s; n; s; n; s; n; s; n; s; n; s; w
+> # EXPECT: ISEND
+
+#
+# THAT MAN's storyline (stealing, no bat signal):
+#
+
+> # RESTART
+> # PAUSE: 1
+# put the log over the chasm:
+> s; get penny; no; get penny; n; spend a penny; east; get bomb; wear well; spring; n; get keys; get lamp; light lamp; s; s; s; throw bomb; s; s; open grate; drop keys; down; w; w; comm; get log; comm; w; w; w; d; w; drop log
+# Go to Gotham:
+> w; w; w; d; s; s; s; in; push butt
+# Get the canister:
+> s; e; exam bubb; get cani
+# Go to the gallery:
+> w; w; in
+# open valve:
+> look
+> open valve
+> # EXPECT: AT 41
+> s; in; wear tiara; out; w; n; get file; out; e
+
+#
+# 100% completion run:
+#
+
+> # RESTART
+> # PAUSE: 1
+> N; get keys; get lamp; get bottle
+> S; S; light lamp; no; get penny
+> N; spend a penny; fill bott
+> E; wear wellies; get bomb
+> SPRING; S; throw bomb
+> S; S; open grate; drop keys
+> D
+> W; get cage
+> W; W; W; W; D; drop bott;
+> S; get can
+> N; N; open can; drop can
+> N; get bars
+> S; W; open cupboard; get key
+> N; get table
+> S; E; E; E
+> # MOCKRANDOM: 1 1
+> FIRE
+> # MOCKRANDOM: 0 1
+> FIRE
+> # MOCKRANDOM: 0 1
+> FIRE
+> # MOCKRANDOM: 0 1
+> FIRE
+> # MOCKRANDOM: 0 1
+> FIRE
+> # MOCKRANDOM: 0 1
+> FIRE
+> # MOCKRANDOM: 0 1
+> FIRE
+> # EXPECT: AT 19
+> # MOCKRANDOM: 0 1
+> FIRE
+> # MOCKRANDOM: 0 1
+> FIRE
+> # EXPECT: EQ 212 8
+> # EXPECT: AT 20
+> open airlock; get crystal
+> SWEAR; WASH MOUTH; E; drop cage; drop crystal; drop silver; drop table; drop key; get log
+> COMMODORE; W; W; W; D; W; drop log
+> E; get bottle
+> W; W; W; W; D; S; S; S; IN; PUSH THE BUTTON!; S; E; examine bubbles; get canister
+> W; W; IN; wait; open valve
+> N; W; N; examine wall
+> CLIMB LADDER; switch switch
+> D; S; E; IN; W; examine desks; open box; get pellet
+> E; OUT; W; S; in; get file
+> OUT; S; E; IN; WEAR TIARA
+> OUT; N; WAIT; wear belt
+> N; N; W; water pellet; get goblet
+> SWEAR; WASH MOUTH; E; drop goblet; drop tiara; drop file; drop paintings; get key
+> COMMODORE; W; W; open pillarbox; D; D
+> # EXPECT: EQ 30 131
+> # EXPECT: AT 14
