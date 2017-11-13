@@ -2077,7 +2077,7 @@ vb_rape nn_you
  pause   50
  writeln "{CLASS|bright ink-yellow|KRIKKK!}"
  pause   50
- writeln "\n{CLASS|bright|You be unable to continue this game. I have been obliged to break your arm.                 }"
+ writeln "\n{CLASS|bright|You will be unable to continue this game. I have been obliged to break your arm.}"
  pause   250
  score
  turns
