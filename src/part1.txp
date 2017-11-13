@@ -1974,6 +1974,7 @@ vb_in nn_spri
  at      wellie_house
  cls
  writeln "{CLASS|center|\n\n\n{CLASS|bright ink-lime|BOOOOOoooooiiiinnnNNGGGG!!!!}}"
+ let     pause_parameter pause_sound_effect_tone_increasing
  pause   100
  goto    room_1
  desc
