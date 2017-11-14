@@ -3288,6 +3288,7 @@ _ _
  at      splendid_chamber
  zero    countdown_location_description
  present object_0_lamp
+ absent  object_25_cord
  anykey
  writeln "\n{CLASS|bright|The {ACTION|examine wall|walls} are frozen rivers of orange sorbet. In the centre stands a {ACTION|examine pillar|pillar} adorned with ornate letters, and here the marble flags are somewhat worn. {ACTION|east|An awkward passage} and {ACTION|west|a good canyon} exit to east and west.}"
 
