@@ -1761,6 +1761,13 @@ vb_open nn_airl
 
 vb_open nn_lett
  at      splendid_chamber
+ notcarr object_23_key
+ carried object_3_keys
+ writeln "{CLASS|bright|You fumble through your keys, but none of them fit}"
+ done
+
+vb_open nn_lett
+ at      splendid_chamber
  carried object_23_key
  create  object_25_cord
  desc
