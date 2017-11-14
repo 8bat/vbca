@@ -76,6 +76,7 @@ part1/code.sce: part1/code.txp part1/jsl $(EMPTY_IMAGES) $(DAT_IMAGES)
 # ngPAWS to JavaScript:
 part1/code.js: part1/code.sce
 	NGPAWS_LIBPATH=${NGPAWS_DIR} ${NGPAWS_DIR}/compiler/ngpc $^ > part1/ngpaws.log
+	cat local/$@ >> $@
 
 # copy static files:
 part1/%.js: ${NGPAWS_DIR}/installation_aux_files/%.js
@@ -89,7 +90,7 @@ part1/%.html: ${NGPAWS_DIR}/installation_aux_files/%.html
 		-e 's/<\/head>/<link href="https:\/\/fonts.googleapis.com\/css?family=Fondamento|Ruge+Boogie" rel="stylesheet">\n<link href="backwards-compatibility.css" rel="stylesheet" type="text\/css" \/>\n<\/head>/' \
 		-e "s/<div class='wrapper'>/<div class='wrapper paper ink'>/" \
 		-e "s/<div class='graphics'>/<div class='color-as-paper graphics'>/" \
-		-e 's/<input.*/<table class="input-table"><tr><td class="arrow">\&gt;<td><input aria-live="polite" title="Type instructions in here (some instructions are also clickable)" type="text" class="prompt" \/><\/table>/' \
+		-e 's/<input.*/<table class="input-table"><tr><td class="arrow">\&gt;<td><input aria-live="polite" title="Type instructions in here (some instructions are also clickable)" type="text" class="prompt" \/><td class="arrow">\&lt;<td><\/table>/' \
 		$^ > $@
 
 part1/jsl: ${PLUGINS}

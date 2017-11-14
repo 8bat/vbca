@@ -81,5 +81,5 @@ body.location-63 .text {
     float: left;
     padding-top: 5px;
     width: 1em;
-    cursor: default;
+    cursor: pointer;
 }
