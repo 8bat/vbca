@@ -72,14 +72,17 @@ body.location-63 .text {
     width: 100%;
 }
 
+.input-table td.panels-wrapper {
+    border-radius: 4px;
+    width: 1em;
+}
+
 .feedback, .arrow, .prompt {
     color: #666688;
 }
 
-.input-table td.arrow {
+.input-table .arrow {
     font-size: 125%;
     float: left;
     padding-top: 5px;
-    width: 1em;
-    cursor: pointer;
 }

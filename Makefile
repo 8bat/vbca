@@ -24,6 +24,9 @@ PLUGINS+=${NGPAWS_DIR}/plugins/listSavedGames_lib/listsavedgames.jsp
 PLUGINS+=${NGPAWS_DIR}/plugins/turnConditions_lib/*.jsp
 PLUGINS+=${NGPAWS_DIR}/plugins/testing/replay_lib/replay.jsp
 PLUGINS+=${NGPAWS_DIR}/plugins/testing/isend_lib/*.jsp
+PLUGINS+=${NGPAWS_DIR}/plugins/panels/*/*.jsp
+PLUGINS+=${NGPAWS_DIR}/plugins/panels/*.jsp
+PLUGINS+=${NGPAWS_DIR}/plugins/watchFlag_lib/watchFlag.jsp
 
 SOURCE_IMAGES=$(shell git ls-files hires | sed -e 's/hires\//location/')
 DAT_IMAGES=$(SOURCE_IMAGES:%=part1/dat/%)
@@ -83,6 +86,7 @@ part1/%.js: ${NGPAWS_DIR}/installation_aux_files/%.js
 	cp -a $^ $@
 part1/%.css: ${NGPAWS_DIR}/installation_aux_files/%.css
 	cp -a $^ $@
+	cat ${NGPAWS_DIR}/plugins/panels/*.css ${NGPAWS_DIR}/plugins/panels/*/*.css >> $@
 	cat local/$@ >> $@
 part1/%.html: ${NGPAWS_DIR}/installation_aux_files/%.html
 	sed \
@@ -90,7 +94,7 @@ part1/%.html: ${NGPAWS_DIR}/installation_aux_files/%.html
 		-e 's/<\/head>/<link href="https:\/\/fonts.googleapis.com\/css?family=Fondamento|Ruge+Boogie" rel="stylesheet">\n<link href="backwards-compatibility.css" rel="stylesheet" type="text\/css" \/>\n<\/head>/' \
 		-e "s/<div class='wrapper'>/<div class='wrapper paper ink'>/" \
 		-e "s/<div class='graphics'>/<div class='color-as-paper graphics'>/" \
-		-e 's/<input.*/<table class="input-table"><tr><td class="arrow">\&gt;<td><input aria-live="polite" title="Type instructions in here (some instructions are also clickable)" type="text" class="prompt" \/><td class="arrow">\&lt;<td><\/table>/' \
+		-e 's/<input.*/<table class="input-table"><tr><td class="panels-wrapper unclicked watch-flag-1"><span class="arrow">\&gt;<\/span><div class="panels paper color-as-paper"><div class="condact-info hide-on-click ink" data-condact="INVEN"><\/div><div class="suggestions-wrapper bright ink-white">Suggestions:<div class="suggestions hide-on-click" data-message="2000"><\/div><\/div><a class="navigation back">\&#x2b05;<\/a><a class="navigation forward">\&#x27a1;<\/a><\/div><\/div><td><input aria-live="polite" title="Type instructions in here (some instructions are also clickable)" type="text" class="prompt" \/><\/table>/' \
 		$^ > $@
 
 part1/jsl: ${PLUGINS}

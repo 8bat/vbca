@@ -1359,6 +1359,7 @@ vb_n _
 vb_n _
  at      hall_of_the_mountain_king
  goto    cemented_floor_room
+ backcmd "south"
  desc
 
 vb_s _
@@ -1393,6 +1394,7 @@ vb_s _
 vb_s _
  at      bulls_gully
  goto    stream_end
+ backcmd "north"
  desc
 
 vb_e _
@@ -1415,6 +1417,7 @@ vb_e _
 vb_e _
  at      y2_room
  goto    censored_room
+ backcmd "west"
  let     game_progress 5
  destroy object_19_silver
  desc
@@ -1432,6 +1435,7 @@ vb_e _
 vb_e _
  at      room_1
  goto    wellie_house
+ backcmd "west"
  desc
 
 vb_w _
@@ -1442,11 +1446,13 @@ vb_w _
 vb_w _
  at      hall_of_the_mountain_king
  goto    habitat_cave
+ backcmd "east"
  desc
 
 vb_w _
  present object_18_log_over_chasm
  goto    hall_of_mists_west_fissure
+ backcmd "east"
  desc
 
 vb_w _
@@ -1466,12 +1472,14 @@ vb_w _
 vb_u _
  present object_34_ladder
  goto    gotham_police_station_roof
+ backcmd "down"
  desc
 
 vb_u _
  at      below_the_grate
  clear   yesno_is_dark
  goto    grate_gully
+ backcmd "down"
  desc
 
 vb_d _
@@ -1481,17 +1489,20 @@ vb_d _
  writeln "{CLASS|bright ink-yellow|Yippee! Now we're getting to the really good bits!}"
  anykey
  goto    below_the_grate
+ backcmd "up"
  desc
 
 vb_d _
  present object_11_grate_open
  set     yesno_is_dark
  goto    below_the_grate
+ backcmd "up"
  desc
 
 vb_d _
  present object_25_cord
  goto    rope_to_part_2
+ backcmd "up"
  desc
 
 vb_exam nn_door
@@ -1526,6 +1537,7 @@ vb_exam nn_spri
  let     pause_parameter pause_sound_effect_tone_increasing
  pause   100
  goto    room_1
+ backcmd "east"
  desc
 
 vb_exam nn_char
@@ -1804,6 +1816,7 @@ vb_open nn_valv
  get     object_38_pictures
  anykey
  goto    heart_of_gotham
+ noback
  let     that_man_status that_man_success
  desc
 
@@ -1863,6 +1876,7 @@ vb_comm _
  let     pause_parameter pause_box_wipe
  pause   20
  goto    wellie_house
+ backcmd "commodore"
  desc
 
 vb_comm _
@@ -1872,6 +1886,7 @@ vb_comm _
  let     pause_parameter pause_box_wipe
  pause   20
  goto    debris_room
+ backcmd "commodore"
  cls
  desc
 
@@ -1882,6 +1897,7 @@ vb_spri _
  let     pause_parameter pause_sound_effect_tone_increasing
  pause   100
  goto    room_1
+ backcmd "east"
  desc
 
 vb_left _
@@ -1950,6 +1966,7 @@ vb_zx81 _
  let     countdown_that_man that_man_initial_value
  anykey
  goto    heart_of_gotham
+ noback
  let     that_man_status that_man_fail
  desc
 
@@ -2056,6 +2073,7 @@ vb_in nn_spri
  let     pause_parameter pause_sound_effect_tone_increasing
  pause   100
  goto    room_1
+ backcmd "east"
  desc
 
 vb_in _
@@ -2074,6 +2092,7 @@ vb_in _
  at      outside_art_gallery
  notzero countdown_jester
  goto    inside_art_gallery
+ backcmd "out"
  desc
 
 vb_in _
@@ -2094,6 +2113,7 @@ vb_in _
  zero    yesno_entered_batmobile
  clear   yesno_is_dark
  goto    batmobile
+ backcmd "out"
  destroy object_26_that_man_has_left
  desc
 
@@ -2140,6 +2160,7 @@ vb_pres nn_butt
  at      batmobile
  pause   50
  goto    batcave_exit_tunnel
+ noback
  desc
 
 vb_rape nn_you
@@ -2155,11 +2176,13 @@ vb_rape nn_you
 
 vb_rape _
  goto    swear_box
+ noback
  desc
 
 vb_wash nn_mout
  at      swear_box
  goto    room_1
+ noback
  desc
 
 vb_lift nn_gyms
@@ -2234,6 +2257,7 @@ vb_buy nn_news
  let     pause_parameter pause_sound_effect_tone_decreasing
  pause   100
  goto    heart_of_gotham
+ noback
  desc
 
 vb_dog _
@@ -2345,6 +2369,7 @@ vb_get nn_book
  let     pause_parameter pause_sound_effect_tone_decreasing
  pause   100
  goto    outside_gotham_library
+ noback
  desc
 
 vb_get nn_pict
@@ -2920,6 +2945,7 @@ _ _
 _ _
  at      room_0
  goto    room_63
+ noback
  desc
 
 _ _
@@ -2947,6 +2973,7 @@ _ _
  clear   that_man_status
  clear   yesno_is_dark
  goto    heart_of_gotham
+ noback
  desc
 
 ; pause THE JESTER's countdown:
@@ -2968,6 +2995,7 @@ _ _
  at      room_63
  anykey
  goto    room_1
+ noback
  prompt  70
  desc
 
@@ -3061,6 +3089,7 @@ _ _
  writeln "{CLASS|center|\n\n\n\n{CLASS|bright ink-yellow|CONGRATURATIONS!\n}\n{CLASS|bright ink-magenta|YOU HAVE DEFEATED ARIEN INVADERS}\n}"
  pause   250
  goto    dead_space_invaders_room
+ noback
  clear   space_invaders_position
  clear   countdown_to_destruction
  desc
@@ -3188,6 +3217,7 @@ _ _
  notzero countdown_that_man
  anykey
  goto    bat_cave
+ noback
  create  object_40_belt
  set     yesno_entered_batmobile
  set     yesno_is_dark
@@ -3250,6 +3280,7 @@ _ _
  let     pause_parameter pause_sound_effect_tone_decreasing
  pause   100
  goto    outside_gotham_bank
+ noback
  desc
 
 _ _
@@ -3410,6 +3441,7 @@ _ _
  let     pause_parameter pause_sound_effect_tone_decreasing
  pause   100
  goto    outside_gotham_police_station
+ noback
  desc
 
 _ _
@@ -3428,6 +3460,7 @@ _ _
  let     pause_parameter pause_sound_effect_tone_decreasing
  pause   100
  goto    outside_art_gallery
+ noback
  desc
 
 _ _
@@ -3438,6 +3471,7 @@ _ _
  anykey
  pause   100
  goto    outside_le_chat_noir
+ noback
  set     yesno_got_booted
  desc
 
