@@ -1454,6 +1454,19 @@ vb_w _
  desc
 
 vb_w _
+ at      log_chasm_room
+ absent  object_18_log_over_chasm
+ writeln "{CLASS|bright|You peer over the edge into the darkness below...}"
+ pause   100
+ writeln "{CLASS|bright|\n                                           BOO!}"
+ pause   25
+ cls
+ pause   150
+ writeln "{CLASS|bright|Only joking.}"
+ pause   100
+ desc
+
+vb_w _
  present object_18_log_over_chasm
  goto    hall_of_mists_west_fissure
  backcmd "east"
