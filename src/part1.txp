@@ -577,6 +577,10 @@ reload 156 verb
 vb_games 157 verb
 transcript 158 verb
 replay     159 verb
+; the art critiquette:
+nn_art  160 noun
+nn_lady 160 noun
+nn_crit 160 noun
 
 ; -- Standard ngPAWS conjuntions (taken from the ngPAWS "start" database) --
 ;
@@ -862,7 +866,7 @@ A gas canister
 /object_42_pellet
 A grey pellet#{CLASS|bright|The dehydrated seed of an art critic}
 /object_43_art_critiquette
-{CLASS|bright|An angular art-critiquette emitting a string of poly- syllables}
+{CLASS|bright|An angular art-critiquette emitting a string of polysyllables}
 /object_44_hippies
 {CLASS|bright|A group of hippies}#{CLASS|bright|They are valuable treasures, both on account of their great antiquity and as consummate examples of the taxidermist's art}
 /object_45_bottle
@@ -1309,7 +1313,7 @@ vb_d behind_gotham_police_station
 /object_40_belt              room_noncreated                 1 nn_belt _       ATTR aWearable
 /object_41_box               room_noncreated                 1 nn_box  _       ATTR
 /object_42_pellet            room_noncreated                 1 nn_pellet _     ATTR
-/object_43_art_critiquette   room_noncreated                 1    _    _       ATTR
+/object_43_art_critiquette   room_noncreated                 1 nn_crit _       ATTR
 /object_44_hippies           inside_gotham_museum            1    _    _       ATTR
 /object_45_bottle            room_noncreated                 1    _    _       ATTR
 
@@ -2497,6 +2501,11 @@ vb_get nn_tiar
  present object_32_tiara
  notcarr object_32_tiara
  writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ done
+
+vb_get nn_crit
+ present object_43_art_critiquette
+ writeln "{CLASS|bright|She is rooted permanently in place.}"
  done
 
 vb_get _
