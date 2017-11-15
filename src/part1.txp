@@ -401,6 +401,7 @@ nn_penn     16    noun
 nn_penny    16    noun
 vb_no       17    verb
 nn_bott     18    noun
+nn_bottle   18    noun
 nn_bunc     19    noun
 nn_keys     19    noun
 nn_lamp     20    noun
@@ -425,6 +426,7 @@ nn_char     36    noun
 nn_pile     36    noun
 nn_airl     37    noun
 nn_crys     38    noun
+nn_crystal  38    noun
 nn_moon     38    noun
 nn_venu     38    noun
 nn_sorb     39    noun
@@ -467,9 +469,11 @@ nn_crac     49    noun
 vb_plug     50    verb
 nn_bars     52    noun
 nn_silv     52    noun
+nn_silver   52    noun
 nn_can      53    noun
 vb_wave     54    verb
 nn_tabl     55    noun
+nn_table    55    noun
 nn_cupb     57    noun
 vb_cupb     57    verb
 nn_draw     57    noun
@@ -570,6 +574,7 @@ vb_tape    155    verb
 nn_well    201    noun
 nn_wellies 201    noun
 nn_tiar    220    noun
+nn_tiara   220    noun
 nn_belt    221    noun
 
 ; utilities:
@@ -810,7 +815,7 @@ You can't see any exits
 /object_14_songbird
 {ACTION|get bird|{CLASS|bright ink-yellow|A cheerful little songbird}}
 /object_15_moon
-{ACTION|Get the Venusian Moon-Crystal|{CLASS|bright white|A Venusian Moon-Crystal}}
+{CLASS|bright white|A Venusian Moon-Crystal}
 /object_16_zx81
 {CLASS|bright ink-yellow|A sharpened ZX81}
 /object_17_log
@@ -818,7 +823,7 @@ You can't see any exits
 /object_18_log_over_chasm
 \n{CLASS|bright|The log forms a bridge over the chasm}
 /object_19_silver
-{ACTION|get silver|{CLASS|bright|Bars of silver}}
+{CLASS|bright|Bars of silver}
 /object_20_python
 {CLASS|bright ink-lime|A python}
 /object_21_can
@@ -1276,23 +1281,23 @@ vb_d behind_gotham_police_station
 /object_3_keys               secret_hiding_place             1 nn_keys _       ATTR
 /object_4_lamp               secret_hiding_place             0 nn_lamp _       ATTR
 /object_5_food               secret_hiding_place             1 nn_food _       ATTR
-/object_6_bottle             secret_hiding_place             1 nn_bott _       ATTR
+/object_6_bottle             secret_hiding_place             1 nn_bottle _     ATTR
 /object_7_wellies            wellie_house                    1 nn_wellies _    ATTR aWearable
 /object_8_bomb               wellie_house                    1 nn_bomb _       ATTR
 /object_9_bull               room_noncreated                 1    _    _       ATTR
 /object_10_grate_locked      grate_gully                     1    _    _       ATTR
 /object_11_grate_open        room_noncreated                 1    _    _       ATTR
-/object_12_cage              crawling_over_cobbles           1    _    _       ATTR
+/object_12_cage              crawling_over_cobbles           1 nn_cage _       ATTR
 /object_13_rod               debris_room                     1 nn_rod  _       ATTR
 /object_14_songbird          splendid_chamber                1    _    _       ATTR
-/object_15_moon              room_noncreated                 1    _    _       ATTR
+/object_15_moon              room_noncreated                 1 nn_crystal _    ATTR
 /object_16_zx81              room_noncreated                 1 nn_zx81 _       ATTR
 /object_17_log               wellie_house                    5 nn_log  _       ATTR
 /object_18_log_over_chasm    room_noncreated                 5    _    _       ATTR
-/object_19_silver            cemented_floor_room             1    _    _       ATTR
+/object_19_silver            cemented_floor_room             1 nn_silver _     ATTR
 /object_20_python            hall_of_the_mountain_king       1    _    _       ATTR
 /object_21_can               low_room                        1 nn_can  _       ATTR
-/object_22_table             twee_chamber                    1    _    _       ATTR
+/object_22_table             twee_chamber                    1 nn_table _      ATTR
 /object_23_key               room_noncreated                 1 nn_key  _       ATTR
 /object_24_hint              room_noncreated                 1    _    _       ATTR
 /object_25_cord              room_noncreated                 1    _    _       ATTR
@@ -1302,20 +1307,20 @@ vb_d behind_gotham_police_station
 /object_29_goblet            sophisticated_parser_cave       1    _    _       ATTR
 /object_30_packet            room_noncreated                 1 nn_packet _     ATTR
 /object_31_parser            room_noncreated                 1    _    _       ATTR
-/object_32_tiara             inside_jewellers_shop           1    _    _       ATTR
+/object_32_tiara             inside_jewellers_shop           1 nn_tiara _      ATTR
 /object_33_gas_canister      room_noncreated                 1 canister _      ATTR
 /object_34_ladder            room_noncreated                 1    _    _       ATTR
 /object_35_searchlight       gotham_police_station_roof      1    _    _       ATTR
 /object_36_desks             study_area                      1    _    _       ATTR
-/object_37_file              inside_gotham_museum            1    _    _       ATTR
-/object_38_pictures          room_noncreated                 0    _    _       ATTR
+/object_37_file              inside_gotham_museum            1 nn_file _       ATTR
+/object_38_pictures          room_noncreated                 0 nn_pict _       ATTR
 /object_39_bat               room_noncreated                 1 nn_bat  _       ATTR
 /object_40_belt              room_noncreated                 1 nn_belt _       ATTR aWearable
 /object_41_box               room_noncreated                 1 nn_box  _       ATTR
 /object_42_pellet            room_noncreated                 1 nn_pellet _     ATTR
 /object_43_art_critiquette   room_noncreated                 1 nn_crit _       ATTR
 /object_44_hippies           inside_gotham_museum            1    _    _       ATTR
-/object_45_bottle            room_noncreated                 1    _    _       ATTR
+/object_45_bottle            room_noncreated                 1 nn_bottle _     ATTR
 
 
 ;
