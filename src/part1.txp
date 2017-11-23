@@ -198,6 +198,7 @@
 
 #define const yesno_lamp_hint                     = 60
 #define const yesno_found_secret_hiding_place     = 61
+#define const yesno_autosave                      = 243
 
 ; PAUSE subfunctions:
 ; Setting the pause_parameter flag will change the behaviour of the PAUSE command:
@@ -2861,21 +2862,24 @@ _ _ ; give the user a few turns to autoload
  hasautosave
  writeln "{ACTION|reload|Click here to reload your previous game}"
 
-_ _ ; autosave, except in the first few turns and the "no cheating" phase
- atgt window_over_pit
- atlt room_63
- islight
- autosave
 _ _
  turngt 5
- atlt hall_of_the_mountain_king
  islight
- autosave
+ set yesno_autosave
+; note: autosave is allowed in the "no cheating" phase, because the autosave is overwritten before you can cheat
+_ _ ; do not autosave during THAT MAN's countdown
+ atgt    batmobile
+ notat   sophisticated_parser_cave
+ notzero countdown_that_man
+ lt      countdown_that_man that_man_returns
+ clear   yesno_autosave
+_ _ ; do not autosave after THAT MAN leaves
+ isnotat object_26_that_man_has_left room_noncreated
+ clear   yesno_autosave
 _ _
- turngt 5
- noteq game_progress 4
- islight
+ notzero yesno_autosave
  autosave
+ clear   yesno_autosave
 
 ; hint if the user can't find the hiding place:
 _ _
