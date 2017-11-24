@@ -1308,7 +1308,7 @@ vb_d behind_gotham_police_station
 /object_29_goblet            sophisticated_parser_cave       1    _    _       ATTR
 /object_30_packet            room_noncreated                 1 nn_packet _     ATTR
 /object_31_parser            room_noncreated                 1    _    _       ATTR
-/object_32_tiara             inside_jewellers_shop           1 nn_tiara _      ATTR
+/object_32_tiara             inside_jewellers_shop           1 nn_tiara _      ATTR aWearable
 /object_33_gas_canister      room_noncreated                 1 canister _      ATTR
 /object_34_ladder            room_noncreated                 1    _    _       ATTR
 /object_35_searchlight       gotham_police_station_roof      1    _    _       ATTR
@@ -2451,11 +2451,22 @@ vb_get nn_file
  get     object_37_file
  ok
 
+vb_wear nn_tiar
+ at      inside_jewellers_shop
+ gt      that_man_status that_man_active
+ get     object_32_tiara
+ wear    object_32_tiara
+ ok
+
 vb_get nn_tiar
  at      inside_jewellers_shop
  gt      that_man_status that_man_active
  get     object_32_tiara
  ok
+
+vb_wear nn_tiar
+ at      inside_jewellers_shop
+ set     yesno_gotham_theft
 
 vb_get nn_tiar
  at      inside_jewellers_shop
@@ -2707,6 +2718,10 @@ vb_drop nn_tiar
  notat   wellie_house
  drop    object_32_tiara
  ok
+
+vb_drop nn_tiar
+ worn   object_32_tiara
+ remove object_32_tiara
 
 vb_drop nn_tiar
  carried object_32_tiara
