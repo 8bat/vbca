@@ -2711,6 +2711,11 @@ vb_drop nn_file
  done
 
 vb_drop nn_all
+ at      wellie_house
+ writeln "{CLASS|bright ink-yellow|&#34;Hold yer horses mate, one thing at a time.&#34;}"
+ done
+
+vb_drop nn_all
  dropall
  ok
 
