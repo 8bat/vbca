@@ -1485,6 +1485,16 @@ vb_w _
 
 vb_w _
  at      stream_end
+ isat  object_14_songbird room_noncreated
+ writeln "{CLASS|bright|I think the bird's still in there}"
+ pause 80
+ writeln "{CLASS|bright ink-lime center|\n-- BLEURGH --\n}"
+ pause 100
+ writeln "{CLASS|bright|I'm sure she'll be ready for her curtain call.}"
+ done
+
+vb_w _
+ at      stream_end
  writeln "{CLASS|bright|You have spent your penny.}"
  done
 
