@@ -1851,7 +1851,7 @@ vb_open nn_valv
  at      inside_art_gallery
  present object_33_gas_canister
  le      countdown_jester jester_appears
- writeln "{CLASS|bright|As the gas eqcapes, THAT&#34;MAN&#xFFFD;bee ins vo laweh,&#34;but&#34;THE&#34;JESTER,wjo  ks anuays laugjile, now collarqes in&#34;helrless&#34;paroxysms, kicking his legs in thg air.&#xFFFD;\n                THCT MAL snapq t he brccelgts on&#34;hio ald tckes hi s haul / mle&#xFFFD;Rkaasso and vwo rec ent&#34;works       by Ferdinand Fin k. The choice   is typical of TH E JESTER's      grotesquely twis ted aesthetic   sense.\n{CLASS|ink-cyan|\n                &#34;Here, take thes e,&#34; says THAT   MAN. &#34;The city i s better off    without them.\n\n                &#34;I'll take you b ack to the      caves.&#34;}}"
+ writeln "{CLASS|bright|As the gas eqcapes, THAT&#34;MAN&#xFFFD;bee ins vo laweh,&#34;but&#34;THE&#34;JESTER,wjo  ks anuays laugjile, now collarqes in&#34;helrless&#34;paroxysms, kicking his legs in thg air.&#xFFFD;\n                THCT MAL snapq t he brccelgts on&#34;hio ald tckes hi s haul / mle&#xFFFD;Rkaasso and vwo rec ent&#34;works       by Ferdinand Fin k. The choice   is typical of TH E JESTER's      grotesquely twis ted aesthetic   sense.\n{CLASS|ink-cyan|\n                &#34;Here, take thes e,&#34;} says THAT   MAN. {CLASS|ink-cyan|&#34;The city i s better off    without them.\n\n                &#34;I'll take you b ack to the      caves.&#34;}}"
  let     countdown_that_man that_man_initial_value
  minus   total_carried 1
  create  object_38_pictures
@@ -1887,7 +1887,7 @@ vb_wate nn_pell
  destroy object_42_pellet
  create  object_43_art_critiquette
  swap    object_45_bottle object_6_bottle
- writeln "{CLASS|bright|The pellet blossoms into an angular lady who sprouts the following foliage:{CLASS|ink-yellow|\n&#34;While it is perhaps tempting to compare Morone's 'Blank Canvas' with 'Unpainted Canvas' by Cretine, nothing could be more misleading. While Cretine sees a pure white proto-landscape of limitless possibilities, Morone is representing the existential void which confronts us all when the superficial pretences of civilised life are stripped away It is necessary to remember that Cretine's work is a virgin canvas while Morone's is actually a Rembrandt scrubbed clean with turpentine in order to fully confront...&#34; etc.}}"
+ writeln "{CLASS|bright|The pellet blossoms into an angular lady who sprouts the following foliage:{CLASS|ink-yellow|\n&#34;While it is perhaps tempting to compare Morone's 'Blank Canvas' with 'Unpainted Canvas' by Cretine, nothing could be more misleading. While Cretine sees a pure white proto-landscape of limitless possibilities, Morone is representing the existential void which confronts us all when the superficial pretences of civilised life are stripped away It is necessary to remember that Cretine's work is a virgin canvas while Morone's is actually a Rembrandt scrubbed clean with turpentine in order to fully confront...&#34;} etc.}"
  done
 
 vb_yes _
@@ -2956,8 +2956,7 @@ _ _
  zero    that_man_status
  notzero countdown_jester
  lt      countdown_jester jester_escapes
- writeln "\n{CLASS|bright ink-cyan|A newsboy cries &#34;Jester escapes!}"
- writeln "{ACTION|buy news|{CLASS|bright ink-cyan|Read all about it!&#34;}}"
+ writeln "\n{CLASS|bright|A newsboy cries {ACTION|buy news|{CLASS|ink-cyan|&#34;Jester escapes! Read all about it!&#34;}}}"
  done
 
 _ _
@@ -2967,8 +2966,7 @@ _ _
  notat   outside_gotham_museum
  notat   outside_gotham_library
  le      that_man_status that_man_fail
- writeln "\n{CLASS|bright ink-cyan|A newsboy cries &#34;Daring robbery!}"
- writeln "{ACTION|buy news|{CLASS|bright ink-cyan|Read all about it!&#34;}}"
+ writeln "\n{CLASS|bright|A newsboy cries {ACTION|buy news|{CLASS|ink-cyan|&#34;Daring robbery! Read all about it!&#34;}}}"
 
 
 ;
@@ -3346,7 +3344,7 @@ _ _
  eq      countdown_that_man that_man_returns
  eq      that_man_status that_man_signalled
  pause   50
- writeln "\n{CLASS|bright ink-cyan|&#34;I'm sorry for the delay,&#34; apologises THAT MAN. &#34;I was called away on a foolish false alarm.&#34;}"
+ writeln "\n{CLASS|bright|{CLASS|ink-cyan|&#34;I'm sorry for the delay,&#34;} apologises THAT MAN. {CLASS|ink-cyan|&#34;I was called away on a foolish false alarm.&#34;}}"
 
 _ _
  at      heart_of_gotham
@@ -3399,7 +3397,7 @@ _ _
  eq      countdown_that_man that_man_initial_value
  lt      that_man_status that_man_signalled
  anykey
- writeln "\n\n{CLASS|bright ink-yellow|&#34;One moment,&#34; says THAT MAN.\n&#34;I just have to visit THAT PLACE before our journey.&#34;\n\nThe caped figure disappears into a small brick building.}"
+ writeln "\n\n{CLASS|bright|{CLASS|ink-yellow|&#34;One moment,&#34;} says THAT MAN. {CLASS|ink-yellow|&#34;I just have to visit THAT PLACE before our journey.&#34;}\n\nThe caped figure disappears into a small brick building.}"
 
 _ _
  eq      yesno_gotham_theft 50
@@ -3421,7 +3419,7 @@ _ _
  at      inside_gotham_bank
  set     yesno_got_booted
  anykey
- writeln "\n{CLASS|bright ink-cyan|A pretty bank-clerkette comes up to you and examines your wallet. &#34;No accounts opened with less than $25O,OOO,&#34; she says.}"
+ writeln "\n{CLASS|bright|A pretty bank-clerkette comes up to you and examines your wallet. {CLASS|ink-cyan|&#34;No accounts opened with less than $25O,OOO,&#34;} she says.}"
  anykey
  let     pause_parameter pause_sound_effect_tone_decreasing
  pause   100
@@ -3501,7 +3499,7 @@ _ _
 _ _
  at      inside_gotham_police_station
  anykey
- writeln "\n{CLASS|bright|In one corner, distinguished, white-haired Commissioner Gormless offers a few encouraging words to a rookie cop. From a desk at the back of the room the words &#34;Book 'im, Sam&#34; ring out with monotonous regularity approximately every thirty seconds as a new gentleman in a black shirt with a white tie is brought in.\n{CLASS|ink-cyan|\n{CLASS|ink-cyan|The station sergeant approaches you. &#34;You got some business here, Mac?&#34; he enquires.}}}"
+ writeln "\n{CLASS|bright|In one corner, distinguished, white-haired Commissioner Gormless offers a few encouraging words to a rookie cop. From a desk at the back of the room the words &#34;Book 'im, Sam&#34; ring out with monotonous regularity approximately every thirty seconds as a new gentleman in a black shirt with a white tie is brought in.\n\nThe station sergeant approaches you. {CLASS|ink-cyan|&#34;You got some business here, Mac?&#34;} he enquires.}"
 
 _ _
  at      behind_gotham_police_station
@@ -3612,7 +3610,7 @@ _ _
 _ _
  at      inside_le_chat_noir
  anykey
- writeln "{CLASS|ink-cyan|{CLASS|bright|\n{CLASS|bright ink-cyan|A waiter approaches.\n\n&#34;Pardon my mentioning it,&#34; he remarks, &#34;but Sir's clothes appear more suitable for potholing than for dining. Perhaps Sir would care to return after a change of attire.&#34;}}}"
+ writeln "{CLASS|bright|\nA waiter approaches.\n\n{CLASS|ink-cyan|&#34;Pardon my mentioning it,&#34;} he remarks, {CLASS|ink-cyan|&#34;but Sir's clothes appear more suitable for potholing than for dining. Perhaps Sir would care to return after a change of attire.&#34;}}"
  let     pause_parameter pause_sound_effect_tone_decreasing
  anykey
  pause   100
