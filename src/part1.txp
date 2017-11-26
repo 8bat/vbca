@@ -418,6 +418,7 @@ vb_ligh     28    verb
 nn_cage     29    noun
 nn_rod      30    noun
 vb_comm     31    verb
+commodore   31    verb
 nn_spri     32    noun
 vb_spri     32    verb
 vb_left     33    verb
