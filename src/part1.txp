@@ -3019,6 +3019,82 @@ _ _
  desc
 
 _ _
+ clear_suggestions
+_ _
+ carried object_2_penny
+ at      room_1
+ suggest "spend a penny"
+_ _
+ carried object_13_rod
+ at      log_chasm_room
+ suggest "wave rod"
+_ _
+ present object_21_can
+ absent  object_14_songbird
+ isnotat object_20_python room_noncreated
+ suggest "open can"
+_ _
+ present object_14_songbird
+ carried object_5_food
+ suggest "drop food"
+_ _
+ present object_33_gas_canister
+ suggest "open valve"
+_ _
+ at  heart_of_gotham
+ gt  countdown_that_man that_man_returns
+ suggest "wait"
+_ _
+ atgt    room_0
+ atlt    wellie_house
+ carried object_6_bottle
+ suggest "fill bottle"
+_ _
+ present object_42_pellet
+ present object_45_bottle
+ suggest "water pellet"
+_ _
+ carried object_17_log
+ at      log_chasm_room
+ suggest "drop log"
+_ _
+ at      wellie_house
+ carried object_12_cage
+ suggest "drop cage"
+_ _
+ at      wellie_house
+ carried object_15_moon
+ suggest "drop crystal"
+_ _
+ at      wellie_house
+ carried object_19_silver
+ suggest "drop silver"
+_ _
+ at      wellie_house
+ carried object_22_table
+ suggest "drop table"
+_ _
+ at      wellie_house
+ carried object_29_goblet
+ suggest "drop goblet"
+_ _
+ at      wellie_house
+ carried object_38_pictures
+ suggest "drop pictures"
+_ _
+ at      wellie_house
+ carried object_37_file
+ suggest "drop file"
+_ _
+ at      wellie_house
+ carried object_32_tiara
+ suggest "drop tiara"
+_ _
+ at      wellie_house
+ worn    object_32_tiara
+ suggest "drop tiara"
+
+_ _
  at      batcave_exit_tunnel
  let     countdown_jester jester_initial_value
 _ _
