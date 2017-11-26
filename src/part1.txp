@@ -3436,7 +3436,6 @@ _ _
  anykey
  let     pause_parameter pause_flash
  pause   20
- cls
  writeln "{CLASS|bright|Overloaded by the excessive and indigestible verbal input, the SOPHISTICATED PARSER overheats and explodes, vaporising the troll and the art critic.}"
 
 _ _
@@ -3449,7 +3448,6 @@ _ _
  at      debris_room
  zero    countdown_location_description
  present object_0_lamp
- anykey
  writeln "{CLASS|bright|\nThe room is filled with bits and pieces washed in from the surface and has not been tidied in years. It looks a lot like your bedroom.\n\n{ACTION|east|The low crawl} becomes plugged with mud here but {ACTION|west|an awkward passage} leads west.\n\nThere is {ACTION|examine wall|a very rude word on the wall}.}"
 
 _ _
@@ -3464,7 +3462,6 @@ _ _
  zero    countdown_location_description
  present object_0_lamp
  absent  object_25_cord
- anykey
  writeln "\n{CLASS|bright|The {ACTION|examine wall|walls} are frozen rivers of orange sorbet. In the centre stands a {ACTION|examine pillar|pillar} adorned with ornate letters, and here the marble flags are somewhat worn. {ACTION|east|An awkward passage} and {ACTION|west|a good canyon} exit to east and west.}"
 
 _ _
@@ -3472,7 +3469,6 @@ _ _
  zero    countdown_location_description
  present object_0_lamp
  zero    yesno_entered_batmobile
- anykey
  writeln "\n{CLASS|bright|From a low cavern in the south glint what would seem to be the two red eyes of some monstrous creature.}"
 
 _ _
@@ -3480,54 +3476,45 @@ _ _
  zero    countdown_location_description
  present object_0_lamp
  zero    yesno_entered_batmobile
- anykey
  writeln "\n{CLASS|bright|You now see that the two red glints came from the tail lights of {ACTION|enter|a powerful, low-slung automobile}. It is jet black with a bat-like mask on the front and a sort of fin along the back resembling a bat's wing.}"
 
 _ _
  at      sophisticated_parser_cave
  zero    countdown_location_description
  present object_0_lamp
- anykey
  writeln "{CLASS|bright|\n{CLASS|bright|One wall is covered by {ACTION|examine the curtains covering the wall|crimson silk curtains} which look suspiciously as if {ACTION|look behind the crimson|something is concealed behind them}.}}"
 
 _ _
  at      inside_jewellers_shop
  zero    countdown_location_description
- anykey
  writeln "\n{CLASS|bright|Approximately every forty-seven seconds a gentleman in a black shirt with a white tie arrives with a slinky lady draped over his arm and buys her some trinket whose enormous price is matched only by its colossal tastelessness.}"
 
 _ _
  at      inside_gotham_police_station
- anykey
  writeln "\n{CLASS|bright|In one corner, distinguished, white-haired Commissioner Gormless offers a few encouraging words to a rookie cop. From a desk at the back of the room the words &#34;Book 'im, Sam&#34; ring out with monotonous regularity approximately every thirty seconds as a new gentleman in a black shirt with a white tie is brought in.\n\nThe station sergeant approaches you. {CLASS|ink-cyan|&#34;You got some business here, Mac?&#34;} he enquires.}"
 
 _ _
  at      behind_gotham_police_station
  zero    countdown_location_description
- anykey
  writeln "\n{CLASS|bright|Approximately every forty-seven seconds a gentleman in a black shirt with a white tie arrives, looks furtively around him and drops a file or a revolver through the bars of one of the windows. Occasionally a slinky lady in a tight skirt breaks the monotony by doing the same thing.}"
 
 _ _
  at      gotham_police_station_roof
  zero    countdown_location_description
- anykey
  writeln "\n{CLASS|bright|A panoramic view of Gotham stretches out before you and the teeming multitudes below exemplify every field of human endeavour: protection, numbers running, bootlegging, blackmail, extortion...\n\nBut why go on? All human life is here. The man who is tired of Gotham is tired of the rackets.}"
 
 _ _
  at      inside_le_chat_noir
- anykey
  writeln "\n{CLASS|bright|Elsewhere dine the board of directors of Oc**n S*ftw*r*. They are wearing black shirts and white ties. From the cases placed neatly at their feet, it would appear that many of them play the violin.}"
 
 _ _
  at      habitat_cave
  zero    countdown_location_description
- anykey
  writeln "\n{CLASS|bright|The cave is distinguished by sackcloth curtains, a {ACTION|open the cupboard|cupboard} and other square pieces of furniture in unvarnished pine, almost as beautiful as packing cases.\n\nThese and other items of like nature, hideous as they look in houses, seem strangely appropriate in a cave.\n\nObjectively the cave is not large but the cold bleakness of its furnishings gives it a sense of endlessness.\n\nExits, thankfully, are {ACTION|north|north}, {ACTION|east|east} and {ACTION|west|west}.}"
 
 _ _
  at      twee_chamber
  zero    countdown_location_description
- anykey
  writeln "\n{CLASS|bright|The wallpaper is a Laura Ashley pattern of pink flowers on blue, the hangings are the same, only blue on pink.\n\nAfter the barren wastes of the Habitat Cave this room seems almost a relief. But it is a dead end and leads only {ACTION|south|back to Habitat}.}"
 
 _ _
