@@ -2,7 +2,8 @@
 #
 # Modify the part 1 .txp file to be more useful
 
-sed -i src/part1.txp \
+modify() {
+    sed "$@" \
 	-e 's/\broom_2\b/bulls_gully/g' \
 	-e 's/\broom_3\b/wellie_house/g' \
 	-e 's/\broom_4\b/stream_end/g' \
@@ -114,3 +115,9 @@ sed -i src/part1.txp \
 	-e 's/\bobject_36\b/object_36_desks/g' \
 	-e 's/\bobject_43\b/object_43_art_critiquette/g' \
 	-e 's/\bobject_44\b/object_44_hippies/g'
+}
+
+if [ -z "$1" ]
+then modify
+else modify -i "$1"
+fi

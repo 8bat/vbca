@@ -1,11 +1,11 @@
-.PHONY: clean default
+.PHONY: clean default platforms
 
 INKER_DIR=../the_inker
 UNQUILL_DIR=../converters/unquill-0.11.0
 TXTPAWS_DIR=../../converters/txtpaws
 NGPAWS_DIR=../converters/ngPAWS
 
-PART1_SNAPSHOT=source/part1/vbca/start.sna
+PART1_SNAPSHOT=source/part1/snapshots/spec.sna
 
 PLUGINS=
 PLUGINS+=${NGPAWS_DIR}/plugins/backCompat_lib/beep2.jsp
@@ -63,7 +63,27 @@ src/part1.txp: src/part1.txt
 	-rm -rf part1
 	mkdir part1
 	rm -rf src/*.svg src/dat
-	./script/process-txp.sh
+	./script/process-txp.sh $@
+
+compare:
+	-mkdir compare
+
+source/part1/decompiled/%.txt: source/part1/snapshots/%.*
+	${UNQUILL_DIR}/unquill -O$@ -TZ $^
+
+compare/%.txp: source/part1/decompiled/%.txt
+	${INKER_DIR}/script/the_difference.pl --platform=$* $^
+	mv adventure/code.txp $@
+	./script/process-txp.sh $@
+
+src/%-part1.txp: source/part1/decompiled/%.txt
+	${INKER_DIR}/script/the_translator.pl --platform=$* $^
+	mv adventure/code.txp $@
+	./script/process-txp.sh $@
+
+compares: compare compare/c64.txp compare/cpc.txp compare/spec+3.txp compare/spec.txp
+
+platforms: src/c64-part1.txp src/cpc-part1.txp src/spec+3-part1.txp src/spec-part1.txp
 
 build:
 	mkdir -p build
