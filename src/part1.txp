@@ -2288,11 +2288,13 @@ vb_swit nn_lamp
 
 vb_swit nn_swit
  at      gotham_police_station_roof
- writeln "{CLASS|bright ink-yellow|A yellow beam thrusts into the sky, projecting upon the clouds that inimitable call-to-arms, the sign of the bat-like splodge.\n\nFrom somewhere below you catch the words: &#34;This is a job for... BARRROOOOOOMMM!&#34; (this last being the roar of a mighty engine)}"
+ writeln "{CLASS|bright ink-yellow|A yellow beam thrusts into the sky, projecting upon the clouds that inimitable call-to-arms, the sign of the bat-like splodge.}"
 
 vb_swit nn_swit
  at      gotham_police_station_roof
  notzero countdown_that_man
+ noteq   that_man_status that_man_signalled
+ writeln "\n{CLASS|bright ink-yellow|From somewhere below you catch the words: {CLASS|ink-cyan|&#34;This is a job for... BARRROOOOOOMMM!&#34;} (this last being the roar of a mighty engine)}"
  plus    countdown_that_man that_man_bat_signal_increment
  set     that_man_status ; to that_man_signalled
 
@@ -2429,8 +2431,7 @@ vb_get nn_book
 
 vb_get nn_pict
  at      inside_art_gallery
- gt      countdown_jester jester_appears
- let     yesno_gotham_theft 50
+ set     yesno_gotham_theft
 
 vb_get nn_pict
  notat   wellie_house
@@ -2463,44 +2464,13 @@ vb_get nn_dog
 
 vb_get nn_file
  at      inside_gotham_museum
- gt      that_man_status that_man_active
- get     object_37_file
- ok
-
-vb_get nn_file
- at      inside_gotham_museum
- let     yesno_gotham_theft 50
-
-vb_get nn_file
- notat   wellie_house
- get     object_37_file
- ok
-
-vb_wear nn_tiar
- at      inside_jewellers_shop
- gt      that_man_status that_man_active
- get     object_32_tiara
- wear    object_32_tiara
- ok
-
-vb_get nn_tiar
- at      inside_jewellers_shop
- gt      that_man_status that_man_active
- get     object_32_tiara
- ok
-
+ set     yesno_gotham_theft
 vb_wear nn_tiar
  at      inside_jewellers_shop
  set     yesno_gotham_theft
-
 vb_get nn_tiar
  at      inside_jewellers_shop
- let     yesno_gotham_theft 50
-
-vb_get nn_tiar
- notat   wellie_house
- get     object_32_tiara
- ok
+ set     yesno_gotham_theft
 
 vb_get nn_cage
  at      wellie_house
@@ -3413,13 +3383,28 @@ _ _
  writeln "\n\n{CLASS|bright|{CLASS|ink-yellow|&#34;One moment,&#34;} says THAT MAN. {CLASS|ink-yellow|&#34;I just have to visit THAT PLACE before our journey.&#34;}\n\nThe caped figure disappears into a small brick building.}"
 
 _ _
- eq      yesno_gotham_theft 50
+ notzero yesno_gotham_theft
+ le      countdown_that_man that_man_returns
  cls
  let     pause_parameter pause_sound_effect_tone_increasing
  pause   255
  writeln "{CLASS|bright|Amid a chaos of alarms and sirens you attempt to leave the building with the loot. Suddenly the room darkens as a grim bat-like figure swoops in through the skylight.\n\nAt first you think it is a bird - or perhaps a plane - but as the handcuffs close over your wrists you realise it is none other than...}"
  anykey
  end
+_ _
+ notzero yesno_gotham_theft
+ at      inside_gotham_museum
+ let     pause_parameter pause_sound_effect_tone_increasing
+ pause   255
+ writeln "{CLASS|bright|A klaxon wails when you grab the loot. A security guard looks up at the batless skylight, then shrugs and continues reading his book.}"
+ clear yesno_gotham_theft
+_ _
+ notzero yesno_gotham_theft
+ at      inside_jewellers_shop
+ let     pause_parameter pause_sound_effect_tone_increasing
+ pause   255
+ writeln "{CLASS|bright|A siren goes off as you grab the loot, but there is no caped crusader to be seen.\n\n{CLASS|ink-cyan|&#34;Well, this is awkward&#34;} the jeweller says. {CLASS|ink-cyan|&#34;Would you mind leaving?&#34;}}"
+ clear yesno_gotham_theft
 
 _ _
  at      heart_of_gotham
