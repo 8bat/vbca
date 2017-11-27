@@ -419,6 +419,7 @@ nn_cage     29    noun
 nn_rod      30    noun
 vb_comm     31    verb
 commodore   31    verb
+vb_clon     31    verb ; STDCAV synonym
 nn_spri     32    noun
 vb_spri     32    verb
 vb_left     33    verb
@@ -589,6 +590,8 @@ replay     159 verb
 nn_art  160 noun
 nn_lady 160 noun
 nn_crit 160 noun
+; drink the water:
+vb_drin 161 verb
 
 ; -- Standard ngPAWS conjuntions (taken from the ngPAWS "start" database) --
 ;
@@ -818,7 +821,7 @@ You can't see any exits
 /object_14_songbird
 {ACTION|get bird|{CLASS|bright ink-yellow|A cheerful little songbird}}
 /object_15_moon
-{CLASS|bright white|A Venusian Moon-Crystal}
+{CLASS|bright white|A Venusian Moon-Crystal}#{CLASS|bright|It is a very well-made crystal. A fine example of the crystal-makers art.}
 /object_16_zx81
 {CLASS|bright ink-yellow|A sharpened ZX81}
 /object_17_log
@@ -1932,6 +1935,12 @@ vb_comm _
  cls
  desc
 
+vb_comm _
+ write "{CLASS|bright|You feel a weird sensation, then suddenly...}"
+ pause   80
+ writeln "{CLASS|bright| nothing happens}"
+ done
+
 vb_spri _
  at      wellie_house
  cls
@@ -2339,6 +2348,10 @@ vb_get nn_wate
  carried object_6_bottle
  swap    object_6_bottle object_45_bottle
  ok
+
+vb_drin nn_wate
+ carried object_45_bottle
+ writeln "{CLASS|bright|It has a slightly metallic taste, but your thirst is quenched.}"
 
 vb_get nn_cage
  notat   wellie_house
