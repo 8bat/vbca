@@ -681,78 +681,78 @@ Now what?
 Y<br>
 /31
 N<br>
-/32 ; TODO: check the following message matches the tone of your game:
+/32
 More...<br>
-/33 ; TODO: check the following message matches the tone of your game:
+/33
 ><br>
-/34 ; TODO: check the following message matches the tone of your game:
+/34
 <br>
-/35 ; TODO: check the following message matches the tone of your game:
+/35
 Time passes...<br>
-/36 ; TODO: check the following message matches the tone of your game:
+/36
 
-/37 ; TODO: check the following message matches the tone of your game:
+/37
 
-/38 ; TODO: check the following message matches the tone of your game:
+/38
 
-/39 ; TODO: check the following message matches the tone of your game:
+/39
 
-/40 ; TODO: check the following message matches the tone of your game:
+/40
 {CLASS|bright|You jolly well can't, so there.}<br>
-/41 ; TODO: check the following message matches the tone of your game:
+/41
 {CLASS|bright|You jolly well can't, so there.}<br>
-/42 ; TODO: check the following message matches the tone of your game:
+/42
 {CLASS|bright|You can't. Your hands are full.}<br>
-/43 ; TODO: check the following message matches the tone of your game:
+/43
 {CLASS|bright|You can't carry any more, wimp.}<br>
 /44
-You put that into<br>
+{CLASS|bright|You put that into<br>}
 /45
-that is not into<br>
-/46 ; TODO: check the following message matches the tone of your game:
+{CLASS|bright|that is not into<br>}
+/46
 <br>
-/47 ; TODO: check the following message matches the tone of your game:
+/47
 <br>
-/48 ; TODO: check the following message matches the tone of your game:
+/48
 <br>
-/49 ; TODO: check the following message matches the tone of your game:
+/49
 {CLASS|bright|You don't have it, chump.}<br>
-/50 ; TODO: check the following message matches the tone of your game:
+/50
 {CLASS|bright|You jolly well can't, so there.}<br>
-/51 ; TODO: check the following message matches the tone of your game:
-.<br>
-/52 ; TODO: check the following message matches the tone of your game:
-That is not into<br>
-/53 ; TODO: check the following message matches the tone of your game:
-nothing at all<br>
-/54 ; TODO: check the following message matches the tone of your game:
-File not found.<br>
-/55 ; TODO: check the following message matches the tone of your game:
-File corrupt.<br>
-/56 ; TODO: check the following message matches the tone of your game:
-I/O error. File not saved.<br>
-/57 ; TODO: check the following message matches the tone of your game:
-Directory full.<br>
-/58 ; TODO: check the following message matches the tone of your game:
+/51
+{CLASS|bright|.<br>}
+/52
+{CLASS|bright|That is not into<br>}
+/53
+{CLASS|bright|nothing at all<br>}
+/54
+{CLASS|bright|File not found.<br>}
+/55
+{CLASS|bright|File corrupt.<br>}
+/56
+{CLASS|bright|I/O error. File not saved.<br>}
+/57
+{CLASS|bright|Directory full.<br>}
+/58
 Please enter savegame name you used when saving the game status.
-/59 ; TODO: check the following message matches the tone of your game:
-Invalid savegame name. Please check the name you entered is correct, and make sure you are trying to load the game from the same browser you saved it.<br>
-/60 ; TODO: check the following message matches the tone of your game:
+/59
+{CLASS|bright|Invalid savegame name. Please check the name you entered is correct, and make sure you are trying to load the game from the same browser you saved it.<br>}
+/60
 Please enter savegame name. Remember to note down the name you choose, as it will be requested in order to restore the game status.
-/61 ; TODO: check the following message matches the tone of your game:
-<br>
-/62 ; TODO: check the following message matches the tone of your game:
-Sorry? Please try other words.<br>
-/63 ; TODO: check the following message matches the tone of your game:
-Here<br>
-/64 ; TODO: check the following message matches the tone of your game:
-you can see<br>
-/65 ; TODO: check the following message matches the tone of your game:
-you can see<br>
-/66 ; TODO: check the following message matches the tone of your game:
-inside you see<br>
-/67 ; TODO: check the following message matches the tone of your game:
-on top you see<br>
+/61
+{CLASS|bright|<br>}
+/62
+{CLASS|bright|Sorry? Please try other words.<br>}
+/63
+{CLASS|bright|Here<br>}
+/64
+{CLASS|bright|you can see<br>}
+/65
+{CLASS|bright|you can see<br>}
+/66
+{CLASS|bright|inside you see<br>}
+/67
+{CLASS|bright|on top you see<br>}
 /68
 What is your reply?
 /69
