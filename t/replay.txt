@@ -437,8 +437,8 @@
 > S; get can
 > N; N; open can; drop can
 > N; get bars
-> S; W; open cupboard; get key
-> N; get table
+> S; W; W; open drawer; get key
+> E; N; get table
 > S; E; E; E
 > # MOCKRANDOM: 1 1
 > FIRE

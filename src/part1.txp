@@ -246,6 +246,7 @@
 #define pic location15.svg   =  15
 #define pic location16.svg   =  16
 #define pic location17.svg   =  17
+#define pic location18.svg   =  18
 #define pic location19.svg   =  19
 #define pic location20.svg   =  20
 #define pic location21.svg   =  21
@@ -398,6 +399,7 @@ nn_door     14    noun
 nn_lock     14    noun
 vb_open     15    verb
 vb_unlo     15    verb
+vb_move     15    verb
 nn_penn     16    noun
 nn_penny    16    noun
 vb_no       17    verb
@@ -420,6 +422,7 @@ nn_rod      30    noun
 vb_comm     31    verb
 commodore   31    verb
 vb_clon     31    verb ; STDCAV synonym
+vb_spec     31    verb ; C64 synonym
 nn_spri     32    noun
 vb_spri     32    verb
 vb_left     33    verb
@@ -538,6 +541,7 @@ nn_sear     90    noun
 vb_sear     90    verb
 nn_swit     90    noun
 vb_swit     90    verb
+vb_exti     90    verb ; extinguish
 nn_turn     90    noun
 vb_turn     90    verb
 nn_news     92    noun
@@ -592,6 +596,9 @@ nn_lady 160 noun
 nn_crit 160 noun
 ; drink the water:
 vb_drin 161 verb
+; from the C64 version:
+nn_mirr 162 noun
+nn_side 163 noun
 
 ; -- Standard ngPAWS conjuntions (taken from the ngPAWS "start" database) --
 ;
@@ -667,7 +674,7 @@ Now what?
 /27
 {CLASS|bright|You can't carry any more, wimp.}<br>
 /28
-{CLASS|bright|You don't have it.}<br>
+{CLASS|bright|You don't have it, chump.}<br>
 /29
 {CLASS|bright|Already being worn, bub.}<br>
 /30
@@ -709,7 +716,7 @@ that is not into<br>
 /48 ; TODO: check the following message matches the tone of your game:
 <br>
 /49 ; TODO: check the following message matches the tone of your game:
-{CLASS|bright|You don't have it.}<br>
+{CLASS|bright|You don't have it, chump.}<br>
 /50 ; TODO: check the following message matches the tone of your game:
 {CLASS|bright|You jolly well can't, so there.}<br>
 /51 ; TODO: check the following message matches the tone of your game:
@@ -924,11 +931,11 @@ A gas canister
 /secret_hiding_place
 {CLASS|center bright|THE SECRET HIDING PLACE}
 /habitat_cave
-{CLASS|bright|You are in the Habitat Cave.}
+{CLASS|bright|You are in the Habitat Cave. It is distinguished by sackcloth curtains and square pieces of furniture in unvarnished pine made by &#34;carpenters&#34; who would not know a lathe if they were hit over the head with it. These and other items of like nature, hideous as they look in the town houses of people who ought to know better, seem strangely appropriate in a cave. Objectively, this cave is not large, but the cold bleakness of its furnishings gives it a sense of endlessness. Exits, thankfully, are {ACTION|north|north}, {ACTION|east|east} and {ACTION|west|west}.}
 /twee_chamber
 {CLASS|bright|You are in the Twee Chamber.}
 /avante_garde_room
-
+{CLASS|bright|As you enter this room, the first thing to appal your eyes is the highly polished black glass floor. The second is the {ACTION|examine sideboard|stainless steel sideboard}. This is the 193Os Avant-Garde Room. As you stand, numbly gazing, you realise that all the so-called &#34;innovations&#34; of post-196O decor had not only been done in the 193Os but had actually been done worse. Stainless steel archways lead {ACTION|east|east} and {ACTION|west|west}.}
 /live_space_invaders_room
 {CLASS|bright|As you enter this room, the door slides ominously shut behind you.}
 /dead_space_invaders_room
@@ -950,7 +957,7 @@ A gas canister
 /y2_room
 {CLASS|bright|You are in a large room. Passages lead {ACTION|south|south} and {ACTION|west|west}. A dirty crack is east. There is a large '{ACTION|Y2|Y2}' on a rock in the room's centre.\n\nA hollow voice says {ACTION|PLUG|'PLUG'}.}
 /window_over_pit
-{CLASS|bright|You are standing at a window looking over a pit. A shadowy figure is watching you from a lighted window opposite.}
+{CLASS|bright|You are at a low window overlooking a huge pit. It extends up out of sight and down at least 5Oft to where the ground can be seen covered with traces of white mist. Markings in the dust on the window sill show that someone has recently been here. Across the pit from you is a similar window looking into a lighted room. A shadowy figure can be seen there, {ACTION|wave|watching your every move}.}
 /censored_room
 {CLASS|center bright ink-black paper-white|\n\n\n\n\n\n\n\n\nCENSORED\n\n\n\n\n\n\n\n\n\n}
 /recent_rock_fall_cavern
@@ -1089,12 +1096,14 @@ vb_s room_1
 /habitat_cave
 vb_e hall_of_the_mountain_king
 vb_n twee_chamber
-vb_w west_end_of_passage
+vb_w avante_garde_room
 
 /twee_chamber
 vb_s habitat_cave
 
 /avante_garde_room
+vb_e habitat_cave
+vb_w west_end_of_passage
 
 /live_space_invaders_room
 
@@ -1171,12 +1180,12 @@ vb_n hall_of_mists_west_fissure
 vb_w east_end_of_hall
 
 /west_end_of_passage
-vb_e habitat_cave
+vb_e avante_garde_room
 
 /east_end_of_hall
 vb_d recent_rock_fall_cavern
 vb_e hall_of_mists_west_end
-vb_n hall_of_mists_west_fissure
+vb_n hall_of_mists_west_end
 
 /small_low_cavern
 vb_n bat_cave
@@ -1578,6 +1587,11 @@ vb_exam nn_spri
  backcmd "east"
  desc
 
+vb_exam _
+ at      small_low_cavern
+ writeln "{CLASS|bright|I've already described it at great length. If you want ten-page descriptions you should read War and Peace. Which reminds me. Did you do your homework before you started this silly game?}"
+ done
+
 vb_exam nn_char
  at      dead_space_invaders_room
  writeln "{CLASS|bright|They are in the shape of space ships. They do not look much the worse for being zapped - the odd pixel out of place here and there, perhaps. Nothing more. These are tough characters.\n\nYou notice that one of them is rather more than a character. This is THE MOTHER SHIP, three characters in length by two high. Pretty big even for a full-blown sprite like yourself. There is {ACTION|open airlock|an airlock} on the ship.}"
@@ -1688,6 +1702,24 @@ vb_exam nn_hipp
  at      inside_gotham_museum
  writeln "{CLASS|bright|They are valuable treasures, both on account of their great antiquity and as consummate examples of the taxidermist's art.}"
  done
+
+vb_exam nn_side
+ at      avante_garde_room
+ writeln "{CLASS|bright|It has {ACTION|open drawers|drawers} and a {ACTION|break mirror|mirror}.}"
+ done
+
+vb_exam nn_mirr
+ at      avante_garde_room
+ writeln "{CLASS|bright|You see a chump.}"
+ done
+
+vb_brea nn_mirr
+ at      avante_garde_room
+ writeln "{CLASS|ink-lime bright|BOOOOOoooooiiiinnnNNGGGG!!!!}"
+ pause   50
+ writeln "{CLASS|bright|You are a chump. It's stainless steel.}"
+ done
+
 
 vb_exam nn_bubb
  at      outside_gotham_infirmary
@@ -1844,10 +1876,13 @@ vb_open nn_can
 
 vb_open nn_cupb
  at      habitat_cave
- absent  object_23_key
+ writeln "{CLASS|bright|You mean you actually found that in the Spectrum version?  Bravo!\n\nBut no, there's nothing there.}"
+
+vb_unlo nn_draw
+ at      avante_garde_room
+ isat    object_23_key room_noncreated
  create  object_23_key
  create  object_24_hint
- let     countdown_location_description 2
  desc
 
 vb_open nn_valv
@@ -2179,6 +2214,10 @@ vb_in _
 vb_plug _
  writeln "{CLASS|bright ink-yellow|BUGSY {CLASS|ink-cyan|- ya wanna stay healthy, ya buy it.}}"
 
+vb_wave _
+ at      window_over_pit
+ writeln "{CLASS|bright|The shadowy figure puts its tongue out. How childish!}"
+
 vb_wave nn_rod
  at      log_chasm_room
  carried object_13_rod
@@ -2476,56 +2515,56 @@ vb_get nn_cage
  at      wellie_house
  present object_12_cage
  notcarr object_12_cage
- writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ writeln "{CLASS|bright ink-yellow|&#34;Oi! Hands off!&#34;}"
  done
 
 vb_get nn_moon
  at      wellie_house
  present object_15_moon
  notcarr object_15_moon
- writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ writeln "{CLASS|bright ink-yellow|&#34;Oi! Hands off!&#34;}"
  done
 
 vb_get nn_silv
  at      wellie_house
  present object_19_silver
  notcarr object_19_silver
- writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ writeln "{CLASS|bright ink-yellow|&#34;Oi! Hands off!&#34;}"
  done
 
 vb_get nn_tabl
  at      wellie_house
  present object_22_table
  notcarr object_22_table
- writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ writeln "{CLASS|bright ink-yellow|&#34;Oi! Hands off!&#34;}"
  done
 
 vb_get nn_gobl
  at      wellie_house
  present object_29_goblet
  notcarr object_29_goblet
- writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ writeln "{CLASS|bright ink-yellow|&#34;Oi! Hands off!&#34;}"
  done
 
 vb_get nn_pict
  at      wellie_house
  present object_38_pictures
  notcarr object_38_pictures
- writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ writeln "{CLASS|bright ink-yellow|&#34;Oi! Hands off!&#34;}"
  done
 
 vb_get nn_file
  at      wellie_house
  present object_37_file
  notcarr object_37_file
- writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ writeln "{CLASS|bright ink-yellow|&#34;Oi! Hands off!&#34;}"
  done
 
 vb_get nn_tiar
  at      wellie_house
  present object_32_tiara
  notcarr object_32_tiara
- writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;'s mine now!&#34;} says the fence}"
+ writeln "{CLASS|bright ink-yellow|&#34;Oi! Hands off!&#34;}"
  done
 
 vb_get nn_crit
@@ -2617,7 +2656,7 @@ vb_drop nn_moon
  carried object_15_moon
  drop    object_15_moon
  writeln "{CLASS|bright|The fence examines it closely and says:}"
- writeln "{CLASS|bright ink-yellow|&#34;Don't see many o' these about nowadays. I'll take it.&#34;}"
+ writeln "{CLASS|bright ink-yellow|&#34;'Ere, 'ow often d'you think I can sell that alien space captain 'is own crystal?&#34;}"
  plus    total_player_score 30
  set     yesno_moon_crystal_sold
  done
@@ -3504,11 +3543,6 @@ _ _
 _ _
  at      inside_le_chat_noir
  writeln "\n{CLASS|bright|Elsewhere dine the board of directors of Oc**n S*ftw*r*. They are wearing black shirts and white ties. From the cases placed neatly at their feet, it would appear that many of them play the violin.}"
-
-_ _
- at      habitat_cave
- zero    countdown_location_description
- writeln "\n{CLASS|bright|The cave is distinguished by sackcloth curtains, a {ACTION|open the cupboard|cupboard} and other square pieces of furniture in unvarnished pine, almost as beautiful as packing cases.\n\nThese and other items of like nature, hideous as they look in houses, seem strangely appropriate in a cave.\n\nObjectively the cave is not large but the cold bleakness of its furnishings gives it a sense of endlessness.\n\nExits, thankfully, are {ACTION|north|north}, {ACTION|east|east} and {ACTION|west|west}.}"
 
 _ _
  at      twee_chamber

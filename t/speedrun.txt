@@ -52,10 +52,12 @@
 
 # get the key:
 > w
-> open cupboard
+> w
+> open drawer
 > get key
 
 # open the pillarbox:
+> e
 > e
 > s
 > u
