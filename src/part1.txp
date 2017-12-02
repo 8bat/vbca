@@ -3262,7 +3262,7 @@ _ _
 
 _ _
  at      sloping_canyon
- absent  object_16_zx81
+ isat    object_16_zx81 room_noncreated
  present object_0_lamp
  anykey
  writeln "{CLASS|bright|\n{CLASS|bright|A spindly balding creature with a neat ginger beard and spectacles emerges from the gloom.\n\nHe throws something which {ACTION|examine wall|lodges in the wall} with a sickening thud, then rushes off cackling wildly.}}"
