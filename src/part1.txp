@@ -399,6 +399,7 @@ nn_door     14    noun
 nn_lock     14    noun
 vb_open     15    verb
 vb_unlo     15    verb
+vb_draw     15    verb
 vb_move     15    verb
 nn_penn     16    noun
 nn_penny    16    noun
@@ -419,10 +420,12 @@ vb_spel     27    verb
 vb_ligh     28    verb
 nn_cage     29    noun
 nn_rod      30    noun
+nn_wand     30    noun
 vb_comm     31    verb
 commodore   31    verb
 vb_clon     31    verb ; STDCAV synonym
 vb_spec     31    verb ; C64 synonym
+vb_suga     31    verb ; CPC synonym
 nn_spri     32    noun
 vb_spri     32    verb
 vb_left     33    verb
@@ -444,8 +447,10 @@ vb_atta     42    verb
 vb_batt     42    verb
 vb_brea     42    verb
 vb_hit      42    verb
+vb_kill     42    verb
 vb_kick     42    verb
 vb_ram      42    verb
+vb_rape     42    verb
 vb_smas     42    verb
 nn_log      43    noun
 songbird    44    noun
@@ -466,6 +471,7 @@ vb_in       48    verb
 vb_into     48    verb
 vb_leav     48    verb
 vb_out      48    verb
+vb_exit     48    verb
 nn_crac     49    noun
 
 ;-- verbs and other nouns --
@@ -484,7 +490,6 @@ nn_table    55    noun
 nn_cupb     57    noun
 vb_cupb     57    verb
 nn_draw     57    noun
-vb_draw     57    verb
 nn_key      58    noun
 nn_trin     59    noun
 nn_trix     59    noun
@@ -497,7 +502,6 @@ vb_pres     65    verb
 vb_push     65    verb
 nn_butt     66    noun
 vb_fuck     67    verb
-vb_rape     67    verb
 vb_shit     67    verb
 vb_swea     67    verb
 vb_wash     68    verb
@@ -599,6 +603,9 @@ vb_drin 161 verb
 ; from the C64 version:
 nn_mirr 162 noun
 nn_side 163 noun
+; from the CPC version:
+vb_fart 164 verb
+vb_igno 165 verb
 
 ; -- Standard ngPAWS conjuntions (taken from the ngPAWS "start" database) --
 ;
@@ -870,7 +877,7 @@ A gas canister
 /object_35_searchlight
 {ACTION|examine searchlight|{CLASS|bright ink-yellow|A curious searchlight}}#{CLASS|bright|A bat-like splodge is painted on the glass. At the back is {ACTION|switch switch|a switch}.}
 /object_36_desks
-{ACTION|examine desks|{CLASS|bright|Rows of empty desks}}
+{ACTION|examine desks|{CLASS|bright|Rows of desks}}
 /object_37_file
 {CLASS|bright ink-yellow|A Byzantian gold enamelled nail file}
 /object_38_pictures
@@ -884,7 +891,7 @@ A gas canister
 /object_42_pellet
 {CLASS|ink-white|A grey pellet}#{CLASS|bright|The dehydrated seed of an art critic}
 /object_43_art_critiquette
-{CLASS|bright|An angular art-critiquette emitting a string of polysyllables}
+{CLASS|bright|An angular art-critiquette emitting a stream of polysyllables}
 /object_44_hippies
 {CLASS|bright|A group of hippies}#{CLASS|bright|They are valuable treasures, both on account of their great antiquity and as consummate examples of the taxidermist's art}
 /object_45_bottle
@@ -957,7 +964,7 @@ A gas canister
 /y2_room
 {CLASS|bright|You are in a large room. Passages lead {ACTION|south|south} and {ACTION|west|west}. A dirty crack is east. There is a large '{ACTION|Y2|Y2}' on a rock in the room's centre.\n\nA hollow voice says {ACTION|PLUG|'PLUG'}.}
 /window_over_pit
-{CLASS|bright|You are at a low window overlooking a huge pit. It extends up out of sight and down at least 5Oft to where the ground can be seen covered with traces of white mist. Markings in the dust on the window sill show that someone has recently been here. Across the pit from you is a similar window looking into a lighted room. A shadowy figure can be seen there, {ACTION|wave|watching your every move}.}
+{CLASS|bright|You are at a low window overlooking a deep pit. It extends up out of sight and down at least 5Oft to where the ground can be seen covered with traces of white mist. Markings in the dust on the window sill show that someone has recently been here. Across the pit from you is a similar window looking into a lighted room. A shadowy figure can be seen there, {ACTION|wave|watching your every move}.}
 /censored_room
 {CLASS|center bright ink-black paper-white|\n\n\n\n\n\n\n\n\nCENSORED\n\n\n\n\n\n\n\n\n\n}
 /recent_rock_fall_cavern
@@ -971,9 +978,9 @@ A gas canister
 /hall_of_mists_west_end
 {CLASS|bright|You are at the west end of the Hall of Mists. A wide passage leads off {ACTION|west|west}. Other exits lead {ACTION|north-east|north and east}.}
 /west_end_of_passage
-{CLASS|bright|You are at the west end of a passage. The floor has collapsed making further progress impossible.}
+{CLASS|bright|You are at the west end of a passage. The floor ahead has collapsed, making further progress impossible.}
 /east_end_of_hall
-{CLASS|bright|You are at the east end of a hall. The floor has collapsed, making further progress impossible. However, the rubble from the massive rock-fall slopes downward, allowing {ACTION|downward|a precarious descent} to the level below. {ACTION|north|A hole in the rock}, six feet up, runs north.}
+{CLASS|bright|You are at the east end of a hall. The floor ahead has collapsed, making further progress impossible. However, the rubble from the massive rock-fall slopes downward, allowing {ACTION|downward|a precarious descent} to the level below. {ACTION|north|A hole in the rock}, six feet up, runs north.}
 /small_low_cavern
 {CLASS|bright|You are in a small low cavern.}
 /batmobile
@@ -981,7 +988,7 @@ A gas canister
 /batcave_exit_tunnel
 {CLASS|bright|The rock face slides silently aside to reveal a long, narrow tunnel.}
 /heart_of_gotham
-{CLASS|bright|You are in the heart of Gotham City near to the concealed ramp from which you emerged.\nRoads {ACTION|north|lead} {ACTION|south|in} {ACTION|east|all} {ACTION|west|directions}.}
+{CLASS|bright|You are in the heart of Gotham City, near to the concealed ramp from which you emerged.\nRoads {ACTION|north|lead} {ACTION|south|in} {ACTION|east|all} {ACTION|west|directions}.}
 /outside_le_chat_noir
 {CLASS|bright|You are outside {ACTION|enter|{CLASS|ink-yellow|Le Chat Noir}}, a restaurant patronised by the rich and famous.\nRoads lead {ACTION|north|north}, {ACTION|south|south} and {ACTION|west|west}}
 /inside_le_chat_noir
@@ -1192,6 +1199,7 @@ vb_n bat_cave
 
 /batmobile
 vb_in small_low_cavern
+vb_u  small_low_cavern
 
 /batcave_exit_tunnel
 
@@ -1925,7 +1933,7 @@ vb_wate nn_pell
  destroy object_42_pellet
  create  object_43_art_critiquette
  swap    object_45_bottle object_6_bottle
- writeln "{CLASS|bright|The pellet blossoms into an angular lady who sprouts the following foliage:{CLASS|ink-yellow|\n&#34;While it is perhaps tempting to compare Morone's 'Blank Canvas' with 'Unpainted Canvas' by Cretine, nothing could be more misleading. While Cretine sees a pure white proto-landscape of limitless possibilities, Morone is representing the existential void which confronts us all when the superficial pretences of civilised life are stripped away It is necessary to remember that Cretine's work is a virgin canvas while Morone's is actually a Rembrandt scrubbed clean with turpentine in order to fully confront...&#34;} etc.}"
+ writeln "{CLASS|bright|The pellet blossoms into an angular lady in a black shirt and white tie who sprouts the following foliage:{CLASS|ink-yellow|\n&#34;While it is perhaps tempting to compare Morone's 'Blank Canvas' with 'Unpainted Canvas' by Cretine, nothing could be more misleading. While Cretine sees a pure white proto-landscape of limitless possibilities, Morone is representing the existential void which confronts us all when the superficial pretences of civilised life are stripped away. It is necessary to remember that Cretine's work is a virgin canvas while Morone's is actually a Rembrandt scrubbed clean with turpentine in order fully to confront...&#34;} etc.}"
  done
 
 vb_yes _
@@ -2264,7 +2272,7 @@ vb_rape nn_you
  turns
  end
 
-vb_rape _
+vb_swea _
  goto    swear_box
  noback
  desc
@@ -2843,6 +2851,18 @@ vb_text _
  pause   255
  desc
 
+vb_igno _
+ present object_28_troll
+ writeln "{CLASS|bright|{CLASS|ink-lime|&#34;Funny how everyone ignores me and me chainsaw,&#34;} says the troll.}"
+ done
+
+vb_fart _
+ beep2   100 25
+ beep2   100 20
+ writeln "{CLASS|bright|Pooh! I'm off!}"
+ anykey
+ end
+
 vb_grap _
  let     pause_parameter pause_toggle_graphics
  pause   1
@@ -3218,7 +3238,7 @@ _ _
 _ _
  atgt    crawling_over_cobbles
  zero    countdown_player_input_unlit
- writeln "{CLASS|bright|Sploosh!}"
+ writeln "{CLASS|bright|SPLOOSH! In you go!}"
  score
  turns
  end
