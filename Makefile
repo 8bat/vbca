@@ -111,7 +111,7 @@ part1/%.css: ${NGPAWS_DIR}/installation_aux_files/%.css
 part1/%.html: ${NGPAWS_DIR}/installation_aux_files/%.html
 	sed \
 		-e 's/<title>.*<\/title>/<title>The Very Big Cave Adventure<\/title>/g' \
-		-e 's/<\/head>/<link href="https:\/\/fonts.googleapis.com\/css?family=Fondamento|Ruge+Boogie" rel="stylesheet">\n<link href="backwards-compatibility.css" rel="stylesheet" type="text\/css" \/>\n<\/head>/' \
+		-e 's/<\/head>/<link href="https:\/\/fonts.googleapis.com\/css?family=Fondamento|Dancing+Script" rel="stylesheet">\n<link href="backwards-compatibility.css" rel="stylesheet" type="text\/css" \/>\n<\/head>/' \
 		-e "s/<div class='wrapper'>/<div class='wrapper paper ink'>/" \
 		-e "s/<div class='graphics'>/<div class='color-as-paper graphics'>/" \
 		-e 's/<input.*/<table class="input-table"><tr><td class="panels-wrapper unclicked watch-flag-1"><span class="arrow">\&gt;<\/span><div class="panels paper color-as-paper"><div class="condact-info hide-on-click ink" data-condact="INVEN"><\/div><div class="suggestions-wrapper bright ink-white">Suggestions:<div class="suggestions hide-on-click" data-message="2000"><\/div><\/div><a class="navigation back">\&#x2b05;<\/a><a class="navigation forward">\&#x27a1;<\/a><\/div><\/div><td><input aria-live="polite" title="Type instructions in here (some instructions are also clickable)" type="text" class="prompt" \/><\/table>/' \

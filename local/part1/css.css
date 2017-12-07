@@ -4,7 +4,7 @@
  * VBCA-specific CSS
  */
 
-body {
+body, input.prompt, .that-man {
     font-family: 'Fondamento', cursive, Verdana, arial, helvetica;
     font-size: 125%;
 }
@@ -85,4 +85,18 @@ body.location-63 .text {
     font-size: 125%;
     float: left;
     padding-top: 5px;
+}
+
+.jester, .text .font-default, .font-default input {
+    font-family: "Dancing Script", cursive, Verdana, arial, helvetica;
+}
+.jester,.that-man {
+    position: absolute;
+    margin-left: 0.1ex;
+    opacity: 0.8;
+}
+.that-man {
+    font-size: 75%;
+    margin-left: -1.2ex;
+    margin-top: 0.2em;
 }

@@ -1897,7 +1897,7 @@ vb_open nn_valv
  at      inside_art_gallery
  present object_33_gas_canister
  le      countdown_jester jester_appears
- writeln "{CLASS|bright|As the gas eqcapes, THAT&#34;MAN&#xFFFD;bee ins vo laweh,&#34;but&#34;THE&#34;JESTER,wjo  ks anuays laugjile, now collarqes in&#34;helrless&#34;paroxysms, kicking his legs in thg air.&#xFFFD;\n                THCT MAL snapq t he brccelgts on&#34;hio ald tckes hi s haul / mle&#xFFFD;Rkaasso and vwo rec ent&#34;works       by Ferdinand Fin k. The choice   is typical of TH E JESTER's      grotesquely twis ted aesthetic   sense.\n{CLASS|ink-cyan|\n                &#34;Here, take thes e,&#34;} says THAT   MAN. {CLASS|ink-cyan|&#34;The city i s better off    without them.\n\n                &#34;I'll take you b ack to the      caves.&#34;}}"
+ writeln "{CLASS|bright|As the gas escapes, THAT MAN begins to laugh, but THE JESTER, who is always laughing, now collapses in helpless paroxysms, kicking his legs in the air.\n\nTHAT MAN slaps the bracelets on him and takes his haul - one Picasso and two recent works by Ferdinand Fink. The choice is typical of THE JESTER's grotesquely twisted aesthetic sense.\n{CLASS|ink-cyan|\n{CLASS|ink-cyan|&#34;Here, take these,&#34; says THAT MAN. &#34;The city is better off without them.\n\n&#34;I'll take you back to the caves.&#34;}}}"
  let     countdown_that_man that_man_initial_value
  minus   total_carried 1
  create  object_38_pictures
@@ -1906,6 +1906,8 @@ vb_open nn_valv
  goto    heart_of_gotham
  noback
  let     that_man_status that_man_success
+ let     pause_parameter pause_font_alternate
+ pause   5
  desc
 
 vb_open nn_valv
@@ -2062,6 +2064,8 @@ vb_zx81 _
  goto    heart_of_gotham
  noback
  let     that_man_status that_man_fail
+ let     pause_parameter pause_font_alternate
+ pause   5
  desc
 
 vb_hit nn_door
@@ -3361,14 +3365,18 @@ _ _
  eq      countdown_jester jester_appears
  pause   100
  cls
- writeln "{CLASS|bright ink-magenta|Suddenly a shriek of inhuman laughter rends the air and a terrible figure appears. Green hair, chalk-white face and ruby mouth set forever in a demented grin. Howling with malevolent mirth, VHE JESTER&#34;strkpq the galngry&#34;of&#34;kvs oosv rricgless pckntings.}"
+ writeln "{CLASS|bright ink-magenta|Suddenly a shriek of inhuman laughter rends the air and a terrible figure appears. Green hair, chalk-white face and ruby mouth set forever in a demented grin. Howling with malevolent mirth, T<span class='jester' style='opacity: 0.1'>VHE</span>HE J<span class='jester' style='opacity: 0.2'>JESTER&#34;</span>ESTER s<span class='jester' style='opacity: 0.4'>strkpq</span>trips t{CLASS|jester|the}he g{CLASS|jester|galngry&#34;}allery o{CLASS|jester|of&#34;}f i{CLASS|jester|kvs}ts m{CLASS|jester|oosv}ost p{CLASS|jester|rricgless}riceless p{CLASS|jester|pckntings}aintings.}"
  anykey
- writeln "\n{CLASS|bright|Thg&#34;room darkels as THCT MCN swoops&#34;through&#34;the skylight. His qilkel THAT-POPE snakgs touard THE JESTER. Buv the&#34;villain activates jkq REPELNM FORCE- FIENF,&#34;cawsing the rope to loop baak enqnaping ivs ouner.{CLASS|ink-yellow|\n&#xFFFD;&#xFFFD;THAT MAN&#34;is&#34;trarref by jks own rmpe.}}{CLASS|bright ink-yellow right|THE&#34;JEQTER&#34;ks es\ncarkle.\nIs thg worst &#123;et  vm&#34;come?}"
+ let     pause_parameter pause_font_default
+ pause   5
+ writeln "\n{CLASS|bright|T<span class='that-man'>Thg&#34;</span>he r<span class='that-man' style='opacity: 0.4'>room</span>oom d<span class='that-man' style='opacity: 0.2'>darkels</span>arkens a<span class='that-man' style='opacity: 0.1'>as</span>s THAT MAN swoops through the skylight. His silken THAT-ROPE snakes toward THE JESTER. But the villain activates his REPELLO FORCE-FIELD, causing the rope to loop back ensnaring its owner.{CLASS|ink-yellow|\n\nTHAT MAN is trapped by his own rope.\nTHE JESTER is escaping.\nIs the worst yet to come?}}"
  let     that_man_status that_man_approaching
 
 _ _
  at      inside_art_gallery
  eq      countdown_jester jester_flees
+ let     pause_parameter pause_font_alternate
+ pause   5
  writeln "{CLASS|bright|\n{CLASS|bright|THE JESTER escapes. THAT MAN, untangling himself, sets off in pursuit. You have lost your only chance of returning to the caves.}}"
  pause   250
  score
