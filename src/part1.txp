@@ -606,6 +606,8 @@ nn_side 163 noun
 ; from the CPC version:
 vb_fart 164 verb
 vb_igno 165 verb
+; acknowledge the cemented-over hole:
+nn_hole 166 noun
 
 ; -- Standard ngPAWS conjuntions (taken from the ngPAWS "start" database) --
 ;
@@ -960,7 +962,7 @@ A gas canister
 /hall_of_the_mountain_king
 {CLASS|bright|You are in the Hall of the Mountain King. Passages lead {ACTION|north|off} {ACTION|south-east|in all} {ACTION|west|directions}.}
 /cemented_floor_room
-{CLASS|bright|You are in a {ACTION|north|N}/{ACTION|south|S} passage. A hole in the floor has been repaired and cemented over.}
+{CLASS|bright|You are in a {ACTION|north|N}/{ACTION|south|S} passage. {ACTION|examine hole|A hole in the floor} has been repaired and cemented over.}
 /y2_room
 {CLASS|bright|You are in a large room. Passages lead {ACTION|south|south} and {ACTION|west|west}. A dirty crack is east. There is a large '{ACTION|Y2|Y2}' on a rock in the room's centre.\n\nA hollow voice says {ACTION|PLUG|'PLUG'}.}
 /window_over_pit
@@ -1594,6 +1596,11 @@ vb_exam nn_spri
  goto    room_1
  backcmd "east"
  desc
+
+vb_exam nn_hole
+ at      cemented_floor_room
+ writeln "{CLASS|bright|Health and Safety made us seal it up after an incident with a grue.}"
+ done
 
 vb_exam _
  at      small_low_cavern
