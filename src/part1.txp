@@ -833,7 +833,7 @@ You can't see any exits
 /object_13_rod
 {CLASS|bright ink-magenta|A black rod with a rusty star on the end}
 /object_14_songbird
-{ACTION|get bird|{CLASS|bright ink-yellow|A cheerful little songbird}}
+{CLASS|bright ink-yellow|A cheerful little songbird}
 /object_15_moon
 {CLASS|bright white|A Venusian Moon-Crystal}#{CLASS|bright|It is a very well-made crystal. A fine example of the crystal-makers art.}
 /object_16_zx81
@@ -2436,6 +2436,7 @@ vb_get nn_log
 
 vb_get nn_bird
  beep2   100 25
+ writeln "{CLASS|bright|Raaaaazzzzzzzzzzzz!}"
  beep2   100 20
  done
 
