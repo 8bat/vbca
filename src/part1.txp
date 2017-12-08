@@ -928,7 +928,7 @@ A gas canister
 /crawling_over_cobbles
 {CLASS|bright|You are {ACTION|west|crawling over cobbles}, muttering something I shall not try too hard to hear. There is a dim light in the {ACTION|east|east}.}
 /debris_room
-{CLASS|bright|You are in the Debris Room.}
+{CLASS|bright|You are in the Debris Room. It is filled with bits and pieces washed in from the surface and has not been tidied in years. It looks a lot like your bedroom.\n\n{ACTION|east|The low crawl} becomes plugged with mud here but {ACTION|west|an awkward passage} leads west.\n\nThere is {ACTION|examine wall|a very rude word on the wall}.}
 /low_room
 {CLASS|bright|You are in a low room.}
 /log_chasm_room
@@ -940,9 +940,9 @@ A gas canister
 /secret_hiding_place
 {CLASS|center bright|THE SECRET HIDING PLACE}
 /habitat_cave
-{CLASS|bright|You are in the Habitat Cave. It is distinguished by sackcloth curtains and square pieces of furniture in unvarnished pine made by &#34;carpenters&#34; who would not know a lathe if they were hit over the head with it. These and other items of like nature, hideous as they look in the town houses of people who ought to know better, seem strangely appropriate in a cave. Objectively, this cave is not large, but the cold bleakness of its furnishings gives it a sense of endlessness. Exits, thankfully, are {ACTION|north|north}, {ACTION|east|east} and {ACTION|west|west}.}
+{CLASS|bright|You are in the Habitat Cave. It is distinguished by sackcloth curtains and square pieces of furniture in unvarnished pine made by &#34;carpenters&#34; who would not know a lathe if they were hit over the head with it.\n\nThese and other items of like nature, hideous as they look in the town houses of people who ought to know better, seem strangely appropriate in a cave.\n\nObjectively, this cave is not large, but the cold bleakness of its furnishings gives it a sense of endlessness.\n\nExits, thankfully, are {ACTION|north|north}, {ACTION|east|east} and {ACTION|west|west}.}
 /twee_chamber
-{CLASS|bright|You are in the Twee Chamber.}
+{CLASS|bright|You are in the Twee Chamber. The wallpaper is a Laura Ashley pattern of pink flowers on blue, the hangings are the same, only blue on pink.\n\nAfter the barren wastes of the Habitat Cave this room seems almost a relief. But it is a dead end and leads only {ACTION|south|back to Habitat}.}
 /avante_garde_room
 {CLASS|bright|As you enter this room, the first thing to appal your eyes is the highly polished black glass floor. The second is the {ACTION|examine sideboard|stainless steel sideboard}. This is the 193Os Avant-Garde Room. As you stand, numbly gazing, you realise that all the so-called &#34;innovations&#34; of post-196O decor had not only been done in the 193Os but had actually been done worse. Stainless steel archways lead {ACTION|east|east} and {ACTION|west|west}.}
 /live_space_invaders_room
@@ -952,7 +952,7 @@ A gas canister
 /sloping_canyon
 {CLASS|bright|You are in an awkward, sloping {ACTION|east|E}/{ACTION|west|W} canyon.}
 /splendid_chamber
-{CLASS|bright|You are in a splendid chamber thirty feet high.}
+{CLASS|bright|You are in a splendid chamber thirty feet high. The {ACTION|examine wall|walls} are frozen rivers of orange sorbet. In the centre stands a {ACTION|examine pillar|pillar} adorned with ornate letters, and here the marble flags are somewhat worn. {ACTION|east|An awkward passage} and {ACTION|west|a good canyon} exit to east and west.}
 /west_end_of_upper_floor
 {CLASS|bright|At your feet is a pit breathing traces of white mist. The passage west ends here but for {ACTION|west|an old crack}. {ACTION|down|Rough stone steps} lead down.}
 /old_crack
@@ -974,7 +974,7 @@ A gas canister
 /high_dark_passage
 {CLASS|bright|You are in a high dark passage. Somewhere in the blackness above you hear occasional squeals and the rustle of leathery wings.}
 /bat_cave ; TODO: consider adding relevant links: {ACTION|exam coin|exam coin}, {ACTION|get hipp|get hipp}, {ACTION|nort|nort}, {ACTION|sout|sout}
-{CLASS|bright|You have entered a vast spacious cavern. Dozens of bats wheel overhead. This is the Bat Cave. On one wall is {ACTION|examine coin|a coin of massive proportions}. On another, {ACTION|examine dinosaur|a stuffed dinosaur.}}
+{CLASS|bright|You have entered a vast spacious cavern. Dozens of bats wheel overhead. This is the Bat Cave. On one wall is {ACTION|examine coin|a coin of massive proportions}. On another, {ACTION|examine dinosaur|a stuffed dinosaur}.\n\nFrom a low cavern in the south glint what would seem to be the {ACTION|south|two red eyes} of some monstrous creature.}
 /hall_of_mists_west_fissure
 {CLASS|bright|You are travelling {ACTION|west|west} past {ACTION|east|the fissure} in the Hall of Mists.}
 /hall_of_mists_west_end
@@ -984,7 +984,7 @@ A gas canister
 /east_end_of_hall
 {CLASS|bright|You are at the east end of a hall. The floor ahead has collapsed, making further progress impossible. However, the rubble from the massive rock-fall slopes downward, allowing {ACTION|downward|a precarious descent} to the level below. {ACTION|north|A hole in the rock}, six feet up, runs north.}
 /small_low_cavern
-{CLASS|bright|You are in a small low cavern.}
+{CLASS|bright|You are in a small low cavern. You now see that the two red glints came from the tail lights of {ACTION|enter|a powerful, low-slung automobile}. It is jet black with a bat-like mask on the front and a sort of fin along the back resembling a bat's wing.}
 /batmobile
 {CLASS|bright|You are seated in the driver's seat. The car looks ready to roll except that there is only a blank rock face ahead.}
 /batcave_exit_tunnel
@@ -994,9 +994,9 @@ A gas canister
 /outside_le_chat_noir
 {CLASS|bright|You are outside {ACTION|enter|{CLASS|ink-yellow|Le Chat Noir}}, a restaurant patronised by the rich and famous.\nRoads lead {ACTION|north|north}, {ACTION|south|south} and {ACTION|west|west}}
 /inside_le_chat_noir
-{CLASS|bright|You are inside {CLASS|ink-yellow|Le Chat Noir{CLASS|ink-white|. At one table sit a party from St. Br*d*'s, squirting champagne and throwing rolls.}}}
+{CLASS|bright|You are inside {CLASS|ink-yellow|Le Chat Noir}. At one table sit a party from St. Br*d*'s, squirting champagne and throwing rolls.\n\nElsewhere dine the board of directors of Oc**n S*ftw*r*. They are wearing black shirts and white ties. From the cases placed neatly at their feet, it would appear that many of them play the violin.}
 /sophisticated_parser_cave
-{CLASS|bright|You are in the Brand New Sophisticated Parser Cave.}
+{CLASS|bright|You are in the Brand New Sophisticated Parser Cave. One wall is covered by {ACTION|examine the curtains covering the wall|crimson silk curtains} which look suspiciously as if {ACTION|look behind the crimson|something is concealed behind them}.}
 /swear_box
 {CLASS|bright|You are in the Swear Box.\nIt is a bare room with neither windows nor doors.\nIn one corner is a washstand and a cake of soap.\nYou know what to do.}
 /outside_art_gallery
@@ -1018,7 +1018,7 @@ A gas canister
 /inside_gotham_museum
 {CLASS|bright|You are inside Gotham Museum.}
 /inside_jewellers_shop
-{CLASS|bright|You are inside the jeweller's.}
+{CLASS|bright|You are inside the jeweller's. Approximately every forty-seven seconds a gentleman in a black shirt with a white tie arrives with a slinky lady draped over his arm and buys her some trinket whose enormous price is matched only by its colossal tastelessness.}
 /inside_gotham_bank
 {CLASS|bright|You are in the bank. Approximately every thirty seconds a gentleman in a black shirt with a white tie enters to deposit some outrageous sum of money.}
 /outside_gotham_infirmary
@@ -1028,11 +1028,11 @@ A gas canister
 /outside_gotham_police_station
 {CLASS|bright|You are outside {ACTION|Enter|Gotham Police Headquarters}.\nRoads lead {ACTION|south|south} and {ACTION|east|east}. {ACTION|north|A little alleyway} leads north.}
 /inside_gotham_police_station
-{CLASS|bright|You are inside the station house.}
+{CLASS|bright|You are inside the station house. In one corner, distinguished, white-haired Commissioner Gormless offers a few encouraging words to a rookie cop. From a desk at the back of the room the words &#34;Book 'im, Sam&#34; ring out with monotonous regularity approximately every thirty seconds as a new gentleman in a black shirt with a white tie is brought in.\n\nThe station sergeant approaches you. {CLASS|ink-cyan|&#34;You got some business here, Mac?&#34;} he enquires.}
 /behind_gotham_police_station
-{CLASS|bright|You are in a back alley behind the station house. {ACTION|examine wall|The station wall} is tall and black, punctuated only by a series of dismal barred windows.}
+{CLASS|bright|You are in a back alley behind the station house. {ACTION|examine wall|The station wall} is tall and black, punctuated only by a series of dismal barred windows. Approximately every forty-seven seconds a gentleman in a black shirt with a white tie arrives, looks furtively around him and drops a file or a revolver through the bars of one of the windows. Occasionally a slinky lady in a tight skirt breaks the monotony by doing the same thing.}
 /gotham_police_station_roof
-{CLASS|bright|You are on the roof of the station.}
+{CLASS|bright|You are on the roof of the station. A panoramic view of Gotham stretches out before you and the teeming multitudes below exemplify every field of human endeavour: protection, numbers running, bootlegging, blackmail, extortion...\n\nBut why go on? All human life is here. The man who is tired of Gotham is tired of the rackets.}
 /room_63
 {CLASS|center|\n{CLASS|bright ink-yellow|WELCOME TO ADVENTURE\n\n}}{CLASS|bright ink-yellow|Hi. I'm Trixie, spelunk me.\n\nWhat I mean is, I've done Caves before, so I've got the job of showing new adventurers around.\n\nI'm a prefect. So you'll have to behave yourself.\n\nLet's have a look at you.\nHealthy enough, I suppose.\nDo with a bit more exercise.\nStill, you'll soon get that.\nAlright, you'll do.\n\nLet's get going.}
 /64
@@ -3518,72 +3518,11 @@ _ _
  writeln "{CLASS|bright|Well, not that small. I notice you are out of breath and perspiring freely so I hope you will not fuss when I tell you that this hill plays no particular part in the adventure and I have no idea why it's here\n\nContrary to the laws of geography, going {ACTION|north|north} will take you back to the road.\n\n\nDon't say I never tell you anything.}"
 
 _ _
- at      debris_room
- zero    countdown_location_description
- present object_0_lamp
- writeln "{CLASS|bright|\nThe room is filled with bits and pieces washed in from the surface and has not been tidied in years. It looks a lot like your bedroom.\n\n{ACTION|east|The low crawl} becomes plugged with mud here but {ACTION|west|an awkward passage} leads west.\n\nThere is {ACTION|examine wall|a very rude word on the wall}.}"
-
-_ _
  at      live_space_invaders_room
  zero    countdown_location_description
  present object_0_lamp
  anykey
- writeln "\n{CLASS|bright|You are in a dark place. High above you hover several rows of brightly-coloured alien craft.\n\nAs you watch, you realise that they are also moving slowly but inexorably... DOWN TOWARD YOU.\n\nYou can move {ACTION|left|LEFT}, {ACTION|right|RIGHT} or {ACTION|fire|FIRE}}"
-
-_ _
- at      splendid_chamber
- zero    countdown_location_description
- present object_0_lamp
- absent  object_25_cord
- writeln "\n{CLASS|bright|The {ACTION|examine wall|walls} are frozen rivers of orange sorbet. In the centre stands a {ACTION|examine pillar|pillar} adorned with ornate letters, and here the marble flags are somewhat worn. {ACTION|east|An awkward passage} and {ACTION|west|a good canyon} exit to east and west.}"
-
-_ _
- at      bat_cave
- zero    countdown_location_description
- present object_0_lamp
- zero    yesno_entered_batmobile
- writeln "\n{CLASS|bright|From a low cavern in the south glint what would seem to be the two red eyes of some monstrous creature.}"
-
-_ _
- at      small_low_cavern
- zero    countdown_location_description
- present object_0_lamp
- zero    yesno_entered_batmobile
- writeln "\n{CLASS|bright|You now see that the two red glints came from the tail lights of {ACTION|enter|a powerful, low-slung automobile}. It is jet black with a bat-like mask on the front and a sort of fin along the back resembling a bat's wing.}"
-
-_ _
- at      sophisticated_parser_cave
- zero    countdown_location_description
- present object_0_lamp
- writeln "{CLASS|bright|\n{CLASS|bright|One wall is covered by {ACTION|examine the curtains covering the wall|crimson silk curtains} which look suspiciously as if {ACTION|look behind the crimson|something is concealed behind them}.}}"
-
-_ _
- at      inside_jewellers_shop
- zero    countdown_location_description
- writeln "\n{CLASS|bright|Approximately every forty-seven seconds a gentleman in a black shirt with a white tie arrives with a slinky lady draped over his arm and buys her some trinket whose enormous price is matched only by its colossal tastelessness.}"
-
-_ _
- at      inside_gotham_police_station
- writeln "\n{CLASS|bright|In one corner, distinguished, white-haired Commissioner Gormless offers a few encouraging words to a rookie cop. From a desk at the back of the room the words &#34;Book 'im, Sam&#34; ring out with monotonous regularity approximately every thirty seconds as a new gentleman in a black shirt with a white tie is brought in.\n\nThe station sergeant approaches you. {CLASS|ink-cyan|&#34;You got some business here, Mac?&#34;} he enquires.}"
-
-_ _
- at      behind_gotham_police_station
- zero    countdown_location_description
- writeln "\n{CLASS|bright|Approximately every forty-seven seconds a gentleman in a black shirt with a white tie arrives, looks furtively around him and drops a file or a revolver through the bars of one of the windows. Occasionally a slinky lady in a tight skirt breaks the monotony by doing the same thing.}"
-
-_ _
- at      gotham_police_station_roof
- zero    countdown_location_description
- writeln "\n{CLASS|bright|A panoramic view of Gotham stretches out before you and the teeming multitudes below exemplify every field of human endeavour: protection, numbers running, bootlegging, blackmail, extortion...\n\nBut why go on? All human life is here. The man who is tired of Gotham is tired of the rackets.}"
-
-_ _
- at      inside_le_chat_noir
- writeln "\n{CLASS|bright|Elsewhere dine the board of directors of Oc**n S*ftw*r*. They are wearing black shirts and white ties. From the cases placed neatly at their feet, it would appear that many of them play the violin.}"
-
-_ _
- at      twee_chamber
- zero    countdown_location_description
- writeln "\n{CLASS|bright|The wallpaper is a Laura Ashley pattern of pink flowers on blue, the hangings are the same, only blue on pink.\n\nAfter the barren wastes of the Habitat Cave this room seems almost a relief. But it is a dead end and leads only {ACTION|south|back to Habitat}.}"
+ writeln "{CLASS|bright|You are in a dark place. High above you hover several rows of brightly-coloured alien craft.\n\nAs you watch, you realise that they are also moving slowly but inexorably... DOWN TOWARD YOU.\n\nYou can move {ACTION|left|LEFT}, {ACTION|right|RIGHT} or {ACTION|fire|FIRE}}"
 
 _ _
  at      part_2_room
@@ -3665,7 +3604,7 @@ _ _
 _ _
  at      inside_le_chat_noir
  anykey
- writeln "{CLASS|bright|\nA waiter approaches.\n\n{CLASS|ink-cyan|&#34;Pardon my mentioning it,&#34;} he remarks, {CLASS|ink-cyan|&#34;but Sir's clothes appear more suitable for potholing than for dining. Perhaps Sir would care to return after a change of attire.&#34;}}"
+ writeln "{CLASS|bright|A waiter approaches.\n\n{CLASS|ink-cyan|&#34;Pardon my mentioning it,&#34;} he remarks, {CLASS|ink-cyan|&#34;but Sir's clothes appear more suitable for potholing than for dining. Perhaps Sir would care to return after a change of attire.&#34;}}"
  let     pause_parameter pause_sound_effect_tone_decreasing
  anykey
  pause   100
