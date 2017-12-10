@@ -3157,9 +3157,9 @@ _ _
 _ _
  at      batcave_exit_tunnel
  anykey
- writeln "\n{CLASS|bright ink-yellow|The powerful headlights suddenly lance down the tunnel, showing{CLASS|ink-yellow| it to be much longer than you had thought.}}"
+ writeln "{CLASS|bright ink-yellow|The powerful headlights suddenly lance down the tunnel, showing{CLASS|ink-yellow| it to be much longer than you had thought.}}"
  anykey
- writeln "{CLASS|bright|\n{CLASS|bright|The engines roar into life.}}"
+ writeln "{CLASS|bright|The engines roar into life.}"
  anykey
  cls
  writeln "{CLASS|bright ink-magenta|The mighty machine plunges down the tunnel, devouring mile after incredible mile of die-straight underground freeway.}"
@@ -3297,7 +3297,7 @@ _ _
  isat    object_16_zx81 room_noncreated
  present object_0_lamp
  anykey
- writeln "{CLASS|bright|\n{CLASS|bright|A spindly balding creature with a neat ginger beard and spectacles emerges from the gloom.\n\nHe throws something which {ACTION|examine wall|lodges in the wall} with a sickening thud, then rushes off cackling wildly.}}"
+ writeln "{CLASS|bright|A spindly balding creature with a neat ginger beard and spectacles emerges from the gloom.\n\nHe throws something which {ACTION|examine wall|lodges in the wall} with a sickening thud, then rushes off cackling wildly.}"
  create  object_16_zx81
 
 _ _
@@ -3456,7 +3456,7 @@ _ _
  eq      countdown_that_man that_man_initial_value
  lt      that_man_status that_man_signalled
  anykey
- writeln "\n\n{CLASS|bright|{CLASS|ink-yellow|&#34;One moment,&#34;} says THAT MAN. {CLASS|ink-yellow|&#34;I just have to visit THAT PLACE before our journey.&#34;}\n\nThe caped figure disappears into a small brick building.}"
+ writeln "{CLASS|bright|{CLASS|ink-yellow|&#34;One moment,&#34;} says THAT MAN. {CLASS|ink-yellow|&#34;I just have to visit THAT PLACE before our journey.&#34;}\n\nThe caped figure disappears into a small brick building.}"
 
 _ _
  notzero yesno_gotham_theft
@@ -3493,7 +3493,7 @@ _ _
  at      inside_gotham_bank
  set     yesno_got_booted
  anykey
- writeln "\n{CLASS|bright|A pretty bank-clerkette comes up to you and examines your wallet. {CLASS|ink-cyan|&#34;No accounts opened with less than $25O,OOO,&#34;} she says.}"
+ writeln "{CLASS|bright|A pretty bank-clerkette comes up to you and examines your wallet. {CLASS|ink-cyan|&#34;No accounts opened with less than $25O,OOO,&#34;} she says.}"
  anykey
  let     pause_parameter pause_sound_effect_tone_decreasing
  pause   100
