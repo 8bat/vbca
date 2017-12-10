@@ -3165,7 +3165,7 @@ _ _
  writeln "{CLASS|bright ink-magenta|The mighty machine plunges down the tunnel, devouring mile after incredible mile of die-straight underground freeway.}"
  beep2   250 20
  beep2   250 30
- beep2   100 205
+ beep2   100 200
  clear   countdown_that_man
  clear   yesno_got_booted
  clear   that_man_status
