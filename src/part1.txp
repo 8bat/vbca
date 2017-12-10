@@ -1861,7 +1861,7 @@ vb_open nn_can
  present object_21_can
  writeln "{CLASS|bright|The sound of tumultuous applause roars forth from the can.}"
  let     pause_parameter pause_sound_effect_white_noise
- pause   20
+ pause   10
 
 vb_open nn_can
  present object_21_can
