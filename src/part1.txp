@@ -3321,6 +3321,7 @@ _ _
  at      splendid_chamber
  lt      game_progress 3
  notcarr object_13_rod
+ present object_14_songbird
  writeln "\n{CLASS|bright|{CLASS|ink-cyan|&#34;No black rod, what?&#34;} chirps the bird. {CLASS|ink-cyan|&#34;I can see you've played this game before.&#34;}}"
  let     game_progress 3
 
