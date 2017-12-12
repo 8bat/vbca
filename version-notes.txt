@@ -1,0 +1,73 @@
+Each version of The Very Big Cave Adventure has some differences.  Some are technical (e.g. more advanced audio and graphics in the C64 version), some are gameplay-related (e.g. clearing up the art gallery text after the initial release).
+
+If you want to see differences between platforms in the original game, examine the decompiled sources.
+
+If you want to see the platform-specific changes in the web-based version, read through the list of commits.  Changes that were made specifically to match other versions should be fairly well labeled, although changes *inspired* by different versions are harder to identify.
+
+Here are some specific changes I looked at while writing the game:
+
+* CPC
+  * "draw" and "move" are synonyms for "unlock"
+  * "taste" is a synonym for "lick"
+  * "exit" is a synonym for "out"
+  * "FART _" does something
+  * "IGNO _" does something
+  * "wand" is a synonym for "rod"
+  * some different system messages
+  * desks are not described as empty (because they're not)
+  * "string" becomes "stream" of polysyllables
+  * wellie-house text is different
+  * "window over pit" description becomes a "deep pit"
+  * "vast" removed from bat cave description
+  * text slightly improved for:
+    * west end of passage
+    * east end of hall
+    * heart of gotham
+    * exam bubb
+    * wate pell
+    * falling in a sploosh hole
+  * up from batmobile goes to small_low_cavern
+  * commodore -> sugar
+  * Fence has message when you GET his stuff
+* C64
+  * "commodore" -> "spectrum"
+  * "move" is a synonym for "draw"
+  * "extinguish" and "turn" are synonyms for "switch" (off)
+  * "searchlight" is a synonym for "switch"
+  * "FART _" does something (sound effect and CPC text)
+  * "mirror" is a synonym for "look" (actually just reuses the ID - "look" is a verb, "mirror" is a noun)
+  * new word: "sideboard"
+  * "WAVE _" at window_over_pit does something
+  * "PLUG _" writes different text
+  * added room 18 (Avante Garde room)
+    * plus exits from nearby rooms
+    * "EXAM SIDE" (...board) does something
+    * "EXAM L" (i.e. examine mirror) does something
+  * even better text for window_over_pit
+  * "EXAM CAR" does something
+  * "HIT _" does something in the art gallery
+  * "HIT L" (break mirror?) in the Avante Garde Room does something
+  * better sound effects throughout
+    * uses the C64's SID chip, which is hard to emulate
+* STDCAV
+  * initial description
+  * Message 38: The inevitable happens and you fall in a pit. (if you water the pellet in the wrong place)
+  * newspaper near news boy
+  * "There is a weird sensation, then suddenly..." (pause) "... nothing happens"
+  * description for moon-crystal, cupboard, utility belt
+  * can drink the water
+  * some text for the parser curtains
+  * "commodore" -> "clones"
+  * Fixes space invaders text
+* Multiple versions
+  * north from east_end_of_hall goes to hall_of_mists_west_end
+  * Jester text cleaned up
+    * all other versions (even spec+3) remove the broken Spectrum text
+  * different "get bird" responses
+    * CPC makes even less sense to me, C64 response suggests maybe the sound effect is supposed to be raspberries?
+    * the Spectrum sound effect for "get bird" resembles the C64 sound effect for "fart", which again suggests raspberries
+    * STDCAV response resembles the CPC response
+    * how do you blow a raspberry if you have a beak?
+    * consider using the exact same effect in both places, to indicate the same
+  * many extra room messages are merged with the main room description
+    * C64, CPC, STDCAV
