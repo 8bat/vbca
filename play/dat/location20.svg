@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 2560 960" style="fill-rule:evenodd;stroke-linecap:square;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-near-wall" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c0c0c0" x="0" y="0" width="40" height="20" />
+      <rect fill="#c00000" x="0" y="10" width="10" height="10" />
+      <rect fill="#c00000" x="10" y="0" width="10" height="10" />
+      <rect fill="#c00000" x="20" y="10" width="20" height="10" />
+    </pattern>
+    <pattern id="fill-archway-wall" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c0c0c0" x="0" y="0" width="40" height="20" />
+      <rect fill="#c00000" x="0" y="10" width="40" height="10" />
+    </pattern>
+  </defs>
+
+  <rect id="floor" fill="#c0c0c0" x="0" y="0" width="2560" height="960" />
+
+  <!-- far wall -->
+  <path id="far-wall" fill="#c0c0c0" stroke="none" d="M 520,640 l -25,-235 l -5,25 v 230 l -195,90 l -60,-275 l -25,-335 l 105,-65 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -30,85 l -405,-40 v -285 l -5,-20 l -35,300 h -45 l -360,-30 l -475,20 l -405,20 Z" />
+  <path id="far-wall-left-edge" fill="none" stroke="#c00000" d="M 295,675 l 230,-110 l 400,-20 M 520,560 l -25,-235 l 40,-200" />
+  <path id="far-wall-right-edge" fill="none" stroke="#c00000" d="M 1765,555 l 500,50 M 1815,555 l 30,-300 l -40,-160" />
+
+  <!-- near wall -->
+  <path id="near-wall" fill="url(#fill-near-wall)" stroke="none" d="M 210,140 l 105,-65 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,25 l 20,-485 v 500 l 95,50 v -955 h -2560 v 950 l 140,-55 l 5,-490 l 20,475 l 160,-15 l -90,-390 Z" />
+  <path id="near-wall-edge" fill="none" stroke="#c00000" d="M 85,225 l 230,-150 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,30 l 110,60
+M 5,955 l 160,-70 l 160,-20 l -90,-390 l -20,-330
+M 165,875 l -20,-470
+M 2445,885 l 20,-480" />
+
+  <!-- space invaders -->
+  <path id="invader-1" fill="#00c000" stroke="#00c000" d="M 1005,645 l -30,-30 v -80 l -80,-80 l 160,-160 l 160,160 l -80,80 v 80 l -40,40 v -120 h -80 v 120 Z M 1015,505 l -50,-50 l 60,-60 v 110 Z M 1095,505 l 50,-50 l -60,-60 v 110 Z" />
+  <path id="invader-2" fill="#c0c000" stroke="#c0c000" d="M 1165,945 l -30,-30 v -80 l -80,-80 l 160,-160 l 160,160 l -80,80 v 80 l -40,40 v -120 h -80 v 120 Z M 1175,805 l -50,-50 l 60,-60 v 110 Z M 1255,805 l 50,-50 l -60,-60 v 110 Z" />
+  <path id="invader-3" fill="#c0c000" stroke="#c0c000" d="M 1355,745 l -25,-25 v -60 l -60,-60 l 120,-120 l 120,120 l -60,60 v 60 l -30,30 v -90 h -60 v 90 Z M 1360,640 l -40,-40 l 45,-45 v 85 Z M 1420,640 l 35,-40 l -45,-45 v 85 Z" />
+  <path id="invader-4" fill="#00c000" stroke="#00c000" d="M 1575,595 l -25,-25 v -60 l -60,-60 l 120,-120 l 120,120 l -60,60 v 60 l -30,30 v -90 h -60 v 90 Z M 1580,490 l -40,-40 l 45,-45 v 85 Z M 1640,490 l 35,-40 l -45,-45 v 85 Z" />
+  <path id="invader-5" fill="#c000c0" stroke="#c000c0" d="M 1655,945 l -25,-25 v -60 l -60,-60 l 120,-120 l 120,120 l -60,60 v 60 l -30,30 v -90 h -60 v 90 Z M 1660,840 l -40,-40 l 45,-45 v 85 Z M 1720,840 l 35,-40 l -45,-45 v 85 Z" />
+
+</svg>

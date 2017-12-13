@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 2560 960" style="stroke-linecap:square;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-near-wall" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c0c0c0" x="0" y="0" width="40" height="20" />
+      <rect fill="#000000" x="0" y="10" width="10" height="10" />
+      <rect fill="#000000" x="10" y="0" width="10" height="10" />
+      <rect fill="#000000" x="20" y="10" width="20" height="10" />
+    </pattern>
+  </defs>
+
+  <rect id="floor" fill="#c0c0c0" x="0" y="0" width="2560" height="960" />
+
+  <!-- far wall -->
+  <path id="far-wall" fill="#c0c0c0" stroke="none" d="M 520,640 l -25,-235 l -5,25 v 230 l -195,90 l -60,-275 l -25,-335 l 105,-65 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -30,85 l -405,-40 v -285 l -5,-20 l -35,300 h -45 l -360,-30 l -475,20 l -405,20 Z" />
+  <path id="far-wall-left-edge" fill="none" stroke="#000000" d="M 295,675 l 230,-110 l 400,-20 M 520,560 l -25,-235 l 40,-200" />
+  <path id="far-wall-middle" fill="none" stroke="#000000" d="M 935,545 h 800" />
+
+  <path id="far-wall-right-edge" fill="none" stroke="#000000" d="M 1765,555 l 500,50 M 1815,555 l 30,-300 l -40,-160" />
+
+  <!-- near wall -->
+  <path id="near-wall" fill="url(#fill-near-wall)" stroke="none" d="M 210,140 l 105,-65 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,25 l 20,-485 v 500 l 95,50 v -955 h -2560 v 950 l 140,-55 l 5,-490 l 20,475 l 160,-15 l -90,-390 Z" />
+  <path id="near-wall-edge" fill="none" stroke="#000000" d="M 85,225 l 230,-150 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,30 l 110,60
+M 5,955 l 160,-70 l 160,-20 l -90,-390 l -20,-330
+M 165,875 l -20,-470
+M 2445,885 l 20,-480" />
+
+  <!-- cupboard -->
+  <rect id="cupboard-wall" fill="#ffff00" stroke="#ff0000" x="1525" y="85" width="230" height="550" />
+  <rect id="cupboard-door" fill="#ffff00" stroke="#ff0000" x="1555" y="155" width="160" height="320" />
+  <rect id="cupboard-handle" fill="#ff0000" stroke="#ff0000" x="1575" y="275" width="50" height="60" />
+
+  <!-- table -->
+  <path id="table" fill="#ffff00" stroke="#ff0000" d="M 1355,655 v 60 h -790 v -70 h 790 Z M 1275,725 v 150 h -70 v -160 M 715,725 v 150 h -70 v -160" />
+
+</svg>

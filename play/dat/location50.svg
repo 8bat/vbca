@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 2560 960" style="stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <pattern id="fill-pillar-column-1" x="0" y="0" width="20" height="1" patternUnits="userSpaceOnUse">
+      <rect fill="#ffffff" x="0" y="0" width="20" height="1" />
+      <rect fill="#000000" x="5" y="0" width="10" height="1" />
+    </pattern>
+    <pattern id="fill-pillar-column-2" x="0" y="0" width="20" height="1" patternUnits="userSpaceOnUse">
+      <rect fill="#ffffff" x="0" y="0" width="20" height="1" />
+      <rect fill="#000000" x="5" y="0" width="10" height="1" />
+    </pattern>
+    <pattern id="fill-pillar-support" x="0" y="0" width="1" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#c0c0c0" x="0" y="0" width="1" height="20" />
+      <rect fill="#000000" x="0" y="0" width="1" height="10" />
+    </pattern>
+  </defs>
+
+  <!-- wall -->
+  <rect id="upper-wall" fill="#ff00ff" x="0" y="0" width="2560" height="640" />
+  <path id="skirting-board" fill="none" stroke="#000000" d="M 0,635 h 2555" />
+  <rect id="lower-wall" fill="#ff00ff" x="0" y="640" width="2560" height="320" />
+
+  <path id="door" fill="#ff0000" stroke="#ffffff" d="M 1595,635 v -630 h -630 v 630 h 630 Z M 1275,5 v 630" />
+
+  <path id="door-panels" fill="none" stroke="#ffffff" d="M 1015,275 v -230 h 200 v 240 h -200 Z M 1015,565 v -230 h 200 v 240 h -200 Z M 1335,565 v -230 h 200 v 240 h -200 Z M 1335,275 v -230 h 200 v 240 h -200 Z" />
+
+  <!-- pillar 1 -->
+  <path id="pillar-column-1" fill="url(#fill-pillar-column-1)" stroke="#000000" d="M 725,485 v -480 h 150 v 480" />
+  <path id="pillar-support-1" fill="url(#fill-pillar-support)" stroke="#000000" d="M 955,565 l -80,-80 h -150 l -80,80" />
+  <rect id="pillar-base-1" fill="#ffffff" stroke="#000000" x="645" y="565" width="310" height="70" />
+
+  <!-- pillar 2 -->
+  <path id="pillar-column-2" fill="url(#fill-pillar-column-2)" stroke="#000000" d="M 1685,485 v -480 h 150 v 480" />
+  <path id="pillar-support-2" fill="url(#fill-pillar-support)" stroke="#000000" d="M 1915,565 l -80,-80 h -150 l -80,80" />
+  <rect id="pillar-base-2" fill="#ffffff" stroke="#000000" x="1605" y="565" width="310" height="70" />
+
+  <!-- steps -->
+  <path id="steps-edge" fill="#ffffff" stroke="#ffffff" d="M 815,715 l 150,-70 h 630 l 160,80 v 80 l 160,80 v 70 h -1260 v -70 l 160,-80 v -80 Z" />
+
+  <rect id="step-vertical-1" fill="#000000" stroke="none" x="660" y="890" width="1250" height="60" />
+  <rect id="step-vertical-2" fill="#000000" stroke="none" x="820" y="730" width="930" height="70" />
+
+</svg>

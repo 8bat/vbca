@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 2560 960" style="stroke-linecap:square;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-near-wall" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="40" height="20" />
+      <rect fill="#000000" x="0" y="10" width="10" height="10" />
+      <rect fill="#000000" x="10" y="0" width="10" height="10" />
+      <rect fill="#000000" x="20" y="10" width="20" height="10" />
+    </pattern>
+    <pattern id="fill-archway-wall" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="40" height="20" />
+      <rect fill="#000000" x="0" y="10" width="40" height="10" />
+    </pattern>
+    <pattern id="fill-far-wall" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="40" height="20" />
+      <rect fill="#000000" x="0" y="10" width="10" height="10" />
+    </pattern>
+  </defs>
+
+  <rect id="floor" fill="#ffff00" x="0" y="0" width="2560" height="960" />
+
+  <!-- far wall -->
+  <path id="far-wall" fill="url(#fill-far-wall)" stroke="none" d="M 520,640 l -25,-235 l -5,25 v 230 l -195,90 l -60,-275 l -25,-335 l 105,-65 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -30,85 l -405,-40 v -285 l -5,-20 l -35,300 h -50 l -405,10 l 70,-170 l -20,-240 l -260,-50 l -90,10 l -160,50 l -30,240 l 60,135 l -400,25 Z" />
+  <path id="far-wall-left-edge" fill="none" stroke="#000000" d="M 295,755 l 230,-110 l 400,-20 M 520,640 l -25,-235 l 40,-200" />
+  <path id="far-wall-right-edge" fill="none" stroke="#000000" d="M 1365,645 l 400,-10 l 500,50 M 1815,635 l 30,-300 l -40,-160" />
+
+  <!-- near wall -->
+  <path id="near-wall" fill="url(#fill-near-wall)" stroke="none" d="M 210,140 l 105,-65 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,25 l 20,-485 v 500 l 95,50 v -955 h -2560 v 950 l 140,-55 l 5,-490 l 20,475 l 160,-15 l -90,-390 Z" />
+  <path id="near-wall-edge" fill="none" stroke="#000000" d="M 85,225 l 230,-150 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,30 l 110,60
+M 5,955 l 160,-70 l 160,-20 l -90,-390 l -20,-330
+M 165,875 l -20,-470
+M 2445,885 l 20,-480" />
+
+  <!-- archway -->
+  <path id="archway-shadow" fill="#000000" stroke="none" d="M 1145,185 l 260,50 l 20,240 l -50,110 h -335 l -70,-140 l -10,-160 l 175,-100 Z" />
+  <path id="archway-wall" fill="url(#fill-archway-wall)" stroke="none" d="M 930,620 l -65,-135 l 30,-240 l 160,-50 l 85,-10 l -175,100 l 10,160 l 65,130 Z" />
+  <path id="archway-edge" fill="none" stroke="#000000" d="M 1415,505 l -130,10 l -160,30 l -190,80 l -70,-140 l 30,-240 l 160,-50 l 90,-10 l 260,50 l 20,240 l -70,170" />
+
+  <!-- eyes -->
+  <circle id="eye-1" cx="1065" cy="395" r="25" stroke="none" fill="#ff0000" />
+  <circle id="eye-2" cx="1325" cy="395" r="25" stroke="none" fill="#ff0000" />
+
+</svg>

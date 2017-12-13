@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 2560 960" style="stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <pattern id="brick-fill" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" fill="#000000" width="40" height="20" />
+      <rect x="5" y="10" fill="#ffff00" width="30" height="10" />
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect id="sky" fill="#00ffff" x="0" y="0" width="2560" height="560" />
+  <path id="leaves" fill="#00ff00" stroke="none" d="M 0,0 v 320 h 645 l 90,-25 l 25,-50 l 25,50 l 90,25 h 670 l 90,-25 l 25,-50 l 25,50 l 90,25 h 785 v -320" />
+  <rect id="grass" fill="#00ff00" x="0" y="560" width="2560" height="400" />
+
+  <!-- trees -->
+  <path id="tree1" fill="#ff0000" stroke="#ff0000" d="M 205,785 l 45,-90 l 22.5,-292.5 l -37.5,-157.5 l 30,15 l 22.5,60 l 37.5,-157.5 l 52.5,-45 l -45,180 l 7.5,82.5 l 7.5,285 l 22.5,67.5 l 67.5,52.5 l -60,0 l -75,-52.5 l -60,52.5 l -35,0 Z" />
+  <path id="tree2" fill="#ff0000" stroke="#ff0000" d="M 425,945 l 60,-120 l 30,-390 l -50,-210 l 40,20 l 30,80 l 50,-210 l 70,-60 l -60,240 l 10,110 l 10,380 l 30,90 l 90,70 l -80,0 l -100,-70 l -80,70 Z" />
+  <path id="tree3" fill="#ff0000" stroke="#ff0000" d="M 1875,945 l 60,-120 l 30,-390 l -50,-210 l 40,20 l 30,80 l 50,-210 l 70,-60 l -60,240 l 10,110 l 10,380 l 30,90 l 90,70 l -80,0 l -100,-70 l -80,70 Z" />
+  <path id="tree4" fill="#ff0000" stroke="#ff0000" d="M 2275,785 l 45,-90 l 22.5,-292.5 l -37.5,-157.5 l 30,15 l 22.5,60 l 37.5,-157.5 l 52.5,-45 l -45,180 l 7.5,82.5 l 7.5,285 l 22.5,67.5 l 67.5,52.5 l -60,0 l -75,-52.5 l -60,52.5 l -35,0 Z" />
+
+  <path id="tree5" fill="#ff0000" stroke="#ff0000" d="M 1135,765 l 45,-90 l 22.5,-292.5 l -37.5,-157.5 l 30,15 l 22.5,60 l 37.5,-157.5 l 52.5,-45 l -45,180 l 7.5,82.5 l 7.5,285 l 22.5,67.5 l 67.5,52.5 l -60,0 l -75,-52.5 l -60,52.5 Z" />
+  <path id="tree6" fill="#ff0000" stroke="#ff0000" d="M 895,705 l 37.5,-75 l 18.75,-243.75 l -31.25,-131.25 l 25,12.5 l 18.75,50 l 31.25,-131.25 l 43.75,-37.5 l -37.5,150 l 6.25,68.75 l 6.25,237.5 l 18.75,56.25 l 56.25,43.75 l -50,0 l -62.5,-43.75 l -50,43.75 Z" />
+
+</svg>

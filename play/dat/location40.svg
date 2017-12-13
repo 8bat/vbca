@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 2560 960" style="fill-rule:evenodd;stroke-linecap:square;stroke-linejoin:mitre;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <pattern id="pattern-centre-line" width="2560" height="960" patternUnits="userSpaceOnUse">
+      <rect id="main" fill="#ffffff" x="0" y="450" width="2560" height="510" />
+      <rect id="gap-1" fill="#00000" x="0" y="500" width="2560" height="30" />
+      <rect id="gap-1" fill="#00000" x="0" y="650" width="2560" height="60" />
+    </pattern>
+  </defs>
+
+  <!-- background -->
+  <rect id="background" fill="#000000" x="0" y="0" width="2560" height="960" />
+
+  <!-- outer wall -->
+  <path id="outer-wall" fill="#ffff00" stroke="#ffff00" d="M 165,885 l 160,-20 l -90,-390 l -20,-330 l 100,-70 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,30 l 20,-490 l 20,-400 h -2480 v 160 l 145,245 Z M 5,955 l 160,-70 M 2445,895 l 110,60" />
+
+  <!-- middle wall -->
+  <path id="middle-wall" fill="#ffff00" stroke="none" d="M 2160,155 l 15,180 l -15,335 l -180,-25 l 60,-200 l 25,-300 l -390,-110 Z M 445,645 l -20,-400 l -35,-80 l 70,-45 l 15,220 l 70,290 Z" />
+  <path id="middle-wall-edge" fill="none" stroke="#ffff00" d="M 295,705 l 160,-70 M 395,165 l 170,-110 l 300,-30 l 300,45 l 420,-45 l 480,120 l -25,300 l -60,200 l 180,25 l 85,45" />
+
+  <!-- far wall -->
+  <path id="far-wall" fill="#ffff00" stroke="none" d="M 690,455 l -5,-220 l -25,-90 l 50,-30 l 10,140 l 45,195 Z M 1840,485 l 15,-260 l -30,-140 l -185,-50 l -175,20 l 310,80 l -15,200 l -40,135 Z" />
+  <path id="far-wall-edge" fill="none" stroke="#ffff00" d="M 525,535 l 80,-40 l 80,-35 l 80,-10 l -45,-195 l -10,-135 M 665,145 l 110,-70 l 200,-20 l 200,30 l 280,-30 l 320,80 l -15,200 l -40,135 l 120,15 l 55,30 l 100,60" />
+
+  <!-- centre lines -->
+  <path id="centre-line" fill="url(#pattern-centre-line)" stroke="url(#pattern-centre-line)" d="M 1195,960 h -75 l 60,-500 l 60,500 h -75 Z" />
+
+</svg>

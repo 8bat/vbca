@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 2560 960" style="stroke-linecap:square;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <!--
+      NOTE: this image is new - the room did not exist in any Spectrum version of the game.
+      This image was constructed by comparing the Spectrum and C64 images for the twee chamber (room 16),
+      then examining the C64 image for the Avante Garde room (room 18),
+      then creating an analogous room by hand in SVG.
+  -->
+  <defs>
+    <pattern id="fill-panel" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffffff" x="0" y="0" width="40" height="20" />
+      <rect fill="#0000ff" x="0" y="10" width="10" height="10" />
+      <rect fill="#0000ff" x="10" y="0" width="10" height="10" />
+      <rect fill="#0000ff" x="20" y="10" width="20" height="10" />
+    </pattern>
+  </defs>
+
+  <rect id="background" fill="#c0c0c0" x="0" y="0" width="2560" height="960" />
+
+  <!-- far wall -->
+  <path id="floor" fill="black" stroke="none" d="M 0,960 l 280,-120 v -165 h 15 l 230,-110 l 400,-20 h 840,0 l 500,50 h 105 v 255 l 190,110 Z" />
+
+  <path id="far-wall-left-edge" fill="none" stroke="#000000" d="M 295,675 l 230,-110 l 400,-20 M 520,560 l -25,-235 l 40,-200" />
+  <path id="far-wall-middle" fill="none" stroke="#000000" d="M 935,545 h 800" />
+
+  <path id="far-wall-right-edge" fill="none" stroke="#000000" d="M 1765,555 l 500,50 M 1815,555 l 30,-300 l -40,-160" />
+
+  <!-- near wall -->
+  <path id="near-wall" fill="#c0c0c0" stroke="none" d="M 210,140 l 105,-65 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,25 l 20,-485 v 500 l 95,50 v -955 h -2560 v 950 l 140,-55 l 5,-490 l 20,475 l 160,-15 l -90,-390 Z" />
+  <path id="near-wall-edge" fill="none" stroke="#000000" d="M 85,225 l 230,-150 l 400,-40 l 400,60 l 560,-60 l 640,160 l -30,400 l -80,270 l 240,30 l 110,60
+M 5,955 l 160,-70 l 160,-20 l -90,-390 l -20,-330
+M 165,875 l -20,-470
+M 2445,885 l 20,-480" />
+
+ <!-- sideboard -->
+ <path id="sideboard-bg" fill="#ffffff" stroke="#ffffff" d="M 1050,325 h 60 v -125 h 590 v 125 h 60 v 250 h -710 v -250 Z" />
+ <path id="sideboard-contours" fill="none" stroke="#0000ff" d="M 1060,340 h 690 M 1415,340 v 220" />
+ <rect id="sideboard-mirror" fill="#ffffff" stroke="#0000ff" x="1140" y="215" width="530" height="90" />
+
+<rect id="sideboard-panel-right-outer" fill="none" stroke="#0000ff" x="1550" y="370" width="180" height="195" />
+<rect id="sideboard-panel-right-inner" fill="none" stroke="#0000ff" x="1570" y="395" width="140" height="145" />
+<path id="sideboard-panel-right-panel" fill="url(#fill-panel)" stroke="#0000ff" d="M 1575,540 h 135 v -140 Z" style="stroke-linejoin:bevel" />
+
+<rect id="sideboard-panel-left-outer" fill="none" stroke="#0000ff" x="1080" y="370" width="180" height="195" />
+<rect id="sideboard-panel-left-inner" fill="none" stroke="#0000ff" x="1100" y="395" width="140" height="145" />
+<path id="sideboard-panel-left-panel" fill="url(#fill-panel)" stroke="#0000ff" d="M 1105,540 h 135 v -140 Z" style="stroke-linejoin:bevel" />
+
+</svg>

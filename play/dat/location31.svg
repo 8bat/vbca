@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 2560 960" style="stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <pattern id="fill-chasm" x="0" y="0" width="20" height="10" patternUnits="userSpaceOnUse">
+      <rect fill="#ff00ff" x="0" y="0" width="20" height="20" />
+      <rect fill="#000000" x="5" y="0" width="10" height="10" />
+    </pattern>
+  </defs>
+
+  <rect id="far-wall" fill="#0000ff" x="0" y="0" width="2560" height="160" />
+  <rect id="chasm" fill="url(#fill-chasm)" x="0" y="160" width="2560" height="800" />
+  <rect id="near-floor" fill="#000000" x="0" y="950" width="2560" height="10" />
+  <path id="floor" fill="#000000" stroke="#000000" d="M 5,165 v 90 l 1095,-40 l -65,380 v 110 l -320,90 l -160,160 h 800 l -100,-350 l -50,-390 l 1350,70 v -120 Z" />
+
+</svg>

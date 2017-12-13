@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 2560 960" style="stroke-linecap:square;stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-middle-wall" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="40" height="20" />
+      <rect fill="#0000ff" x="0" y="10" width="10" height="10" />
+      <rect fill="#0000ff" x="10" y="0" width="10" height="10" />
+      <rect fill="#0000ff" x="20" y="10" width="10" height="10" />
+    </pattern>
+    <pattern id="fill-right-floor" x="0" y="0" width="1" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffff00" x="0" y="0" width="1" height="20" />
+      <rect fill="#0000ff" x="0" y="10" width="1" height="10" />
+    </pattern>
+  </defs>
+
+  <!-- left background -->
+  <rect id="left-wall" fill="#ffff00" x="0" y="0" width="960" height="960" />
+
+  <!-- table -->
+  <path id="table" fill="#ff0000" d="M 0,960 h 800 v -240 h 160 v -160 h -960 v 400" />
+  <path id="table-edge" fill="none" stroke="#0000ff" d="M 955,725 h -950" />
+
+  <!-- right background -->
+  <path id="right-floor" fill="url(#fill-right-floor)" stroke="none" d="M 960,960 l 475,-395 h 1125 v 395 Z" />
+  <rect id="right-wall" fill="#ffff00" stroke="none" x="1435" y="0" width="1125" height="565" />
+  <path id="skirting-board" fill="none" stroke="#0000ff" d="M 1445,565 h 150" />
+  <path id="middle-wall" fill="url(#fill-middle-wall)" stroke="#0000ff" d="M 965,0 v 955 l 470,-390 v -565" stroke-linecap="butt" />
+
+  <path id="chest-of-drawers" fill="#ff0000" stroke="#0000ff" d="M 2560,245 h -1035 v 70 h 1035 M 2560,635 h -955 v -320 h 955" stroke-linecap="butt" />
+  <path id="drawers" fill="none" stroke="#0000ff" d="M 1695,575 v -230 h 200 v 240 h -200 Z M 1995,575 v -230 h 200 v 240 h -200 Z M 2295,575 v -230 h 200 v 240 h -200 Z" />
+
+</svg>

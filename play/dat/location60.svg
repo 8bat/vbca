@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 2560 960" style="stroke-linecap:square;stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-jacket" x="0" y="0" width="40" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#00ffff" x="0" y="0" width="40" height="20" />
+      <rect fill="#000000" x="0" y="10" width="10" height="10" />
+      <rect fill="#000000" x="20" y="10" width="20" height="10" />
+      <rect fill="#000000" x="10" y="0" width="10" height="10" />
+    </pattern>
+    <pattern id="fill-cell-door" x="0" y="0" width="40" height="1" patternUnits="userSpaceOnUse">
+      <rect fill="#000000" x="0" y="0" width="10" height="1" />
+    </pattern>
+  </defs>
+
+  <!-- left background -->
+  <rect id="left-wall" fill="#00ffff" x="0" y="0" width="960" height="960" />
+
+  <!-- right background -->
+  <path id="right-floor" fill="#00ffff" stroke="none" d="M 960,960 l 475,-395 h 1125 v 395 Z" />
+  <rect id="right-wall" fill="#00ffff" stroke="none" x="1435" y="0" width="1125" height="565" />
+  <path id="skirting-board" fill="none" stroke="#000000" d="M 1445,565 h 150" />
+  <path id="middle-wall" fill="#00ffff" stroke="#000000" d="M 965,0 v 955 l 470,-390 v -565" stroke-linecap="butt" />
+  <path id="chest-of-drawers" fill="#0000ff" stroke="#ffff00" d="M 2560,245 h -1035 v 70 h 1035 M 2560,635 h -955 v -320 h 955" stroke-linecap="butt" />
+  <path id="drawers" fill="none" stroke="#ffff00" d="M 1695,575 v -230 h 200 v 240 h -200 Z M 1995,575 v -230 h 200 v 240 h -200 Z M 2295,575 v -230 h 200 v 240 h -200 Z" />
+
+  <rect id="cell-door" fill="url(#fill-cell-door)" stroke="#000000" x="965" y="5" width="470" height="950" />
+  <path id="cell-door-hinge" fill="#000000" stroke="none" d="M 1005,5 h -40 v 950 l 40,-35 Z" />
+  <rect id="cell-door-lock" fill="#000000" x="1280" y="400" width="160" height="160" />
+
+  <!-- face -->
+  <path id="head" fill="#ffffff" stroke="#000000" d="M 325,555 v -120 l -10,-190 h 250 l -10,190 v 120 Z" />
+  <path id="eyebrow-1" fill="none" stroke="#000000" d="M 355,355 h 50" />
+  <rect id="eye-1" x="490" y="360" fill="#000000" stroke="none" width="10" height="10" />
+  <path id="line-34" fill="none" stroke="#000000" d="M 475,355 h 50" />
+  <rect id="eye-2" x="370" y="360" fill="#000000" stroke="none" width="10" height="10" />
+  <path id="mouth" fill="none" stroke="#000000" d="M 405,475 h 70" />
+
+  <!-- clothes -->
+  <path id="hat" fill="#000000" stroke="#000000" d="M 365,275 h 150 l 160,-30 l -110,-40 l -20,-100 l -80,-20 l -20,40 l -20,-40 l -90,20 l -30,100 l -100,40 l 160,30 Z" />
+  <path id="jacket" fill="url(#fill-jacket)" stroke="#000000" d="M 565,485 l 200,30 l 30,30 l 80,410 h -870 l 80,-400 l 30,-30 l 210,-40 l 120,70 l 110,-70" />
+  <path id="jacket-lapel-shadow" fill="#00ffff" stroke="none" d="M 205,825 h 50 l -40,40" />
+  <path id="jacket-lapels" fill="none" stroke="#000000" d="M 205,515 v 310 h 50 l -40,40 l 50,50 M 675,505 v 260" />
+  <path id="shirt" fill="#000000" stroke="#000000" d="M 540,900 v -110 l 85,-295 l -70,-10 l -110,70 l -120,-70 l -60,10 l 80,405" />
+  <path id="shirt-collar-shadow" fill="#ffffff" stroke="#ffffff" stroke-width="5" d="M 330,570 l 85,85 h 60 l 85,-85" />
+  <path id="shirt-collar" fill="#000000" stroke="#000000" stroke-width="5" d="M 320,555 l 85,85 l 40,-80 l 40,80 l 85,-85" />
+  <path id="tie" fill="#ffffff" stroke="#000000" d="M 415,615 l 30,-55 l 30,55 l -10,80 h -40 l -10,-80 M 485,845 l -20,-150 h -40 l -40,190 h 100" />
+  <path id="jacket-sleeve" fill="url(#fill-jacket)" stroke="#000000" d="M 195,955 l 230,-80 l 40,80" />
+
+  <!-- hand -->
+  <path id="hand" fill="#ffffff" stroke="#000000" d="M 555,835 l 120,-60 l 50,40 v 140 h -260 l -35,-70 l 115,-100 l 35,35" />
+  <path id="fingers" fill="none" stroke="#000000" d="M 715,915 h -50 M 715,855 h -50" />
+
+</svg>

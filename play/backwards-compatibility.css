@@ -1,0 +1,407 @@
+/*
+ * CSS rules to make ngPAWS look more like an old ZX Spectrum game
+ */
+
+body
+{
+	background: black;
+
+        /* the following elements make it easier to display an image in the BORDER area: */
+        width:100%;
+        height:100%;
+        margin:0;
+        padding:0;
+
+}
+
+/* Spectrum-style border */
+.wrapper
+{
+	border: none;
+	margin: 10vh 10vw;
+	background: black;
+}
+
+/* react to INK, PAPER and BORDER commands */
+body.border-blue    { background: blue }
+body.border-red     { background: red }
+body.border-magenta { background: magenta }
+body.border-green   { background: green }
+body.border-lime    { background: lime }
+body.border-cyan    { background: cyan }
+body.border-yellow  { background: yellow }
+body.border-white   { background: white }
+body.border-black   { background: black }
+
+body.border-blue    .border { border-color: blue }
+body.border-red     .border { border-color: red }
+body.border-magenta .border { border-color: magenta }
+body.border-green   .border { border-color: green }
+body.border-lime    .border { border-color: lime }
+body.border-cyan    .border { border-color: cyan }
+body.border-yellow  .border { border-color: yellow }
+body.border-white   .border { border-color: white }
+body.border-black   .border { border-color: black }
+                    .border { border-color: black }
+
+body.paper-blue    .paper { background: blue }
+body.paper-red     .paper { background: red }
+body.paper-magenta .paper { background: magenta }
+body.paper-green   .paper { background: green }
+body.paper-lime    .paper { background: lime }
+body.paper-cyan    .paper { background: cyan }
+body.paper-yellow  .paper { background: yellow }
+body.paper-white   .paper { background: white }
+body.paper-black   .paper { background: black }
+                   .paper { background: black }
+
+.wrapper .paper-blue    { background: blue }
+.wrapper .paper-red     { background: red }
+.wrapper .paper-magenta { background: magenta }
+.wrapper .paper-green   { background: green }
+.wrapper .paper-lime    { background: lime }
+.wrapper .paper-cyan    { background: cyan }
+.wrapper .paper-yellow  { background: yellow }
+.wrapper .paper-white   { background: white }
+.wrapper .paper-black   { background: black }
+
+.wrapper .ink-blue    { color: blue }
+.wrapper .ink-red     { color: red }
+.wrapper .ink-magenta { color: magenta }
+.wrapper .ink-green   { color: green }
+.wrapper .ink-lime    { color: lime }
+.wrapper .ink-cyan    { color: cyan }
+.wrapper .ink-yellow  { color: yellow }
+.wrapper .ink-white   { color: white }
+.wrapper .ink-black   { color: black }
+.wrapper              { color: white }
+
+/*
+ * color-as-* classes can be useful if you want to set a box-shadow
+ * (which inherits its default value from the "color" attribute)
+ */
+body.border-blue    .color-as-border { color: blue }
+body.border-red     .color-as-border { color: red }
+body.border-magenta .color-as-border { color: magenta }
+body.border-green   .color-as-border { color: green }
+body.border-lime    .color-as-border { color: lime }
+body.border-cyan    .color-as-border { color: cyan }
+body.border-yellow  .color-as-border { color: yellow }
+body.border-white   .color-as-border { color: white }
+body.border-black   .color-as-border { color: black }
+                    .color-as-border { color: black }
+
+body.paper-blue    .color-as-paper { color: blue }
+body.paper-red     .color-as-paper { color: red }
+body.paper-magenta .color-as-paper { color: magenta }
+body.paper-green   .color-as-paper { color: green }
+body.paper-lime    .color-as-paper { color: lime }
+body.paper-cyan    .color-as-paper { color: cyan }
+body.paper-yellow  .color-as-paper { color: yellow }
+body.paper-white   .color-as-paper { color: white }
+body.paper-black   .color-as-paper { color: black }
+                   .color-as-paper { color: black }
+
+/* Stop the input box from falling off the bottom of the border */
+.input {
+	height: 4ex;
+}
+
+/* Preserve whitespace sequences */
+.text {
+	white-space: pre-wrap;
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+/*
+ * Add a "flash" class that loosely resembles a Spectrum FLASH effect
+ * Use this with a sequence tag like {CLASS|flash|blah}
+ *
+ * CSS doesn't have anything that behaves *quite* like a FLASH command,
+ * and in practice the FLASH effect can get quite annoying.
+ * This should produce a fairly pleasing effect, which you can customise
+ * to suit your needs.
+ */
+@keyframes flash {
+    20%, 80% { filter: invert(0%) }
+    30%, 70% { filter: invert(100%) }
+}
+.text .flash {
+    animation: flash 0.64s linear infinite;
+}
+
+/*
+ * Make the text dim by default, and add a "bright" class that resembles
+ * a Spectrum BRIGHT effect.  Use this with e.g. {CLASS|bright|blah}
+ */
+.text { color: #C0C0C0; }
+
+.paper-blue, .paper-red, .paper-magenta, .paper-green, .paper-lime, .paper-cyan, .paper-yellow, .paper-white, .paper-black {
+    display: inline-block;
+}
+
+.bright { color: #FFFFFF; }
+
+.bright.paper-blue   , .bright .paper-blue   , .paper-blue    .bright { background: #0000FF }
+.bright.paper-red    , .bright .paper-red    , .paper-red     .bright { background: #FF0000 }
+.bright.paper-magenta, .bright .paper-magenta, .paper-magenta .bright { background: #FF00FF }
+.bright.paper-green  , .bright .paper-green  , .paper-green   .bright { background: #00FF00 }
+.bright.paper-lime   , .bright .paper-lime   , .paper-lime    .bright { background: #00FF00 }
+.bright.paper-cyan   , .bright .paper-cyan   , .paper-cyan    .bright { background: #00FFFF }
+.bright.paper-yellow , .bright .paper-yellow , .paper-yellow  .bright { background: #FFFF00 }
+.bright.paper-white  , .bright .paper-white  , .paper-white   .bright { background: #FFFFFF }
+.bright.paper-black  , .bright .paper-black  , .paper-black   .bright { background: #000000 }
+
+.bright.ink-blue   , .bright .ink-blue   , .ink-blue    .bright { color: #0000FF }
+.bright.ink-red    , .bright .ink-red    , .ink-red     .bright { color: #FF0000 }
+.bright.ink-magenta, .bright .ink-magenta, .ink-magenta .bright { color: #FF00FF }
+.bright.ink-green  , .bright .ink-green  , .ink-green   .bright { color: #00FF00 }
+.bright.ink-lime   , .bright .ink-lime   , .ink-lime    .bright { color: #00FF00 }
+.bright.ink-cyan   , .bright .ink-cyan   , .ink-cyan    .bright { color: #00FFFF }
+.bright.ink-yellow , .bright .ink-yellow , .ink-yellow  .bright { color: #FFFF00 }
+.bright.ink-white  , .bright .ink-white  , .ink-white   .bright { color: #FFFFFF }
+.bright.ink-black  , .bright .ink-black  , .ink-black   .bright { color: #000000 }
+
+
+/*
+ * Flash the screen (PAUSE subfunction 4)
+ */
+
+#flash-container-hidden {
+    display: none;
+}
+
+#flash-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#flash-container #flash-1 { animation: 0.28s step-end infinite pause-animation-flash-1; }
+@keyframes pause-animation-flash-1 { 0% { opacity: 0 } 7% { opacity: 1 } }
+#flash-container #flash-2 { animation: 0.28s step-end infinite pause-animation-flash-2; }
+@keyframes pause-animation-flash-2 { 0% { opacity: 0 } 14% { opacity: 1 } }
+#flash-container #flash-3 { animation: 0.28s step-end infinite pause-animation-flash-3; }
+@keyframes pause-animation-flash-3 { 0% { opacity: 0 } 21% { opacity: 1 } }
+#flash-container #flash-4 { animation: 0.28s step-end infinite pause-animation-flash-4; }
+@keyframes pause-animation-flash-4 { 0% { opacity: 0 } 28% { opacity: 1 } }
+#flash-container #flash-5 { animation: 0.28s step-end infinite pause-animation-flash-5; }
+@keyframes pause-animation-flash-5 { 0% { opacity: 0 } 35% { opacity: 1 } }
+#flash-container #flash-6 { animation: 0.28s step-end infinite pause-animation-flash-6; }
+@keyframes pause-animation-flash-6 { 0% { opacity: 0 } 42% { opacity: 1 } }
+#flash-container #flash-7 { animation: 0.28s step-end infinite pause-animation-flash-7; }
+@keyframes pause-animation-flash-7 { 0% { opacity: 0 } 50% { opacity: 1 } }
+#flash-container #flash-8 { animation: 0.28s step-end infinite pause-animation-flash-8; }
+@keyframes pause-animation-flash-8 { 0% { opacity: 0 } 57% { opacity: 1 } }
+#flash-container #flash-9 { animation: 0.28s step-end infinite pause-animation-flash-9; }
+@keyframes pause-animation-flash-9 { 0% { opacity: 0 } 64% { opacity: 1 } }
+#flash-container #flash-10 { animation: 0.28s step-end infinite pause-animation-flash-10; }
+@keyframes pause-animation-flash-10 { 0% { opacity: 0 } 71% { opacity: 1 } }
+#flash-container #flash-11 { animation: 0.28s step-end infinite pause-animation-flash-11; }
+@keyframes pause-animation-flash-11 { 0% { opacity: 0 } 78% { opacity: 1 } }
+#flash-container #flash-12 { animation: 0.28s step-end infinite pause-animation-flash-12; }
+@keyframes pause-animation-flash-12 { 0% { opacity: 0 } 85% { opacity: 1 } }
+#flash-container #flash-13 { animation: 0.28s step-end infinite pause-animation-flash-13; }
+@keyframes pause-animation-flash-13 { 0% { opacity: 0 } 92% { opacity: 1 } }
+
+/*
+ * Box wipe animation (PAUSE subfunction 9)
+ */
+@keyframes pause-animation-box-border-colors {
+    0% {
+        width:  0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+    }
+    12.5%, 100% {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    12.5% { background: black }
+      25% { background: blue }
+    37.5% { background: red }
+      50% { background: magenta }
+    62.5% { background: lime }
+      75% { background: cyan }
+    87.5%, 100% { background: yellow }
+}
+@keyframes pause-animation-box-colors {
+       0% { background: black }
+    12.5% { background: blue }
+      25% { background: red }
+    37.5% { background: magenta }
+      50% { background: lime }
+    62.5% { background: cyan }
+      75% { background: yellow }
+    87.5% { background: white }
+}
+
+@keyframes pause-animation-box-sizes {
+    0%, 12.5%, 25%, 37.5%, 50%, 62.5%, 75%, 87.5% {
+        width:  0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+    }
+    12.49%, 24.99%, 37.49%, 49.99%, 62.49%, 74.99%, 87.49%, 100% {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+}
+
+.pause-animation-box::before {
+    content: '';
+    position: absolute;
+    background: blue;
+    animation: pause-animation-box-border-colors 5s steps(1,end) 1;
+    z-index: 2;
+}
+.pause-animation-box::after {
+    content: '';
+    position: absolute;
+    animation: pause-animation-box-colors 5s steps(1,end) 1, pause-animation-box-sizes 5s linear 1;
+    z-index: 2;
+}
+
+/*
+ * Reset the computer animation (PAUSE sub-function 13)
+ */
+@keyframes pause-animation-reset-height {
+    0%, 25% { height: 80vh }
+    100% { height: 0 }
+}
+.pause-animation-reset::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border-color: #c0c0c0;
+    border-style: solid;
+    border-width: 10vh 10vw;
+    z-index: 2;
+    background: black;
+}
+.pause-animation-reset::after {
+    content: '';
+    position: absolute;
+    width: 80vw;
+    animation: pause-animation-reset-height 0.5s 0.5s linear 1;
+    bottom: 10vh;
+    left: 10vw;
+    z-index: 2;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 1'><defs><pattern id='a' width='.03125' height='1'><rect x='6' width='1' height='1' fill='red'/></pattern></defs><rect width='256' height='1' fill='black'/><rect id='a' width='256' height='1' fill='url(%23a)'/></svg>");
+}
+/*
+ * Example CSS to display panels
+ *
+ * Adapt this for your game, or create your own
+ */
+
+/* Panels are hidden by default */
+.panels {
+    display: none;
+
+    position: absolute;
+    bottom: 75%;
+    left: -1em;
+    z-index: 1;
+
+    padding: 0.1em 1em;
+    box-shadow: 0 0 1em 1em;
+
+    white-space: pre;
+
+    opacity: 0.9;
+
+}
+
+/*
+ * Panels are shown when the user hovers over the wrapper
+ * Also, panels.jsp adds a "panels-visible" class when
+ * a panel is hidden temporarily and should be re-shown
+ */
+.panels-wrapper:not(.panels-invisible):hover .panels,
+.panels-wrapper.panels-visible .panels {
+    display: block;
+}
+
+/*
+ * An invisible element hovers between the wrapper and the panel,
+ * to stop the panel from disappearing if the mouse wobbles a bit.
+ */
+.panels-wrapper:not(.panels-invisible):hover .panels::before,
+.panels-wrapper.panels-visible .panels::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2em;
+    left: 0;
+    width: 100%;
+    height: 5em;
+    z-index: -1;
+}
+
+/*
+ * panels.jsp automatically removes the "unclicked" class
+ * the first time a panel is clicked.  This can be useful
+ * to direct new users user towards this panel.
+ */
+@keyframes flash-panel {
+    0% { background-color: rgba(255,255,255,0.5); }
+    100% { background-color: transparent; }
+}
+.panels-wrapper.unclicked.flag-1-changed-recently {
+    animation: flash-panel 0.1s step-end 1;
+}
+/*
+ * Syle navigation links
+ *
+ * This example assumes the links are next to each other in a small box,
+ * such as in the "common actions" plugin.
+ *
+ * Note: we use "body .navigation" here instead of just ".navigation",
+ * to make sure this overrides the browser's built-in style.
+ */
+
+/* Each box should fill half the width of the box */
+body .navigation {
+
+    width: 45%;
+    float: left;
+
+    text-align: center;
+    font-size: x-large;
+    text-decoration: none;
+
+    opacity: 0.5;
+
+    cursor: default;
+
+}
+
+/* When clicking the link would do something, make it more visible */
+body .navigation.enabled {
+
+    opacity: 1;
+
+    cursor: pointer;
+
+}
+
+/* Show a line between the two links */
+.navigation.back {
+    margin-right: 10%;
+}.suggestions-wrapper.empty {
+    display: none;
+}

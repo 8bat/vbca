@@ -135,3 +135,7 @@ part1/location%.svg: hires/%.svg
 # combine:
 part1: part1/code.js part1/index.html part1/jquery.js part1/buzz.js part1/css.css part1/backwards-compatibility.css $(DEST_IMAGES)
 	cp -a local/part1/dat/* part1/dat/
+
+play: part1/*.js part1/*.css part1/*.html part1/dat
+	-mkdir $@
+	cp -a $^ $@/

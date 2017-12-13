@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg viewBox="0 0 2560 960" style="stroke-linecap:square;stroke-linejoin:round;stroke-width:10" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="fill-right-floor" x="0" y="0" width="1" height="20" patternUnits="userSpaceOnUse">
+      <rect fill="#ffffff" x="0" y="0" width="1" height="20" />
+      <rect fill="#000000" x="0" y="10" width="1" height="10" />
+    </pattern>
+  </defs>
+
+  <!-- left background -->
+  <rect id="left-wall" fill="#ffffff" x="0" y="0" width="960" height="960" />
+
+  <!-- right background -->
+  <path id="right-floor" fill="url(#fill-right-floor)" stroke="none" d="M 960,960 l 475,-395 h 1125 v 395 Z" />
+  <rect id="right-wall" fill="#ffffff" stroke="none" x="1435" y="0" width="1125" height="565" />
+  <path id="skirting-board" fill="none" stroke="#000000" d="M 1445,565 h 1115" />
+  <path id="middle-wall" fill="#ffffff" stroke="#000000" d="M 965,0 v 955 l 470,-390 v -565" stroke-linecap="butt" />
+
+  <!-- left painting -->
+  <rect id="left-painting-hill" fill="#00ff00" x="0" y="0" width="800" height="800" />
+  <path id="left-painting-sky" fill="#0000ff" stroke="none" d="M 0,0 h 680 l -275,275 l -160,-160 l -245,490 Z" />
+
+  <!-- right painting -->
+  <rect id="right-painting-1" fill="#ff0000" x="1600" y="0" width="800" height="480" />
+  <rect id="right-painting-2" fill="#ff00ff" x="1680" y="0" width="640" height="400" />
+  <rect id="right-painting-3" fill="#00ffff" x="1840" y="0" width="320" height="320" />
+
+</svg>
